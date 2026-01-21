@@ -13,3 +13,5 @@ wheels/
 .env
 downloaded_documents/
 translations/
+scripts/debug_pdf.py    
+scripts/test_pymupdf.py
