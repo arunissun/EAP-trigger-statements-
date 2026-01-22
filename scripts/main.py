@@ -126,8 +126,7 @@ def prepare_pdf_payload(pdf_path: Path, document_metadata: dict = None) -> tuple
         "pages_analyzed": 0,
         "pages_selected": 0,
         "trigger_mechanism": None,
-        "triggers": {},
-        "notes": []
+        "triggers": {}
     }
     
     # Step 1: Extract content from all pages
@@ -213,7 +212,7 @@ def process_single_pdf(pdf_path: Path, document_metadata: dict = None) -> dict:
     result["triggers"] = formatted_triggers
     
     # Store notes
-    result["notes"] = llm_result.get("notes", [])
+    #result["notes"] = llm_result.get("notes", [])
     
     if "error" in llm_result:
         result["status"] = "partial"
@@ -253,7 +252,7 @@ def main():
     print(f"Testing with first 2 files...\n")
     
     # Process only first 2 PDFs for testing
-    test_files = pdf_files[3:4]
+    test_files = pdf_files[:65]
     #all_files = pdf_files
     all_results = []
     
@@ -274,9 +273,9 @@ def main():
         # Print summary for this file
         triggers = result['triggers']
         mechanism = result.get('trigger_mechanism')
-        notes = result.get('notes', [])
+        #notes = result.get('notes', [])
         
-        print(f"\n  Summary: {len(triggers)} triggers found, {len(notes)} notes")
+        print(f"\n  Summary: {len(triggers)} triggers found")
         print(f"  Document ID: {result.get('document_id', 'N/A')}")
         print(f"  Document Name: {result.get('document_name', 'N/A')}")
         if mechanism:

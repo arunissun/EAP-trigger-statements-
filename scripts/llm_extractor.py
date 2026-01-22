@@ -132,7 +132,7 @@ OTHER INSTRUCTIONS:
 - Extract ALL trigger statements, do not miss any
 - Include ALL relevant context about thresholds, conditions, and mechanisms
 - If a field's information is not found, use null
-- If no triggers found, return: {{"trigger_mechanism": null, "triggers": [], "notes": []}}
+- If no triggers found, return: {{"trigger_mechanism": null, "triggers": []}}
 
 Return ONLY the JSON object, no additional text."""
 
