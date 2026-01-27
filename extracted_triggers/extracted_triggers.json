@@ -1,5 +1,125 @@
 [
   {
+    "file": "16389_EAP2025HN05-Summary.pdf",
+    "document_id": 16389,
+    "document_name": "Honduras - Floods EAP (MDRHN027)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 14,
+    "pages_selected": 5,
+    "trigger_mechanism": {
+      "description": "The EAP uses a dual-trigger mechanism where a meteorological forecast (Trigger 1) must be met before a hydrological forecast (Trigger 2) is evaluated. Trigger 2 formally activates the EAP and initiates the majority of early actions, while Trigger 1 allows for preliminary readiness activities.",
+      "activation_type": "dual-trigger",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "If during the third day of the forecasted lead time the event decreases in intensity to a tropical disturbance, or if the event abruptly changes its predicted trajectory according to the competent forecasting authorities, all actions planned and/or underway under the EAP must be halted immediately."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "CENAOS or NOAA issues issues a forecast with ≥60 per cent probability that a tropical storm (≥34 knots) or stronger will reach the alert zone within 3 to 5 days.",
+        "statement_english": null,
+        "thresholds": [
+          "≥60% probability of a tropical storm (≥34 knots) or stronger",
+          "3 to 5 days lead time"
+        ],
+        "source_authority": "CENAOS or NOAA",
+        "lead_time": "3 to 5 days",
+        "geographic_scope": "Alert zone in Honduras",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Communication and coordination activities, community preparedness messaging, and readiness checks.",
+        "page_ref": 4
+      },
+      "trigger_statement_2": {
+        "statement": "When the GEOGLOWS/GloFAS model indicates a ≥50 per cent probability of river flooding with a 10-year return period in high-risk flood zones, within a 3-day lead time.",
+        "statement_english": null,
+        "thresholds": [
+          "≥50% probability of river flooding",
+          "10-year return period",
+          "3-day lead time"
+        ],
+        "source_authority": "GEOGLOWS/GloFAS model",
+        "lead_time": "3 days",
+        "geographic_scope": "High-risk flood zones in Honduras (e.g., Ulúa, Chamelecón, Patuca, Choluteca, Humuya, Cangrejal, Coco, and Segovia basins)",
+        "is_conditional": true,
+        "condition_dependency": "Trigger 1 must be met in order to reach Trigger 2, which formally activates the EAP.",
+        "preliminary_actions": "Initiation of most early actions including distribution of multi-purpose cash transfers (PTM) and provision of 72-hour WASH kits.",
+        "page_ref": 4
+      }
+    }
+  },
+  {
+    "file": "16393_MDRSS017sEAP.pdf",
+    "document_id": 16393,
+    "document_name": "South Sudan - Floods sEAP (MDRSS017)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 25,
+    "pages_selected": 5,
+    "trigger_mechanism": {
+      "description": "The sEAP uses a single-trigger mechanism based on the INFLOW-AI machine learning model which predicts the maximum flood extent of the White Nile/Sudd wetlands two months in advance. The model runs every 10 days (dekads) from June to December to provide updated forecasts.",
+      "activation_type": "single-trigger",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": "This sEAP does not have stop mechanism, the flooding is slow-onset wetland flooding rather than sudden onset flooding, and all actions will be implemented as soon as the sEAP is triggered."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "The sEAP will be activated between 1 June and 30 September if the statistical model predicts the change in the Sudd inundation extent from the seasonal minimum to the forecasted maximum extent over the next two months to be greater than 5% then the early actions will be activated.",
+        "statement_english": null,
+        "thresholds": [
+          "Change in Sudd inundation extent from the seasonal minimum to the forecasted maximum extent over the next two months > 5%"
+        ],
+        "source_authority": "INFLOW-AI model (developed through the INFLOW project, hosted on JASMIN)",
+        "lead_time": "2 months (6 dekads)",
+        "geographic_scope": "White Nile Basin and Sudd Wetland (Central Equatoria, Jonglei, Pibor, Upper Nile, Unity, Ruweng, Lakes, Warrap, Northern Bahr el Ghazal, and Abyei)",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Refresher training for staff and volunteers; procurement and prepositioning of essential household items; beneficiary selection and registration one month ahead of the peak of flooding.",
+        "page_ref": 12
+      }
+    }
+  },
+  {
+    "file": "16399_MDRMW023sEAP.pdf",
+    "document_id": 16399,
+    "document_name": "Malawi - Pluvial Floods sEAP (MDRMW023)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 16,
+    "pages_selected": 7,
+    "trigger_mechanism": {
+      "description": "The sEAP uses a tiered activation model consisting of Phase 1 (Monitoring), Tier 1 (Forecast-Informed Readiness/Pre-activation), and Tier 2 (Observational and Full Activation). It is based on seasonal outlooks, short-term rainfall/cyclone forecasts, exposure analysis, and real-time river gauge monitoring.",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "All actions will be suspended if DCCMS daily forecasts indicate a reduction in anticipated rainfall amounts."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "Phase 1: Monitoring of the trigger will be initiated when the Department of Climate Change and Meteorological Services issues a seasonal weather outlook indicating normal to above-normal rainfall, with a high probability of wetter-than-average conditions expected between November and March. Phase 2: The Simplified Early Action Protocol is pre-activated when the DCCMS issues an alert followed by a warning, triggering Tier 1 – Forecast-Informed Readiness. The sEAP will be fully activated for Early Actions under Tier 2 – Observational and Activation when river gauge readings exceed the alert stage at ≥2 stations or inundation modelling projects ≥30% of households affected.",
+        "statement_english": null,
+        "thresholds": [
+          "Seasonal rainfall totals exceeding 800 mm to 1,200 mm",
+          "Rainfall forecast of ≥100–150 mm within 72 hours in key basins",
+          "Cyclone forecast predicting ≥100 mm of rainfall within 24 hours in flood-prone districts",
+          "Rainfall forecast combined with exposure analysis showing ≥30% of households at risk",
+          "River gauge readings exceed the alert stage at ≥2 stations (real-time)",
+          "Inundation modelling projects ≥30% of households affected in flood-risk zones",
+          "Shire River Basin (Mwanza Gauging Station): 100 mm",
+          "Lake Chilwa Basin: 150 mm",
+          "Salima/Linthipe/Rifidzi: 100 mm",
+          "North Rukuru Catchment (Virauri Gauging Station): 100 mm",
+          "South Rukuru Catchment (South Rukuru Bridge Gauging Station): 100 mm"
+        ],
+        "source_authority": "Department of Climate Change and Meteorological Services (DCCMS)",
+        "lead_time": "Seasonal to 2-5 days",
+        "geographic_scope": "Flood prone districts in Malawi (Chikwawa, Nsanje, Phalombe, Zomba, Blantyre) and specific catchment areas (Shire River, Lake Chilwa, Salima/Linthipe/Rifidzi, North/South Rukuru).",
+        "is_conditional": true,
+        "condition_dependency": "Tiered system where Phase 1 (Monitoring) precedes Tier 1 (Pre-activation), which precedes Tier 2 (Full Activation). Tier 1 is triggered when an alert is followed by a warning.",
+        "preliminary_actions": "Readiness: Community awareness, staff/volunteer orientation on risk monitoring, simulations, and procurement of sandbags, shovels, and cement. Pre-activation: Cleaning drainage systems, implementing feedback mechanisms, prepositioning National Response Teams (NRT), and updating implementation strategies.",
+        "page_ref": 6
+      }
+    }
+  },
+  {
     "file": "16401_MDRZW026-sEAP.pdf",
     "document_id": 16401,
     "document_name": "Zimbabwe - Cholera sEAP (MDRZW026)",
@@ -8,31 +128,2413 @@
     "pages_analyzed": 25,
     "pages_selected": 9,
     "trigger_mechanism": {
-      "description": "The sEAP utilizes a staged intervention approach with three consecutive phases of action, each activated by a specific trigger related to the location and severity of cholera cases.",
+      "description": "The sEAP adopts a staged intervention using separate triggers to initiate three consecutive phases of action (Phase 1, Phase 2, and Phase 3) based on the geographic location and severity of cholera cases.",
       "activation_type": "multi-stage",
       "has_stop_mechanism": true,
-      "stop_mechanism_description": "The sEAP does not have a traditional stop mechanism but employs a 'scale down mechanism' at each phase. Activities can be tapered off or sustained without proceeding to the next phase if outbreaks are contained or do not spread beyond their initial geographic location."
+      "stop_mechanism_description": "The sEAP does not include a traditional stop mechanism but uses a scale-down mechanism at each phase. If outbreaks are contained or do not spread, activities can be tapered off or sustained at the current phase without proceeding to the next."
     },
     "triggers": {
       "trigger_statement_1": {
-        "statement": "The sEAP adopts a staged intervention which uses separate triggers to initiate three consecutive phases of action. Phase 1: A confirmed cholera case in any district of the country. Phase 2: A case confirmed in Harare. Phase 3: Evidence of community transmission in Harare and spread to additional districts.",
+        "statement": "Phase 1: Trigger: A confirmed cholera case in any district of the country will trigger... Phase 2: Trigger A case confirmed in Harare will trigger... Phase 3: Trigger Evidence of community transmission in Harare and spread to additional districts",
         "statement_english": null,
         "thresholds": [
-          "A confirmed cholera case (Vibrio Cholerae 01 or 0139 by culture or PCR) in any district of the country",
-          "A confirmed cholera case in Harare",
+          "Confirmed cholera case in any district (Vibrio Cholerae 01 or 0139 by culture or PCR)",
+          "Confirmed cholera case in Harare",
           "Evidence of community transmission in Harare",
-          "Spread of cholera to additional districts",
-          "Thresholds generated by local clinics to determine necessity of ORP deployments"
+          "Spread to additional districts",
+          "Thresholds generated by local clinics for ORP deployment"
         ],
         "source_authority": "Ministry of Health and Child Care (MoHCC)",
-        "lead_time": "Within days of the receipt of an alert",
-        "geographic_scope": "Zimbabwe (National), with specific focus on Harare urban hotspots and vulnerable rural districts",
-        "is_conditional": true,
-        "condition_dependency": "Phases are consecutive; Phase 2 follows Phase 1, and Phase 3 follows Phase 2 based on the escalation of the outbreak.",
-        "preliminary_actions": "Phase 1: Deployment of mobile Surge Team to affected districts; BORT teams in Harare for messaging and targeting surveys (FCR tests). Phase 2: RRT investigations in target areas; BORT deployment with NFIs; distribution of inline chlorinator tablets; development of DREF document for needs outside Harare.",
+        "lead_time": "Immediate upon case confirmation",
+        "geographic_scope": "Zimbabwe (National) with specific focus on Harare urban hotspots",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Phase 1: Deploy mobile Surge Team for investigations and BORT training; deploy BORT teams in Harare for messaging and environmental surveys. Phase 2: Support RRT investigations; deploy BORT with NFIs; distribute inline chlorinator tablets; initiate DREF development. Phase 3: Deploy BORT with NFIs and establish Oral Rehydration Points (ORPs).",
         "page_ref": 13
       }
+    }
+  },
+  {
+    "file": "16410_MDRMR020sEAP.pdf",
+    "document_id": 16410,
+    "document_name": "Mauritania - Flood sEAP (MDRMR020)",
+    "document_language": "French",
+    "status": "success",
+    "pages_analyzed": 23,
+    "pages_selected": 7,
+    "trigger_mechanism": {
+      "description": "The EAP uses a dual-trigger mechanism. The first trigger (pre-season) is for logistical preparation and coordination, while the second trigger (short-term) activates field-level early actions. The second trigger can be activated independently of the first to ensure maximum responsiveness to imminent threats.",
+      "activation_type": "dual-trigger",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": null
     },
-    "notes": []
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "Déclencheur de pré-saison : Prévision par le CEPMMT SEAS5 d'une probabilité de 40 % ou plus que les précipitations totales saisonnières soient supérieures à la normale. En d'autres termes, il s'agit d'une probabilité de 40 % ou plus pour le tercile supérieur.",
+        "statement_english": "Pre-season trigger: Forecast by ECMWF SEAS5 of a 40% or higher probability that total seasonal rainfall will be above normal. In other words, a 40% or higher probability for the upper tercile.",
+        "thresholds": [
+          "40% or higher probability of seasonal rainfall being above normal (upper tercile)",
+          "Seasonal total for July-August-September (JAS) above normal"
+        ],
+        "source_authority": "ECMWF (CEPMMT) SEAS5, ONM, ACMAD / AGRHYMET",
+        "lead_time": "Pre-season (Early May to June)",
+        "geographic_scope": "Mauritania (specifically Trarza, Brakna, Gorgol, and Guidimakha)",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Logistical preparation, pre-positioning of resources, training of volunteers, and local coordination.",
+        "page_ref": 13
+      },
+      "trigger_statement_2": {
+        "statement": "5 jours - Prévision de précipitations extrêmes Déclencheur : Les prévisions de l'ECMWF pour un EFI > 0,8 et de l'ONM prévoient une quantité de précipitations supérieure à 25 mm pour les 5 prochains jours. La SONADER dispose d’un réseau des stations hydrométriques qui permet de suivre la situation hydrologique du fleuve en période de crue et de décrue.",
+        "statement_english": "5 days - Extreme Precipitation Forecast Trigger: ECMWF forecasts for an EFI > 0.8 and ONM forecasts predicting a rainfall amount greater than 25 mm for the next 5 days. SONADER has a network of hydrometric stations to monitor the river's hydrological situation during flood and recession periods.",
+        "thresholds": [
+          "ECMWF Extreme Forecast Index (EFI) > 0.8",
+          "ONM forecast of rainfall > 25 mm in the next 5 days",
+          "Hydrological monitoring of river levels via SONADER stations"
+        ],
+        "source_authority": "ECMWF, ONM, SONADER",
+        "lead_time": "5 days",
+        "geographic_scope": "Trarza, Brakna, Gorgol, and Guidimakha",
+        "is_conditional": false,
+        "condition_dependency": "Can be activated independently of the pre-season trigger if conditions are met.",
+        "preliminary_actions": "Implementation of early actions on the ground: assembly of emergency shelters, evacuation of at-risk households to host sites, distribution of sandbags and tools for house protection, distribution of NFI/WASH kits (buckets, jerry cans, water purification products), distribution of mosquito nets, and awareness campaigns.",
+        "page_ref": 13
+      }
+    }
+  },
+  {
+    "file": "16416_EAP2025PK02_MDRPK029.pdf",
+    "document_id": 16416,
+    "document_name": "Pakistan - Riverine Floods EAP (MDRPK029)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 14,
+    "pages_selected": 7,
+    "trigger_mechanism": {
+      "description": "The EAP uses a multi-stage trigger system consisting of Pre-Activation and Activation phases. The Indus River is divided into three stretches and six sections, each with specific thresholds based on real-time water flow levels, 24-hour forecasts (Bulletin B), and observed outflows. Pre-activation primarily relies on GloFAS (Global Flood Awareness System) or weekly weather outlooks, while activation is based on specific discharge thresholds at gauging stations provided by FFD, PMD, and PID.",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": "The EAP does not include a stop mechanism once early action is initiated because the reliance on 24-hour lead time forecasts and real-time observations minimizes uncertainty. However, evacuation support is only activated when observed flood outflows exceed specific thresholds."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "Section 1: Kabul & Swat River (Lead Time: 6 hours): The trigger for Nowshera district will be reached when the observed flood flows in the Kabul River at Nowshera station, as reported by FFD are at a very high flood level (i.e., over 200,000 cusec), while the trigger for Charsada district is reached when the observed flows in the Swat River at Munda Headworks as reported by PID are at a very high flood level (i.e., over 150,000 cusec).",
+        "statement_english": null,
+        "thresholds": [
+          "Observed flood flows in Kabul River at Nowshera > 200,000 cusec",
+          "Observed flows in Swat River at Munda Headworks > 150,000 cusec",
+          "Pre-activation: Weekly weather outlooks from PMD"
+        ],
+        "source_authority": "FFD (Flood Forecast Division), PID (Punjab Irrigation Department), PMD (Pakistan Meteorological Department)",
+        "lead_time": "6 hours",
+        "geographic_scope": "Section 1: Kabul & Swat River (Nowshera and Charsada districts)",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Continuous monitoring and validation by PRCS with technical support from RCCC; volunteer mobilization; coordination with government authorities.",
+        "page_ref": 4
+      },
+      "trigger_statement_2": {
+        "statement": "Section 2: Indus River - Tarbela to Taunsa (Lead Time 48 hours): The trigger will be reached when Bulletin B i.e., Quantitative flood forecast at gauging stations from the FFD predicts: Flood inflows in Indus at Tarbela of 400,000 cusecs or above in the next 24 hours or High flood inflows in the Indus at Kalabagh of 500,000 cusecs or above in the next 24 hours or High flood inflows in the Indus at Chashma of 550,000 cusecs or above in the next 24 hours.",
+        "statement_english": null,
+        "thresholds": [
+          "Forecast flood inflows in Indus at Tarbela >= 400,000 cusecs in next 24 hours",
+          "Forecast high flood inflows in Indus at Kalabagh >= 500,000 cusecs in next 24 hours",
+          "Forecast high flood inflows in Indus at Chashma >= 550,000 cusecs in next 24 hours",
+          "Pre-activation: GloFAS predicting 2 to 5-year return period with >70% probability",
+          "Evacuation Trigger: Observed river outflows surpass the aforementioned thresholds"
+        ],
+        "source_authority": "FFD (Flood Forecast Division), GloFAS",
+        "lead_time": "48 hours",
+        "geographic_scope": "Section 2: Indus River - Tarbela to Taunsa",
+        "is_conditional": true,
+        "condition_dependency": "Evacuation of people and livestock is only triggered once observed river outflows surpass the forecast thresholds.",
+        "preliminary_actions": "Pre-activation monitoring; identification of potentially exposed villages using inundation maps and settlement lists.",
+        "page_ref": 4
+      },
+      "trigger_statement_3": {
+        "statement": "Section 3: Indus River - Taunsa to Panjnad (Lead Time: 4 days): The activation trigger will be reached when both of the following criteria are met: FFD confirms the observed outflows in Tarbela to be at flood levels above 400,000 cusecs, or observed flood outflows of Indus at Kalabagh are above high flood level i.e., 500,000 cusecs or observed flood outflows of Indus at Chasma is above 550,000 cusecs AND Bulletin B from the FFD predicts high flood inflows of above 550,000 cusecs in the Indus at Taunsa in the next 24 hours.",
+        "statement_english": null,
+        "thresholds": [
+          "Observed Tarbela outflows > 400,000 cusecs OR Kalabagh > 500,000 cusecs OR Chashma > 550,000 cusecs",
+          "Forecast high flood inflows at Taunsa > 550,000 cusecs in next 24 hours",
+          "Pre-activation: GloFAS predicting 2 to 5-year return period with >70% probability",
+          "Evacuation Trigger: Observed flood outflows in Taunsa > 550,000 cusecs"
+        ],
+        "source_authority": "FFD (Flood Forecast Division), GloFAS",
+        "lead_time": "4 days",
+        "geographic_scope": "Section 3: Indus River - Taunsa to Panjnad",
+        "is_conditional": true,
+        "condition_dependency": "Dual criteria: Observed upstream outflows must be high AND downstream inflow must be forecast high. Evacuation requires observed Taunsa outflows > 550,000 cusecs.",
+        "preliminary_actions": "Multipurpose cash assistance targeting registered households in Sections 3 and 5.",
+        "page_ref": 4
+      },
+      "trigger_statement_4": {
+        "statement": "Section 4: Chenab River Trimmu to Panjnad (Lead Time: 24 hours): The trigger will be reached when Bulletin B i.e., quantitative flood forecasts from FFD predict high flood inflows of the Chenab River at Trimmu (i.e., 300,000 cusecs or above) in the next 24 hours.",
+        "statement_english": null,
+        "thresholds": [
+          "Forecast high flood inflows at Trimmu >= 300,000 cusecs in next 24 hours",
+          "Pre-activation: GloFAS predicting 2 to 5-year return period with >70% probability",
+          "Evacuation Trigger: Observed flood outflows at Trimmu > 300,000 cusecs"
+        ],
+        "source_authority": "FFD (Flood Forecast Division), GloFAS",
+        "lead_time": "24 hours",
+        "geographic_scope": "Section 4: Chenab River - Trimmu to Panjnad",
+        "is_conditional": true,
+        "condition_dependency": "Evacuation is only triggered once observed flood outflows at Trimmu exceed 300,000 cusecs.",
+        "preliminary_actions": "Early warning dissemination via megaphones and mosque loudspeakers.",
+        "page_ref": 4
+      },
+      "trigger_statement_5": {
+        "statement": "Section 5: Indus River - Panjnad to Guddu (Lead Time: 4 days): The trigger will be reached when any of the following criteria are met: The Bulletin B... predicts high flood inflows of above 550,000 cusecs in Taunsa... in the next 24 hours or The Bulletin B... predicts high flood inflows of above 300,000 cusecs in Chenab... at Trimmu or Punjnad in the next 24 hours.",
+        "statement_english": null,
+        "thresholds": [
+          "Forecast high flood inflows at Taunsa > 550,000 cusecs in next 24 hours",
+          "Forecast high flood inflows at Trimmu or Panjnad > 300,000 cusecs in next 24 hours",
+          "Pre-activation: GloFAS predicting 2 to 5-year return period with >70% probability",
+          "Evacuation Trigger: Observed outflows at Taunsa > 550,000 cusecs OR Panjnad > 300,000 cusecs"
+        ],
+        "source_authority": "FFD (Flood Forecast Division), GloFAS",
+        "lead_time": "4 days",
+        "geographic_scope": "Section 5: Indus River - Panjnad to Guddu",
+        "is_conditional": true,
+        "condition_dependency": "Evacuation is only triggered once observed outflows at Taunsa or Panjnad exceed thresholds.",
+        "preliminary_actions": "Multipurpose cash assistance for early harvesting and evacuation subsistence.",
+        "page_ref": 5
+      },
+      "trigger_statement_6": {
+        "statement": "Section 6: Guddu to Kotri (Lead Time: 3-5 days): The trigger will be reached when any of the following criteria is met: FFD confirms the observed outflows of the Indus River in Taunsa is above high flood levels of 550,000 cusecs and that of Chenab River at Panjnad is above high flood levels of 300,000 cusecs; OR Bulletin B... predict very high flood inflows in the Indus River at Guddu or Sukkur (i.e., 700,000 cusecs or above) in the next 24 hours; OR FFD confirms that high flood flows are observed in the Indus River at Kotri (i.e., 450,000 cusecs or above) for 3 consecutive days or more.",
+        "statement_english": null,
+        "thresholds": [
+          "Observed Taunsa > 550,000 cusecs AND Panjnad > 300,000 cusecs",
+          "Forecast very high flood inflows at Guddu or Sukkur >= 700,000 cusecs in next 24 hours",
+          "Observed high flood flows at Kotri >= 450,000 cusecs for 3+ consecutive days",
+          "Pre-activation: GloFAS predicting 2 to 5-year return period with >70% probability",
+          "Evacuation Trigger: Observed very high flood levels at Guddu or Sukkur >= 700,000 cusecs"
+        ],
+        "source_authority": "FFD (Flood Forecast Division), GloFAS",
+        "lead_time": "3-5 days",
+        "geographic_scope": "Section 6: Indus River - Guddu to Kotri",
+        "is_conditional": true,
+        "condition_dependency": "Evacuation from subsequent tehsils is only triggered once very high flood levels are observed in Guddu or Sukkur.",
+        "preliminary_actions": "Distribution of WASH materials, hygiene promotion, and mosquito nets at designated evacuation sites.",
+        "page_ref": 5
+      }
+    }
+  },
+  {
+    "file": "16440_MDRMG024-EAP-Summary.pdf",
+    "document_id": 16440,
+    "document_name": "Madagascar - Floods sEAP (MDRMG024)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 13,
+    "pages_selected": 6,
+    "trigger_mechanism": {
+      "description": "The trigger mechanism is based on the Directorate General of Meteorology (DGM) 2-week precipitation forecast bulletin. The system uses weekly cumulative rainfall maps to identify districts likely to receive significant rainfall. This forecast is coupled with local knowledge of river behavior (natural markers like rocks or trees) and daily heavy rain/flood vigilance bulletins. A modeling tool transforms predicted rainfall into water height and flood zone identification.",
+      "activation_type": "single-trigger",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": null
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "The activation trigger will be reached when the weekly forecast bulletin of the river watersheds and the important flood warnings/advisories predict exceptionally high precipitation heights: greater than a cumulative precipitation of 150 mm (i.e. in the category of \"abundant\" according to the DGM classification, see Appendix)",
+        "statement_english": null,
+        "thresholds": [
+          "Cumulative precipitation greater than 150 mm per week",
+          "Classified as 'abundant' according to DGM classification",
+          "Confirmation via local markers (natural beacons like rocks or trees) reaching specific water levels"
+        ],
+        "source_authority": "Directorate General of Meteorology (DGM) of Madagascar",
+        "lead_time": "3 to 7 days",
+        "geographic_scope": "Matatana and Manapatrana River basins (Communes of Vohipeno, Vohitrindry, and Anosivelo)",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Dissemination of early warning messages and evacuation bulletins; identification of the most vulnerable communities; validation and registration of beneficiaries; mobilization of volunteers for flood awareness; distribution of roofing sheets (3 days before); disbursement of cash for work (24-48 hours before).",
+        "page_ref": 6
+      }
+    }
+  },
+  {
+    "file": "16445_sEAP_EAP2025PY01-summary.pdf",
+    "document_id": 16445,
+    "document_name": "Paraguay - Drought sEAP (MDRPY024)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 19,
+    "pages_selected": 6,
+    "trigger_mechanism": {
+      "description": "The EAP is activated based on a seasonal precipitation forecast issued by the national meteorological authority. If the forecast indicates a high probability of rainfall falling into the lower tercile (below normal) for the upcoming quarter, the protocol is triggered to initiate drought-preventive actions.",
+      "activation_type": "single-trigger",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": null
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "The triggering criterion will be determined by the Climate Outlook Bulletin issued by the Directorate of Meteorology and Hydrology (DMH), which identifies a 50% or greater probability that rainfall will remain in the lower tercile between December and February, which would imply a reduction in precipitation for the quarter compared to normal levels for that time of year.",
+        "statement_english": null,
+        "thresholds": [
+          "50% or greater probability that rainfall will remain in the lower tercile",
+          "rainfall below normal levels for the quarter"
+        ],
+        "source_authority": "Directorate of Meteorology and Hydrology (DMH) - Climate Outlook Bulletin",
+        "lead_time": "3 months",
+        "geographic_scope": "Paraguay (national/regional coverage based on DMH forecasts)",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Training of volunteers and staff in vulnerability identification; selection of 285 participating families; training in resilient livelihoods (water, soil, seeds); identification of suppliers for agricultural inputs; rapid survey of community water systems; prepositioning of vegetable seeds and agricultural implements (shade nets, mulching, tools); prepositioning of 700 jerrycans and water quality test kits; signing agreements with financial service providers for cash transfers.",
+        "page_ref": 8
+      }
+    }
+  },
+  {
+    "file": "16446_MDRET038sEAP.pdf",
+    "document_id": 16446,
+    "document_name": "Ethiopia - Cholera sEAP (MDRET038)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 21,
+    "pages_selected": 7,
+    "trigger_mechanism": {
+      "description": "The sEAP utilizes a dual-trigger mechanism that can be activated under two scenarios. Scenario 1 involves sequential activation where a drought trigger (Trigger 1) must be met before an epidemiological trigger (Trigger 2). Scenario 2 allows for the independent activation of the epidemiological trigger (Trigger 2) without a preceding drought event.",
+      "activation_type": "dual-trigger",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "The sEAP activation will be stopped if: 1) Confirmed cholera cases are identified within the activated area (shifting to response); 2) Five suspected cholera cases are not identified within a week at the end of the lead time of Trigger 1; 3) During Trigger 1 activation, there is no indication of a decline in surface water resources one month after the start of the drought season compared to the normal season based on Ministry of Water and Energy monitoring."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "When the monthly EDRMC disaster report confirms the occurrence of drought affecting 32000 people in any of the 20 identified woredas, with a 3-month lead time.",
+        "statement_english": null,
+        "thresholds": [
+          "Monthly EDRMC disaster report confirms drought occurrence",
+          "Drought affects at least 32,000 people",
+          "Occurrence in any of the 20 identified woredas"
+        ],
+        "source_authority": "Ethiopian Disaster Risk Management Commission (EDRMC)",
+        "lead_time": "3 months",
+        "geographic_scope": "20 identified woredas in Somali Region (Gursum, Erer, Hudet, Kelafo, Moyale, Dolo Ado), South Ethiopia Region (Dasenech), and Tigray Region (Dega Temben, Tahtay Adiyabo)",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "ERCS focal person reviews monthly EDRMC reports to monitor drought incidents; monitoring of surface water resources by Ministry of Water and Energy.",
+        "page_ref": 8
+      },
+      "trigger_statement_2": {
+        "statement": "ERCS will activate the second trigger of the sEAP when • one confirmed case is reported by EPHI in a neighboring woreda/district of the 20 identified woredas/districts, within the same country or in a neighboring district of bordering country with a 7-day lead time, or • five suspected cases that qualify the clinical case definition of EPHI are identified within a week in the 20 selected woredas/district with a 7-day lead time.",
+        "statement_english": null,
+        "thresholds": [
+          "One confirmed cholera case reported by EPHI in a neighboring woreda/district (domestic or bordering country)",
+          "Five suspected cholera cases qualifying EPHI clinical definition identified within one week in the 20 selected woredas"
+        ],
+        "source_authority": "Ethiopian Public Health Institute (EPHI)",
+        "lead_time": "7 days",
+        "geographic_scope": "20 identified woredas and adjacent neighboring districts",
+        "is_conditional": true,
+        "condition_dependency": "Can be activated sequentially after Trigger 1 (Scenario 1) or independently (Scenario 2)",
+        "preliminary_actions": "Weekly review of EPHI disease surveillance reports; EPHI notification of confirmed cases via email; mobilization of volunteers for disinfection and awareness; distribution of NFI kits (water treatment chemicals, soap); provision of water treatment chemicals for households in hotspots using the CATI approach; installation of water containers in public facilities.",
+        "page_ref": 8
+      }
+    }
+  },
+  {
+    "file": "16458_EAP2024BD07_MDRBD038.pdf",
+    "document_id": 16458,
+    "document_name": "Bangladesh - Cold Wave EAP (MDRBD038)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 14,
+    "pages_selected": 7,
+    "trigger_mechanism": {
+      "description": "The EAP activation is based on weather forecasts from BMD or ECMWF with a 4-day lead time and a 70% or more likelihood of impact. The mechanism requires two specific criteria to be fulfilled simultaneously over a duration of 3 consecutive days, affecting at least three districts.",
+      "activation_type": "dual-trigger",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "The stop mechanism is triggered when a later forecast, issued before the start of early actions, indicates a reduced likelihood of a cold wave event. In such cases, in-kind items are stored for future use, cash interventions are halted, and stakeholders/communities are informed via SMS and community meetings."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "Trigger will be activated when BMD forecasts minimum temperature goes below (<=7 0C) or the departure from normal temperature is equal to or below the 2nd percentile (3 to 4 0C) and maximum temperature goes below or equal 5th percentile (18-200C) or wind speed exceed 5th percentile (>5 km/hr) for 3 consecutive days, affecting three or more districts partially (>=50% area of the district).",
+        "statement_english": null,
+        "thresholds": [
+          "Minimum temperature <= 7°C",
+          "Departure from normal temperature <= 2nd percentile (3 to 4°C) with minimum temperature 12°C",
+          "Maximum temperature <= 5th percentile (18-20°C)",
+          "Wind speed > 5th percentile (>5 km/hr)",
+          "Duration: 3 consecutive days",
+          "Geographic impact: 3 or more districts partially (>=50% area of the district)",
+          "Likelihood: 70% or more"
+        ],
+        "source_authority": "Bangladesh Meteorological Department (BMD) and ECMWF",
+        "lead_time": "4 days",
+        "geographic_scope": "Northwest and northeast parts of Bangladesh (specifically 3 or more districts with >=50% area affected)",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Monitoring weather forecasts (December to February), beneficiary verification, Multi-purpose Cash Grant (MPCG) distribution, distribution of blankets/warm clothes/shawls, community awareness sessions on cold wave risks, and technical guidance for livestock and agricultural protection.",
+        "page_ref": 3
+      }
+    }
+  },
+  {
+    "file": "16467_MDRSO023-EAP-Summary.pdf",
+    "document_id": 16467,
+    "document_name": "Somalia - Cholera sEAP (MDRSO023)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 22,
+    "pages_selected": 8,
+    "trigger_mechanism": {
+      "description": "The sEAP uses a two-stage trigger system. The first trigger (T1) activates low-cost early actions based on environmental drivers, neighboring outbreaks, or drought EAP activation. The second trigger (T2) activates the full range of early actions based on epidemiological surveillance data and official health confirmations. T2 can be activated independently of T1.",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "Scaling down follows a phased approach. Oral Rehydration Points (ORPs) without reported cases for seven consecutive days may be deactivated. Attack rate (AR) thresholds (0.1% to 2% in rural areas; 1% to 5% in urban/IDP settings) determine outbreak status and guide the continuation of actions. The sEAP transitions to response if the outbreak exceeds capacity."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "T1 can consist of the following scenarios identified as drivers of AWD/cholera epidemics in Somalia based on historical patterns: 1. A confirmed cholera case or spikes in AWD cases in a neighboring location to the selected PAMIs. 2. Activation of the SRCS drought EAP (MDRSO019) 3. The following amplifying factors occur in a selected PAMI... a. Flooding and extensive rains b. Drought followed by heavy rains c. Drought EAP is activated d. Increased malnutrition rates (GAM cases reaching the threshold of >10%) coinciding with heavy rains, flooding, or droughts",
+        "statement_english": null,
+        "thresholds": [
+          "Confirmed cholera case or AWD spike in a neighboring location",
+          "Activation of SRCS drought EAP (MDRSO019)",
+          "Flooding and extensive rains",
+          "Drought followed by heavy rains",
+          "Global Acute Malnutrition (GAM) cases >10% coinciding with heavy rains, flooding, or droughts"
+        ],
+        "source_authority": "SRCS, Ministry for Agricultural Development, National Disaster and Food Reserve Authority (NADFOR), Ministry of Health (MoH), Somalia Acute Malnutrition Projection dashboard",
+        "lead_time": "Maximum 3 months until T2 activation",
+        "geographic_scope": "Garowe and Bosaso (Puntland), Borama and Burao districts (Somaliland)",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Low-cost early actions, readiness interventions, community reporting of amplifying factors, and communication with the SRCS Emergency Operations Centre (EoC).",
+        "page_ref": 8
+      },
+      "trigger_statement_2": {
+        "statement": "T2 may be triggered by: 1. A spike in AWD/ADD CBS true signals, such as: a. Doubling of alert thresholds – from at least 5 to at least 10 signals (see alert threshold explanation above) within one week. 2. Confidential information from the MoH indicating a rise in AWD/ADD cases 3. MoH confirmation of AWD/Cholera",
+        "statement_english": null,
+        "thresholds": [
+          "Doubling of CBS alert thresholds (from at least 5 to at least 10 signals) within one week",
+          "Confidential MoH information indicating a rise in AWD/ADD cases",
+          "Official MoH confirmation of AWD/Cholera"
+        ],
+        "source_authority": "SRCS Community-Based Surveillance (CBS) via Nyss platform, Ministry of Health (MoH), EWARN, DHIS2",
+        "lead_time": "10 days",
+        "geographic_scope": "Garowe and Bosaso (Puntland), Borama and Burao districts (Somaliland)",
+        "is_conditional": false,
+        "condition_dependency": "Can be activated independently of T1",
+        "preliminary_actions": "Full range of early actions including hygiene promotion, distribution of ORS and Zinc, distribution of Aqua Tabs, facilitating referrals, and Risk Communication and Community Engagement (RCCE).",
+        "page_ref": 9
+      }
+    }
+  },
+  {
+    "file": "16473_MDRAL009seaps.pdf",
+    "document_id": 16473,
+    "document_name": "Albania - Heatwave sEAP (MDRAL009)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 19,
+    "pages_selected": 8,
+    "trigger_mechanism": {
+      "description": "The sEAP uses a single trigger mechanism based on ECMWF forecasts. If the forecast for Tirana meets the defined temperature and duration thresholds with a 50% probability, the protocol is activated for Tirana, Elbasan, and Berat simultaneously, as these cities share identical temperature patterns.",
+      "activation_type": "single-trigger",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": null
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "The Heatwave sEAP is triggered in Tirana, Elbasan, and Berat if, with a probability of 50% according to ECMWF, there are at least 3 consecutive days in Tirana where the expected maximum and minimum temperatures are both higher than the 95th percentile of the monthly historical maximum and minimum temperatures of the months of June-September, based on data from 2000 to 2024.",
+        "statement_english": null,
+        "thresholds": [
+          "Probability of 50% according to ECMWF",
+          "At least 3 consecutive days",
+          "Expected maximum and minimum temperatures both higher than the 95th percentile of monthly historical maximum and minimum temperatures (June-September, 2000-2024)"
+        ],
+        "source_authority": "ECMWF (forecast), IGEO (monitoring and historical data analysis)",
+        "lead_time": "5 days",
+        "geographic_scope": "Cities of Tirana, Berat, and Elbasan, Albania",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Inform beneficiaries through Greenline calls or SMS on upcoming cheque distribution; Distribute cheques via branches and multifunctional teams; Support in cashing of cheques; Set up Red Cross green line; Conduct proactive 'Heat Remote Check Calls' for vulnerable households.",
+        "page_ref": 8
+      }
+    }
+  },
+  {
+    "file": "16479_MDRLB019sEAP.pdf",
+    "document_id": 16479,
+    "document_name": "Lebanon - Cold Wave sEAP (MDRLB019)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 16,
+    "pages_selected": 6,
+    "trigger_mechanism": {
+      "description": "The trigger mechanism is based on a single meteorological threshold (daily maximum temperature) forecasted by the ECMWF ensemble. It operates on a dual-stage timeline: a 7-day lead time for the initial release of funds and a 5-day lead time that serves as a final 'Go/No-Go' confirmation or stop mechanism. Monitoring begins up to two weeks in advance through automated notifications.",
+      "activation_type": "single-trigger",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "If the median ensemble member of the ECMWF ensemble indicates that the daily maximum temperature at Zahle is not less than 2°C with a lead time of 5 days, the intervention is stopped to prevent unnecessary expenditure."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "When the median ensemble member of the ECMWF ensemble indicates that the daily maximum temperature at Zahle is projected to be less than 2°C, with a lead time of 7 days.",
+        "statement_english": null,
+        "thresholds": [
+          "Daily maximum temperature at Zahle < 2°C",
+          "Median ensemble member of the ECMWF ensemble",
+          "Lead time of 7 days for fund release",
+          "Lead time of 5 days for stop/confirmation"
+        ],
+        "source_authority": "ECMWF (European Centre for Medium-Range Weather Forecasts)",
+        "lead_time": "7 days",
+        "geographic_scope": "Zahle, Lebanon",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Convene expert committee, liaise with government counterparts, activate volunteers, and conduct volunteer refreshers between day -7 and day -5. Monitoring starts 2 weeks in advance via ECMWF notifications.",
+        "page_ref": 6
+      }
+    }
+  },
+  {
+    "file": "16482_sEAP2024LK01_MDRLK022.pdf",
+    "document_id": 16482,
+    "document_name": "Sri Lanka - Dengue sEAP (MDRLK022)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 18,
+    "pages_selected": 8,
+    "trigger_mechanism": {
+      "description": "The trigger mechanism is a multi-stage system based on two scenarios: meteorological predictions for readiness and epidemiological reports for early action. Readiness is triggered by rainfall forecasts which precede outbreaks, while early action is triggered by specific caseload thresholds during peak months or relative to historical averages.",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": null
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "The Meteorological Department forecasts average rainfall exceeding 100mm in the Western Province.",
+        "statement_english": null,
+        "thresholds": [
+          "Average rainfall exceeding 100mm"
+        ],
+        "source_authority": "Meteorological Department",
+        "lead_time": "2 to 4 weeks",
+        "geographic_scope": "Western Province (Colombo, Kalutara, and Gampaha districts)",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Elimination of mosquito breeding sites at community level, logistical support for MOH response teams, mass/social media mobilization, and empowering children in school circles to lead monitoring.",
+        "page_ref": 8
+      },
+      "trigger_statement_2": {
+        "statement": "The trigger is activated under the following conditions: • Weekly caseload exceeding 1,500 cases in the months of May, June, July and December, and January. OR • If the caseload in the target districts exceeds 1.5 times higher than their average caseload.",
+        "statement_english": null,
+        "thresholds": [
+          "Weekly caseload exceeding 1,500 cases in May, June, July, December, and January",
+          "Caseload in target districts exceeds 1.5 times higher than their average caseload"
+        ],
+        "source_authority": "National Dengue Control Unit (NDCU), Ministry of Health (MoH)",
+        "lead_time": "2 to 4 weeks",
+        "geographic_scope": "National (focused on Colombo, Gampaha, Kalutara, Jaffna, and Kandy districts)",
+        "is_conditional": true,
+        "condition_dependency": "Activated when epidemiological thresholds are met, typically following the readiness phase or during seasonal peaks.",
+        "preliminary_actions": "House-to-house surveillance campaigns, volunteer deployment to hospitals, distribution of IEC materials to patients and families, training households on water storage cleaning, and clean-up campaigns in public hotspots.",
+        "page_ref": 8
+      }
+    }
+  },
+  {
+    "file": "16486_sEAP2024FJ01_MDRFJ008.pdf",
+    "document_id": 16486,
+    "document_name": "Fiji - Tropical Cyclone  sEAP (MDRFJ008)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 15,
+    "pages_selected": 5,
+    "trigger_mechanism": {
+      "description": "The trigger mechanism is a two-stage system based on lead time. A Readiness trigger is met if conditions are forecasted at a 120-hour lead time (using unofficial forecasts), and an Action trigger is met if conditions are forecasted at a 72-hour lead time (using official track forecasts).",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": null
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "This simplified EAP will be triggered by a tropical cyclone that is forecasted by the Regional Specialized Meteorological Centre (RSMC) in Nadi to be a: Category 4 or 5 while within 250 km of Fiji, or Category 3, 4, or 5 while making landfall in Fiji",
+        "statement_english": null,
+        "thresholds": [
+          "Category 4 or 5 while within 250 km of Fiji",
+          "Category 3, 4, or 5 while making landfall in Fiji"
+        ],
+        "source_authority": "Regional Specialized Meteorological Centre (RSMC) in Nadi / Fiji Meteorological Services (FMS)",
+        "lead_time": "120 hours (Readiness) and 72 hours (Action)",
+        "geographic_scope": "National level coverage (Fiji), with focus on coastal low-lying areas and 16 branch networks",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Inform relevant Branches; Activation of internal processes for the release of funds; Prepositioning of funds to divisional teams; Notify logistics service providers; Movement of resources (staff and volunteers); Checking of pre-positioned items; Stakeholder coordination meetings; Confirmation of target communities and households.",
+        "page_ref": 7
+      }
+    }
+  },
+  {
+    "file": "16494_MDRTZ041EAP.pdf",
+    "document_id": 16494,
+    "document_name": "Tanzania - Flood EAP (MDRTZ041)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 11,
+    "pages_selected": 5,
+    "trigger_mechanism": {
+      "description": "The EAP is activated based on a 5-day impact-based weather forecast issued by the Tanzania Meteorological Authority (TMA). It uses a single-trigger mechanism with multiple spatial and temporal conditions that must be met simultaneously.",
+      "activation_type": "single-trigger",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "Full activation is avoided if the forecast is downgraded below the severe threshold three or more days before the event. In such cases, preparedness and early warning activities continue only in areas where alerts remain."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "The EAP is triggered when the following conditions are met: \n• A severe rainfall warning (orange) or major warning (red) is issued in over 10 administrative regions across more than three river basins, lasting at least two consecutive days. \n• At least one advisory-level warning (yellow) is present on any of the remaining days within the five-day forecast.",
+        "statement_english": null,
+        "thresholds": [
+          "Severe rainfall warning (orange) or major warning (red)",
+          "Issued in over 10 administrative regions",
+          "Across more than three river basins",
+          "Lasting at least two consecutive days",
+          "At least one advisory-level warning (yellow) on any of the remaining days within the five-day forecast"
+        ],
+        "source_authority": "Tanzania Meteorological Authority (TMA)",
+        "lead_time": "1 to 5 days",
+        "geographic_scope": "Tanzania (specifically over 10 administrative regions across more than three river basins)",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Dissemination of early warning messages, community-level cleaning of drainage systems and trenches, pre-positioning and distribution of cleaning tools, support for evacuation of vulnerable individuals, pre-positioning and distribution of WASH supplies (water purification tablets, hygiene kits), activation of EPIC-trained volunteers, and deployment of first aid teams.",
+        "page_ref": 2
+      }
+    }
+  },
+  {
+    "file": "16513_MDRCI017sEAP.pdf",
+    "document_id": 16513,
+    "document_name": "Côte d'Ivore - Floods sEAP (MDRCI017)",
+    "document_language": null,
+    "status": "success",
+    "pages_analyzed": 22,
+    "pages_selected": 7,
+    "trigger_mechanism": null,
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "",
+        "statement_english": null,
+        "thresholds": [],
+        "source_authority": null,
+        "lead_time": null,
+        "geographic_scope": null,
+        "is_conditional": null,
+        "condition_dependency": null,
+        "preliminary_actions": null,
+        "page_ref": null
+      }
+    }
+  },
+  {
+    "file": "16527_sEAP2024CO02-Summary.pdf",
+    "document_id": 16527,
+    "document_name": "Colombia - Forced Displacement sEAP (MDRCO031)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 19,
+    "pages_selected": 8,
+    "trigger_mechanism": {
+      "description": "The sEAP is activated when a recognized authority issues an official document (Act, Bulletin, or Early Alert) indicating that a massive forced displacement has occurred or is imminent, provided the number of victims reaches or is expected to reach department-specific thresholds.",
+      "activation_type": "single-trigger",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "The Early Action ends once the activities foreseen for each component are fulfilled (estimated duration of 30 days). It is also expected that within this timeframe, violent actions will have ceased and security conditions will allow communities to return to their territories."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "The activation of this sEAP will be met when the corresponding institution (Transitional Justice Committee, OCHA or the Ombudsman's Office) issues one of the respective official or activating documents: Act, Bulletin or Early Alert, in which it is indicated that a massive forced displacement caused by the armed conflict has occurred, or the risk of occurrence is imminent, in one or more of the municipalities of the departments that constitute the Colombian Pacific region (Chocó, Valle del Cauca, Cauca or Nariño) that reaches (or may reach) the threshold established in number of displaced victims per department.",
+        "statement_english": null,
+        "thresholds": [
+          "Chocó: 1,290 people",
+          "Cauca: 1,696 people",
+          "Nariño: 3,040 people",
+          "Valle del Cauca: 2,078 people"
+        ],
+        "source_authority": "Transitional Justice Committee, OCHA, or the Ombudsman's Office",
+        "lead_time": "3 to 5 calendar days",
+        "geographic_scope": "Colombian Pacific region (Chocó, Valle del Cauca, Cauca, and Nariño)",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Readiness activities include local first aid and psychosocial workshops, purchase of kits, and inter-institutional monitoring meetings. Pre-positioning includes purchasing hygiene kits, water treatment plants, and storage tanks.",
+        "page_ref": 8
+      }
+    }
+  },
+  {
+    "file": "16531_MDRZM025-EAP-Summary.pdf",
+    "document_id": 16531,
+    "document_name": "Zambia - Drought EAP2024ZM02 (MDRZM025)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 10,
+    "pages_selected": 5,
+    "trigger_mechanism": {
+      "description": "The EAP uses a multi-stage trigger system consisting of a Pre-trigger (Trigger 0), Trigger 1, and Trigger 2. These triggers are based on ENSO signals, seasonal precipitation forecasts, and observed crop losses/dry spells. There is no dependency between Trigger 0 and Trigger 1, and Trigger 2 can be activated even if the previous triggers were not met.",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "If the forecast shows a declining risk (e.g., probability drops below 40% by day 10 of the 25-day lead time), an Emergency Operations Meeting will be convened to recommend stopping the activation. Pre-purchased non-food items (NFIs) will be stored, while planned activities for later phases (e.g., cash transfers) will be canceled."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "When the ECMWF issues in July an NDJ average forecast of a Nino3.4 index>=0.5K, the pre-trigger is reached and the pre-actions will be started.",
+        "statement_english": null,
+        "thresholds": [
+          "ECMWF NDJ average Niño3.4 index >= 0.5K"
+        ],
+        "source_authority": "ECMWF",
+        "lead_time": "July (approx. 3-4 months lead time)",
+        "geographic_scope": "Zambia",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Start pre-actions; readiness activities including training for volunteers, pre-positioning of supplies (WASH kits, seeds), updating vulnerability maps, and awareness campaigns.",
+        "page_ref": 3
+      },
+      "trigger_statement_2": {
+        "statement": "When the ECMWF SEAS5 seasonal forecast issued in October forecasts a below average precipitation (with 45% and above probability of the ‘below average’ tercile), the first trigger is reached and the first set of funded early actions will be implemented in anticipation of a failed rainy season.",
+        "statement_english": null,
+        "thresholds": [
+          "ECMWF SEAS5 seasonal forecast (October) below average precipitation with >= 45% probability of the 'below average' tercile"
+        ],
+        "source_authority": "ECMWF SEAS5",
+        "lead_time": "October",
+        "geographic_scope": "Zambia",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Implementation of the first set of funded early actions, including awareness raising, borehole rehabilitation, and distribution of drought-resistant seeds and WASH kits.",
+        "page_ref": 3
+      },
+      "trigger_statement_3": {
+        "statement": "When the Ministry of Agriculture CFSI in March-April projects 40% and above losses in the current season and ZMD calculates more than 21 days of no rain higher than 1mm during the period DJFM, the second set of funded early actions will be implemented in anticipation of declining food and economic security.",
+        "statement_english": null,
+        "thresholds": [
+          "Ministry of Agriculture Crop Forecast Survey Index (CFSI) projects >= 40% crop losses",
+          "Zambia Meteorological Department (ZMD) records > 21 consecutive days of no rain (> 1mm) during DJFM"
+        ],
+        "source_authority": "Ministry of Agriculture (CFSI) and Zambia Meteorological Department (ZMD)",
+        "lead_time": "March-April",
+        "geographic_scope": "Zambia",
+        "is_conditional": false,
+        "condition_dependency": "Can be activated even if Trigger 0 and Trigger 1 are not met.",
+        "preliminary_actions": "Implementation of the second set of funded early actions, specifically unconditional cash transfers to vulnerable households.",
+        "page_ref": 3
+      }
+    }
+  },
+  {
+    "file": "16542_MDRML021_EAP-Summary.pdf",
+    "document_id": 16542,
+    "document_name": "Mali - Flood EAP (MDRML021)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 10,
+    "pages_selected": 4,
+    "trigger_mechanism": {
+      "description": "The EAP is activated based on a single-trigger mechanism when water levels are forecasted to exceed a 5-year return period threshold at key monitoring stations along the Niger and Senegal Rivers.",
+      "activation_type": "single-trigger",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "A deactivation mechanism is applied if forecasts indicate that flood levels will not reach the critical threshold within three days."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "The EAP for river flooding in Mali will be activated when water levels exceed the 5-year return period threshold at key monitoring stations along the Niger and Senegal Rivers, as determined by the National Directorate of Hydraulics and Mali Météo.",
+        "statement_english": null,
+        "thresholds": [
+          "5-year return period flood forecast",
+          "370 cm in Bamako",
+          "859 cm in Kayes"
+        ],
+        "source_authority": "National Directorate of Hydraulics (DNH) and Mali Météo",
+        "lead_time": "4 to 8 days",
+        "geographic_scope": "High-risk flood-prone areas along the Niger and Senegal Rivers, specifically Mopti, Ségou, Timbuktu, Gao, Kayes, and Bamako.",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Community awareness campaigns, evacuation support, distribution of 20,000 sandbags, reinforcement of dikes, sanitation and hygiene interventions (provision of aquatab tablets and 1,000 emergency mosquito nets), and livelihood protection measures (livestock evacuation and emergency fodder).",
+        "page_ref": 3
+      }
+    }
+  },
+  {
+    "file": "16562_MDRCM040sEAP.pdf",
+    "document_id": 16562,
+    "document_name": "Cameroon - Cholera EAP (MDRCM040)",
+    "document_language": null,
+    "status": "success",
+    "pages_analyzed": 12,
+    "pages_selected": 6,
+    "trigger_mechanism": null,
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "",
+        "statement_english": null,
+        "thresholds": [],
+        "source_authority": null,
+        "lead_time": null,
+        "geographic_scope": null,
+        "is_conditional": null,
+        "condition_dependency": null,
+        "preliminary_actions": null,
+        "page_ref": null
+      }
+    }
+  },
+  {
+    "file": "16566_sEAP2024TL01_MDRTL001.pdf",
+    "document_id": 16566,
+    "document_name": "Timor Leste - Flood sEAP (MDRTL001)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 16,
+    "pages_selected": 8,
+    "trigger_mechanism": {
+      "description": "The trigger system is a multi-stage mechanism based on rainfall forecasts from the National Directorate for Meteorology and Geophysics (DNMG). It consists of a Preparedness phase (Trigger 1) at a 5-day lead time and an Activation phase (Trigger 2) at a 3-day lead time, with a specific 24-hour lead time for evacuation actions. The system uses a color-coded warning scale (Green, Yellow, Orange, Red).",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": null
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "The second trigger will be reached when a 3-day weather forecast from DNMG issues a red warning (extreme rain) in any of the target municipalities for two consecutive days. This means all the relevant pre-agreed early actions will be triggered in the respective municipalities that are likely to receive rainfall with a cumulative total of more than 200mm in next 72 hours. The evacuation early action will only be triggered at the 24-hour lead time.",
+        "statement_english": null,
+        "thresholds": [
+          "Orange warning (rainfall intensity 10-20mm/hr or 50-100mm/day) in more than three target municipalities for three consecutive days or more in a 5-day forecast period",
+          "Cumulative rainfall total of 150 mm or more during the forecasted period of heavy rainfall in the next 5 days",
+          "Red warning (rainfall intensity of more than 20 mm/hr or daily total of more than 100mm) in any of the target municipalities for two consecutive days",
+          "Cumulative rainfall total of more than 200mm in the next 72 hours"
+        ],
+        "source_authority": "National Directorate for Meteorology and Geophysics (DNMG)",
+        "lead_time": "5 days (Preparedness), 3 days (Activation), 24 hours (Evacuation)",
+        "geographic_scope": "Flood risk areas of Manatuto, Viqueque, Manufahi, Covalima, and Oecusse municipalities (excluding Dili)",
+        "is_conditional": true,
+        "condition_dependency": "The Activation phase (Trigger 2) follows the Preparedness phase (Trigger 1) as the forecast lead time decreases and intensity increases.",
+        "preliminary_actions": "Preparedness phase (Trigger 1) actions: Map/identify safer areas and routes; Purchase loudspeakers and megaphones; Purchase basic shelter equipment (mattresses, blankets, tarps); Identify households for seed storage drums; Conduct beneficiary selection meetings; Establish agreements with local catering.",
+        "page_ref": 7
+      }
+    }
+  },
+  {
+    "file": "16567_EAP2024ID01_MDRID027.pdf",
+    "document_id": 16567,
+    "document_name": "Indonesia - Flood EAP (MDRID027)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 13,
+    "pages_selected": 7,
+    "trigger_mechanism": {
+      "description": "The EAP uses a multi-stage trigger mechanism consisting of a 'Pre-activation' phase and an 'Activation' phase. Pre-activation is triggered 6 days before a predicted peak based on rainfall intensity and probability. Activation is triggered 2 to 3 days before the event based on one of two conditions: a high-probability heavy rainfall forecast from BMKG or a specific rainfall threshold reached on the BNPB Prevention Dashboard. The system also incorporates river water level monitoring (Waspada, Siaga, Awas) to validate forecasts.",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": null
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "PMI NHQ will make the activation decision based on BMKG forecasts or BNPB’s Prevention Dashboard as follows: Condition 1: BMKG has issued forecast information for rainfall intensity exceeding 100mm in 24 hours with a probability of 80%... Or Condition 2: BNPB, through the Dashboard Pencegahan, provides information on rainfall exceeding the threshold of 80 mm/day in a specific area. 'Pre-activation' is carried out by utilizing forecast information on rainfall intensity exceeding 50mm in 6 hours with a probability of over 60% during the 6 days prior to the peak.",
+        "statement_english": null,
+        "thresholds": [
+          "Pre-activation: Rainfall intensity > 50mm in 6 hours with probability > 60%",
+          "Activation Condition 1: Rainfall intensity > 100mm in 24 hours with 80% probability",
+          "Activation Condition 2: Rainfall exceeding 80 mm/day",
+          "Water Level Categories: Waspada (Alert), Siaga (Standby), or Awas (Warning)"
+        ],
+        "source_authority": "BMKG (Indonesian Meteorology, Climatology, and Geophysics Agency) and BNPB (National Disaster Management Agency)",
+        "lead_time": "6 days (pre-activation) to 48-72 hours (activation)",
+        "geographic_scope": "Nationwide (Indonesia), with specific analysis for Bengawan Solo, Babura, Barito, and Mahakam watersheds",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Pre-activation activities include monitoring various platforms (seasonal forecasts, BMKG probabilistic forecasts), coordination with stakeholders, volunteer orientation, and procurement/prepositioning of first aid equipment, hygiene kits, and dignity kits.",
+        "page_ref": 4
+      }
+    }
+  },
+  {
+    "file": "16568_sEAP2024SV02-Summary.pdf",
+    "document_id": 16568,
+    "document_name": "El Salvador -Extreme Rainfall sEAP (MDRSV018)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 12,
+    "pages_selected": 7,
+    "trigger_mechanism": {
+      "description": "The EAP uses a conditional dual-trigger system where Trigger 1 (NHC probability) must be met before Trigger 2 (DGOA rainfall forecast) can activate the full EAP. Trigger 1 allows for zero-cost early actions, while Trigger 2 activates the full protocol and funded actions.",
+      "activation_type": "dual-trigger",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": null
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "Trigger 1: The National Hurricane Center (NHC) issues a greater than 60% chance of a tropical storm or hurricane moving into the General Directorate of the Hazards and Natural Resources Observatory (DGOA) \"emergency stage watch area\" for the next 7 days. Trigger 2: DGOA forecast of extreme rainfall, associated with a tropical storm or hurricane, exceeding 200 mm accumulated for a 3-day horizon in the months of May through November.",
+        "statement_english": null,
+        "thresholds": [
+          "Greater than 60% chance of a tropical storm or hurricane (NHC)",
+          "Moving into DGOA 'emergency stage watch area'",
+          "Exceeding 200 mm accumulated rainfall (DGOA)",
+          "3-day horizon",
+          "Months of May through November"
+        ],
+        "source_authority": "National Hurricane Center (NHC) and General Directorate of the Hazards and Natural Resources Observatory (DGOA)",
+        "lead_time": "3 to 7 days",
+        "geographic_scope": "Departments of Ahuachapán, La Paz, Sonsonate, Morazán, La Unión and Usulután, particularly the Pacific coast and banks of main bodies of water",
+        "is_conditional": true,
+        "condition_dependency": "Trigger 1 must be fulfilled to reach Trigger 2; Trigger 2 is the final activator for the EAP",
+        "preliminary_actions": "Trigger 1 allows for early actions that do not require cost for the EAP. Trigger 2 activates full early actions including multipurpose cash transfers and WASH kit distribution.",
+        "page_ref": 4
+      }
+    }
+  },
+  {
+    "file": "16569_sEAP2024CL01-Summary.pdf",
+    "document_id": 16569,
+    "document_name": "Chile - Wildfire sEAP (MDRCL018)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 13,
+    "pages_selected": 7,
+    "trigger_mechanism": {
+      "description": "The trigger system is based on the 'Red Button' (Botón Rojo) condition, which monitors specific meteorological and ignition conditions to predict wildfire risk and advance.",
+      "activation_type": "single-trigger",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "An updated forecast 3 days after receiving the trigger forecast to confirm if conditions are still above the thresholds or if they have lowered their probability of reaching the thresholds defined in the trigger."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "Trigger: Activation will be declared when the \"Red Button\" condition is reached, an ignition probability equal to or greater than 70%, wind speed equal to or greater than 20 Km/h, relative humidity less than 30% in the threatened territory. With 8 days in advance, this forecast must maintain a high probability that vulnerable communities will be reached.",
+        "statement_english": null,
+        "thresholds": [
+          "Ignition probability equal to or greater than 70%",
+          "Wind speed equal to or greater than 20 Km/h",
+          "Relative humidity less than 30%"
+        ],
+        "source_authority": "National Forestry Corporation (CONAF) - Red Button",
+        "lead_time": "8 days",
+        "geographic_scope": "V Region (Coastal farallón, Intermediate Depression, Cordillera de la Costa) and VII Region (Coastal Zone, Maule Basin, Pre-mountain range) of Chile",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Monitoring of fire advance by CONAF; alerting SENAPRED; training of volunteers in Multipurpose Cash Transfer; identification of regional storage centers; identification of vulnerable populated areas; procurement of Personal Protective Equipment (PPE) Kits.",
+        "page_ref": 4
+      }
+    }
+  },
+  {
+    "file": "16618_sEAP2024MM01_MDRMM022.pdf",
+    "document_id": 16618,
+    "document_name": "Myanmar - Heatwave sEAP (MDRMM022)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 21,
+    "pages_selected": 5,
+    "trigger_mechanism": {
+      "description": "The trigger system is a multi-stage mechanism starting with a 10-day pre-activation phase followed by a 5-day activation phase. It is based on Heat Index (HI) values calculated from daily maximum temperature and relative humidity forecasts. Activation is triggered when the HI exceeds the 90th percentile for at least three consecutive days.",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "A stop mechanism for high-value early actions (specifically cash) is initiated if the forecasted HI thresholds do not hold true for the corresponding days or if observed daily maximum temperature and humidity do not correspond to the HI thresholds. Cash distribution requires a minimum 48h lead time and is only confirmed when observed HI values and the next two days of forecasts surpass the thresholds."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "The Simplified EAP will be activated when: Calculated Heat Index (HI) ≥ 62.6 Yangon / 58.2 Mandalay for more or equal than 3 consecutive days (No unit to HI as it refers to Index Value) is forecasted based on DMH´s forecasts.",
+        "statement_english": null,
+        "thresholds": [
+          "Heat Index (HI) ≥ 62.6 for Yangon (Kaba Aye)",
+          "Heat Index (HI) ≥ 58.2 for Mandalay",
+          "Duration of 3 or more consecutive days",
+          "HI values corresponding to > 90th percentile for summer months (March-May)",
+          "10-day numerical weather prediction from Indian Meteorology Department (IMD) indicating potential heat extremes (Pre-activation stage)"
+        ],
+        "source_authority": "Department of Meteorology & Hydrology (DMH) of Myanmar and Indian Meteorology Department (IMD)",
+        "lead_time": "Up to 10 days (Pre-activation) with a 5-day activation window",
+        "geographic_scope": "Yangon (Kaba Aye) and Mandalay, Myanmar",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Heads up to EC members, verification of beneficiaries, setting up First Aid (FA) posts including shading places and water stands, dissemination of forecasts and awareness messages.",
+        "page_ref": 8
+      }
+    }
+  },
+  {
+    "file": "16633_MDRBF020sEAP.pdf",
+    "document_id": 16633,
+    "document_name": "Burkina Faso - Heatwave sEAP (MDRBF020)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 14,
+    "pages_selected": 7,
+    "trigger_mechanism": {
+      "description": "The simplified Early Action Protocol is activated based on a forecast from the National Meteorological Agency (ANAM) when a specific temperature threshold is predicted to be exceeded for a minimum duration of three consecutive days.",
+      "activation_type": "single-trigger",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": null
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "The simplified PAP is activated if a maximum temperature threshold of 42.4°C for at least three (03) consecutive days is announced by the National Meteorological Agency with a lead time of 4 days compared to the beginning.",
+        "statement_english": null,
+        "thresholds": [
+          "Maximum temperature of 42.4°C",
+          "Duration of at least 3 consecutive days",
+          "Exceeding the 90th percentile of the distribution of the hottest month of the year"
+        ],
+        "source_authority": "National Meteorological Agency (ANAM)",
+        "lead_time": "4 days",
+        "geographic_scope": "City of Ouagadougou, specifically spontaneous housing districts (non-lotis)",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Raising awareness among at-risk communities (lead time 2-0 days); Distribution of WASH kits, dignity kits, food, solar lighting kits, and cooling kits (lead time 4-2 days); Home visits for medical follow-up and care of people with special needs (lead time 2-0 days).",
+        "page_ref": 7
+      }
+    }
+  },
+  {
+    "file": "16646_sEAP2023CO01-Summary.pdf",
+    "document_id": 16646,
+    "document_name": "Colombia - Drought sEAP (MDRCO027)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 14,
+    "pages_selected": 8,
+    "trigger_mechanism": {
+      "description": "The EAP is activated based on official reports from IDEAM. It requires two conditions to be met simultaneously: a three-month precipitation forecast showing a 50% probability of below-normal rainfall and a Standardized Precipitation Index (SPI) forecast indicating moderate drought (values <= -1.4) for the same period.",
+      "activation_type": "dual-trigger",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": null
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "In accordance with the above, this EAP will be activated when IDEAM reports a precipitation forecast (three months) with a probability of 50% that rainfall will be below normal and that the SPI forecast indicates a moderate drought with values equal or below -1.4, for the same forecasted months, in the departments of the Caribbean and Andean region.",
+        "statement_english": null,
+        "thresholds": [
+          "Precipitation forecast (three months) with a probability of 50% that rainfall will be below normal",
+          "Standardized Precipitation Index (SPI) forecast indicating moderate drought with values equal or below -1.4"
+        ],
+        "source_authority": "IDEAM (Institute of Hydrology, Meteorology and Environmental Studies)",
+        "lead_time": "3 months",
+        "geographic_scope": "Departments of the Caribbean and Andean region, Colombia",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Readiness activities: Design and printing of educational materials for livelihood protection, update of feasibility/market studies for Cash and Voucher Assistance (CVA), mapping of Financial Service Providers (FSPs), volunteer training for CVA registration, and Water, Sanitation and Hygiene (WASH) workshops. Prepositioning activities: Purchase of nutritional blocks for livestock and hydro-retainers for crops.",
+        "page_ref": 6
+      }
+    }
+  },
+  {
+    "file": "16651_EAP2024SV01-Summary.pdf",
+    "document_id": 16651,
+    "document_name": "El Salvador - Drought EAP (MDRSV017)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 13,
+    "pages_selected": 8,
+    "trigger_mechanism": {
+      "description": "The EAP uses a dual-trigger mechanism based on monitoring weather conditions three months in advance. Trigger 1 monitors El Niño (ENSO) conditions in region 3.4, while Trigger 2 monitors quarterly precipitation forecasts. The final selection of intervention zones is determined by overlaying the Trigger 2 forecast onto a historical risk model to identify high-risk municipalities.",
+      "activation_type": "dual-trigger",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "A control mechanism will be evaluated three months after the initiation of the Early Action Protocol (EAP)."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "When the General Directorate of Threat Observatory and Natural Resources (DGOA) communicates an El Niño event in region 3.4 for the upcoming 3 or 4 months with a 60% probability, based on the official IRI-CPC forecast until April of year (0) or even earlier in year (-1).",
+        "statement_english": null,
+        "thresholds": [
+          "El Niño event in region 3.4",
+          "60% probability",
+          "IRI-CPC forecast until April of year (0) or earlier in year (-1)"
+        ],
+        "source_authority": "General Directorate of Threat Observatory and Natural Resources (DGOA) / IRI-CPC",
+        "lead_time": "3 to 4 months",
+        "geographic_scope": "El Salvador (Region 3.4 for ENSO monitoring)",
+        "is_conditional": true,
+        "condition_dependency": "This is the first trigger in a dual-trigger system, often preceding or coinciding with Trigger 2.",
+        "preliminary_actions": "Dissemination of drought alerts to the at-risk population in high-risk municipalities; Hygiene promotion campaign with key messages on treating dehydration and preventing heatstroke.",
+        "page_ref": 6
+      },
+      "trigger_statement_2": {
+        "statement": "When the DGOA has issued a quarterly precipitation forecast indicating that accumulated rainfall during May, June, and July will be below normal (33rd percentile).",
+        "statement_english": null,
+        "thresholds": [
+          "Accumulated rainfall during May, June, and July below normal (33rd percentile)",
+          "Severe precipitation deficit associated with the 10th percentile"
+        ],
+        "source_authority": "General Directorate of Threat Observatory and Natural Resources (DGOA)",
+        "lead_time": "3 months",
+        "geographic_scope": "El Salvador (specifically the Dry Corridor and high-risk municipalities like Mazahuat and El Carmen)",
+        "is_conditional": true,
+        "condition_dependency": "This is the second trigger in a dual-trigger system, used to refine the intervention area and activate implementation actions.",
+        "preliminary_actions": "Awareness workshop on adaptive practices for households with subsistence agro-livelihoods; Unconditional cash transfers tied to training; Unrestricted cash transfers for livestock livelihoods; Awareness workshops on the use of cash transfers; Distribution of unconditional cash transfers for basic needs; Cash transfer satisfaction survey; Assessment, treatment, and distribution of safe drinking water; Workshop on appropriate water use and hygiene; Installation of community storage tanks in schools and health centers; Distribution of family water purification and hygiene kits; Monitoring and evaluation of lessons learned.",
+        "page_ref": 6
+      }
+    }
+  },
+  {
+    "file": "16682_MDRLS010-EAP.pdf",
+    "document_id": 16682,
+    "document_name": "Lesotho - Cold Wave EAP (MDRLS010)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 7,
+    "pages_selected": 5,
+    "trigger_mechanism": {
+      "description": "The EAP is activated based on a specific temperature forecast issued by the national meteorological authority for the highland regions, requiring a sustained low temperature over a specific duration.",
+      "activation_type": "single-trigger",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": null
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "The EAP is activated when the Lesotho Meteorological Services (LMS) issues a forecast of 2oC maximum day temperature or less in the highlands for at least two consecutive days with a maximum lead time of four days to the onset.",
+        "statement_english": null,
+        "thresholds": [
+          "2°C maximum day temperature or less",
+          "At least two consecutive days"
+        ],
+        "source_authority": "Lesotho Meteorological Services (LMS)",
+        "lead_time": "4 days",
+        "geographic_scope": "Highlands of Lesotho",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Readiness and prepositioning activities include: pre-contracting financial service providers; targeting, pre-registration, and verification of beneficiaries; CVA refresher training for volunteers; capacity building of communities on DRR; MoUs with telecommunication and media providers; and prepositioning of snow barrows, snow chains, protective clothing, flags, whistles, and megaphones.",
+        "page_ref": 3
+      }
+    }
+  },
+  {
+    "file": "16700_EAP2024PH03_MDRPH055.pdf",
+    "document_id": 16700,
+    "document_name": "Philippines - Typhoon EAP (MDRPH055)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 9,
+    "pages_selected": 5,
+    "trigger_mechanism": {
+      "description": "The EAP is activated when any of the three defined trigger statements are met 72 hours before the anticipated landfall of a typhoon. The mechanism uses a combination of impact-based forecasting (510 model) and official meteorological bulletins (PAGASA). The PRC AA Technical Working Group also verifies the potential for high impact and additional conditions before activation.",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": "As the lead time is 3 days, the EAP does not include a stop mechanism."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "This EAP will be activated if 72 hours before the anticipated landfall the 510 model indicates at least three (3) municipalities in a province will have 10 per cent of their houses damaged.",
+        "statement_english": null,
+        "thresholds": [
+          "At least three (3) municipalities in a province with 10% of houses damaged"
+        ],
+        "source_authority": "Netherlands Red Cross 510 model / ECMWF",
+        "lead_time": "72 hours (3 days)",
+        "geographic_scope": "25 targeted provinces across North Luzon, Central Luzon, Bicol, Visayas, and Mindanao",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Identification and pre-registration of beneficiaries; training of chapters, LGUs, and volunteers; simulations; pre-agreements with service providers for SSK materials.",
+        "page_ref": 4
+      },
+      "trigger_statement_2": {
+        "statement": "This EAP will be activated if 72 hours before the anticipated typhoon landfall the 510 model indicates a minimum 50 per cent likelihood of the typhoon causing complete damage to over 200,000 houses across the country. Additionally, the EAP will be activated under conditions of a 60 per cent likelihood of complete damage to more than 160,000 houses, or a 70 per cent likelihood of complete damage to more than 90,000 houses, or an 80 per cent likelihood of complete damage to more than 50,000 houses.",
+        "statement_english": null,
+        "thresholds": [
+          "50% likelihood of complete damage to over 200,000 houses nationwide",
+          "60% likelihood of complete damage to more than 160,000 houses nationwide",
+          "70% likelihood of complete damage to more than 90,000 houses nationwide",
+          "80% likelihood of complete damage to more than 50,000 houses nationwide"
+        ],
+        "source_authority": "Netherlands Red Cross 510 model / ECMWF",
+        "lead_time": "72 hours (3 days)",
+        "geographic_scope": "National (across the country)",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Early harvesting of matured crops/fish; evacuation of livestock and relocation of assets; installation of Shelter Strengthening Kits (SSK); provision of Cash for Work.",
+        "page_ref": 4
+      },
+      "trigger_statement_3": {
+        "statement": "When PAGASA issues a typhoon bulletin with a predicted forecast that a Tropical Cyclone will reach wind speed of a) 185km/h in Central or Northern Luzon (Region 1) or b) 185 km/h in Eastern Visayas, Bicol or Calabarzon (Region 2) or c) 118 km/h in Caraga or Davao regions 72 hours before the expected landfall (Region 3), then this EAP will be activated.",
+        "statement_english": null,
+        "thresholds": [
+          "185 km/h wind speed in Central or Northern Luzon",
+          "185 km/h wind speed in Eastern Visayas, Bicol, or Calabarzon",
+          "118 km/h wind speed in Caraga or Davao regions"
+        ],
+        "source_authority": "PAGASA (Philippine Atmospheric, Geophysical and Astronomical Services Administration)",
+        "lead_time": "72 hours (3 days)",
+        "geographic_scope": "Central Luzon, Northern Luzon, Eastern Visayas, Bicol, Calabarzon, Caraga, and Davao regions",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Validation of pre-identified beneficiary lists; orientation for selected beneficiaries; implementation of early harvesting and shelter reinforcement.",
+        "page_ref": 4
+      }
+    }
+  },
+  {
+    "file": "16754_MDRTD023sEAP.pdf",
+    "document_id": 16754,
+    "document_name": "Chad - Floods EAP (MDRTD023)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 20,
+    "pages_selected": 7,
+    "trigger_mechanism": {
+      "description": "The EAP uses a sequenced activation mechanism. A first activation occurs at the seasonal scale in May to initiate preparedness and prepositioning, followed by a second activation at a short-term scale (7 days) for the implementation of direct early actions when extreme rainfall is imminent.",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": null
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "On a seasonal scale (information available in May with a two-month lead-time): above-normal seasonal rainfall forecasts, issued by the National Meteorological Agency (ANAM).",
+        "statement_english": null,
+        "thresholds": [
+          "Above-normal seasonal rainfall forecasts"
+        ],
+        "source_authority": "National Meteorological Agency (ANAM) / PRESASS",
+        "lead_time": "2 months",
+        "geographic_scope": "Moyen Chari, Mandoul, Logone Oriental, Tandjilé, Mayo Kebbi West, Salamat",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Briefing of volunteers in targeting and distribution; purchase and storage of agricultural equipment (300 wheelbarrows, 600 shovels, 600 pickaxes, 600 rakes); purchase and storage of 20,000 empty bags for home protection.",
+        "page_ref": 9
+      },
+      "trigger_statement_2": {
+        "statement": "Short-scale (7 days lead-time): Weekly EFI index forecasts from the ECMWF model > 0.8 AND ANAM extreme rain forecast.",
+        "statement_english": null,
+        "thresholds": [
+          "Weekly EFI index forecasts from the ECMWF model > 0.8",
+          "ANAM extreme rain forecast"
+        ],
+        "source_authority": "ECMWF (European Centre Model) and ANAM (National Meteorological Agency of Chad)",
+        "lead_time": "7 days",
+        "geographic_scope": "Moyen Chari, Mandoul, Logone Oriental, Tandjilé, Mayo Kebbi West, Salamat",
+        "is_conditional": true,
+        "condition_dependency": "This trigger is the second stage of a sequenced activation following the seasonal preparedness trigger.",
+        "preliminary_actions": "Implementation of direct early actions; housing safety actions; distribution of prepositioned materials to 400 targeted households.",
+        "page_ref": 9
+      }
+    }
+  },
+  {
+    "file": "16764_EAP2024SO01-Summary.pdf",
+    "document_id": 16764,
+    "document_name": "Somalia - Drought EAP (MDRSO019)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 9,
+    "pages_selected": 5,
+    "trigger_mechanism": {
+      "description": "The drought trigger mechanism is a dual-trigger system that combines hazard forecasting with dynamic vulnerability assessment. It requires both a meteorological drought indicator (SPI-12) and a food insecurity projection (IPC-based index) to reach specific thresholds within the same district.",
+      "activation_type": "dual-trigger",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "The stop mechanism is activated if situational analysis, monthly SPI-12 data, and FEWSNET projection updates indicate an improvement in the projected food security situation. The process is initiated by the FbF/EAP Manager and confirmed by the DRM Directors."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "When ICPAC issues an SPI-12 forecast of less than -1 for a district AND the FEWSNET food insecurity projection reaches at least 0.7 in its derived population-weighted index in the same district, then Anticipatory Actions will be triggered in the district.",
+        "statement_english": null,
+        "thresholds": [
+          "SPI-12 forecast of less than -1",
+          "FEWSNET food insecurity projection of at least 0.7 in its derived population-weighted index"
+        ],
+        "source_authority": "ICPAC (for SPI-12) and FEWSNET (for Food Insecurity projection)",
+        "lead_time": "90 days (3 months)",
+        "geographic_scope": "Districts in Somalia",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Early warning communication and advisory services (destocking, water conservation), rehabilitation of water points, and multi-purpose cash transfers. Readiness activities include yearly refresher trainings for volunteers in Cash, WASH, and Early Warning Communication.",
+        "page_ref": 4
+      }
+    }
+  },
+  {
+    "file": "16767_EAP2024KG03_MDRKG020.pdf",
+    "document_id": 16767,
+    "document_name": "Kyrgyzstan - Cold Wave EAP (MDRKG020)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 11,
+    "pages_selected": 6,
+    "trigger_mechanism": {
+      "description": "The EAP is activated based on a 7-day weather forecast from Kyrgyzhydromet with a lead time of four days. The process includes a confirmation step at 72 hours before the event to determine if the actions should proceed or be halted via a stop-mechanism.",
+      "activation_type": "single-trigger",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "If the probability of the occurrence of a cold wave with a lead time of 72 hours is less than 75 per cent, the Stop Mechanism will be activated. This halts the distribution process, registration/verification of beneficiaries, and publication of press releases."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "The EAP presented in this plan targets a cold wave and is triggered by a forecast provided by Kyrgyzhydromet with a lead time of four days.",
+        "statement_english": null,
+        "thresholds": [
+          "Forecast of a cold wave event",
+          "Lead time of 4 days",
+          "Probability of occurrence of at least 75% at 72 hours lead time (confirmation threshold)"
+        ],
+        "source_authority": "Kyrgyzhydromet (Hydrometeorological Service under the Ministry of Emergency Situations of the Kyrgyz Republic)",
+        "lead_time": "4 days",
+        "geographic_scope": "Kyrgyzstan (High-risk areas: Chuy, Naryn, Osh, Talas, Jalal-Abad, Batken, and Issyk-Kul provinces)",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Mobilizing RCSK FbF focal points, NDRT members and volunteers; beneficiary identification and registration; verification of vulnerable families; awareness raising; preparation of food parcels and non-food items (electrical heaters, blankets, mattresses, window insulation films); publication of press releases.",
+        "page_ref": 2
+      }
+    }
+  },
+  {
+    "file": "16796_Download.aspx.pdf",
+    "document_id": 16796,
+    "document_name": "Yemen - Floods EAP (MDRYE015)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 16,
+    "pages_selected": 8,
+    "trigger_mechanism": {
+      "description": "The trigger mechanism is a multi-stage system based on rainfall forecasts. It consists of a Readiness Trigger at a 7-day lead time and an Activation Trigger at a 3-day lead time, both utilizing the same rainfall threshold but different forecast windows and geographic focuses.",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": null
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "Readiness Trigger: The readiness trigger will be met when the median ensemble member of the ECMWF forecast indicates that 24-hour rainfall totals will be 20mm or above, looking at a time window of 7 days ahead across western Yemen (including Hajjah Governorate). Activation Trigger: The activation trigger will be met when the median ensemble member of the ECMWF forecast indicates that 24-hour rainfall totals will be 20 mm or above, looking at a time window within 3 days (72 hours) over the northwestern part of the country (including Hajjah Governorate).",
+        "statement_english": null,
+        "thresholds": [
+          "24-hour rainfall totals of 20mm or above",
+          "Median ensemble member of the ECMWF forecast",
+          "7-day lead time for Readiness",
+          "3-day (72 hours) lead time for Activation"
+        ],
+        "source_authority": "ECMWF (European Centre for Medium-Range Weather Forecasts) in coordination with Yemen Metrology Department",
+        "lead_time": "3 to 7 days",
+        "geographic_scope": "Western and Northwestern Yemen, specifically Hajjah Governorate (Abs district)",
+        "is_conditional": true,
+        "condition_dependency": "The Activation stage (3-day lead time) follows the Readiness stage (7-day lead time) based on updated forecasts.",
+        "preliminary_actions": "Activate branch disaster response team; disseminate Early Warning Early Action messaging and advisories; re-verify beneficiary lists for MPCA and shelter kits; notify financial service providers (FSPs) to begin preparedness; notify sandbag suppliers; procure and preposition first aid kits, stretchers, and emergency shelter/repair kits; coordinate with Cash and Market working group (CMWG), UNOCHA, and CCCM.",
+        "page_ref": 5
+      }
+    }
+  },
+  {
+    "file": "16797_MDRYE015sEAP.pdf",
+    "document_id": 16797,
+    "document_name": "Yemen - Floods EAP (MDRYE015)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 16,
+    "pages_selected": 8,
+    "trigger_mechanism": {
+      "description": "The trigger mechanism is a multi-stage system based on rainfall forecasts from the ECMWF. It consists of a Readiness Trigger at a 7-day lead time and an Activation Trigger at a 3-day lead time, both utilizing the same rainfall intensity threshold to initiate progressively intensive early actions.",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": null
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "Readiness Trigger: The readiness trigger will be met when the median ensemble member of the ECMWF forecast indicates that 24-hour rainfall totals will be 20mm or above, looking at a time window of 7 days ahead across western Yemen (including Hajjah Governorate). Activation Trigger: The activation trigger will be met when the median ensemble member of the ECMWF forecast indicates that 24-hour rainfall totals will be 20 mm or above, looking at a time window within 3 days (72 hours) over the northwestern part of the country (including Hajjah Governorate).",
+        "statement_english": null,
+        "thresholds": [
+          "24-hour rainfall totals of 20mm or above",
+          "Median ensemble member of the ECMWF forecast"
+        ],
+        "source_authority": "ECMWF",
+        "lead_time": "7 days (Readiness) and 3 days (Activation)",
+        "geographic_scope": "Western Yemen (Readiness) and Northwestern Yemen (Activation), specifically including Hajjah Governorate and IDP sites in Abs district.",
+        "is_conditional": true,
+        "condition_dependency": "The Activation Trigger (3 days) is a refinement of the Readiness Trigger (7 days) as the forecast window narrows.",
+        "preliminary_actions": "Activate branch disaster response team; disseminate Early Warning Early Action messaging and advisories; re-verify beneficiary lists for MPCA and shelter kits; notify financial service providers (FSPs) to begin preparedness; notify sandbag suppliers to prepare; distribute IEC materials (posters, brochures).",
+        "page_ref": 5
+      }
+    }
+  },
+  {
+    "file": "16827_MDRBI021sEAP.pdf",
+    "document_id": 16827,
+    "document_name": "Burundi - Floods -sEAP (MDRBI021)",
+    "document_language": null,
+    "status": "success",
+    "pages_analyzed": 13,
+    "pages_selected": 8,
+    "trigger_mechanism": null,
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "",
+        "statement_english": null,
+        "thresholds": [],
+        "source_authority": null,
+        "lead_time": null,
+        "geographic_scope": null,
+        "is_conditional": null,
+        "condition_dependency": null,
+        "preliminary_actions": null,
+        "page_ref": null
+      }
+    }
+  },
+  {
+    "file": "16845_sEAP2024NP01_MDRNP017.pdf",
+    "document_id": 16845,
+    "document_name": "Nepal - Floods EAP (MDRNP017)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 25,
+    "pages_selected": 5,
+    "trigger_mechanism": {
+      "description": "The EAP uses a multi-stage trigger system for riverine flooding. It begins with a Readiness Trigger (3-5 days lead time) based on GLOFAS return period forecasts or DHM/RIMES rainfall forecasts. This is followed by an Activation Trigger (48 hours lead time) based on DHM flood forecast bulletins or ICIMOD regional outlooks predicting specific water level thresholds at river gauging stations.",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "Evacuation of the most vulnerable population and livestock is only implemented once the rivers surpass the danger level (based on real-time river status from DHM) and are in a rising trend in respective gauging stations."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "The activation trigger for Karnali will be reached when the DHM flood forecast bulletin or regional flood outlook from ICIMOD or any special flood advisories from DHM predict the water level of Karnali in Chisapani to rise 1 metre above the existing danger level in the next 48 hours. The activation trigger for Babai and West Rapti River will be reached when the DHM flood forecast bulletin or regional flood outlook from ICIMOD or any special flood advisories from DHM predict water levels of Babai and West Rapti to rise to their existing danger levels in Chepang and Kusum station respectively in next 48 hours.",
+        "statement_english": null,
+        "thresholds": [
+          "GLOFAS predicts more than 2-year return period flow with a probability of 50% or more (3-5 days lead time)",
+          "Numerical weather prediction (NWP) from DHM/RIMES or special advisories predict extreme and widespread rainfall for the next 3 days, provided rivers are already flowing at stage level less than 2m from existing danger level",
+          "Karnali River (Chisapani station): Water level predicted to rise to 11.8m (1m above existing danger level of 10.8m) within 48 hours",
+          "West Rapti River (Kusum station): Water level predicted to rise to 7.8m (existing danger level) within 48 hours",
+          "Babai River (Chepang station): Water level predicted to rise to 6.8m (existing danger level) within 48 hours"
+        ],
+        "source_authority": "Department of Hydrology and Meteorology (DHM) Nepal, GLOFAS, ICIMOD, RIMES",
+        "lead_time": "48 hours (Activation), 3-5 days (Readiness)",
+        "geographic_scope": "Karnali, Babai and West Rapti river basins (Chisapani, Chepang and Kusum stations) in Banke, Bardiya and Kailali districts, Nepal",
+        "is_conditional": true,
+        "condition_dependency": "The activation trigger (48h) is preceded by a readiness trigger (3-5 days). The rainfall-based readiness trigger is conditional on the river stage being within 2m of the danger level.",
+        "preliminary_actions": "Confirmation of the readiness trigger initiates field preparation for evacuation and relocation of prepositioned items. Specific actions include: identification and orientation of volunteers, mapping and pre-arrangement of evacuation centers/safe sites, simulation of evacuation processes, mapping of local vendors and pre-agreements, and prepositioning of shelter tool kits, relief items, and waterproof storage bags.",
+        "page_ref": 6
+      }
+    }
+  },
+  {
+    "file": "16862_EAP2024GT02-Summary.pdf",
+    "document_id": 16862,
+    "document_name": "Guatemala - Floods EAP (MDRGT024)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 11,
+    "pages_selected": 8,
+    "trigger_mechanism": {
+      "description": "The EAP uses a dual-trigger mechanism based on meteorological and hydrological forecasts. Trigger 1 focuses on the probability of a tropical storm's path entering the national emergency zone, while Trigger 2 focuses on the probability of river flooding exceeding a specific return period.",
+      "activation_type": "dual-trigger",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": null
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "When the National Institute of Seismology, Volcanology, Meteorology and Hydrology (INSIVUMEH) of Guatemala or the National Hurricane Center (NOAA) issues a forecast with a 60% probability that the path of a tropical storm (63 km/hr) or greater, will enter the cyclone emergency zone of the Republic of Guatemala, with a waiting time of 3 to 5 days.",
+        "statement_english": null,
+        "thresholds": [
+          "60% probability of tropical storm path entering the cyclone emergency zone",
+          "Wind speed of 63 km/hr or greater"
+        ],
+        "source_authority": "INSIVUMEH or NOAA",
+        "lead_time": "3 to 5 days",
+        "geographic_scope": "Cyclone emergency zone of the Republic of Guatemala",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Registration and/or validation of families for Multipurpose Cash Transfers (MCT), distribution of MCT to selected families, and publication of guidelines with key information/messages on social networks.",
+        "page_ref": 4
+      },
+      "trigger_statement_2": {
+        "statement": "When the Global Flood Awareness System (GLoFAS) forecast exceeds a 50% probability for a 3-year return period in areas of high flood risk with a 3-day lead time.",
+        "statement_english": null,
+        "thresholds": [
+          "50% probability for a 3-year return period"
+        ],
+        "source_authority": "Global Flood Awareness System (GLoFAS) / ECMWF",
+        "lead_time": "3 days",
+        "geographic_scope": "Areas of high flood risk in Guatemala",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Registration and/or validation of families for Multipurpose Cash Transfers (MCT), distribution of MCT to selected families, and publication of guidelines with key information/messages on social networks.",
+        "page_ref": 5
+      }
+    }
+  },
+  {
+    "file": "16877_EAP2023GT03-Summary.pdf",
+    "document_id": 16877,
+    "document_name": "Guatemala - Drought EAP (MDRGT023)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 11,
+    "pages_selected": 5,
+    "trigger_mechanism": {
+      "description": "The EAP uses a dual-trigger mechanism for meteorological drought. It requires two criteria to be met in sequence: first, an El Niño warning (Trigger 1) which initiates monitoring and pre-activation, followed by a seasonal precipitation forecast below a specific percentile (Trigger 2) which leads to full activation.",
+      "activation_type": "dual-trigger",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "A 'stop mechanism' allows actions to be halted if an updated seasonal forecast does not confirm the Trigger 2 forecast."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "When INSIVUMEH issues a bulletin or seasonal precipitation forecast from the month of June with 50% probability below the first tercile (33rd percentile) for the next 3 months.",
+        "statement_english": null,
+        "thresholds": [
+          "El Niño warning in area 3.4 for the next 3 months with a 70% probability based on the IRI forecast as of June",
+          "Seasonal precipitation forecast with 50% probability below the first tercile (33rd percentile) for the next 3 months"
+        ],
+        "source_authority": "National Institute of Seismology, Volcanology, Meteorology and Hydrology (INSIVUMEH) and NOAA Climate Prediction Center (CPC/IRI)",
+        "lead_time": "3 months",
+        "geographic_scope": "Guatemalan Dry Corridor (Municipalities: Quetzaltenango, Chiquimula, Jalapa, Sacapulas, Retalhuleu, and San Lorenzo)",
+        "is_conditional": true,
+        "condition_dependency": "The activation (Trigger 2) is conditional upon the prior issuance of an El Niño warning (Trigger 1) with 70% probability.",
+        "preliminary_actions": "Monitoring/Pre-activation (Trigger 1): Socialization of information to the Management Team of the Guatemalan Red Cross and IFRC, verification of available inputs, and volunteer preparation. Activation (Trigger 2): Communication with National Society branches, definition of intervention areas, mapping of zones, and deployment of personnel.",
+        "page_ref": 5
+      }
+    }
+  },
+  {
+    "file": "16946_MDRKM012seap.pdf",
+    "document_id": 16946,
+    "document_name": "Comoros - Volcanic Ash (EAP) (MDRKM012)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 12,
+    "pages_selected": 8,
+    "trigger_mechanism": {
+      "description": "The trigger mechanism is a multi-stage alert system based on seismic and ground deformation monitoring. It consists of three alert levels (Yellow, Orange, Red) triggered by special bulletins from the Karthala Volcanological Observatory (OVK). The system monitors seismic crises, micro-deformation of the ground, and changes in gas composition (carbon dioxide).",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": null
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "It includes three types of alerts that are activated after receipt of the special bulletins of level 1 for the yellow alert, level 2 for the orange alert and level 3 for the red alert, which are monitored through the periodic forecasts shared by OVK two weeks, four days and two days before the impact respectively for the yellow, the orange and the red alert. The early action trigger threshold is reached, when the CRCS receives the special orange alert bulletin (OVK-SB2) four days before the impact. The red alert is reached, when the CRCS receives the special level 3 bulletin (OVK-BS3).",
+        "statement_english": null,
+        "thresholds": [
+          "Yellow Alert (Level 1): Receipt of special bulletin OVK-SB1 approximately 2 weeks before impact",
+          "Orange Alert (Level 2): Receipt of special bulletin OVK-SB2 approximately 4 days before impact",
+          "Red Alert (Level 3): Receipt of special bulletin OVK-BS3 approximately 2 days before impact",
+          "Orange Alert Technical Criteria: Anomaly higher than normal (second-level seismic crisis, second level micro-deformation of the ground, and change in the composition of gases through the accumulation of carbon dioxide) that persists for several hours a day"
+        ],
+        "source_authority": "Observatoire Volcanologique du Karthala (OVK) / Centre National de Documentation et de la Recherche Scientifique des Comores",
+        "lead_time": "2 weeks to 2 days",
+        "geographic_scope": "Ngazidja island (Comoros), specifically the regions of Mbadjini, Hambou, Bambao, Itsandra, Washilli, and Dimani",
+        "is_conditional": true,
+        "condition_dependency": "The early action protocol follows a sequential alert level system where specific actions are tied to the progression from Yellow to Orange and Red alerts.",
+        "preliminary_actions": "Yellow phase: Sensitization activities and covering water sources. Orange phase: Distribution of sanitation, WASH, and dignity kits; technical support for site identification and evacuation; psychosocial support. Red phase: Distribution of dust masks and protective glasses to the most at-risk population before evacuation.",
+        "page_ref": 5
+      }
+    }
+  },
+  {
+    "file": "16988_EAP2023SZ01_MDRSZ005.pdf",
+    "document_id": 16988,
+    "document_name": "Eswatini - Drought EAP (MDRSZ005)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 10,
+    "pages_selected": 6,
+    "trigger_mechanism": {
+      "description": "The EAP uses a 2-step triggering process. The first step occurs in September for readiness and low-regret actions based on a seasonal forecast. The second step occurs in mid-January for full activation of food and water-related early actions based on observed drought indices from the preceding three months.",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "The Disaster Management Coordinator will be responsible for the activation and the stop mechanism with guidance of forecast information from the Meteorological Department."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "The trigger is characterized by a 2-step triggering process: one starting in September for readiness and low-regret actions to be triggered by “below to normal” forecast issued by Eswatini Meteorological Services and the second one in mid-January based on low CDI average observed over the OND season aimed at triggering food and water-related early actions.",
+        "statement_english": null,
+        "thresholds": [
+          "“below to normal” rainfall forecast issued by Eswatini Meteorological Services in September",
+          "low Composite Drought Index (CDI) average observed over the OND (October-November-December) season"
+        ],
+        "source_authority": "Eswatini Meteorological Services (EMS)",
+        "lead_time": "3 Months / 0 Months",
+        "geographic_scope": "Most drought prone areas with less coping capabilities (Lowveld region)",
+        "is_conditional": true,
+        "condition_dependency": "The mid-January activation is conditional on the monitoring and readiness phase initiated in September.",
+        "preliminary_actions": "Readiness activities including constituency and chiefdom sensitizations, targeting, registration, and verification of beneficiaries. Full activation includes distribution of multi-purpose cash for food, conditional cash for garden fencing, seeds, and animal care kits, procurement and delivery of hay bales, and water trucking.",
+        "page_ref": 2
+      }
+    }
+  },
+  {
+    "file": "17037_EAP2021BD06_MDRBD033.pdf",
+    "document_id": 17037,
+    "document_name": "Bangladesh - Cyclone EAP (MDRBD033)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 9,
+    "pages_selected": 7,
+    "trigger_mechanism": {
+      "description": "The EAP uses a two-stage trigger mechanism consisting of a Pre-Activation stage and an Activation stage. It relies on a combination of official government warnings (BMD signals), meteorological forecasts of wind speed from multiple global and regional models, and impact-based analysis of potential household asset damage.",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": null
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "Stage I: Pre-Activation: 'When BMD issues a Signal 4 or above warning with a lead time of 72 hours or more' AND 'BMD / IMD / ECMWF / GFS / JTWC (at least two models) forecasts wind speeds of 125 km/h or greater in the coastal districts of Bangladesh with a lead time of 72 hours or more AND with a potential damage of 25% household asset of the respective Unions'. Stage II: Activation: 'When BMD issues a Signal 7 or above warning with a lead time of 30 hours or more' AND 'BMD / IMD forecasts wind speeds of 125 km/h or greater in the coastal districts of Bangladesh with a lead time of 30 hours or more AND with a potential damage of 25 per cent household asset of the respective Unions'.",
+        "statement_english": null,
+        "thresholds": [
+          "BMD Signal 4 or above (Pre-activation stage)",
+          "BMD Signal 7 or above (Activation stage)",
+          "Wind speeds of 125 km/h or greater",
+          "Potential damage of 25% household assets in respective Unions",
+          "Agreement of at least two forecast models (BMD, IMD, ECMWF, GFS, or JTWC)"
+        ],
+        "source_authority": "Bangladesh Meteorological Department (BMD), Indian Meteorological Department (IMD), ECMWF, GFS, JTWC",
+        "lead_time": "30 to 72 hours",
+        "geographic_scope": "14 coastal districts of Bangladesh",
+        "is_conditional": true,
+        "condition_dependency": "The Activation stage (30 hours lead time) follows the Pre-Activation stage (72 hours lead time) based on updated forecasts and higher warning signals.",
+        "preliminary_actions": "Early warning dissemination (approx. 150,000 people); transport arrangement to evacuate people and livestock to cyclone shelters; distribution of food (flattened rice, sugar/molasses, energy biscuits), drinking water, and ORS at shelters; provision of basic first aid and hygiene items; cyclone shelter management support (lighting and WASH).",
+        "page_ref": 3
+      }
+    }
+  },
+  {
+    "file": "17039_MDRMZ021.pdf",
+    "document_id": 17039,
+    "document_name": "Mozambique - Cyclone EAP (MDRMZ021)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 11,
+    "pages_selected": 7,
+    "trigger_mechanism": {
+      "description": "The EAP is activated based on cyclone alerts from the National Meteorological Institute (INAM). When a forecast meets the defined threshold, the Technical Committee for Disaster Management (CTGC) meets to decide on an official disaster alert. CVM activates the EAP only following this official government announcement.",
+      "activation_type": "single-trigger",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "If the cyclone changes track dramatically to the point where selected communities are unlikely to suffer impacts, distribution is stopped and materials are returned to the warehouse. This mechanism only applies if communities have not yet been notified and distributions have not begun."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "The threshold or trigger for activation of this EAP will be a category 3 cyclone with an anticipated speed of 120 km/h or more at landfall, as indicated by INAM in their 72-hour forecast. This corresponds to an event with a return period of 5 years. In exceptional cases, the EAP may be activated below the trigger threshold of 120 km/h it means 100km/h based on expert consensus, if levels of vulnerability have significantly increased at the time of activation due to compounding risks which emerged after the finalization of the EAP (e.g. onset of a pandemic) or because the exposed area has recently been impacted by another natural extreme event and find itself in the process of recovery and reconstruction.",
+        "statement_english": null,
+        "thresholds": [
+          "Category 3 cyclone",
+          "Wind speed of 120 km/h or more at landfall",
+          "Return period of 5 years",
+          "Exceptional threshold of 100 km/h based on expert consensus for high vulnerability or compounding risks"
+        ],
+        "source_authority": "National Meteorological Institute (INAM)",
+        "lead_time": "72 hours",
+        "geographic_scope": "Coastal districts in northern and central Mozambique (maximum of 3 districts simultaneously)",
+        "is_conditional": true,
+        "condition_dependency": "Official announcement of a disaster alert by the Technical Committee for Disaster Management (CTGC)",
+        "preliminary_actions": "Monitoring by FbF focal points in INAM's Forecasting Department; CTGC meeting to discuss forecasts; activation of CVM volunteers; dissemination of information on the phenomenon; dissemination of messages on community radios.",
+        "page_ref": 5
+      }
+    }
+  },
+  {
+    "file": "17042_MDRMZ021sEAP.pdf",
+    "document_id": 17042,
+    "document_name": "Mozambique - Cyclone EAP (MDRMZ021)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 11,
+    "pages_selected": 7,
+    "trigger_mechanism": {
+      "description": "The EAP is activated based on a 72-hour forecast from the National Meteorological Institute (INAM). Activation occurs when a Category 3 cyclone with wind speeds of at least 120 km/h is predicted to make landfall. The process requires an official alert from the Technical Committee for Disaster Management (CTGC), of which the Mozambique Red Cross (CVM) is a member.",
+      "activation_type": "single-trigger",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "If the cyclone changes track dramatically to the point where selected communities are unlikely to suffer any impacts, distribution will be stopped and materials returned to the warehouse. This stop mechanism only takes effect if the cyclone changes course before communities have been notified of impending support and/or distributions have begun."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "The threshold or trigger for activation of this EAP will be a category 3 cyclone with an anticipated speed of 120 km/h or more at landfall, as indicated by INAM in their 72-hour forecast. This corresponds to an event with a return period of 5 years. In exceptional cases, the EAP may be activated below the trigger threshold of 120 km/h it means 100km/h based on expert consensus, if levels of vulnerability have significantly increased at the time of activation due to compounding risks which emerged after the finalization of the EAP (e.g. onset of a pandemic) or because the exposed area has recently been impacted by another natural extreme event and find itself in the process of recovery and reconstruction.",
+        "statement_english": null,
+        "thresholds": [
+          "Category 3 cyclone",
+          "Wind speed of 120 km/h or more at landfall",
+          "5-year return period",
+          "100 km/h wind speed (exceptional case for compounding risks or recent disaster impact)"
+        ],
+        "source_authority": "National Meteorological Institute (INAM)",
+        "lead_time": "72 hours",
+        "geographic_scope": "Coastal districts in northern and central Mozambique (maximum of 3 districts within a 120 km radius of forecasted landfall)",
+        "is_conditional": true,
+        "condition_dependency": "Activation is conditional on the official announcement of an alert by the Technical Committee for Disaster Management (CTGC). The exceptional 100 km/h trigger requires consensus between CVM and IFRC based on consultations with government partners and technical experts.",
+        "preliminary_actions": "Monitoring of triggers by FbF focal points at INAM; CTGC meeting to discuss forecasts; selection of focus districts based on vulnerability criteria; activation of CVM volunteers; dissemination of information via community radios; demonstration of house reinforcement; distribution of shelter kits and WASH materials (chlorine/buckets).",
+        "page_ref": 5
+      }
+    }
+  },
+  {
+    "file": "17044_MDRMZ022.pdf",
+    "document_id": 17044,
+    "document_name": "Mozambique - Floods EAP (MDRMZ022)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 11,
+    "pages_selected": 6,
+    "trigger_mechanism": {
+      "description": "The EAP is activated based on hydro-meteorological warnings indicating that water levels corresponding to a five-year return period discharge will be reached at upstream reference stations. It utilizes a dual-trigger approach involving national hydrological forecasts and the GloFAS global model as an alternative to extend lead times.",
+      "activation_type": "dual-trigger",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "Activities and distributions will be stopped and materials returned to the warehouse if the flood characteristics change dramatically such that selected communities are unlikely to be impacted. This mechanism only applies if communities have not yet been notified and distributions have not begun."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "The actions proposed will be activated on the basis of hydro-meteorological warnings indicating that the trigger level (water level correspondent to discharge of five-year return period at the river basin reference station) will be reached within 72 hours (3 days).",
+        "statement_english": null,
+        "thresholds": [
+          "Water level correspondent to discharge of five-year return period at the river basin reference station"
+        ],
+        "source_authority": "National Directorate of Water Resources Management (DNGRH)",
+        "lead_time": "48 to 72 hours (3 days)",
+        "geographic_scope": "Limpopo, Buzi, Zambezi and Licungo hydrographic basins (specifically 12 districts in Gaza, Sofala, and Zambezia provinces)",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Monitoring of triggers by FbF focal points; Technical Committee on Disaster Management (CTGD) discussions; coordination with INGD for activation approval.",
+        "page_ref": 2
+      },
+      "trigger_statement_2": {
+        "statement": "This EAP will also incorporate GloFAS as an alternative trigger for the Buzi and Licungo rivers, where the model demonstrates sufficient capabilities, providing a lead time of approximately 7 days for Buzi and Licungo. Despite the Limpopo River presenting indications lower than the previous ones, they are still sufficient for use, given its lead time of 3 to 7 days.",
+        "statement_english": null,
+        "thresholds": [
+          "GloFAS model indications of flood risk (aligned with 5-year return period discharge)"
+        ],
+        "source_authority": "GloFAS (via REPRESA project)",
+        "lead_time": "3 to 7 days",
+        "geographic_scope": "Buzi, Licungo, and Limpopo rivers",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Automated email monitoring set up by the REPRESA project; Climate Centre review of GloFAS model skill for Limpopo and Zambezi rivers.",
+        "page_ref": 6
+      }
+    }
+  },
+  {
+    "file": "17090_EAP2023HN04-Summary.pdf",
+    "document_id": 17090,
+    "document_name": "Honduras - Population Movement EAP (MDRHN021)",
+    "document_language": null,
+    "status": "success",
+    "pages_analyzed": 13,
+    "pages_selected": 6,
+    "trigger_mechanism": null,
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "",
+        "statement_english": null,
+        "thresholds": [],
+        "source_authority": null,
+        "lead_time": null,
+        "geographic_scope": null,
+        "is_conditional": null,
+        "condition_dependency": null,
+        "preliminary_actions": null,
+        "page_ref": null
+      }
+    }
+  },
+  {
+    "file": "17092_EAP2023HN03-Summary.pdf",
+    "document_id": 17092,
+    "document_name": "Honduras - Floods EAP (MDRHN020)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 12,
+    "pages_selected": 8,
+    "trigger_mechanism": {
+      "description": "The EAP uses a dual-trigger mechanism for activation. Both a meteorological condition (Tropical Storm forecast) and a hydrological condition (Flood forecast) must be met simultaneously to trigger the priority early actions. The system relies on a 3-to-5-day lead time.",
+      "activation_type": "dual-trigger",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": null
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "The activation statement will have 2 criteria (both must be met): 1. CENAOS or NOAA issues a forecast with a 60% probability of a tropical storm (34 knots) or greater reaching the warning area with a lead time of between 3 to 5 days. 2. When the GEOGLOWS/GloFAS forecast exceeds 50% probability for a 10-year return period in high flood hazard areas with a 3-day lead time.",
+        "statement_english": null,
+        "thresholds": [
+          "60% probability of a tropical storm (34 knots) or greater reaching the warning area",
+          "GEOGLOWS/GloFAS forecast exceeds 50% probability for a 10-year return period in high flood hazard areas"
+        ],
+        "source_authority": "CENAOS, NOAA, GEOGLOWS, GloFAS, ECMWF",
+        "lead_time": "3 to 5 days",
+        "geographic_scope": "Honduras (specifically high flood hazard areas and municipalities identified in the flood risk index)",
+        "is_conditional": false,
+        "condition_dependency": "Both meteorological and hydrological criteria must be met simultaneously for activation.",
+        "preliminary_actions": "Readiness activities: Hiring of anticipation referent and GIS technician, development of simulations and workshops, purchase of satellite tool licenses, and socialization of the EAP. Prepositioning activities: CTP prepositioning (plastic/electronic code service), acquisition of 20 water quality kits, 2,000 buckets, family hygiene kits, and protective/visibility equipment for volunteers.",
+        "page_ref": 5
+      }
+    }
+  },
+  {
+    "file": "17174_EAP2023CR02-Costa-Rica-Floods-activation.pdf",
+    "document_id": 17174,
+    "document_name": "Costa Rica - Floods EAP (MDRCR024)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 10,
+    "pages_selected": 8,
+    "trigger_mechanism": {
+      "description": "The EAP uses a multi-stage trigger system based on forecasts from the National Meteorological Institute (IMN). Trigger 1 serves as a monitoring and pre-activation phase, while Trigger 2 initiates full activation. Trigger 2 can also be declared directly (bypassing Trigger 1) if specific rainfall and storm location conditions are met to avoid 'missed events'.",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "If a forecast update is issued 2 days after Trigger 2 activation and indicates that cumulative rainfall will not exceed 300 mm for a 3-day horizon, the stop mechanism is activated and early actions are discontinued."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "Information from the National Meteorological Institute (IMN), on the forecast of a tropical storm with a trajectory entering at least Zone 3 indicated in the IMN Emergency Protocol, with a 60% probability and a lead time of 5 days.",
+        "statement_english": null,
+        "thresholds": [
+          "Tropical storm trajectory entering at least Zone 3 (IMN Emergency Protocol)",
+          "60% probability",
+          "5-day lead time"
+        ],
+        "source_authority": "National Meteorological Institute (IMN)",
+        "lead_time": "5 days",
+        "geographic_scope": "Zone 3 as defined in the IMN Emergency Protocol",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Monitoring of IMN updates; Technical meeting with IMN; GIS analysis and preparation of intervention map; Review of analysis with DINAGER; Coordination with COR and local committees; Reporting to National Society management; Coordination with local authorities; Establishing communication channels with the community; Financial, human, and logistical resource preparation.",
+        "page_ref": 6
+      },
+      "trigger_statement_2": {
+        "statement": "Occurs when the IMN issues a forecast of extreme rainfall with a high probability of exceeding 400 mm of accumulated precipitation for a 5-day horizon, currently the EAP is activated. Trigger 2 may be declared directly when cumulative rainfall of between 300 and 400 mm is forecast, in association with the formation of a tropical depression in danger zone '1 or 2'.",
+        "statement_english": null,
+        "thresholds": [
+          "Accumulated precipitation exceeding 400 mm for a 5-day horizon",
+          "Accumulated rainfall between 300 and 400 mm associated with a tropical depression in danger zone 1 or 2"
+        ],
+        "source_authority": "National Meteorological Institute (IMN)",
+        "lead_time": "5 days",
+        "geographic_scope": "Prioritized flood hazard zones and river basins in Costa Rica",
+        "is_conditional": true,
+        "condition_dependency": "Usually follows Trigger 1, but can be declared directly regardless of Trigger 1 status to mitigate risk of missed events.",
+        "preliminary_actions": "Execution of humanitarian aid delivery; Multi-purpose Cash Distribution.",
+        "page_ref": 6
+      }
+    }
+  },
+  {
+    "file": "17240_EAP2023EC03-Summary.pdf",
+    "document_id": 17240,
+    "document_name": "Ecuador - Volcanic Ash (MDREC024)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 15,
+    "pages_selected": 7,
+    "trigger_mechanism": {
+      "description": "The EAP uses a multi-stage trigger system based on volcanic activity reports (Special Reports A, B, and C) issued by IGEPN. Trigger 1 focuses on awareness and preparation based on internal volcanic changes, while Trigger 2 focuses on fund requests and full activation based on eruptive events and ash fall modeling.",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "The stop mechanism is defined by Special Report B. When this report indicates that the internal activity of the volcano (seismicity, degassing, and deformation) has decreased and stabilized, the intervention in the communities will be lifted."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "Trigger 1: The EAP will activate actions of the Ecuadorian Red Cross in terms of awareness in high-risk areas with a spatial report A, indicating significant changes in the internal activity of a volcano. This type of report is issued when a significant change, increase in this case, in the internal activity of the volcano (seismicity, gas, deformation, etc.) is observed.",
+        "statement_english": null,
+        "thresholds": [
+          "Issuance of Special Report A",
+          "Significant increase in internal activity (seismicity, gas, deformation, etc.)"
+        ],
+        "source_authority": "IGEPN (Geophysical Institute of the National Polytechnic)",
+        "lead_time": "Variable (can be months before an eruption; 2020 experience showed awareness from June to September)",
+        "geographic_scope": "High-risk areas near volcanoes",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Implementation of Awareness Plan; Training for volunteers in volcanic ash monitoring and protection measures; Registration of potentially affected people; Prepositioning of Health and Livelihood Protection Kits in strategic warehouses (Tungurahua, Pichincha, Imbabura).",
+        "page_ref": 5
+      },
+      "trigger_statement_2": {
+        "statement": "Trigger 2: The EAP will activate the request for funds with a special report B (Increase of parameters of internal activity of the volcano) and/or with a spatial report C, which indicates an eruptive event with an explosive index (VEI 3) with possible impact on the communities. The ASH3D Ash Fall and Dispersion Model of the IGEPN should indicate at least that the 2 mm ash fall in the communities is exceeded.",
+        "statement_english": null,
+        "thresholds": [
+          "Issuance of Special Report B (Increase of parameters)",
+          "Issuance of Special Report C (Eruptive event with VEI 3)",
+          "ASH3D or FALL3D model forecast exceeding 2 mm ash fall",
+          "Impact level 1: 2 to 5 mm ash fall",
+          "Impact level 2: 5 to 10 mm ash fall",
+          "Impact level 3: 10 to 300 mm ash fall"
+        ],
+        "source_authority": "IGEPN (ASH3D Model), INAMHI (FALL3D Model)",
+        "lead_time": "Short-term/Immediate (uses real-time information such as ash column height and direction)",
+        "geographic_scope": "Communities prioritized by risk index based on ash fall dispersion models",
+        "is_conditional": true,
+        "condition_dependency": "Activation of Trigger 2 is typically preceded by the monitoring phase of Trigger 1, though Report B can be generated any time after Report A.",
+        "preliminary_actions": "Administrative and operational alert of the National Society; Distribution of Health Protection Kits (N95 masks, goggles); Distribution of Livelihood Protection Kits (plastic tarps, toolkits); Multisectoral distribution of Cash and Voucher Assistance (CVA) of approximately USD 200 (for ash fall >= 10 mm); Protection of water supply sources (jerrycans and tarps).",
+        "page_ref": 5
+      }
+    }
+  },
+  {
+    "file": "17253_MDRGR005seap.pdf",
+    "document_id": 17253,
+    "document_name": "Greece - Extreme Heat sEAP (MDRGR005)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 16,
+    "pages_selected": 8,
+    "trigger_mechanism": {
+      "description": "The trigger system is based on an impact-based forecast tool (Extreme Temperature Categorization system) that correlates extreme temperature data with excess mortality. While the National Observatory of Athens (NOA) provides alerts for Categories 1 through 3, the sEAP only activates for high-severity Category 3 events. There is a monitoring phase for lower categories (soft triggers) where standard awareness activities are conducted.",
+      "activation_type": "single-trigger",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": null
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "The sEAP trigger will be reached when NOA issues a Heat Alert category 3, with a predicted excess mortality rate of 45% or higher, within a five-day lead time to implement the early action activities.",
+        "statement_english": null,
+        "thresholds": [
+          "Heat Alert Category 3",
+          "Predicted excess mortality rate of 45% or higher",
+          "5-day lead time"
+        ],
+        "source_authority": "National Observatory of Athens (NOA) / Arsht-Rockefeller and Atlantic Council Extreme Temperature Categorization system",
+        "lead_time": "5 days",
+        "geographic_scope": "Cities of Athens, Patras, and Thessaloniki",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Monitoring of Heat Alerts Category 1 and above; commencement of usual heat activities within existing capacity for alerts below the 45% threshold; investment in paid social media boosts when soft triggers are met.",
+        "page_ref": 5
+      }
+    }
+  },
+  {
+    "file": "17272_EAP2023ET02-Summary_Ethiopia_Drought.pdf",
+    "document_id": 17272,
+    "document_name": "Ethiopia - Drought EAP (MDRET033)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 12,
+    "pages_selected": 5,
+    "trigger_mechanism": {
+      "description": "The activation system follows a multi-stage process starting with a watch signal based on SPI analysis. The first trigger is activated one month before the season based on seasonal SPI forecasts. A second activation is triggered one month after the start of the season based on agricultural drought signals (crop yield reduction).",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "If the moisture or Water Requirement Satisfaction Index (WRSI) is not showing the level of critical (not passed the threshold) a stop mechanism will be initiated."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "The ERCS will activate the EAP with the first trigger (one month ahead of a season) when the seasonal forecast (provided by the ECMWF/ICPAC and EMI) indicated that more than 50% of the geographical area of a zone is predicted to be drier than normal conditions SPI<-1, and at least 40% probability of below normal for JJA season and 45% probability of below normal OND and MAM seasons with a 1-month lead time.",
+        "statement_english": null,
+        "thresholds": [
+          "More than 50% of the geographical area of a zone predicted to be drier than normal (SPI < -1)",
+          "At least 40% probability of below normal for JJA season",
+          "At least 45% probability of below normal for OND and MAM seasons"
+        ],
+        "source_authority": "ECMWF/ICPAC and EMI",
+        "lead_time": "1 month ahead of the season",
+        "geographic_scope": "East and West Harerge, Afar Zone 1 and Zone 3, Northern Shewa, North and South Wollo, South Gonder, Southern Tigray, Somali (Afder, Dhawa, Dollo, Fafan, Korah, Liben and Shebelle zones), Borena, Guji, Erer, and East Bale zones",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "SPI-3 forecast used to warn Technical Working Group (TWG) and at-risk communities to perform 'community-owned' activities ahead of the season.",
+        "page_ref": 3
+      },
+      "trigger_statement_2": {
+        "statement": "The second activation will be triggered (one month after the start of the season) when the crop yield reduction is predicted to be more than 50% based on LEAP index",
+        "statement_english": null,
+        "thresholds": [
+          "Crop yield reduction predicted to be more than 50% based on LEAP index (Water Requirement Satisfaction Index for a specific crop)"
+        ],
+        "source_authority": "LEAP model",
+        "lead_time": "1 month after the start of the season",
+        "geographic_scope": "Drought prone zones in Ethiopia (Belg receiving, Northern pastorals, and Southern pastoral livelihood zones)",
+        "is_conditional": true,
+        "condition_dependency": "Activated after the first trigger and four weeks after the start of the season if agricultural drought signals pass the threshold.",
+        "preliminary_actions": "Automated messages sent to TWG members; EDRMC calls urgent TWG meeting; official implementation of early actions starts; dissemination of early warning information; rehabilitation of water facilities; promotion of food saving and drought-tolerant crops; vaccination and pre-stocking of vet medicines.",
+        "page_ref": 3
+      }
+    }
+  },
+  {
+    "file": "17301_EAP2023BD05_MDRBD032.pdf",
+    "document_id": 17301,
+    "document_name": "Bangladesh - Heatwave EAP (MDRBD032)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 14,
+    "pages_selected": 7,
+    "trigger_mechanism": {
+      "description": "The EAP uses a two-stage trigger mechanism consisting of a pre-activation stage and an activation stage. Both stages share the same physical thresholds but differ in forecast sources and lead times. The system requires monitoring of temperature and heat index forecasts.",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "The stop mechanism is set at Day 4, 3, and 2 before the potential occurrence. If the forecast 2 to 3 days prior indicates the activation trigger will not be hit, the committee stops the activation. However, if cash distribution or other early actions have already started, implementation continues."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "Pre-activation: to activate the pre-activation trigger, the forecast (from ECMWF and/or GFS) needs to meet two thresholds – a temperature of 38°C or more for 2 two consecutive days, and a heat index of 38 or more for two consecutive days. The expected lead time is 5–7 days. Activation: the activation trigger has a same threshold as pre-activation. However, the source of the forecast is BMD and either ECMWF or GFS; and the expected lead time is 2-3 days.",
+        "statement_english": null,
+        "thresholds": [
+          "Temperature of 38°C or more for 2 consecutive days",
+          "Heat index of 38 or more for 2 consecutive days"
+        ],
+        "source_authority": "BMD (Bangladesh Meteorological Department), ECMWF, and GFS",
+        "lead_time": "5-7 days (Pre-activation) and 2-3 days (Activation)",
+        "geographic_scope": "Dhaka City (North and South), specifically targeting high-impact Thanas and slums",
+        "is_conditional": true,
+        "condition_dependency": "The Activation stage (2-3 days lead time) is conditional on the forecast being confirmed by the Bangladesh Meteorological Department (BMD) in addition to ECMWF or GFS after the Pre-activation threshold has been monitored.",
+        "preliminary_actions": "Mapping Thanas expected to experience most impact; beneficiary selection; MPCG (Multi-purpose Cash Grant) distribution; ambulance support for referral cases; first aid services; cooling station/centre setup; distribution of safe drinking water and saline; mass awareness messaging through miking.",
+        "page_ref": 6
+      }
+    }
+  },
+  {
+    "file": "17333_EAP2023KG02_MDRKG016.pdf",
+    "document_id": 17333,
+    "document_name": "Kyrgyzstan - Heatwave (MDRKG016)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 10,
+    "pages_selected": 5,
+    "trigger_mechanism": {
+      "description": "The EAP is activated based on a 7-day forecast from Kyrgyzhydromet. A 72-hour forecast is then used as a confirmation step. If the probability of the heatwave at the 72-hour mark falls below a specific threshold, a stop mechanism is activated to halt early actions.",
+      "activation_type": "single-trigger",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "If the probability of the occurrence of a heatwave with a lead time of 72 hours is less than 75%, the Stop Mechanism is activated by the RCSK Head of the Disaster Management Department. Implementation of early actions is then stopped unless a subsequent forecast confirms the heatwave."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "the seven-day forecast of Kyrgyzhydromet indicates that temperature will exceed the 85th percentile for three (3) and more consecutive days during June – August throughout the life cycle of the EAP with a lead time of four (4) days for the selected local points.",
+        "statement_english": null,
+        "thresholds": [
+          "Temperature exceeds the 85th percentile",
+          "Duration of 3 or more consecutive days",
+          "Occurs during the months of June, July, or August",
+          "Lead time of 4 days",
+          "Confirmation threshold: 72-hour forecast probability must be 75% or higher"
+        ],
+        "source_authority": "Kyrgyzhydromet",
+        "lead_time": "4 days",
+        "geographic_scope": "Selected local points in Chui, Issyk-Kul, Talas, Batken, Jalal-Abad and Osh provinces",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Distribution of food parcels and hygiene kits for families below the poverty line; distribution of coloring books and pencils for children; installation of air conditioners in care homes and orphanages; installation of information boards; conducting information campaigns (first aid master classes, videos); early warning via SMS.",
+        "page_ref": 4
+      }
+    }
+  },
+  {
+    "file": "17366_EAP2023PK01_MDRPK024.pdf",
+    "document_id": 17366,
+    "document_name": "Pakistan - Riverine Flood (MDRPK024)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 26,
+    "pages_selected": 7,
+    "trigger_mechanism": {
+      "description": "The EAP uses a multi-stage trigger system based on flood bulletins from the Flood Forecasting Division (FFD). An initial activation trigger is reached 3-5 days in advance to start early warnings and beneficiary registration. A second confirmation stage occurs 24-48 hours before the event to trigger the actual cash distribution.",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "A stop mechanism is in place for the distribution of cash if the 24-48 hour lead time bulletins (Bulletin A or B) do not confirm the very high flooding threshold of 150,000 cusecs at Nowshera station."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "The activation trigger will be reached when flood bulletin C (Weekly River’s Catchments Forecast) and significant flood warning/advisories from FFD/PMD predicts very high to exceptionally high flooding with river flow above 150,000 cusecs at Nowshera station of Kabul River with a lead time ranging from 3-5 days. However, the distribution of cash to registered beneficiaries will be implemented within 24hr - 48hr lead time when the flood bulletin A (Qualitative Flood Forecast) or flood bulletin B (Quantitative flood forecast) from FFD/PMD confirms a very high-level flooding with flow above 150,000 cusecs at Nowshera station of Kabul River within the next 48hrs.",
+        "statement_english": null,
+        "thresholds": [
+          "River flow above 150,000 cusecs at Nowshera station",
+          "Very high to exceptionally high flooding category",
+          "Confirmation of 150,000 cusecs threshold within 24-48 hours for cash disbursement"
+        ],
+        "source_authority": "Flood Forecasting Division (FFD) of Pakistan Meteorological Department (PMD)",
+        "lead_time": "3 to 5 days (Activation), 24 to 48 hours (Cash distribution)",
+        "geographic_scope": "Kabul River basin, specifically Nowshera station",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Dissemination of early warning messages; identification of most vulnerable communities; validation/registration of beneficiaries; funds disbursement to financial service providers (FSPs) and retailers.",
+        "page_ref": 6
+      }
+    }
+  },
+  {
+    "file": "17557_MDRKE055_EAP.pdf",
+    "document_id": 17557,
+    "document_name": "Kenya - Drought (MDRKE055)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 14,
+    "pages_selected": 9,
+    "trigger_mechanism": {
+      "description": "The EAP uses a multi-stage trigger process for the October-November-December (OND) rainy season. It begins with a meteorological forecast (SPI), followed by a risk-based ranking using an IBF dashboard (incorporating IPC projections), and a final operational filter using NDMA data to ensure the intervention is anticipatory (targeting counties in 'alert' or 'normal' status rather than 'alarm' or 'emergency').",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": null
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "This EAP will be triggered for the 23 ASAL counties of Kenya where Standardised Precipitation Index (SPI) forecast for OND from KMD indicates SPI value of below -0.98 with at least 33% chance of occurrence, in at least 3 counties.",
+        "statement_english": null,
+        "thresholds": [
+          "Standardised Precipitation Index (SPI) value below -0.98",
+          "At least 33% chance of occurrence",
+          "Condition met in at least 3 of the 23 ASAL counties"
+        ],
+        "source_authority": "Kenya Meteorological Department (KMD), National Drought Management Authority (NDMA), IBF dashboard",
+        "lead_time": "Up to 12 weeks",
+        "geographic_scope": "23 Arid and Semi-Arid (ASAL) counties of Kenya",
+        "is_conditional": true,
+        "condition_dependency": "The trigger is conditional on the current drought classification by NDMA; counties already in 'alarm' or 'emergency' states are excluded to ensure actions are anticipatory, focusing on those in 'alert' or 'normal' states.",
+        "preliminary_actions": "Dissemination of early warning information (Radio and SMS); WASH needs and feasibility assessments; Rapid assessment of water facility functionality; Pre-Crisis Market Analysis (conducted 1.5 months before the season); Advocacy on water harvesting and pasture management; Activation of Water Management Committees.",
+        "page_ref": 4
+      }
+    }
+  },
+  {
+    "file": "17563_MDRZW020_EAP.pdf",
+    "document_id": 17563,
+    "document_name": "Zimbabwe - Drought Protocol (MDRZW020)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 9,
+    "pages_selected": 5,
+    "trigger_mechanism": {
+      "description": "The EAP utilizes a two-stage trigger system based on an Impact Based Forecast (IBF) Drought model. The model monitors five meteorological indicators (including ENSO, CHIRPS, and VCI) starting in September to provide up to 7 months of lead time. The first stage triggers low-investment mitigation, while the second stage triggers food security interventions.",
+      "activation_type": "dual-trigger",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": null
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "A forecast of an El Nino event, with an impact level corresponding to a once-in-six-year event, will act as the first trigger for low investment Early Actions (Early warning dissemination, drought tolerant seed distributions, and livestock dosing).",
+        "statement_english": null,
+        "thresholds": [
+          "Forecast of an El Nino event",
+          "Impact level corresponding to a once-in-six-year event"
+        ],
+        "source_authority": "IBF Drought model (utilizing ENSO forecasts, CHIRPS Data, and Vegetation Condition Index), Meteorological Services Department (MSD)",
+        "lead_time": "7 months (model runs monthly starting in September; actions initiated in October)",
+        "geographic_scope": "Zimbabwe (target districts)",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Early warning communication, distribution of drought-tolerant short-season certified seed varieties, and livestock dosing support (vaccination and dipping).",
+        "page_ref": 4
+      },
+      "trigger_statement_2": {
+        "statement": "A forecast of IPC 4 conditions in the FEWSnet Food Security Forecast Reports in Both March and June will trigger the second set of early actions that address drought-induced food insecurity (livestock support, Multi-Purpose Cash Transfers, and school supplemental feeding)",
+        "statement_english": null,
+        "thresholds": [
+          "IPC 4 conditions in FEWSnet Food Security Forecast Reports in both March and June",
+          "IBF model detects a drought by April (if Trigger 1 was not met)",
+          "Drought declared by the Government of Zimbabwe (if Trigger 1 was not met)",
+          "2nd round of crop assessments by Agritex indicating a poor agricultural season or failed harvest"
+        ],
+        "source_authority": "FEWSnet, Agritex, IBF Model, and Government of Zimbabwe",
+        "lead_time": "March to June",
+        "geographic_scope": "Zimbabwe (target wards and schools)",
+        "is_conditional": true,
+        "condition_dependency": "Normally activated following the activation of the first trigger. If the first trigger is not activated, the second trigger will only activate if the IBF model detects a drought by April and a drought is declared by the Government of Zimbabwe.",
+        "preliminary_actions": "Livestock dosing support, Multi-Purpose Cash/Voucher Assistance (65 USD per round for three months), and school supplemental feeding (CSB and cooking materials) in collaboration with the Ministry of Education.",
+        "page_ref": 4
+      }
+    }
+  },
+  {
+    "file": "17595_EAP2023HN02_EAPSummary.pdf",
+    "document_id": 17595,
+    "document_name": "Honduras - Drought (MDRHN018)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 13,
+    "pages_selected": 5,
+    "trigger_mechanism": {
+      "description": "The EAP is activated based on a dual-trigger system requiring both an ENSO alert and a specific precipitation deficit forecast. Monitoring begins three months in advance with monthly evaluations.",
+      "activation_type": "dual-trigger",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "The stop mechanism (interruption mechanism) is triggered by the update of the quarterly forecast of the next month's climate outlook."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "When COPECO/CENAOS issues an alert warning of \"El Niño\" in area 3.4, for the next 3 months with a 60% probability based on the IRI forecast from the OND quarter (year -1) and except for AMJ and MJJ quarters (Predictability barrier).",
+        "statement_english": null,
+        "thresholds": [
+          "El Niño alert in area 3.4",
+          "60% probability",
+          "3-month forecast window",
+          "Based on IRI forecast from OND quarter",
+          "Excluding AMJ and MJJ quarters (predictability barrier)"
+        ],
+        "source_authority": "COPECO/CENAOS, CPC/IRI, NOAA",
+        "lead_time": "3 months",
+        "geographic_scope": "ENSO Area 3.4",
+        "is_conditional": true,
+        "condition_dependency": "Both Trigger 1 and Trigger 2 are required for the activation declaration",
+        "preliminary_actions": "Monitoring of meteorological conditions three months in advance and monthly control mechanism evaluation",
+        "page_ref": 6
+      },
+      "trigger_statement_2": {
+        "statement": "When COPECO/CENAOS issues a climate outlook bulletin where a serious precipitation deficiency is forecast when the accumulated rainfall for the next 3 months is between the 10th and 20th percentile in the dry corridor starting in the (March-May) MAM quarter (year 1) with a probability from greater to 60%.",
+        "statement_english": null,
+        "thresholds": [
+          "Serious precipitation deficiency",
+          "Accumulated rainfall between 10th and 20th percentile",
+          "Probability greater than 60%",
+          "Starting in the MAM (March-May) quarter"
+        ],
+        "source_authority": "COPECO/CENAOS",
+        "lead_time": "3 months",
+        "geographic_scope": "Honduran dry corridor",
+        "is_conditional": true,
+        "condition_dependency": "Both Trigger 1 and Trigger 2 are required for the activation declaration",
+        "preliminary_actions": "Monitoring of meteorological conditions three months in advance and monthly control mechanism evaluation",
+        "page_ref": 6
+      }
+    }
+  },
+  {
+    "file": "17638_Download.aspx.pdf",
+    "document_id": 17638,
+    "document_name": "Lesotho - Drought (EAP2022LS01) (MDRLS006)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 9,
+    "pages_selected": 5,
+    "trigger_mechanism": {
+      "description": "The EAP uses a two-tiered trigger system. A pre-activation trigger is initiated in September based on seasonal forecasts, followed by a second activation trigger in January based on observed rainfall and vulnerability projections.",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "The stoppage of the activation will be initiated by the EAP Manager who, upon assessing and confirmation of the changes, will recommend concurrently to the Programme Director and IFRC for the latter to order the activation stoppage."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "LRCS will activate a two-tiered trigger. The pre-activation trigger is reached when LMS issues the seasonal outlook in September with below normal rainfall and this will initiate the dissemination of early warning messaging (EWM), and preparedness and monitoring measures of the upcoming conditions. The second trigger is reached when all following three conditions are met: (i) the first trigger was activated in September, (ii) the October, November, December (OND) rainfall was indeed below normal (iii) the Vulnerability Assessment Analysis report (by LVAC) issued in January projects 20% of the population in drought-induced IPC Phase 3 and 4 in January in anticipation of the March/April main harvests for the next six months.",
+        "statement_english": null,
+        "thresholds": [
+          "LMS seasonal outlook in September indicates below normal rainfall",
+          "October, November, December (OND) rainfall is below normal",
+          "LVAC report projects 20% of the population in drought-induced IPC Phase 3 and 4"
+        ],
+        "source_authority": "Lesotho Meteorological Services (LMS) and Lesotho Vulnerability Assessment Committee (LVAC)",
+        "lead_time": "September (pre-activation) to January (activation)",
+        "geographic_scope": "Southern lowlands and Senqu valley, Lesotho",
+        "is_conditional": true,
+        "condition_dependency": "The second trigger (activation) is conditional on the first trigger (pre-activation) being met in September and the OND rainfall being below normal.",
+        "preliminary_actions": "Dissemination of early warning messaging (EWM) to 20,560 people, preparedness and monitoring measures of the upcoming conditions, and training of community-based organizations in EWM dissemination.",
+        "page_ref": 4
+      }
+    }
+  },
+  {
+    "file": "17645_Download.aspx.pdf",
+    "document_id": 17645,
+    "document_name": "Tajikistan - Cold Wave (EAP2022TJ02) (MDRTJ033)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 9,
+    "pages_selected": 5,
+    "trigger_mechanism": {
+      "description": "The EAP is activated based on a 4-day (96-hour) weather forecast provided by the Hydromet of Tajikistan and a CoES alert. The trigger is reached when specific temperature thresholds (percentiles) are forecasted to be exceeded for at least three consecutive days in designated regions.",
+      "activation_type": "single-trigger",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "The Stop mechanism will be activated if the probability of the occurrence of a cold wave is less than 85% with a lead-time of 48 hours. The FbF coordinator proposes the stop mechanism based on consultations with Hydromet, and the RCST Head of DM department endorses it."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "This EAP will be triggered based on forecast to be provided by the Hydromet of Tajikistan and CoES alert, if temperatures in GBAO exceed the 1 percentile/PCTL [at temperature of below -39.0°C] and in all other areas of DRS, Sughd and Khalton exceed 2 percentile/PCTL [at temperature of below -21.1°C] for 3 or more consecutive days based on the 4-days [96 hours] weather forecast with the 4 days of lead-time that the RCST will have to prepare for an extreme cold wave before it strikes.",
+        "statement_english": null,
+        "thresholds": [
+          "Temperatures in GBAO below -39.0°C (1st percentile)",
+          "Temperatures in DRS, Sughd, and Khatlon below -21.1°C (2nd percentile)",
+          "Duration of 3 or more consecutive days",
+          "4-day (96 hours) weather forecast"
+        ],
+        "source_authority": "Hydromet of Tajikistan and Committee on Emergency Situations (CoES)",
+        "lead_time": "4 days (96 hours)",
+        "geographic_scope": "Tajikistan (Gorno-Badakhshan Autonomous Oblast [GBAO], Districts of Republican Subordination [DRS], Sughd and Khatlon provinces)",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Spread of awareness messages and alerts; provision of Non-Food Items (NFIs) including electric oil heaters, materials for windows and floor thermal insulation, and thermos flasks; provision of essential food commodities for a family of 5 to cover the first seven days; provision of First Aid support by LDMCs in case of hypothermia or frostbite.",
+        "page_ref": 3
+      }
+    }
+  },
+  {
+    "file": "17691_Download.aspx.pdf",
+    "document_id": 17691,
+    "document_name": "Kazakhstan - EAP2022KZ01 - Cold Wave (MDRKZ012)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 10,
+    "pages_selected": 8,
+    "trigger_mechanism": {
+      "description": "The trigger mechanism is a multi-stage process based on Kazhydromet forecasts. A 7-day temperature forecast triggers the activation of the simplified EAP and preparation activities, while a 3-day map alert initiates the specific early action activities. The trigger is based on specific temperature thresholds combined with precipitation, wind speed, and duration.",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": null
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "Orange level of weather or higher threat according to the Kazhydromet, which means: If the 7-day temperature forecast of Kazhydromet shows the minimum temperature will go below -40˚C (-35 ˚C in Karaganada region) with precipitation and increased speed of wind and such conditions persist for at least two days in any district... If the 3-day map alert of Kazhydromet forecast temperatures consistent with the table below in any targeted district the early action activities will be initiated.",
+        "statement_english": null,
+        "thresholds": [
+          "Minimum temperature below -40°C (Northern Kazakhstan, Akmola, Kostanay, Pavlodar, Eastern Kazakhstan, and Abay regions)",
+          "Minimum temperature below -35°C (Karaganda region)",
+          "Presence of precipitation",
+          "Increased speed of wind",
+          "Conditions persist for at least two days",
+          "Orange level of weather threat or higher"
+        ],
+        "source_authority": "Kazhydromet",
+        "lead_time": "7 days for activation/preparation, 3 days for action initiation",
+        "geographic_scope": "Northern Kazakhstan, Pavlodar, Kostanay, Eastern Kazakhstan, Abay, Akmola, Karaganda regions, and Astana city",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "National Society starts preparation for activation and continues monitoring; pre-contracting of food service providers; mapping of homeless gathering places; awareness raising about food distribution points and social adaptation centers; agreements with local police and social services for transportation; preparing databases of vulnerable elderly, single mothers, and people with special needs; mapping bus stations, truck parking, and gas stations.",
+        "page_ref": 4
+      }
+    }
+  },
+  {
+    "file": "18031_EAP2021TJ01_MDRTJ034.pdf",
+    "document_id": 18031,
+    "document_name": "Tajikistan - Heat Wave (EAP2021TJ01) (MDRTJ034)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 16,
+    "pages_selected": 7,
+    "trigger_mechanism": {
+      "description": "The EAP is activated based on weather forecasts from Tajik Hydromet. Activation occurs when forecasted temperatures exceed specific regional thresholds for 4 consecutive days during the summer period (July-August), with a lead time of 5 days.",
+      "activation_type": "single-trigger",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "If the heatwave changes track dramatically before communities are notified or distributions begin, the operation is stopped and materials are returned to storage. If the path shifts after distribution starts, RCST assesses re-routing or continues if the community is still at risk."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "The trigger for this EAP will be activated when Hydromet issues a forecast of the day temperature exceeding 39.5°C in the North and 43.5°C in the South for 4 consecutive days in the period of July-August.",
+        "statement_english": null,
+        "thresholds": [
+          "Day temperature exceeding 39.5°C in the North for 4 consecutive days",
+          "Day temperature exceeding 43.5°C in the South for 4 consecutive days",
+          "Specific district thresholds based on 90th percentile (ranging from 35°C to 43.5°C)",
+          "Forecast probability of 78%-85% (Bagrov model)",
+          "Return period of 5 years or less"
+        ],
+        "source_authority": "Tajik Hydromet (using Bagrov, ECMWF, COSMO, and WRF models)",
+        "lead_time": "5 days",
+        "geographic_scope": "Tajikistan (Districts: Kabodiyon, Nosiri Khusrav, Shahritus, Rudaki, Bokhtar, Kumsangir, Panj, Dushanbe, Hissor, Shahrinav, Tursunzoda, Vahdat, Farkhor, Kulob, Vose, Asht, Khujand, Mastcho, Zafarobod, B. Gafurov, Darvoz, Istaravshan, Penjikent, Ayni, Khovaling, Muminobod, Shurobod, Faizobod, Rasht, Tojikobod, Khorog, Rushon, Ishkoshim, Vanj, Iskandarkul, Mastchoi Kuhi, Lakhsh, Navobod)",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Awareness broadcasting (starts at 120h lead time), safety measures tuition (held at <48h lead time), notification of IFRC and CoES, and mobilization of NDRTs and volunteers.",
+        "page_ref": 4
+      }
+    }
+  },
+  {
+    "file": "25999_sEAP2025NP02_MDRNP020.pdf",
+    "document_id": 25999,
+    "document_name": "Nepal - Heatwave sEAP (MDRNP020)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 27,
+    "pages_selected": 5,
+    "trigger_mechanism": {
+      "description": "The sEAP uses a dual-trigger system requiring both observed conditions (specific temperature and humidity thresholds) and forecast criteria (DHM red alerts or 99th percentile forecasts) to be met simultaneously for activation in specific cities.",
+      "activation_type": "dual-trigger",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": null
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "The simplified Early Action Protocol (sEAP) will be activated in a respective city/municipality of the southern Terai region of Nepal when both of the observed conditions and forecast criteria are met: 1. Observed Conditions: o Daily maximum temperature (Tmax) exceeding - 41°C in Nepalgunj - 40.5°C in Dhangadi - 37.5 °C in Biratnagar - 40.5°C in Siddharthanagar o Relative humidity (Rh) of 45 per cent or higher in the respective city for which observed condition for Tmax is met. 2. Forecast Criteria: In addition to the observed conditions, at least one of the following forecast criteria must be met for the same city/municipality for which both the aforementioned observed condition (Tmax and Rh) is met: o Criteria 1: DHM issues a red alert heatwave bulletin (indicating \"take action\") for the next 3 days in the target city or its associated district. o Criteria 2: Numerical Weather Prediction (NWP) product from DHM forecasts daily maximum temperature (Tmax) above the 99th percentile threshold in the target cities/municipalities for the next 3 consecutive days.",
+        "statement_english": null,
+        "thresholds": [
+          "Nepalgunj: Daily maximum temperature (Tmax) > 41°C",
+          "Dhangadi: Daily maximum temperature (Tmax) > 40.5°C",
+          "Biratnagar: Daily maximum temperature (Tmax) > 37.5°C",
+          "Siddharthanagar: Daily maximum temperature (Tmax) > 40.5°C",
+          "Relative humidity (Rh) >= 45% in the respective city",
+          "DHM Red Alert heatwave bulletin ('take action') for the next 3 days",
+          "NWP forecast Tmax > 99th percentile for 3 consecutive days"
+        ],
+        "source_authority": "Department of Hydrology and Meteorology (DHM)",
+        "lead_time": "3 days",
+        "geographic_scope": "Southern Terai region of Nepal (Nepalgunj, Dhangadi, Biratnagar, Siddharthanagar)",
+        "is_conditional": true,
+        "condition_dependency": "Forecast criteria must be met in addition to observed conditions (Tmax and Rh) for the same city/municipality.",
+        "preliminary_actions": "Awareness and community sensitization, volunteer mobilization for beneficiary registration, training NRCS volunteers and staff on CVA, standby agreements with telecommunication and catering services, and coordination meetings with municipalities.",
+        "page_ref": 9
+      }
+    }
+  },
+  {
+    "file": "26012_MDRNE031_EPA.pdf",
+    "document_id": 26012,
+    "document_name": "Niger - Drought EAP (MDRNE031)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 16,
+    "pages_selected": 7,
+    "trigger_mechanism": {
+      "description": "The EAP uses a three-trigger system based on seasonal rainfall forecasts, forage biomass assessments, and food security indicators (Cadre Harmonisé). Trigger 1 is activated in April/May based on rainfall forecasts, while Triggers 2 and 3 are activated in November based on fodder deficits and food security phases respectively.",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": true,
+      "stop_mechanism_description": "A deactivation mechanism will apply if updated forecasts or satellite monitoring show a significant improvement in rainfall or vegetation cover before the window for early action closes."
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "The CRN will launch a first phase of early action in April/May based on a forecast of 40% or more below-normal rainfall provided by the European Centre for Medium-Range Weather Forecasts (ECMWF). When the ECMWF forecasts indicate, in April, a probability of 40% or more of having below-normal rainfall totals over the period July to September in a region or department, we will coordinate with the national meteorological service to carry out a downscaling.",
+        "statement_english": null,
+        "thresholds": [
+          "40% or more probability of below-normal rainfall totals for the period July to September"
+        ],
+        "source_authority": "European Centre for Medium-Range Weather Forecasts (ECMWF) and National Directorate of Meteorology (DMN)",
+        "lead_time": "April/May (for July-September period)",
+        "geographic_scope": "Region or department, downscaled to communes and villages",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Awareness messages (Radio, Megaphone); Vaccination coupled with vitamins, minerals, and deworming; Distribution of drought-adapted seeds (millet and cowpeas); Post-Distribution Evaluation.",
+        "page_ref": 4
+      },
+      "trigger_statement_2": {
+        "statement": "When the results of the Ministry of Livestock's forage biomass assessment, carried out in November, indicate a fodder deficit of up to 40% or more in a locality (commune or village), the NS will activate the second trigger and intervene in these localities with the specific early actions.",
+        "statement_english": null,
+        "thresholds": [
+          "Fodder deficit of 40% or more"
+        ],
+        "source_authority": "Ministry of Livestock (forage biomass assessment)",
+        "lead_time": "November",
+        "geographic_scope": "Locality (commune or village)",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Awareness messages (Radio, Megaphone); Conditional cash transfer for livestock owners to access cereals and livestock feed; Vaccination/Deworming.",
+        "page_ref": 4
+      },
+      "trigger_statement_3": {
+        "statement": "Finally, if the November Cadre Harmonisé results indicate that a region will be in IPC Phase 3 or higher due to drought, the NS will anticipate a difficult lean season. To do this, NRCS will use the data from the evaluation of the agricultural season of the Ministry of Agriculture to determine the communes and villages in deficit in the concerned region.",
+        "statement_english": null,
+        "thresholds": [
+          "IPC Phase 3 or higher in Cadre Harmonisé",
+          "Agricultural season evaluation showing deficit in communes/villages"
+        ],
+        "source_authority": "Cadre Harmonisé and Ministry of Agriculture",
+        "lead_time": "November",
+        "geographic_scope": "Region, downscaled to communes and villages in deficit",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Awareness messages (Radio, Megaphone); Conditional cash transfer allowing the poorest households to access cereals free of charge.",
+        "page_ref": 4
+      }
+    }
+  },
+  {
+    "file": "26020_MDRFJ008rseap.pdf",
+    "document_id": 26020,
+    "document_name": "Fiji - Tropical Cyclone  sEAP (MDRFJ008)",
+    "document_language": "English",
+    "status": "success",
+    "pages_analyzed": 15,
+    "pages_selected": 6,
+    "trigger_mechanism": {
+      "description": "The trigger mechanism is a multi-stage system aligned with the National Anticipatory Action Framework for Tropical Cyclones in Fiji. It utilizes a combination of wind speed forecasts and population exposure thresholds across two lead-time stages (Readiness and Action), plus a post-event observational rainfall trigger.",
+      "activation_type": "multi-stage",
+      "has_stop_mechanism": false,
+      "stop_mechanism_description": null
+    },
+    "triggers": {
+      "trigger_statement_1": {
+        "statement": "This simplified EAP will be triggered by a tropical cyclone that is forecasted by the Regional Specialized Meteorological Centre (RSMC) in Nadi to cause winds of at least 64 knots in zones where at least 5,000 people lives. The trigger comprises 2 stages, each of which is triggered based on the lead time of the points in the forecast: 1. Readiness trigger: If the wind field indicated by the 120-hour forecast meets the trigger conditions, the readiness trigger is met. 2. Action trigger: If the wind field indicated by the forecast up to a lead time of 72 hours meets the trigger conditions, the activation trigger is met.",
+        "statement_english": null,
+        "thresholds": [
+          "Winds of at least 64 knots (Category 3 on the Australian scale)",
+          "Zones where at least 5,000 people live (based on WorldPop 2020)",
+          "120-hour forecast for Readiness stage",
+          "72-hour forecast for Action stage"
+        ],
+        "source_authority": "Regional Specialized Meteorological Centre (RSMC) Nadi / Fiji Meteorological Services (FMS)",
+        "lead_time": "Up to 5 days (120 hours)",
+        "geographic_scope": "National (Fiji)",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Activation of internal processes for fund release, prepositioning of funds to divisional teams, notification of logistics providers, movement of staff and volunteers, checking pre-positioned items (SSKs, jerry cans, soap), stakeholder coordination via NDMO, and confirmation of target communities/households.",
+        "page_ref": 7
+      },
+      "trigger_statement_2": {
+        "statement": "The National AA Framework also includes a third trigger, which is a post event observational trigger: If the average rainfall over the whole country during two consecutive days meets the threshold (190 mm), the observational trigger is activated.",
+        "statement_english": null,
+        "thresholds": [
+          "Average rainfall of 190 mm over the whole country during two consecutive days"
+        ],
+        "source_authority": "Fiji Meteorological Services (FMS) / NDMO",
+        "lead_time": "Post-event",
+        "geographic_scope": "National (Fiji)",
+        "is_conditional": false,
+        "condition_dependency": null,
+        "preliminary_actions": "Fiji Red Cross will seek rapid response funding from the DREF Response Pillar to conduct its pre-agreed actions.",
+        "page_ref": 8
+      }
+    }
   }
 ]
