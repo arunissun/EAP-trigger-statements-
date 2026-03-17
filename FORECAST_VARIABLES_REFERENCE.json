@@ -1,0 +1,357 @@
+{
+  "metadata": {
+    "description": "Forecast Variables Reference for EAP Trigger UI - Organized by frequency and use case",
+    "generated_date": "2026-03-17",
+    "source": "Analysis of 255 normalized trigger threshold records",
+    "total_unique_variables": 53,
+    "recommendation": "Use Tier 1 as main dropdown, Tier 2 for advanced/optional, Tier 3 for freetext custom entry"
+  },
+  "tier_1_common": {
+    "description": "Most common variables - covers ~80% of all triggers. Recommended for main UI dropdown.",
+    "count": 14,
+    "coverage_percent": 80.8,
+    "variables": [
+      {
+        "rank": 1,
+        "name": "Seasonal precipitation",
+        "frequency": 46,
+        "percent_of_total": 18.0,
+        "cumulative_percent": 18.0,
+        "use_cases": ["Flood forecasting", "Climate-based early action", "Seasonal planning"],
+        "recommended_for_ui": true
+      },
+      {
+        "rank": 2,
+        "name": "Rainfall total",
+        "frequency": 36,
+        "percent_of_total": 14.1,
+        "cumulative_percent": 32.2,
+        "use_cases": ["Flood triggers", "Water-related hazards"],
+        "recommended_for_ui": true
+      },
+      {
+        "rank": 3,
+        "name": "River discharge",
+        "frequency": 34,
+        "percent_of_total": 13.3,
+        "cumulative_percent": 45.5,
+        "use_cases": ["Flood early action", "Hydrological forecasts"],
+        "recommended_for_ui": true
+      },
+      {
+        "rank": 4,
+        "name": "Affected population",
+        "frequency": 25,
+        "percent_of_total": 9.8,
+        "cumulative_percent": 55.3,
+        "use_cases": ["Impact-based triggers", "Vulnerability assessment"],
+        "recommended_for_ui": true
+      },
+      {
+        "rank": 5,
+        "name": "Wind speed",
+        "frequency": 19,
+        "percent_of_total": 7.5,
+        "cumulative_percent": 62.8,
+        "use_cases": ["Storm/cyclone triggers"],
+        "recommended_for_ui": true
+      },
+      {
+        "rank": 6,
+        "name": "Confirmed cholera cases",
+        "frequency": 18,
+        "percent_of_total": 7.1,
+        "cumulative_percent": 69.8,
+        "use_cases": ["Disease outbreak triggers", "Health emergency response"],
+        "recommended_for_ui": true
+      },
+      {
+        "rank": 7,
+        "name": "Inundation extent",
+        "frequency": 7,
+        "percent_of_total": 2.7,
+        "cumulative_percent": 72.5,
+        "use_cases": ["Flood impact assessment"],
+        "recommended_for_ui": true
+      },
+      {
+        "rank": 8,
+        "name": "Temperature",
+        "frequency": 6,
+        "percent_of_total": 2.4,
+        "cumulative_percent": 74.9,
+        "use_cases": ["Heat wave triggers", "Temperature-based early action"],
+        "recommended_for_ui": true,
+        "note": "See also: Maximum temperature, Daily maximum temperature"
+      },
+      {
+        "rank": 9,
+        "name": "Maximum temperature",
+        "frequency": 4,
+        "percent_of_total": 1.6,
+        "cumulative_percent": 76.5,
+        "use_cases": ["Heat wave triggers"],
+        "recommended_for_ui": true,
+        "consolidation_note": "Consider merging with 'Temperature' for cleaner UX"
+      },
+      {
+        "rank": 10,
+        "name": "Daily maximum temperature",
+        "frequency": 4,
+        "percent_of_total": 1.6,
+        "cumulative_percent": 78.0,
+        "use_cases": ["Daily heat monitoring"],
+        "recommended_for_ui": true,
+        "consolidation_note": "Consider merging with 'Temperature' for cleaner UX"
+      },
+      {
+        "rank": 11,
+        "name": "Lead time",
+        "frequency": 4,
+        "percent_of_total": 1.6,
+        "cumulative_percent": 79.6,
+        "use_cases": ["Forecast lead time specification"],
+        "recommended_for_ui": true,
+        "data_quality_note": "Consider if this should be metadata rather than a forecast variable"
+      },
+      {
+        "rank": 12,
+        "name": "Heat Index",
+        "frequency": 3,
+        "percent_of_total": 1.2,
+        "cumulative_percent": 80.8,
+        "use_cases": ["Heat-humidity combined index for health impacts"],
+        "recommended_for_ui": true
+      },
+      {
+        "rank": 13,
+        "name": "Excess mortality",
+        "frequency": 3,
+        "percent_of_total": 1.2,
+        "cumulative_percent": 82.0,
+        "use_cases": ["Health emergency indicators"],
+        "recommended_for_ui": true
+      },
+      {
+        "rank": 14,
+        "name": "Relative humidity",
+        "frequency": 2,
+        "percent_of_total": 0.8,
+        "cumulative_percent": 82.8,
+        "use_cases": ["Drought/moisture monitoring"],
+        "recommended_for_ui": true
+      }
+    ]
+  },
+  "tier_2_special": {
+    "description": "Specialized/region-specific variables appearing in 2-3 documents. Show on demand via 'Advanced' or 'Other' button.",
+    "count": 17,
+    "coverage_percent": 14.0,
+    "variables": [
+      {
+        "rank": 15,
+        "name": "Cold wave occurrence",
+        "frequency": 2,
+        "percent_of_total": 0.8,
+        "use_cases": ["Cold weather early action"],
+        "recommended_for_ui": false,
+        "tier": "optional"
+      },
+      {
+        "rank": 16,
+        "name": "Malaria incidence",
+        "frequency": 2,
+        "percent_of_total": 0.8,
+        "use_cases": ["Disease outbreak response"],
+        "recommended_for_ui": false,
+        "tier": "optional"
+      },
+      {
+        "rank": 17,
+        "name": "Suspected cholera cases",
+        "frequency": 2,
+        "percent_of_total": 0.8,
+        "use_cases": ["Early disease detection"],
+        "recommended_for_ui": false,
+        "tier": "optional"
+      },
+      {
+        "rank": 18,
+        "name": "Lake level",
+        "frequency": 2,
+        "percent_of_total": 0.8,
+        "use_cases": ["Water body monitoring"],
+        "recommended_for_ui": false,
+        "tier": "optional"
+      },
+      {
+        "rank": 19,
+        "name": "Waterbody elevation",
+        "frequency": 2,
+        "percent_of_total": 0.8,
+        "use_cases": ["Water level monitoring"],
+        "recommended_for_ui": false,
+        "tier": "optional",
+        "consolidation_note": "Consider merging with 'Lake level' or 'River discharge'"
+      },
+      {
+        "rank": 20,
+        "name": "Cumulative rainfall",
+        "frequency": 2,
+        "percent_of_total": 0.8,
+        "use_cases": ["Long-term rainfall monitoring"],
+        "recommended_for_ui": false,
+        "tier": "optional"
+      },
+      {
+        "rank": 21,
+        "name": "Altitude/Elevation",
+        "frequency": 2,
+        "percent_of_total": 0.8,
+        "use_cases": ["Geographic/climatic differentiation"],
+        "recommended_for_ui": false,
+        "tier": "optional"
+      },
+      {
+        "rank": 22,
+        "name": "Mortality rate",
+        "frequency": 2,
+        "percent_of_total": 0.8,
+        "use_cases": ["Health outcome monitoring"],
+        "recommended_for_ui": false,
+        "tier": "optional"
+      },
+      {
+        "rank": 23,
+        "name": "Outbreak severity index",
+        "frequency": 2,
+        "percent_of_total": 0.8,
+        "use_cases": ["Disease severity assessment"],
+        "recommended_for_ui": false,
+        "tier": "optional"
+      },
+      {
+        "rank": 24,
+        "name": "Rainfall anomaly",
+        "frequency": 2,
+        "percent_of_total": 0.8,
+        "use_cases": ["Drought/excess rainfall detection"],
+        "recommended_for_ui": false,
+        "tier": "optional"
+      },
+      {
+        "rank": 25,
+        "name": "River level",
+        "frequency": 2,
+        "percent_of_total": 0.8,
+        "use_cases": ["Hydrological monitoring"],
+        "recommended_for_ui": false,
+        "tier": "optional",
+        "consolidation_note": "Consider merging with 'River discharge' or 'Lake level'"
+      },
+      {
+        "rank": 26,
+        "name": "Temperature anomaly",
+        "frequency": 2,
+        "percent_of_total": 0.8,
+        "use_cases": ["Deviation-based heat/cold triggers"],
+        "recommended_for_ui": false,
+        "tier": "optional"
+      },
+      {
+        "rank": 27,
+        "name": "Vegetation health",
+        "frequency": 2,
+        "percent_of_total": 0.8,
+        "use_cases": ["Drought monitoring, food security"],
+        "recommended_for_ui": false,
+        "tier": "optional"
+      },
+      {
+        "rank": 28,
+        "name": "Water availability",
+        "frequency": 2,
+        "percent_of_total": 0.8,
+        "use_cases": ["Water security monitoring"],
+        "recommended_for_ui": false,
+        "tier": "optional"
+      },
+      {
+        "rank": 29,
+        "name": "Weekly cholera incidence",
+        "frequency": 2,
+        "percent_of_total": 0.8,
+        "use_cases": ["Disease trend monitoring"],
+        "recommended_for_ui": false,
+        "tier": "optional"
+      },
+      {
+        "rank": 30,
+        "name": "Yellow fever cases",
+        "frequency": 2,
+        "percent_of_total": 0.8,
+        "use_cases": ["Disease outbreak response"],
+        "recommended_for_ui": false,
+        "tier": "optional"
+      }
+    ]
+  },
+  "tier_3_rare": {
+    "description": "Rare variables appearing only once. Recommend offering as freetext 'Other/Specify' field instead of dropdown option.",
+    "count": 22,
+    "coverage_percent": 6.0,
+    "variables": [
+      "Abdominal distension",
+      "Blood pressure",
+      "Cholera Rapid Diagnostic Test (RDT) positive rate",
+      "Consultation per population at risk",
+      "COVID-19 active cases",
+      "Dengue fever incidence",
+      "Fever with arthralgia-joint pain",
+      "Flood affected areas",
+      "Food security indicators",
+      "Health facility functionality",
+      "Health sector capacity",
+      "Meningitis cases",
+      "Nutrition indicators",
+      "Operational effectiveness",
+      "Plague cases",
+      "Pregnancy complications",
+      "Seasonal forecasts",
+      "Water quality indicators",
+      "Waterborne disease rate",
+      "Weather conditions"
+    ],
+    "recommendation": "Use freetext field with option to save for future dropdown inclusion"
+  },
+  "implementation_recommendations": {
+    "quick_start": {
+      "option_1": "14-item dropdown (Tier 1 only) - Covers 80% of triggers, minimal UI clutter",
+      "option_2": "14 + 16-item tiered - Main dropdown + 'Show more' expands to Tier 2",
+      "option_3": "14 + 16 + freetext - Full tiered with custom entry for emerging variables"
+    },
+    "ui_pattern": {
+      "main_dropdown": "Tier 1 variables (14 items)",
+      "advanced_section": "Tier 2 variables (16 items) - Show only on click or if user has used before",
+      "custom_entry": "Freetext for Tier 3 - Log for future analysis"
+    },
+    "quality_improvements": [
+      "Consider consolidating Temperature variants (Temperature, Maximum temperature, Daily maximum temperature)",
+      "Review 'Lead time' - appears to be metadata rather than a forecast variable",
+      "Group similar disease-related variables (e.g., all cholera variants into 'Cholera indicators')",
+      "Group water-related variables (Lake level, Waterbody elevation, River level, River discharge)"
+    ],
+    "data_collection": {
+      "freetext_logging": "Log all freetext 'Other' entries to identify emerging variables",
+      "usage_analytics": "Track which variables partners select most frequently",
+      "feedback_loop": "Quarterly review: If Tier 3 variable used 5+ times, promote to Tier 2"
+    }
+  },
+  "field_mapping_for_developers": {
+    "csv_column": "forecast_variable",
+    "json_schema_location": "dropdown_masters.forecast_variables",
+    "ui_component_type": "dropdown / select",
+    "validation": "Must be one of the predefined list OR freetext if 'Other' selected",
+    "database_storage": "Store both selected value AND any freetext 'Other' entry for analysis"
+  }
+}
