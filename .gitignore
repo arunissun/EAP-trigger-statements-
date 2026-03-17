@@ -15,3 +15,10 @@ downloaded_documents/
 translations/
 scripts/debug_pdf.py    
 scripts/test_pymupdf.py
+# Keep Python files in subfolders
+*.py
+!scripts/**/*.py
+scripts/debug_pdf.py 
+scripts/test_pymupdf.py
+
+
