@@ -5,7 +5,7 @@
     "total_statements": 96,
     "total_thresholds": 258,
     "failed_records": 12,
-    "min_frequency_threshold": 5,
+    "min_frequency_threshold": 2,
     "trigger_logic_summary": {
       "Conditional (Either / OR)": 51,
       "Conditional (Sequential / AND)": 32,
@@ -15,10 +15,20 @@
   "dropdown_masters": {
     "forecast_variables": [
       "Affected population",
+      "Cold wave occurrence",
       "Confirmed cholera cases",
+      "Confirmed dengue cases",
+      "Daily maximum temperature",
+      "Day temperature",
+      "Excess mortality",
+      "Extreme Forecast Index",
+      "Heat Index",
       "Inundation extent",
       "Lead time",
+      "Maximum temperature",
+      "Minimum temperature",
       "Rainfall total",
+      "Relative humidity",
       "River discharge",
       "Seasonal precipitation",
       "Temperature",
@@ -130,10 +140,16 @@
     ],
     "hazard_types": [
       "Cholera",
+      "Cold Wave",
+      "Dengue",
       "Drought",
+      "Extreme Rainfall",
       "Flood",
+      "Heatwave",
+      "Population Movement",
       "Storm",
-      "Unknown"
+      "Volcanic Ash",
+      "Wildfire"
     ],
     "threshold_operators": [
       "<",
@@ -144,9 +160,9 @@
       "between"
     ],
     "_metadata": {
-      "forecast_variables_common": 9,
-      "forecast_variables_rare": 42,
-      "min_frequency_threshold": 5,
+      "forecast_variables_common": 19,
+      "forecast_variables_rare": 32,
+      "min_frequency_threshold": 2,
       "variable_frequency": {
         "Seasonal precipitation": 46,
         "River discharge": 38,
@@ -205,21 +221,14 @@
         "Alert level",
         "Alert level bulletin",
         "Ash fall",
-        "Cold wave occurrence",
         "Conditions duration",
-        "Confirmed dengue cases",
         "Crop losses",
         "Crop yield reduction",
-        "Daily maximum temperature",
-        "Day temperature",
         "Departure from normal temperature",
         "Duration",
         "El Niño event",
-        "Excess mortality",
-        "Extreme Forecast Index",
         "Fodder deficit",
         "Food insecurity index",
-        "Heat Index",
         "Heat index",
         "Heatwave alert",
         "Heatwave duration",
@@ -227,12 +236,9 @@
         "Heatwave occurrence probability",
         "Ignition probability",
         "Internal volcanic activity parameters",
-        "Maximum temperature",
-        "Minimum temperature",
         "Nino3.4 index",
         "Orange warning level",
         "Red warning",
-        "Relative humidity",
         "Response capacity",
         "River stage level",
         "Standardized Precipitation Index",
@@ -411,7 +417,7 @@
     },
     {
       "document_name": "Bangladesh - Cold Wave EAP (MDRBD038)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Cold Wave",
       "statement_key": "trigger_statement_1",
       "activation_type": "multi-stage",
       "is_conditional": false,
@@ -438,7 +444,7 @@
     },
     {
       "document_name": "Albania - Heatwave sEAP (MDRAL009)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "activation_type": "single-trigger",
       "is_conditional": false,
@@ -447,7 +453,7 @@
     },
     {
       "document_name": "Lebanon - Cold Wave sEAP (MDRLB019)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Cold Wave",
       "statement_key": "trigger_statement_1",
       "activation_type": "single-trigger",
       "is_conditional": false,
@@ -456,7 +462,7 @@
     },
     {
       "document_name": "Sri Lanka - Dengue sEAP (MDRLK022)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Dengue",
       "statement_key": "trigger_statement_1",
       "activation_type": "dual-trigger",
       "is_conditional": true,
@@ -465,7 +471,7 @@
     },
     {
       "document_name": "Fiji - Tropical Cyclone  sEAP (MDRFJ008)",
-      "hazard_type": "Flood",
+      "hazard_type": "Storm",
       "statement_key": "trigger_statement_1",
       "activation_type": "dual-trigger",
       "is_conditional": true,
@@ -492,7 +498,7 @@
     },
     {
       "document_name": "Colombia - Forced Displacement sEAP (MDRCO031)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Population Movement",
       "statement_key": "trigger_statement_1",
       "activation_type": "single-trigger",
       "is_conditional": false,
@@ -591,7 +597,7 @@
     },
     {
       "document_name": "El Salvador -Extreme Rainfall sEAP (MDRSV018)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Extreme Rainfall",
       "statement_key": "trigger_statement_1",
       "activation_type": "dual-trigger",
       "is_conditional": false,
@@ -600,7 +606,7 @@
     },
     {
       "document_name": "El Salvador -Extreme Rainfall sEAP (MDRSV018)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Extreme Rainfall",
       "statement_key": "trigger_statement_2",
       "activation_type": "dual-trigger",
       "is_conditional": true,
@@ -609,7 +615,7 @@
     },
     {
       "document_name": "Chile - Wildfire sEAP (MDRCL018)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Wildfire",
       "statement_key": "trigger_statement_1",
       "activation_type": "single-trigger",
       "is_conditional": false,
@@ -618,7 +624,7 @@
     },
     {
       "document_name": "Myanmar - Heatwave sEAP (MDRMM022)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "activation_type": "multi-stage",
       "is_conditional": true,
@@ -627,7 +633,7 @@
     },
     {
       "document_name": "Burkina Faso - Heatwave sEAP (MDRBF020)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "activation_type": "single-trigger",
       "is_conditional": false,
@@ -663,7 +669,7 @@
     },
     {
       "document_name": "Lesotho - Cold Wave EAP (MDRLS010)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Cold Wave",
       "statement_key": "trigger_statement_1",
       "activation_type": "single-trigger",
       "is_conditional": false,
@@ -726,7 +732,7 @@
     },
     {
       "document_name": "Kyrgyzstan - Cold Wave EAP (MDRKG020)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Cold Wave",
       "statement_key": "trigger_statement_1",
       "activation_type": "single-trigger",
       "is_conditional": false,
@@ -807,7 +813,7 @@
     },
     {
       "document_name": "Comoros - Volcanic Ash (EAP) (MDRKM012)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Volcanic Ash",
       "statement_key": "trigger_statement_1",
       "activation_type": "multi-stage",
       "is_conditional": true,
@@ -825,7 +831,7 @@
     },
     {
       "document_name": "Bangladesh - Cyclone EAP (MDRBD033)",
-      "hazard_type": "Flood",
+      "hazard_type": "Storm",
       "statement_key": "trigger_statement_1",
       "activation_type": "dual-trigger",
       "is_conditional": false,
@@ -834,7 +840,7 @@
     },
     {
       "document_name": "Bangladesh - Cyclone EAP (MDRBD033)",
-      "hazard_type": "Flood",
+      "hazard_type": "Storm",
       "statement_key": "trigger_statement_2",
       "activation_type": "dual-trigger",
       "is_conditional": true,
@@ -843,7 +849,7 @@
     },
     {
       "document_name": "Mozambique - Cyclone EAP (MDRMZ021)",
-      "hazard_type": "Flood",
+      "hazard_type": "Storm",
       "statement_key": "trigger_statement_1",
       "activation_type": "single-trigger",
       "is_conditional": true,
@@ -870,7 +876,7 @@
     },
     {
       "document_name": "Honduras - Population Movement EAP (MDRHN021)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Population Movement",
       "statement_key": "trigger_statement_1",
       "activation_type": "single-trigger",
       "is_conditional": false,
@@ -879,7 +885,7 @@
     },
     {
       "document_name": "Honduras - Population Movement EAP (MDRHN021)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Population Movement",
       "statement_key": "trigger_statement_2",
       "activation_type": "single-trigger",
       "is_conditional": false,
@@ -915,7 +921,7 @@
     },
     {
       "document_name": "Ecuador - Volcanic Ash (MDREC024)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Volcanic Ash",
       "statement_key": "trigger_statement_1",
       "activation_type": "dual-trigger",
       "is_conditional": false,
@@ -924,7 +930,7 @@
     },
     {
       "document_name": "Ecuador - Volcanic Ash (MDREC024)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Volcanic Ash",
       "statement_key": "trigger_statement_2",
       "activation_type": "dual-trigger",
       "is_conditional": true,
@@ -933,7 +939,7 @@
     },
     {
       "document_name": "Greece - Extreme Heat sEAP (MDRGR005)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "activation_type": "single-trigger",
       "is_conditional": false,
@@ -951,7 +957,7 @@
     },
     {
       "document_name": "Bangladesh - Heatwave EAP (MDRBD032)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "activation_type": "dual-trigger",
       "is_conditional": true,
@@ -960,7 +966,7 @@
     },
     {
       "document_name": "Kyrgyzstan - Heatwave (MDRKG016)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "activation_type": "single-trigger",
       "is_conditional": false,
@@ -1041,7 +1047,7 @@
     },
     {
       "document_name": "Tajikistan - Cold Wave (EAP2022TJ02) (MDRTJ033)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Cold Wave",
       "statement_key": "trigger_statement_1",
       "activation_type": "single-trigger",
       "is_conditional": false,
@@ -1050,7 +1056,7 @@
     },
     {
       "document_name": "Kazakhstan - EAP2022KZ01 - Cold Wave (MDRKZ012)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Cold Wave",
       "statement_key": "trigger_statement_1",
       "activation_type": "single-trigger",
       "is_conditional": false,
@@ -1059,7 +1065,7 @@
     },
     {
       "document_name": "Tajikistan - Heat Wave (EAP2021TJ01) (MDRTJ034)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "activation_type": "single-trigger",
       "is_conditional": false,
@@ -1068,7 +1074,7 @@
     },
     {
       "document_name": "Nepal - Heatwave sEAP (MDRNP020)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "activation_type": "dual-trigger",
       "is_conditional": true,
@@ -1104,7 +1110,7 @@
     },
     {
       "document_name": "Fiji - Tropical Cyclone  sEAP (MDRFJ008)",
-      "hazard_type": "Flood",
+      "hazard_type": "Storm",
       "statement_key": "trigger_statement_2",
       "activation_type": "multi-stage",
       "is_conditional": false,
@@ -2241,7 +2247,7 @@
     {
       "document_id": 16458,
       "document_name": "Bangladesh - Cold Wave EAP (MDRBD038)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Cold Wave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 6,
@@ -2266,7 +2272,7 @@
     {
       "document_id": 16458,
       "document_name": "Bangladesh - Cold Wave EAP (MDRBD038)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Cold Wave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 1,
       "total_thresholds": 6,
@@ -2291,7 +2297,7 @@
     {
       "document_id": 16458,
       "document_name": "Bangladesh - Cold Wave EAP (MDRBD038)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Cold Wave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 2,
       "total_thresholds": 6,
@@ -2316,7 +2322,7 @@
     {
       "document_id": 16458,
       "document_name": "Bangladesh - Cold Wave EAP (MDRBD038)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Cold Wave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 3,
       "total_thresholds": 6,
@@ -2341,7 +2347,7 @@
     {
       "document_id": 16458,
       "document_name": "Bangladesh - Cold Wave EAP (MDRBD038)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Cold Wave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 4,
       "total_thresholds": 6,
@@ -2366,7 +2372,7 @@
     {
       "document_id": 16458,
       "document_name": "Bangladesh - Cold Wave EAP (MDRBD038)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Cold Wave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 5,
       "total_thresholds": 6,
@@ -2616,7 +2622,7 @@
     {
       "document_id": 16473,
       "document_name": "Albania - Heatwave sEAP (MDRAL009)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 4,
@@ -2641,7 +2647,7 @@
     {
       "document_id": 16473,
       "document_name": "Albania - Heatwave sEAP (MDRAL009)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 1,
       "total_thresholds": 4,
@@ -2666,7 +2672,7 @@
     {
       "document_id": 16473,
       "document_name": "Albania - Heatwave sEAP (MDRAL009)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 2,
       "total_thresholds": 4,
@@ -2691,7 +2697,7 @@
     {
       "document_id": 16473,
       "document_name": "Albania - Heatwave sEAP (MDRAL009)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 3,
       "total_thresholds": 4,
@@ -2716,7 +2722,7 @@
     {
       "document_id": 16479,
       "document_name": "Lebanon - Cold Wave sEAP (MDRLB019)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Cold Wave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 2,
@@ -2741,7 +2747,7 @@
     {
       "document_id": 16479,
       "document_name": "Lebanon - Cold Wave sEAP (MDRLB019)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Cold Wave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 1,
       "total_thresholds": 2,
@@ -2766,7 +2772,7 @@
     {
       "document_id": 16482,
       "document_name": "Sri Lanka - Dengue sEAP (MDRLK022)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Dengue",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 3,
@@ -2791,7 +2797,7 @@
     {
       "document_id": 16482,
       "document_name": "Sri Lanka - Dengue sEAP (MDRLK022)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Dengue",
       "statement_key": "trigger_statement_1",
       "threshold_index": 1,
       "total_thresholds": 3,
@@ -2816,7 +2822,7 @@
     {
       "document_id": 16482,
       "document_name": "Sri Lanka - Dengue sEAP (MDRLK022)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Dengue",
       "statement_key": "trigger_statement_1",
       "threshold_index": 2,
       "total_thresholds": 3,
@@ -2841,7 +2847,7 @@
     {
       "document_id": 16486,
       "document_name": "Fiji - Tropical Cyclone  sEAP (MDRFJ008)",
-      "hazard_type": "Flood",
+      "hazard_type": "Storm",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 2,
@@ -2866,7 +2872,7 @@
     {
       "document_id": 16486,
       "document_name": "Fiji - Tropical Cyclone  sEAP (MDRFJ008)",
-      "hazard_type": "Flood",
+      "hazard_type": "Storm",
       "statement_key": "trigger_statement_1",
       "threshold_index": 1,
       "total_thresholds": 2,
@@ -3041,7 +3047,7 @@
     {
       "document_id": 16527,
       "document_name": "Colombia - Forced Displacement sEAP (MDRCO031)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Population Movement",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 4,
@@ -3066,7 +3072,7 @@
     {
       "document_id": 16527,
       "document_name": "Colombia - Forced Displacement sEAP (MDRCO031)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Population Movement",
       "statement_key": "trigger_statement_1",
       "threshold_index": 1,
       "total_thresholds": 4,
@@ -3091,7 +3097,7 @@
     {
       "document_id": 16527,
       "document_name": "Colombia - Forced Displacement sEAP (MDRCO031)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Population Movement",
       "statement_key": "trigger_statement_1",
       "threshold_index": 2,
       "total_thresholds": 4,
@@ -3116,7 +3122,7 @@
     {
       "document_id": 16527,
       "document_name": "Colombia - Forced Displacement sEAP (MDRCO031)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Population Movement",
       "statement_key": "trigger_statement_1",
       "threshold_index": 3,
       "total_thresholds": 4,
@@ -3816,7 +3822,7 @@
     {
       "document_id": 16568,
       "document_name": "El Salvador -Extreme Rainfall sEAP (MDRSV018)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Extreme Rainfall",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 1,
@@ -3841,7 +3847,7 @@
     {
       "document_id": 16568,
       "document_name": "El Salvador -Extreme Rainfall sEAP (MDRSV018)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Extreme Rainfall",
       "statement_key": "trigger_statement_2",
       "threshold_index": 0,
       "total_thresholds": 2,
@@ -3866,7 +3872,7 @@
     {
       "document_id": 16568,
       "document_name": "El Salvador -Extreme Rainfall sEAP (MDRSV018)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Extreme Rainfall",
       "statement_key": "trigger_statement_2",
       "threshold_index": 1,
       "total_thresholds": 2,
@@ -3891,7 +3897,7 @@
     {
       "document_id": 16569,
       "document_name": "Chile - Wildfire sEAP (MDRCL018)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Wildfire",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 3,
@@ -3916,7 +3922,7 @@
     {
       "document_id": 16569,
       "document_name": "Chile - Wildfire sEAP (MDRCL018)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Wildfire",
       "statement_key": "trigger_statement_1",
       "threshold_index": 1,
       "total_thresholds": 3,
@@ -3941,7 +3947,7 @@
     {
       "document_id": 16569,
       "document_name": "Chile - Wildfire sEAP (MDRCL018)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Wildfire",
       "statement_key": "trigger_statement_1",
       "threshold_index": 2,
       "total_thresholds": 3,
@@ -3966,7 +3972,7 @@
     {
       "document_id": 16618,
       "document_name": "Myanmar - Heatwave sEAP (MDRMM022)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 5,
@@ -3991,7 +3997,7 @@
     {
       "document_id": 16618,
       "document_name": "Myanmar - Heatwave sEAP (MDRMM022)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 1,
       "total_thresholds": 5,
@@ -4016,7 +4022,7 @@
     {
       "document_id": 16618,
       "document_name": "Myanmar - Heatwave sEAP (MDRMM022)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 2,
       "total_thresholds": 5,
@@ -4041,7 +4047,7 @@
     {
       "document_id": 16618,
       "document_name": "Myanmar - Heatwave sEAP (MDRMM022)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 3,
       "total_thresholds": 5,
@@ -4066,7 +4072,7 @@
     {
       "document_id": 16633,
       "document_name": "Burkina Faso - Heatwave sEAP (MDRBF020)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 2,
@@ -4091,7 +4097,7 @@
     {
       "document_id": 16633,
       "document_name": "Burkina Faso - Heatwave sEAP (MDRBF020)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 1,
       "total_thresholds": 2,
@@ -4341,7 +4347,7 @@
     {
       "document_id": 16682,
       "document_name": "Lesotho - Cold Wave EAP (MDRLS010)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Cold Wave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 3,
@@ -4366,7 +4372,7 @@
     {
       "document_id": 16682,
       "document_name": "Lesotho - Cold Wave EAP (MDRLS010)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Cold Wave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 1,
       "total_thresholds": 3,
@@ -4391,7 +4397,7 @@
     {
       "document_id": 16682,
       "document_name": "Lesotho - Cold Wave EAP (MDRLS010)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Cold Wave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 2,
       "total_thresholds": 3,
@@ -4741,7 +4747,7 @@
     {
       "document_id": 16767,
       "document_name": "Kyrgyzstan - Cold Wave EAP (MDRKG020)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Cold Wave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 2,
@@ -4766,7 +4772,7 @@
     {
       "document_id": 16767,
       "document_name": "Kyrgyzstan - Cold Wave EAP (MDRKG020)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Cold Wave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 1,
       "total_thresholds": 2,
@@ -5341,7 +5347,7 @@
     {
       "document_id": 16946,
       "document_name": "Comoros - Volcanic Ash (EAP) (MDRKM012)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Volcanic Ash",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 3,
@@ -5366,7 +5372,7 @@
     {
       "document_id": 16946,
       "document_name": "Comoros - Volcanic Ash (EAP) (MDRKM012)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Volcanic Ash",
       "statement_key": "trigger_statement_1",
       "threshold_index": 1,
       "total_thresholds": 3,
@@ -5391,7 +5397,7 @@
     {
       "document_id": 16946,
       "document_name": "Comoros - Volcanic Ash (EAP) (MDRKM012)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Volcanic Ash",
       "statement_key": "trigger_statement_1",
       "threshold_index": 2,
       "total_thresholds": 3,
@@ -5441,7 +5447,7 @@
     {
       "document_id": 17037,
       "document_name": "Bangladesh - Cyclone EAP (MDRBD033)",
-      "hazard_type": "Flood",
+      "hazard_type": "Storm",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 3,
@@ -5466,7 +5472,7 @@
     {
       "document_id": 17037,
       "document_name": "Bangladesh - Cyclone EAP (MDRBD033)",
-      "hazard_type": "Flood",
+      "hazard_type": "Storm",
       "statement_key": "trigger_statement_1",
       "threshold_index": 1,
       "total_thresholds": 3,
@@ -5491,7 +5497,7 @@
     {
       "document_id": 17037,
       "document_name": "Bangladesh - Cyclone EAP (MDRBD033)",
-      "hazard_type": "Flood",
+      "hazard_type": "Storm",
       "statement_key": "trigger_statement_1",
       "threshold_index": 2,
       "total_thresholds": 3,
@@ -5516,7 +5522,7 @@
     {
       "document_id": 17037,
       "document_name": "Bangladesh - Cyclone EAP (MDRBD033)",
-      "hazard_type": "Flood",
+      "hazard_type": "Storm",
       "statement_key": "trigger_statement_2",
       "threshold_index": 0,
       "total_thresholds": 3,
@@ -5541,7 +5547,7 @@
     {
       "document_id": 17037,
       "document_name": "Bangladesh - Cyclone EAP (MDRBD033)",
-      "hazard_type": "Flood",
+      "hazard_type": "Storm",
       "statement_key": "trigger_statement_2",
       "threshold_index": 1,
       "total_thresholds": 3,
@@ -5566,7 +5572,7 @@
     {
       "document_id": 17037,
       "document_name": "Bangladesh - Cyclone EAP (MDRBD033)",
-      "hazard_type": "Flood",
+      "hazard_type": "Storm",
       "statement_key": "trigger_statement_2",
       "threshold_index": 2,
       "total_thresholds": 3,
@@ -5591,7 +5597,7 @@
     {
       "document_id": 17039,
       "document_name": "Mozambique - Cyclone EAP (MDRMZ021)",
-      "hazard_type": "Flood",
+      "hazard_type": "Storm",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 2,
@@ -5616,7 +5622,7 @@
     {
       "document_id": 17039,
       "document_name": "Mozambique - Cyclone EAP (MDRMZ021)",
-      "hazard_type": "Flood",
+      "hazard_type": "Storm",
       "statement_key": "trigger_statement_1",
       "threshold_index": 1,
       "total_thresholds": 2,
@@ -5641,7 +5647,7 @@
     {
       "document_id": 17042,
       "document_name": "Mozambique - Cyclone EAP (MDRMZ021)",
-      "hazard_type": "Flood",
+      "hazard_type": "Storm",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 2,
@@ -5666,7 +5672,7 @@
     {
       "document_id": 17042,
       "document_name": "Mozambique - Cyclone EAP (MDRMZ021)",
-      "hazard_type": "Flood",
+      "hazard_type": "Storm",
       "statement_key": "trigger_statement_1",
       "threshold_index": 1,
       "total_thresholds": 2,
@@ -5766,7 +5772,7 @@
     {
       "document_id": 17090,
       "document_name": "Honduras - Population Movement EAP (MDRHN021)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Population Movement",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 3,
@@ -5791,7 +5797,7 @@
     {
       "document_id": 17090,
       "document_name": "Honduras - Population Movement EAP (MDRHN021)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Population Movement",
       "statement_key": "trigger_statement_1",
       "threshold_index": 1,
       "total_thresholds": 3,
@@ -5816,7 +5822,7 @@
     {
       "document_id": 17090,
       "document_name": "Honduras - Population Movement EAP (MDRHN021)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Population Movement",
       "statement_key": "trigger_statement_1",
       "threshold_index": 2,
       "total_thresholds": 3,
@@ -5841,7 +5847,7 @@
     {
       "document_id": 17090,
       "document_name": "Honduras - Population Movement EAP (MDRHN021)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Population Movement",
       "statement_key": "trigger_statement_2",
       "threshold_index": 0,
       "total_thresholds": 3,
@@ -5866,7 +5872,7 @@
     {
       "document_id": 17090,
       "document_name": "Honduras - Population Movement EAP (MDRHN021)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Population Movement",
       "statement_key": "trigger_statement_2",
       "threshold_index": 1,
       "total_thresholds": 3,
@@ -5891,7 +5897,7 @@
     {
       "document_id": 17090,
       "document_name": "Honduras - Population Movement EAP (MDRHN021)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Population Movement",
       "statement_key": "trigger_statement_2",
       "threshold_index": 2,
       "total_thresholds": 3,
@@ -6116,7 +6122,7 @@
     {
       "document_id": 17240,
       "document_name": "Ecuador - Volcanic Ash (MDREC024)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Volcanic Ash",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 1,
@@ -6141,7 +6147,7 @@
     {
       "document_id": 17240,
       "document_name": "Ecuador - Volcanic Ash (MDREC024)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Volcanic Ash",
       "statement_key": "trigger_statement_2",
       "threshold_index": 0,
       "total_thresholds": 2,
@@ -6166,7 +6172,7 @@
     {
       "document_id": 17240,
       "document_name": "Ecuador - Volcanic Ash (MDREC024)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Volcanic Ash",
       "statement_key": "trigger_statement_2",
       "threshold_index": 1,
       "total_thresholds": 2,
@@ -6191,7 +6197,7 @@
     {
       "document_id": 17253,
       "document_name": "Greece - Extreme Heat sEAP (MDRGR005)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 4,
@@ -6216,7 +6222,7 @@
     {
       "document_id": 17253,
       "document_name": "Greece - Extreme Heat sEAP (MDRGR005)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 1,
       "total_thresholds": 4,
@@ -6241,7 +6247,7 @@
     {
       "document_id": 17253,
       "document_name": "Greece - Extreme Heat sEAP (MDRGR005)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 2,
       "total_thresholds": 4,
@@ -6266,7 +6272,7 @@
     {
       "document_id": 17253,
       "document_name": "Greece - Extreme Heat sEAP (MDRGR005)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 3,
       "total_thresholds": 4,
@@ -6391,7 +6397,7 @@
     {
       "document_id": 17301,
       "document_name": "Bangladesh - Heatwave EAP (MDRBD032)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 2,
@@ -6416,7 +6422,7 @@
     {
       "document_id": 17301,
       "document_name": "Bangladesh - Heatwave EAP (MDRBD032)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 1,
       "total_thresholds": 2,
@@ -6441,7 +6447,7 @@
     {
       "document_id": 17333,
       "document_name": "Kyrgyzstan - Heatwave (MDRKG016)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 5,
@@ -6466,7 +6472,7 @@
     {
       "document_id": 17333,
       "document_name": "Kyrgyzstan - Heatwave (MDRKG016)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 1,
       "total_thresholds": 5,
@@ -6491,7 +6497,7 @@
     {
       "document_id": 17333,
       "document_name": "Kyrgyzstan - Heatwave (MDRKG016)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 2,
       "total_thresholds": 5,
@@ -6516,7 +6522,7 @@
     {
       "document_id": 17333,
       "document_name": "Kyrgyzstan - Heatwave (MDRKG016)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 3,
       "total_thresholds": 5,
@@ -6541,7 +6547,7 @@
     {
       "document_id": 17333,
       "document_name": "Kyrgyzstan - Heatwave (MDRKG016)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 4,
       "total_thresholds": 5,
@@ -7091,7 +7097,7 @@
     {
       "document_id": 17645,
       "document_name": "Tajikistan - Cold Wave (EAP2022TJ02) (MDRTJ033)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Cold Wave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 2,
@@ -7116,7 +7122,7 @@
     {
       "document_id": 17645,
       "document_name": "Tajikistan - Cold Wave (EAP2022TJ02) (MDRTJ033)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Cold Wave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 1,
       "total_thresholds": 2,
@@ -7141,7 +7147,7 @@
     {
       "document_id": 17691,
       "document_name": "Kazakhstan - EAP2022KZ01 - Cold Wave (MDRKZ012)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Cold Wave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 3,
@@ -7166,7 +7172,7 @@
     {
       "document_id": 17691,
       "document_name": "Kazakhstan - EAP2022KZ01 - Cold Wave (MDRKZ012)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Cold Wave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 2,
       "total_thresholds": 3,
@@ -7191,7 +7197,7 @@
     {
       "document_id": 18031,
       "document_name": "Tajikistan - Heat Wave (EAP2021TJ01) (MDRTJ034)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 2,
@@ -7216,7 +7222,7 @@
     {
       "document_id": 18031,
       "document_name": "Tajikistan - Heat Wave (EAP2021TJ01) (MDRTJ034)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 1,
       "total_thresholds": 2,
@@ -7241,7 +7247,7 @@
     {
       "document_id": 25999,
       "document_name": "Nepal - Heatwave sEAP (MDRNP020)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 4,
@@ -7266,7 +7272,7 @@
     {
       "document_id": 25999,
       "document_name": "Nepal - Heatwave sEAP (MDRNP020)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 1,
       "total_thresholds": 4,
@@ -7291,7 +7297,7 @@
     {
       "document_id": 25999,
       "document_name": "Nepal - Heatwave sEAP (MDRNP020)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 2,
       "total_thresholds": 4,
@@ -7316,7 +7322,7 @@
     {
       "document_id": 25999,
       "document_name": "Nepal - Heatwave sEAP (MDRNP020)",
-      "hazard_type": "Unknown",
+      "hazard_type": "Heatwave",
       "statement_key": "trigger_statement_1",
       "threshold_index": 3,
       "total_thresholds": 4,
@@ -7491,7 +7497,7 @@
     {
       "document_id": 26020,
       "document_name": "Fiji - Tropical Cyclone  sEAP (MDRFJ008)",
-      "hazard_type": "Flood",
+      "hazard_type": "Storm",
       "statement_key": "trigger_statement_1",
       "threshold_index": 0,
       "total_thresholds": 4,
@@ -7516,7 +7522,7 @@
     {
       "document_id": 26020,
       "document_name": "Fiji - Tropical Cyclone  sEAP (MDRFJ008)",
-      "hazard_type": "Flood",
+      "hazard_type": "Storm",
       "statement_key": "trigger_statement_1",
       "threshold_index": 1,
       "total_thresholds": 4,
@@ -7541,7 +7547,7 @@
     {
       "document_id": 26020,
       "document_name": "Fiji - Tropical Cyclone  sEAP (MDRFJ008)",
-      "hazard_type": "Flood",
+      "hazard_type": "Storm",
       "statement_key": "trigger_statement_2",
       "threshold_index": 0,
       "total_thresholds": 1,
