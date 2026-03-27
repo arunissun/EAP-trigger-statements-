@@ -1,4 +1,4 @@
-# UI/UX Guide: EAP Trigger Form
+# UI: EAP Trigger Form
 
 ## Aim
 The primary goal of the new "Trigger Rule Builder" for the IFRC GO platform is to transition Early Action Protocol (EAP) triggers from unstructured, free-text paragraphs into a structured, machine-readable format. 
