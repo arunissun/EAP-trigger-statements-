@@ -21,4 +21,7 @@ scripts/test_pymupdf.py
 scripts/debug_pdf.py 
 scripts/test_pymupdf.py
 
+# No pdfs
+*.pdf
+
 
