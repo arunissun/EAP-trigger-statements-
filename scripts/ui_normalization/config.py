@@ -62,9 +62,17 @@ MAX_RETRIES       = 3       # per-record retry attempts
 # Hazard type inference keywords (matched against document_name)
 # ---------------------------------------------------------------------------
 HAZARD_KEYWORDS = {
-    "Flood":    ["flood", "inundation", "riverine", "pluvial", "cyclone"],
-    "Drought":  ["drought", "dry", "tercile", "precipitation deficit"],
-    "Cholera":  ["cholera", "epidemic", "outbreak", "epidem"],
-    "Storm":    ["storm", "tropical", "hurricane", "typhoon", "wind"],
-    "Landslide":["landslide", "mudslide"],
+    # Specific hazards first to avoid broad-category collisions.
+    "Volcanic Ash": ["volcanic ash", "ash fall", "volcanic"],
+    "Wildfire": ["wildfire", "forest fire", "fire weather", "ignition"],
+    "Population Movement": ["population movement", "forced displacement", "displacement", "migration"],
+    "Dengue": ["dengue"],
+    "Cholera": ["cholera", "epidemic", "outbreak", "epidem"],
+    "Heatwave": ["heatwave", "heat wave", "extreme heat", "heat index"],
+    "Cold Wave": ["cold wave", "coldwave", "cold spell"],
+    "Drought": ["drought", "dry", "tercile", "precipitation deficit", "el nino", "el niño"],
+    "Flood": ["flood", "floods", "flooding", "inundation", "riverine", "pluvial", "flash flood"],
+    "Extreme Rainfall": ["extreme rainfall", "heavy rainfall"],
+    "Storm": ["storm", "tropical storm", "hurricane", "typhoon", "cyclone", "tropical depression", "windstorm"],
+    "Landslide": ["landslide", "mudslide"],
 }
