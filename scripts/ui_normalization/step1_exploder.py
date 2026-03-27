@@ -40,10 +40,18 @@ def infer_hazard_type(document_name: str) -> str:
     Infer a standardised hazard type from the document name.
     Falls back to 'Unknown' if no keyword matches.
     """
-    name_lower = document_name.lower()
+    # Normalize punctuation/spacing so variants like "cold-wave", "heat wave",
+    # and "EAP2024... - Cold Wave" are matched consistently.
+    name_lower = re.sub(r"\s+", " ", re.sub(r"[^a-z0-9]+", " ", document_name.lower())).strip()
+
     for hazard, keywords in HAZARD_KEYWORDS.items():
-        if any(kw in name_lower for kw in keywords):
-            return hazard
+        for kw in keywords:
+            kw_norm = re.sub(r"\s+", " ", re.sub(r"[^a-z0-9]+", " ", kw.lower())).strip()
+            if not kw_norm:
+                continue
+            if re.search(rf"\b{re.escape(kw_norm)}\b", name_lower):
+                return hazard
+
     return "Unknown"
 
 
