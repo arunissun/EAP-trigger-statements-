@@ -1,9 +1,9 @@
 # UI/UX Guide: EAP Trigger Form
 
-## Executive Summary & Goal
+## Aim
 The primary goal of the new "Trigger Rule Builder" for the IFRC GO platform is to transition Early Action Protocol (EAP) triggers from unstructured, free-text paragraphs into a structured, machine-readable format. 
 
-Currently, trigger statements are written as complex narrative sentences, making it difficult to automate monitoring, analyze historical data, or integrate with forecasting APIs. By moving to a structured, conditional logic builder, we enable automated alerts, scalable data analysis, and clearer, less ambiguous activation protocols for National Societies.
+Currently, trigger statements are written as complex narrative sentences, making it difficult to automate monitoring and analyze historical data. By moving to a structured, conditional logic builder, we enable automated alerts, scalable data analysis, and clearer, less ambiguous activation protocols for National Societies.
 
 ## Critique of the Current Mockup
 The preliminary mockup provides a solid foundation, but requires structural adjustments to support the full complexity of EAP logic.
@@ -15,7 +15,7 @@ The preliminary mockup provides a solid foundation, but requires structural adju
 **What Needs Improvement:**
 *   **Lack of Phase Context:** The mockup simply lists "Trigger 1" and "Trigger 2". EAPs can be multi-stage and require distinct phases. The UI needs a higher-level container to distinguish between *Pre-activation*, *Activation*, and *Stop mechanisms*.
 *   **Ambiguous Nested Logic:** The "Trigger Logic: Conditional (Either / or)" dropdown is floating between cards. It is visually unclear if this applies globally or just between Trigger 1 and 2. We need clearer visual grouping (e.g., indented blocks, vertical connecting lines, or visual brackets) to represent nested `AND`/`OR` logic.
-*   **Unstructured Threshold Field:** The "Threshold Value" field currently shows "400 mm in 5 days" as a single text input. This defeats the purpose of structured data. It must be broken down into distinct fields: `Operator` (>, <, =), `Value` (400), and `Unit` (mm). The "in 5 days" part is already handled by the Lead Time/Timeframe fields, so combining them in the threshold field is redundant.
+*   **Unstructured Threshold Field:** The "Threshold Value" field currently shows "400 mm in 5 days" as a single text input. It must be broken down into distinct fields: `Operator` (>, <, =), `Value` (400), and `Unit` (mm). The "in 5 days" part is already handled by the Lead Time/Timeframe fields, so combining them in the threshold field might not be useful.
 
 ## The EAP Mental Model (Information Architecture)
 To support complex, multi-stage EAPs, the UI must strictly adhere to the following three-level hierarchy:
@@ -95,7 +95,7 @@ From the current extracted dataset (65 records), pre-activation signals are expl
 To prevent cognitive overload, dropdown menus must prioritize the most common options based on our global frequency analysis, rather than presenting a massive alphabetical list.
 
 **1. Forecast Variables (Top 80%)**
-Based on 258 historical records, just 12 variables account for over 80% of all triggers. These should be immediately visible:
+Based on 258 different trigger statememnts in the EAPS, just 12 variables account for over 80% of all triggers. These should be immediately visible:
 1. Seasonal precipitation
 2. River discharge
 3. Rainfall total
@@ -107,7 +107,8 @@ Based on 258 historical records, just 12 variables account for over 80% of all t
 9. Daily maximum temperature
 10. Maximum temperature
 11. Excess mortality
-12. Confirmed Cases
+12. Heat Index
+see variable_frequency_openai.md file for a list of all variables
 
 **2. Sources**
 The UI should prioritize the most frequently used regional and global forecasting centers from our dataset (e.g., ECMWF, GLoFAS, PAGASA, IDEAM, INAM). 
