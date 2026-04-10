@@ -1,39 +1,515 @@
 {
   "metadata": {
-    "description": "EAP Trigger UI Schema with frequency-filtered forecast variables",
+    "description": "EAP Trigger UI Schema with canonical/subcategory dropdown contract",
     "total_documents": 62,
-    "total_statements": 96,
-    "total_thresholds": 258,
-    "failed_records": 12,
-    "min_frequency_threshold": 2,
+    "total_statements": 93,
+    "total_thresholds": 253,
+    "failed_records": 17,
+    "min_frequency_threshold": 4,
+    "max_primary_canonicals": 13,
     "trigger_logic_summary": {
-      "Conditional (Either / OR)": 51,
-      "Conditional (Sequential / AND)": 32,
-      "Single": 13
+      "Conditional (Either / OR)": 50,
+      "Conditional (Sequential / AND)": 31,
+      "Single": 12
     }
   },
   "dropdown_masters": {
-    "forecast_variables": [
-      "Affected population",
-      "Cold wave occurrence",
-      "Confirmed cholera cases",
-      "Confirmed dengue cases",
-      "Daily maximum temperature",
-      "Day temperature",
-      "Excess mortality",
-      "Extreme Forecast Index",
-      "Heat Index",
-      "Inundation extent",
-      "Lead time",
-      "Maximum temperature",
-      "Minimum temperature",
-      "Rainfall total",
-      "Relative humidity",
-      "River discharge",
-      "Seasonal precipitation",
+    "primary_dropdown_top10": [
+      "Precipitation",
       "Temperature",
-      "Wind speed"
+      "Wind",
+      "Hydrological Flow",
+      "Population Impact",
+      "Infectious Disease Incidence",
+      "Humidity",
+      "Fire Risk",
+      "Volcanic Activity",
+      "Agricultural Impact"
     ],
+    "secondary_subcategory_dropdown": {
+      "Precipitation": [
+        "Seasonal total",
+        "Total rainfall"
+      ],
+      "Temperature": [
+        "Cold Wave",
+        "Cold wave event",
+        "Daytime temperature",
+        "General temperature",
+        "Heat index",
+        "Heatwave",
+        "Heatwave intensity",
+        "Heatwave occurrence",
+        "Heatwave occurrence probability",
+        "Max daily temp",
+        "Max daily temperature",
+        "Max temperature",
+        "Min temperature"
+      ],
+      "Wind": [
+        "Speed",
+        "Speed category"
+      ],
+      "Hydrological Flow": [
+        "Flood extent",
+        "River flow"
+      ],
+      "Population Impact": [
+        "Affected count",
+        "Mortality",
+        "Mortality excess"
+      ],
+      "Infectious Disease Incidence": [
+        "Cholera cases",
+        "Dengue cases"
+      ],
+      "Humidity": [
+        "Relative humidity"
+      ],
+      "Fire Risk": [
+        "Ignition probability"
+      ],
+      "Volcanic Activity": [
+        "Activity parameters",
+        "Ash deposition",
+        "Volcanic Ash"
+      ],
+      "Agricultural Impact": [
+        "Crop damage",
+        "Crop yield",
+        "Fodder availability"
+      ]
+    },
+    "advanced_other_search": [
+      "Extreme Forecast Index",
+      "Nino3.4 index"
+    ],
+    "canonical_to_units": {
+      "Precipitation": [
+        "%",
+        "counties",
+        "days",
+        "event",
+        "mm",
+        "mm/day",
+        "months",
+        "percentile",
+        "regions",
+        "tercile",
+        "years"
+      ],
+      "Temperature": [
+        "%",
+        "days",
+        "degrees",
+        "event",
+        "percentile",
+        "°C"
+      ],
+      "Wind": [
+        "%",
+        "Signal level",
+        "category",
+        "km/h",
+        "km/hr",
+        "knots",
+        "signal level"
+      ],
+      "Hydrological Flow": [
+        "%",
+        "cm",
+        "cusecs",
+        "days",
+        "level",
+        "levels",
+        "m",
+        "metres",
+        "people",
+        "unitless",
+        "years"
+      ],
+      "Population Impact": [
+        "%",
+        "IPC phase",
+        "index",
+        "months",
+        "people",
+        "tercile"
+      ],
+      "Infectious Disease Incidence": [
+        "%",
+        "cases",
+        "times average caseload"
+      ],
+      "Humidity": [
+        "%"
+      ],
+      "Fire Risk": [
+        "%"
+      ],
+      "Volcanic Activity": [
+        "level",
+        "mm",
+        "units"
+      ],
+      "Agricultural Impact": [
+        "%"
+      ]
+    },
+    "canonical_to_operators": {
+      "Precipitation": [
+        "<",
+        "<=",
+        "=",
+        ">",
+        ">=",
+        "between"
+      ],
+      "Temperature": [
+        "<",
+        "<=",
+        "=",
+        ">",
+        ">="
+      ],
+      "Wind": [
+        "=",
+        ">",
+        ">="
+      ],
+      "Hydrological Flow": [
+        ">",
+        ">="
+      ],
+      "Population Impact": [
+        "<=",
+        ">",
+        ">=",
+        "between"
+      ],
+      "Infectious Disease Incidence": [
+        ">",
+        ">="
+      ],
+      "Humidity": [
+        "<",
+        ">="
+      ],
+      "Fire Risk": [
+        ">="
+      ],
+      "Volcanic Activity": [
+        ">="
+      ],
+      "Agricultural Impact": [
+        ">",
+        ">="
+      ]
+    },
+    "subcategory_to_units_overrides": {
+      "Precipitation": {
+        "Seasonal total": [
+          "%",
+          "counties",
+          "days",
+          "event",
+          "mm",
+          "months",
+          "percentile",
+          "tercile",
+          "years"
+        ],
+        "Total rainfall": [
+          "%",
+          "days",
+          "mm",
+          "mm/day",
+          "percentile",
+          "regions"
+        ]
+      },
+      "Temperature": {
+        "Cold Wave": [
+          "event"
+        ],
+        "Cold wave event": [
+          "%"
+        ],
+        "Daytime temperature": [
+          "°C"
+        ],
+        "General temperature": [
+          "degrees",
+          "percentile",
+          "°C"
+        ],
+        "Heat index": [
+          "percentile",
+          "°C"
+        ],
+        "Heatwave": [
+          "days"
+        ],
+        "Heatwave intensity": [
+          "event"
+        ],
+        "Heatwave occurrence": [
+          "event"
+        ],
+        "Heatwave occurrence probability": [
+          "%"
+        ],
+        "Max daily temp": [
+          "percentile",
+          "°C"
+        ],
+        "Max daily temperature": [
+          "°C"
+        ],
+        "Max temperature": [
+          "percentile",
+          "°C"
+        ],
+        "Min temperature": [
+          "percentile",
+          "°C"
+        ]
+      },
+      "Wind": {
+        "Speed": [
+          "%",
+          "Signal level",
+          "category",
+          "km/h",
+          "km/hr",
+          "knots",
+          "signal level"
+        ],
+        "Speed category": [
+          "category"
+        ]
+      },
+      "Hydrological Flow": {
+        "Flood extent": [
+          "%",
+          "cm",
+          "level",
+          "levels",
+          "people"
+        ],
+        "River flow": [
+          "cm",
+          "cusecs",
+          "days",
+          "m",
+          "metres",
+          "unitless",
+          "years"
+        ]
+      },
+      "Population Impact": {
+        "Affected count": [
+          "%",
+          "IPC phase",
+          "index",
+          "months",
+          "people",
+          "tercile"
+        ],
+        "Mortality": [
+          "%"
+        ],
+        "Mortality excess": [
+          "%"
+        ]
+      },
+      "Infectious Disease Incidence": {
+        "Cholera cases": [
+          "%",
+          "cases"
+        ],
+        "Dengue cases": [
+          "cases",
+          "times average caseload"
+        ]
+      },
+      "Humidity": {
+        "Relative humidity": [
+          "%"
+        ]
+      },
+      "Fire Risk": {
+        "Ignition probability": [
+          "%"
+        ]
+      },
+      "Volcanic Activity": {
+        "Activity parameters": [
+          "units"
+        ],
+        "Ash deposition": [
+          "mm"
+        ],
+        "Volcanic Ash": [
+          "level"
+        ]
+      },
+      "Agricultural Impact": {
+        "Crop damage": [
+          "%"
+        ],
+        "Crop yield": [
+          "%"
+        ],
+        "Fodder availability": [
+          "%"
+        ]
+      }
+    },
+    "subcategory_to_operators_overrides": {
+      "Precipitation": {
+        "Seasonal total": [
+          "<",
+          "<=",
+          "=",
+          ">",
+          ">=",
+          "between"
+        ],
+        "Total rainfall": [
+          "<=",
+          ">",
+          ">="
+        ]
+      },
+      "Temperature": {
+        "Cold Wave": [
+          ">="
+        ],
+        "Cold wave event": [
+          ">="
+        ],
+        "Daytime temperature": [
+          ">"
+        ],
+        "General temperature": [
+          "<=",
+          "=",
+          ">",
+          ">="
+        ],
+        "Heat index": [
+          ">",
+          ">="
+        ],
+        "Heatwave": [
+          "<="
+        ],
+        "Heatwave intensity": [
+          ">="
+        ],
+        "Heatwave occurrence": [
+          ">="
+        ],
+        "Heatwave occurrence probability": [
+          "<"
+        ],
+        "Max daily temp": [
+          "<",
+          ">",
+          ">="
+        ],
+        "Max daily temperature": [
+          "<="
+        ],
+        "Max temperature": [
+          "<=",
+          ">",
+          ">="
+        ],
+        "Min temperature": [
+          "<",
+          "<=",
+          ">"
+        ]
+      },
+      "Wind": {
+        "Speed": [
+          "=",
+          ">",
+          ">="
+        ],
+        "Speed category": [
+          ">="
+        ]
+      },
+      "Hydrological Flow": {
+        "Flood extent": [
+          ">",
+          ">="
+        ],
+        "River flow": [
+          ">",
+          ">="
+        ]
+      },
+      "Population Impact": {
+        "Affected count": [
+          "<=",
+          ">",
+          ">="
+        ],
+        "Mortality": [
+          ">="
+        ],
+        "Mortality excess": [
+          ">=",
+          "between"
+        ]
+      },
+      "Infectious Disease Incidence": {
+        "Cholera cases": [
+          ">",
+          ">="
+        ],
+        "Dengue cases": [
+          ">"
+        ]
+      },
+      "Humidity": {
+        "Relative humidity": [
+          "<",
+          ">="
+        ]
+      },
+      "Fire Risk": {
+        "Ignition probability": [
+          ">="
+        ]
+      },
+      "Volcanic Activity": {
+        "Activity parameters": [
+          ">="
+        ],
+        "Ash deposition": [
+          ">="
+        ],
+        "Volcanic Ash": [
+          ">="
+        ]
+      },
+      "Agricultural Impact": {
+        "Crop damage": [
+          ">="
+        ],
+        "Crop yield": [
+          ">"
+        ],
+        "Fodder availability": [
+          ">="
+        ]
+      }
+    },
     "sources": [
       "ANAM",
       "BMD",
@@ -52,13 +528,12 @@
       "DNH",
       "DNMG",
       "ECMWF",
-      "EDRMC",
       "EPHI",
       "Eswatini",
       "FEWSnet",
       "FFD",
+      "FMS",
       "GLOFAS",
-      "GLoFAS",
       "GloFAS",
       "Hydromet",
       "IBF",
@@ -77,20 +552,20 @@
       "Ministry",
       "NDCU",
       "NHC",
-      "NMD",
       "NOA",
       "National",
       "Netherlands",
+      "OCHA",
       "ONM",
       "OVK",
       "PAGASA",
+      "PMD",
       "RSMC",
       "SRCS",
       "Steering",
       "TJC",
       "TMA",
       "Tajik",
-      "Transitional",
       "ZRCS"
     ],
     "timeframe_units": [
@@ -98,45 +573,6 @@
       "hours",
       "months",
       "weeks"
-    ],
-    "threshold_units": [
-      "%",
-      "K",
-      "SPI",
-      "Signal level",
-      "alert level",
-      "alerts",
-      "cases",
-      "cm",
-      "counties",
-      "cusecs",
-      "days",
-      "degrees",
-      "event",
-      "events",
-      "hours",
-      "index",
-      "km/h",
-      "km/hr",
-      "knots",
-      "level",
-      "m",
-      "metres",
-      "mm",
-      "mm/day",
-      "months",
-      "people",
-      "percentile",
-      "phase",
-      "regions",
-      "signal level",
-      "tercile",
-      "times average caseload",
-      "unit",
-      "units",
-      "years",
-      "zone",
-      "°C"
     ],
     "hazard_types": [
       "Cholera",
@@ -151,105 +587,48 @@
       "Volcanic Ash",
       "Wildfire"
     ],
-    "threshold_operators": [
-      "<",
-      "<=",
-      "=",
-      ">",
-      ">=",
-      "between"
-    ],
     "_metadata": {
-      "forecast_variables_common": 19,
-      "forecast_variables_rare": 32,
-      "min_frequency_threshold": 2,
+      "canonical_count": 10,
+      "advanced_other_count": 2,
+      "overflow_canonical_count": 0,
+      "max_primary_canonicals": 13,
       "variable_frequency": {
-        "Seasonal precipitation": 46,
-        "River discharge": 38,
-        "Rainfall total": 34,
+        "Seasonal precipitation": 55,
+        "River discharge": 42,
+        "Rainfall total": 38,
         "Affected population": 26,
         "Wind speed": 20,
-        "Confirmed cholera cases": 18,
+        "Confirmed cholera cases": 19,
         "Inundation extent": 6,
         "Temperature": 6,
-        "Lead time": 5,
         "Daily maximum temperature": 4,
-        "Maximum temperature": 4,
-        "Excess mortality": 4,
+        "Maximum temperature": 3,
+        "Minimum temperature": 3,
+        "Excess mortality": 3,
         "Heat Index": 3,
         "Confirmed dengue cases": 2,
-        "Cold wave occurrence": 2,
         "Relative humidity": 2,
-        "Minimum temperature": 2,
         "Day temperature": 2,
-        "Extreme Forecast Index": 2,
-        "Crop losses": 1,
-        "Nino3.4 index": 1,
-        "Water level": 1,
-        "Advisory-level warning presence": 1,
-        "Conditions duration": 1,
-        "Departure from normal temperature": 1,
         "Ignition probability": 1,
-        "Orange warning level": 1,
-        "Duration": 1,
-        "Standardized Precipitation Index": 1,
-        "Temperature anomaly": 1,
-        "El Niño event": 1,
-        "Food insecurity index": 1,
-        "Tropical storm or hurricane occurrence": 1,
+        "Wind speed category": 1,
+        "Nino3.4 index": 1,
+        "Maximum day temperature": 1,
         "Heatwave duration": 1,
-        "Red warning": 1,
+        "Crop losses": 1,
+        "Extreme Forecast Index": 1,
         "Volcanic activity indicators": 1,
-        "Alert level bulletin": 1,
-        "River stage level": 1,
-        "Alert level": 1,
         "Volcanic activity parameters": 1,
-        "Internal volcanic activity parameters": 1,
-        "Tropical depression formation": 1,
-        "Response capacity": 1,
-        "Crop yield reduction": 1,
+        "Cold wave occurrence": 1,
+        "Cold wave intensity": 1,
+        "Excess daily mortality": 1,
         "Ash fall": 1,
-        "Heatwave occurrence": 1,
         "Heat index": 1,
+        "Crop yield reduction": 1,
+        "Heatwave occurrence": 1,
         "Heatwave occurrence probability": 1,
-        "Temperature minimum": 1,
-        "Heatwave alert": 1,
+        "Heatwave intensity": 1,
         "Fodder deficit": 1
-      },
-      "rare_variables": [
-        "Advisory-level warning presence",
-        "Alert level",
-        "Alert level bulletin",
-        "Ash fall",
-        "Conditions duration",
-        "Crop losses",
-        "Crop yield reduction",
-        "Departure from normal temperature",
-        "Duration",
-        "El Niño event",
-        "Fodder deficit",
-        "Food insecurity index",
-        "Heat index",
-        "Heatwave alert",
-        "Heatwave duration",
-        "Heatwave occurrence",
-        "Heatwave occurrence probability",
-        "Ignition probability",
-        "Internal volcanic activity parameters",
-        "Nino3.4 index",
-        "Orange warning level",
-        "Red warning",
-        "Response capacity",
-        "River stage level",
-        "Standardized Precipitation Index",
-        "Temperature anomaly",
-        "Temperature minimum",
-        "Tropical depression formation",
-        "Tropical storm or hurricane occurrence",
-        "Volcanic activity indicators",
-        "Volcanic activity parameters",
-        "Water level"
-      ]
+      }
     }
   },
   "trigger_logic_mapping": [
@@ -767,27 +1146,9 @@
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
-      "document_name": "Nepal - Floods EAP (MDRNP017)",
-      "hazard_type": "Flood",
-      "statement_key": "trigger_statement_2",
-      "activation_type": "multi-stage",
-      "is_conditional": true,
-      "total_thresholds": 2,
-      "trigger_logic": "Conditional (Sequential / AND)"
-    },
-    {
       "document_name": "Guatemala - Floods EAP (MDRGT024)",
       "hazard_type": "Flood",
       "statement_key": "trigger_statement_1",
-      "activation_type": "dual-trigger",
-      "is_conditional": false,
-      "total_thresholds": 1,
-      "trigger_logic": "Single"
-    },
-    {
-      "document_name": "Guatemala - Floods EAP (MDRGT024)",
-      "hazard_type": "Flood",
-      "statement_key": "trigger_statement_2",
       "activation_type": "dual-trigger",
       "is_conditional": false,
       "total_thresholds": 1,
@@ -860,15 +1221,6 @@
       "document_name": "Mozambique - Floods EAP (MDRMZ022)",
       "hazard_type": "Flood",
       "statement_key": "trigger_statement_1",
-      "activation_type": "dual-trigger",
-      "is_conditional": false,
-      "total_thresholds": 2,
-      "trigger_logic": "Conditional (Either / OR)"
-    },
-    {
-      "document_name": "Mozambique - Floods EAP (MDRMZ022)",
-      "hazard_type": "Flood",
-      "statement_key": "trigger_statement_2",
       "activation_type": "dual-trigger",
       "is_conditional": false,
       "total_thresholds": 2,
@@ -1133,15 +1485,20 @@
       "condition_dependency": null,
       "activation_type": "dual-trigger",
       "has_stop_mechanism": true,
-      "forecast_variable": "Seasonal precipitation",
+      "forecast_variable": "River discharge",
       "threshold_operator": ">=",
       "threshold_value": 0.0,
-      "threshold_unit": "percentile",
+      "threshold_unit": "cusecs",
       "probability_value": 60.0,
       "lead_time_value": 5.0,
       "timeframe_unit": "days",
       "normalized_source": "CENAOS",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -1167,6 +1524,11 @@
       "timeframe_unit": "days",
       "normalized_source": "CENAOS",
       "llm_used": "azure_openai",
+      "original_variable": "Wind speed",
+      "canonical_variable": "Wind",
+      "subcategory": "Speed",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -1183,15 +1545,20 @@
       "condition_dependency": null,
       "activation_type": "dual-trigger",
       "has_stop_mechanism": true,
-      "forecast_variable": "Lead time",
-      "threshold_operator": "between",
-      "threshold_value": 3.0,
-      "threshold_unit": "days",
+      "forecast_variable": "River discharge",
+      "threshold_operator": ">=",
+      "threshold_value": 0.0,
+      "threshold_unit": "cusecs",
       "probability_value": NaN,
       "lead_time_value": 5.0,
       "timeframe_unit": "days",
       "normalized_source": "CENAOS",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -1210,13 +1577,18 @@
       "has_stop_mechanism": true,
       "forecast_variable": "River discharge",
       "threshold_operator": ">=",
-      "threshold_value": 1.0,
-      "threshold_unit": "years",
+      "threshold_value": 0.0,
+      "threshold_unit": "cusecs",
       "probability_value": NaN,
       "lead_time_value": 3.0,
       "timeframe_unit": "days",
       "normalized_source": "GloFAS",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -1233,15 +1605,20 @@
       "condition_dependency": "Trigger 2 is conditional on Trigger 1 being met first; Trigger 2 formally activates the EAP.",
       "activation_type": "dual-trigger",
       "has_stop_mechanism": true,
-      "forecast_variable": "Lead time",
+      "forecast_variable": "River discharge",
       "threshold_operator": ">=",
-      "threshold_value": 3.0,
-      "threshold_unit": "days",
+      "threshold_value": 0.0,
+      "threshold_unit": "cusecs",
       "probability_value": NaN,
       "lead_time_value": 3.0,
       "timeframe_unit": "days",
       "normalized_source": "GloFAS",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -1267,6 +1644,11 @@
       "timeframe_unit": "months",
       "normalized_source": "INFLOW",
       "llm_used": "azure_openai",
+      "original_variable": "Inundation extent",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "Flood extent",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Single"
     },
     {
@@ -1292,6 +1674,11 @@
       "timeframe_unit": "months",
       "normalized_source": "DCCMS",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -1309,14 +1696,19 @@
       "activation_type": "multi-stage",
       "has_stop_mechanism": true,
       "forecast_variable": "Seasonal precipitation",
-      "threshold_operator": ">",
-      "threshold_value": 50.0,
+      "threshold_operator": ">=",
+      "threshold_value": 67.0,
       "threshold_unit": "percentile",
       "probability_value": NaN,
       "lead_time_value": 0.0,
       "timeframe_unit": "months",
       "normalized_source": "DCCMS",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -1342,6 +1734,11 @@
       "timeframe_unit": "months",
       "normalized_source": "DCCMS",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -1367,6 +1764,11 @@
       "timeframe_unit": "days",
       "normalized_source": "DCCMS",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -1392,6 +1794,11 @@
       "timeframe_unit": "days",
       "normalized_source": "DCCMS",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -1417,31 +1824,11 @@
       "timeframe_unit": "days",
       "normalized_source": "DCCMS",
       "llm_used": "azure_openai",
-      "trigger_logic": "Conditional (Sequential / AND)"
-    },
-    {
-      "document_id": 16399,
-      "document_name": "Malawi - Pluvial Floods sEAP (MDRMW023)",
-      "hazard_type": "Flood",
-      "statement_key": "trigger_statement_2",
-      "threshold_index": 3,
-      "total_thresholds": 5,
-      "threshold_text": "River gauge readings exceed alert stage at two or more stations (real-time)",
-      "source_authority": "Department of Climate Change and Meteorological Services (DCCMS), Malawi Red Cross Society (MRCS)",
-      "lead_time": "3–5 days for forecast-based triggers; 2–5 days for observational triggers",
-      "is_conditional": true,
-      "condition_dependency": "Pre-activation (Tier 1) based on forecast triggers must occur before full activation (Tier 2) based on observational data.",
-      "activation_type": "multi-stage",
-      "has_stop_mechanism": true,
-      "forecast_variable": "River discharge",
-      "threshold_operator": ">=",
-      "threshold_value": 1.0,
-      "threshold_unit": "cusecs",
-      "probability_value": NaN,
-      "lead_time_value": 5.0,
-      "timeframe_unit": "days",
-      "normalized_source": "DCCMS",
-      "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -1467,6 +1854,11 @@
       "timeframe_unit": "days",
       "normalized_source": "DCCMS",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -1492,6 +1884,11 @@
       "timeframe_unit": "hours",
       "normalized_source": "ZRCS",
       "llm_used": "azure_openai",
+      "original_variable": "Confirmed cholera cases",
+      "canonical_variable": "Infectious Disease Incidence",
+      "subcategory": "Cholera cases",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -1517,6 +1914,11 @@
       "timeframe_unit": "hours",
       "normalized_source": "ZRCS",
       "llm_used": "azure_openai",
+      "original_variable": "Confirmed cholera cases",
+      "canonical_variable": "Infectious Disease Incidence",
+      "subcategory": "Cholera cases",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -1542,6 +1944,11 @@
       "timeframe_unit": "hours",
       "normalized_source": "ZRCS",
       "llm_used": "azure_openai",
+      "original_variable": "Confirmed cholera cases",
+      "canonical_variable": "Infectious Disease Incidence",
+      "subcategory": "Cholera cases",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -1567,6 +1974,11 @@
       "timeframe_unit": "days",
       "normalized_source": "CEPMMT",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -1583,15 +1995,20 @@
       "condition_dependency": null,
       "activation_type": "dual-trigger",
       "has_stop_mechanism": false,
-      "forecast_variable": "Extreme Forecast Index",
+      "forecast_variable": "River discharge",
       "threshold_operator": ">",
       "threshold_value": 0.8,
-      "threshold_unit": null,
+      "threshold_unit": "unitless",
       "probability_value": NaN,
       "lead_time_value": 5.0,
       "timeframe_unit": "days",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -1617,6 +2034,11 @@
       "timeframe_unit": "days",
       "normalized_source": "ONM",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -1635,13 +2057,18 @@
       "has_stop_mechanism": false,
       "forecast_variable": "River discharge",
       "threshold_operator": ">=",
-      "threshold_value": 70.0,
-      "threshold_unit": "percentile",
+      "threshold_value": 2.0,
+      "threshold_unit": "years",
       "probability_value": 70.0,
       "lead_time_value": 10.0,
       "timeframe_unit": "days",
       "normalized_source": "GLOFAS",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -1665,8 +2092,13 @@
       "probability_value": NaN,
       "lead_time_value": 10.0,
       "timeframe_unit": "days",
-      "normalized_source": "GLOFAS",
+      "normalized_source": "PMD",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -1692,6 +2124,11 @@
       "timeframe_unit": "hours",
       "normalized_source": "FFD",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -1717,6 +2154,11 @@
       "timeframe_unit": "hours",
       "normalized_source": "FFD",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -1742,6 +2184,11 @@
       "timeframe_unit": "hours",
       "normalized_source": "FFD",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -1767,6 +2214,11 @@
       "timeframe_unit": "hours",
       "normalized_source": "FFD",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -1792,6 +2244,11 @@
       "timeframe_unit": "hours",
       "normalized_source": "FFD",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -1817,6 +2274,11 @@
       "timeframe_unit": "days",
       "normalized_source": "FFD",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -1842,6 +2304,11 @@
       "timeframe_unit": "days",
       "normalized_source": "FFD",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -1867,6 +2334,11 @@
       "timeframe_unit": "hours",
       "normalized_source": "FFD",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -1892,6 +2364,11 @@
       "timeframe_unit": "hours",
       "normalized_source": "FFD",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -1917,6 +2394,11 @@
       "timeframe_unit": "days",
       "normalized_source": "FFD",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -1942,6 +2424,11 @@
       "timeframe_unit": "days",
       "normalized_source": "FFD",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -1967,6 +2454,11 @@
       "timeframe_unit": "days",
       "normalized_source": "FFD",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -1992,6 +2484,11 @@
       "timeframe_unit": "days",
       "normalized_source": "FFD",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2017,6 +2514,11 @@
       "timeframe_unit": "days",
       "normalized_source": "FFD",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2042,6 +2544,11 @@
       "timeframe_unit": "days",
       "normalized_source": "FFD",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2067,6 +2574,11 @@
       "timeframe_unit": "days",
       "normalized_source": "FFD",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2092,6 +2604,11 @@
       "timeframe_unit": "days",
       "normalized_source": "DGM",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Single"
     },
     {
@@ -2117,6 +2634,11 @@
       "timeframe_unit": "months",
       "normalized_source": "DMH",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Single"
     },
     {
@@ -2138,10 +2660,15 @@
       "threshold_value": 32000.0,
       "threshold_unit": "people",
       "probability_value": NaN,
-      "lead_time_value": 3.0,
-      "timeframe_unit": "months",
-      "normalized_source": "EDRMC",
+      "lead_time_value": 7.0,
+      "timeframe_unit": "days",
+      "normalized_source": "EPHI",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -2167,6 +2694,11 @@
       "timeframe_unit": "days",
       "normalized_source": "EPHI",
       "llm_used": "azure_openai",
+      "original_variable": "Confirmed cholera cases",
+      "canonical_variable": "Infectious Disease Incidence",
+      "subcategory": "Cholera cases",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -2192,6 +2724,11 @@
       "timeframe_unit": "days",
       "normalized_source": "EPHI",
       "llm_used": "azure_openai",
+      "original_variable": "Confirmed cholera cases",
+      "canonical_variable": "Infectious Disease Incidence",
+      "subcategory": "Cholera cases",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -2217,6 +2754,11 @@
       "timeframe_unit": "days",
       "normalized_source": "EPHI",
       "llm_used": "azure_openai",
+      "original_variable": "Confirmed cholera cases",
+      "canonical_variable": "Infectious Disease Incidence",
+      "subcategory": "Cholera cases",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2242,6 +2784,11 @@
       "timeframe_unit": "days",
       "normalized_source": "EPHI",
       "llm_used": "azure_openai",
+      "original_variable": "Confirmed cholera cases",
+      "canonical_variable": "Infectious Disease Incidence",
+      "subcategory": "Cholera cases",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2267,6 +2814,11 @@
       "timeframe_unit": "days",
       "normalized_source": "BMD",
       "llm_used": "azure_openai",
+      "original_variable": "Minimum temperature",
+      "canonical_variable": "Temperature",
+      "subcategory": "Min temperature",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2283,7 +2835,7 @@
       "condition_dependency": null,
       "activation_type": "multi-stage",
       "has_stop_mechanism": true,
-      "forecast_variable": "Departure from normal temperature",
+      "forecast_variable": "Seasonal precipitation",
       "threshold_operator": "<=",
       "threshold_value": 2.0,
       "threshold_unit": "percentile",
@@ -2292,6 +2844,11 @@
       "timeframe_unit": "days",
       "normalized_source": "BMD",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2317,6 +2874,11 @@
       "timeframe_unit": "days",
       "normalized_source": "BMD",
       "llm_used": "azure_openai",
+      "original_variable": "Maximum temperature",
+      "canonical_variable": "Temperature",
+      "subcategory": "Max temperature",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2342,6 +2904,11 @@
       "timeframe_unit": "days",
       "normalized_source": "BMD",
       "llm_used": "azure_openai",
+      "original_variable": "Wind speed",
+      "canonical_variable": "Wind",
+      "subcategory": "Speed",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2358,7 +2925,7 @@
       "condition_dependency": null,
       "activation_type": "multi-stage",
       "has_stop_mechanism": true,
-      "forecast_variable": "Conditions duration",
+      "forecast_variable": "Seasonal precipitation",
       "threshold_operator": ">=",
       "threshold_value": 3.0,
       "threshold_unit": "days",
@@ -2367,6 +2934,11 @@
       "timeframe_unit": "days",
       "normalized_source": "BMD",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2392,6 +2964,11 @@
       "timeframe_unit": "days",
       "normalized_source": "BMD",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2417,6 +2994,11 @@
       "timeframe_unit": "months",
       "normalized_source": "SRCS",
       "llm_used": "azure_openai",
+      "original_variable": "Confirmed cholera cases",
+      "canonical_variable": "Infectious Disease Incidence",
+      "subcategory": "Cholera cases",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2442,6 +3024,11 @@
       "timeframe_unit": "months",
       "normalized_source": "SRCS",
       "llm_used": "azure_openai",
+      "original_variable": "Confirmed cholera cases",
+      "canonical_variable": "Infectious Disease Incidence",
+      "subcategory": "Cholera cases",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2458,15 +3045,20 @@
       "condition_dependency": null,
       "activation_type": "dual-trigger",
       "has_stop_mechanism": true,
-      "forecast_variable": "Affected population",
+      "forecast_variable": "Confirmed cholera cases",
       "threshold_operator": ">=",
       "threshold_value": 1.0,
-      "threshold_unit": "people",
+      "threshold_unit": "cases",
       "probability_value": NaN,
       "lead_time_value": 3.0,
       "timeframe_unit": "months",
       "normalized_source": "SRCS",
       "llm_used": "azure_openai",
+      "original_variable": "Confirmed cholera cases",
+      "canonical_variable": "Infectious Disease Incidence",
+      "subcategory": "Cholera cases",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2492,6 +3084,11 @@
       "timeframe_unit": "months",
       "normalized_source": "SRCS",
       "llm_used": "azure_openai",
+      "original_variable": "Confirmed cholera cases",
+      "canonical_variable": "Infectious Disease Incidence",
+      "subcategory": "Cholera cases",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2517,6 +3114,11 @@
       "timeframe_unit": "months",
       "normalized_source": "SRCS",
       "llm_used": "azure_openai",
+      "original_variable": "Confirmed cholera cases",
+      "canonical_variable": "Infectious Disease Incidence",
+      "subcategory": "Cholera cases",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2542,6 +3144,11 @@
       "timeframe_unit": "months",
       "normalized_source": "SRCS",
       "llm_used": "azure_openai",
+      "original_variable": "Confirmed cholera cases",
+      "canonical_variable": "Infectious Disease Incidence",
+      "subcategory": "Cholera cases",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2567,6 +3174,11 @@
       "timeframe_unit": "days",
       "normalized_source": "SRCS",
       "llm_used": "azure_openai",
+      "original_variable": "Confirmed cholera cases",
+      "canonical_variable": "Infectious Disease Incidence",
+      "subcategory": "Cholera cases",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2592,6 +3204,11 @@
       "timeframe_unit": "days",
       "normalized_source": "SRCS",
       "llm_used": "azure_openai",
+      "original_variable": "Confirmed cholera cases",
+      "canonical_variable": "Infectious Disease Incidence",
+      "subcategory": "Cholera cases",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2617,6 +3234,11 @@
       "timeframe_unit": "days",
       "normalized_source": "SRCS",
       "llm_used": "azure_openai",
+      "original_variable": "Confirmed cholera cases",
+      "canonical_variable": "Infectious Disease Incidence",
+      "subcategory": "Cholera cases",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2635,13 +3257,18 @@
       "has_stop_mechanism": false,
       "forecast_variable": "Seasonal precipitation",
       "threshold_operator": ">=",
-      "threshold_value": 50.0,
-      "threshold_unit": "percentile",
+      "threshold_value": 0.0,
+      "threshold_unit": "%",
       "probability_value": 50.0,
       "lead_time_value": 5.0,
       "timeframe_unit": "days",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2658,7 +3285,7 @@
       "condition_dependency": null,
       "activation_type": "single-trigger",
       "has_stop_mechanism": false,
-      "forecast_variable": "Affected population",
+      "forecast_variable": "Seasonal precipitation",
       "threshold_operator": ">=",
       "threshold_value": 3.0,
       "threshold_unit": "days",
@@ -2667,6 +3294,11 @@
       "timeframe_unit": "days",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2692,6 +3324,11 @@
       "timeframe_unit": "days",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "Maximum temperature",
+      "canonical_variable": "Temperature",
+      "subcategory": "Max temperature",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2717,6 +3354,11 @@
       "timeframe_unit": "days",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "Minimum temperature",
+      "canonical_variable": "Temperature",
+      "subcategory": "Min temperature",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2742,6 +3384,11 @@
       "timeframe_unit": "days",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "Daily maximum temperature",
+      "canonical_variable": "Temperature",
+      "subcategory": "Max daily temp",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2767,6 +3414,11 @@
       "timeframe_unit": "days",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "Daily maximum temperature",
+      "canonical_variable": "Temperature",
+      "subcategory": "Max daily temp",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2792,6 +3444,11 @@
       "timeframe_unit": "weeks",
       "normalized_source": "NDCU",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -2817,6 +3474,11 @@
       "timeframe_unit": "weeks",
       "normalized_source": "NDCU",
       "llm_used": "azure_openai",
+      "original_variable": "Confirmed dengue cases",
+      "canonical_variable": "Infectious Disease Incidence",
+      "subcategory": "Dengue cases",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -2842,6 +3504,11 @@
       "timeframe_unit": "weeks",
       "normalized_source": "NDCU",
       "llm_used": "azure_openai",
+      "original_variable": "Confirmed dengue cases",
+      "canonical_variable": "Infectious Disease Incidence",
+      "subcategory": "Dengue cases",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -2858,15 +3525,20 @@
       "condition_dependency": "The activation trigger (72 hours lead time) is conditional on the readiness trigger (120 hours lead time) being met first",
       "activation_type": "dual-trigger",
       "has_stop_mechanism": false,
-      "forecast_variable": "Wind speed",
+      "forecast_variable": "Wind speed category",
       "threshold_operator": ">=",
-      "threshold_value": 178.0,
-      "threshold_unit": "km/h",
+      "threshold_value": 4.0,
+      "threshold_unit": "category",
       "probability_value": NaN,
-      "lead_time_value": 120.0,
-      "timeframe_unit": "hours",
+      "lead_time_value": 5.0,
+      "timeframe_unit": "days",
       "normalized_source": "RSMC",
       "llm_used": "azure_openai",
+      "original_variable": "Wind speed category",
+      "canonical_variable": "Wind",
+      "subcategory": "Speed category",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -2888,10 +3560,15 @@
       "threshold_value": 96.0,
       "threshold_unit": "km/h",
       "probability_value": NaN,
-      "lead_time_value": 120.0,
-      "timeframe_unit": "hours",
+      "lead_time_value": 5.0,
+      "timeframe_unit": "days",
       "normalized_source": "RSMC",
       "llm_used": "azure_openai",
+      "original_variable": "Wind speed",
+      "canonical_variable": "Wind",
+      "subcategory": "Speed",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -2917,6 +3594,11 @@
       "timeframe_unit": "days",
       "normalized_source": "TMA",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2933,7 +3615,7 @@
       "condition_dependency": null,
       "activation_type": "single-trigger",
       "has_stop_mechanism": true,
-      "forecast_variable": "Advisory-level warning presence",
+      "forecast_variable": "Rainfall total",
       "threshold_operator": ">=",
       "threshold_value": 1.0,
       "threshold_unit": "days",
@@ -2942,6 +3624,11 @@
       "timeframe_unit": "days",
       "normalized_source": "TMA",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -2967,6 +3654,41 @@
       "timeframe_unit": "days",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
+      "trigger_logic": "Conditional (Sequential / AND)"
+    },
+    {
+      "document_id": 16513,
+      "document_name": "Côte d'Ivore - Floods sEAP (MDRCI017)",
+      "hazard_type": "Flood",
+      "statement_key": "trigger_statement_1",
+      "threshold_index": 1,
+      "total_thresholds": 5,
+      "threshold_text": "Fanfar forecast on orange alert",
+      "source_authority": "Fanfar forecast system, National Meteorological Directorate, Directorate of Hydrology, ECMWF (European Centre for Medium-Range Weather Forecasts)",
+      "lead_time": "5 days",
+      "is_conditional": true,
+      "condition_dependency": "Trigger requires cumulative rainfall above historical average AND Fanfar forecast orange alert AND beacon water level at specified thresholds; for N'Zi basin, additionally requires EFI index forecast of heavy rainfall",
+      "activation_type": "dual-trigger",
+      "has_stop_mechanism": true,
+      "forecast_variable": "River discharge",
+      "threshold_operator": ">=",
+      "threshold_value": 1.0,
+      "threshold_unit": "cusecs",
+      "probability_value": NaN,
+      "lead_time_value": 5.0,
+      "timeframe_unit": "days",
+      "normalized_source": "ECMWF",
+      "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -2983,7 +3705,7 @@
       "condition_dependency": "Trigger requires cumulative rainfall above historical average AND Fanfar forecast orange alert AND beacon water level at specified thresholds; for N'Zi basin, additionally requires EFI index forecast of heavy rainfall",
       "activation_type": "dual-trigger",
       "has_stop_mechanism": true,
-      "forecast_variable": "Water level",
+      "forecast_variable": "River discharge",
       "threshold_operator": ">=",
       "threshold_value": 695.0,
       "threshold_unit": "cm",
@@ -2992,6 +3714,11 @@
       "timeframe_unit": "days",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -3017,6 +3744,11 @@
       "timeframe_unit": "days",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -3042,6 +3774,11 @@
       "timeframe_unit": "days",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -3067,6 +3804,11 @@
       "timeframe_unit": "days",
       "normalized_source": "TJC",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -3090,8 +3832,13 @@
       "probability_value": NaN,
       "lead_time_value": 5.0,
       "timeframe_unit": "days",
-      "normalized_source": "Transitional",
+      "normalized_source": "TJC",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -3115,8 +3862,13 @@
       "probability_value": NaN,
       "lead_time_value": 5.0,
       "timeframe_unit": "days",
-      "normalized_source": "Transitional",
+      "normalized_source": "OCHA",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -3140,8 +3892,13 @@
       "probability_value": NaN,
       "lead_time_value": 5.0,
       "timeframe_unit": "days",
-      "normalized_source": "Transitional",
+      "normalized_source": "OCHA",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -3167,6 +3924,11 @@
       "timeframe_unit": "months",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "Nino3.4 index",
+      "canonical_variable": "Other",
+      "subcategory": "ENSO index",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Single"
     },
     {
@@ -3192,6 +3954,11 @@
       "timeframe_unit": "months",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -3217,6 +3984,11 @@
       "timeframe_unit": "months",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -3242,6 +4014,11 @@
       "timeframe_unit": "months",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -3267,6 +4044,11 @@
       "timeframe_unit": "months",
       "normalized_source": "CFSI",
       "llm_used": "azure_openai",
+      "original_variable": "Crop losses",
+      "canonical_variable": "Agricultural Impact",
+      "subcategory": "Crop damage",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -3284,7 +4066,7 @@
       "activation_type": "multi-stage",
       "has_stop_mechanism": true,
       "forecast_variable": "Rainfall total",
-      "threshold_operator": ">",
+      "threshold_operator": "<=",
       "threshold_value": 1.0,
       "threshold_unit": "mm",
       "probability_value": NaN,
@@ -3292,31 +4074,11 @@
       "timeframe_unit": "months",
       "normalized_source": "CFSI",
       "llm_used": "azure_openai",
-      "trigger_logic": "Conditional (Either / OR)"
-    },
-    {
-      "document_id": 16542,
-      "document_name": "Mali - Flood EAP (MDRML021)",
-      "hazard_type": "Flood",
-      "statement_key": "trigger_statement_1",
-      "threshold_index": 0,
-      "total_thresholds": 3,
-      "threshold_text": "Flood forecast corresponding to a 5-year return period",
-      "source_authority": "National Directorate of Hydraulics (DNH) and Mali Météo",
-      "lead_time": "4 to 8 days",
-      "is_conditional": false,
-      "condition_dependency": null,
-      "activation_type": "single-trigger",
-      "has_stop_mechanism": true,
-      "forecast_variable": "River discharge",
-      "threshold_operator": ">=",
-      "threshold_value": 5.0,
-      "threshold_unit": "years",
-      "probability_value": NaN,
-      "lead_time_value": 8.0,
-      "timeframe_unit": "days",
-      "normalized_source": "DNH",
-      "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -3342,6 +4104,11 @@
       "timeframe_unit": "days",
       "normalized_source": "DNH",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -3367,6 +4134,11 @@
       "timeframe_unit": "days",
       "normalized_source": "DNH",
       "llm_used": "azure_openai",
+      "original_variable": "Inundation extent",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "Flood extent",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -3392,6 +4164,11 @@
       "timeframe_unit": "months",
       "normalized_source": "National",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -3415,8 +4192,13 @@
       "probability_value": NaN,
       "lead_time_value": 2.0,
       "timeframe_unit": "months",
-      "normalized_source": "NMD",
+      "normalized_source": "National",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -3442,6 +4224,11 @@
       "timeframe_unit": "days",
       "normalized_source": "Ministry",
       "llm_used": "azure_openai",
+      "original_variable": "Confirmed cholera cases",
+      "canonical_variable": "Infectious Disease Incidence",
+      "subcategory": "Cholera cases",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -3467,6 +4254,11 @@
       "timeframe_unit": "days",
       "normalized_source": "Ministry",
       "llm_used": "azure_openai",
+      "original_variable": "Confirmed cholera cases",
+      "canonical_variable": "Infectious Disease Incidence",
+      "subcategory": "Cholera cases",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -3492,6 +4284,11 @@
       "timeframe_unit": "days",
       "normalized_source": "Ministry",
       "llm_used": "azure_openai",
+      "original_variable": "Confirmed cholera cases",
+      "canonical_variable": "Infectious Disease Incidence",
+      "subcategory": "Cholera cases",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -3517,6 +4314,11 @@
       "timeframe_unit": "days",
       "normalized_source": "DNMG",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -3542,6 +4344,11 @@
       "timeframe_unit": "days",
       "normalized_source": "DNMG",
       "llm_used": "azure_openai",
+      "original_variable": "Inundation extent",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "Flood extent",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -3558,15 +4365,20 @@
       "condition_dependency": null,
       "activation_type": "dual-trigger",
       "has_stop_mechanism": false,
-      "forecast_variable": "Orange warning level",
+      "forecast_variable": "River discharge",
       "threshold_operator": ">=",
-      "threshold_value": 3.0,
+      "threshold_value": 1.0,
       "threshold_unit": "days",
       "probability_value": NaN,
       "lead_time_value": 5.0,
       "timeframe_unit": "days",
       "normalized_source": "DNMG",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -3592,6 +4404,11 @@
       "timeframe_unit": "days",
       "normalized_source": "DNMG",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -3617,6 +4434,11 @@
       "timeframe_unit": "days",
       "normalized_source": "DNMG",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -3633,15 +4455,20 @@
       "condition_dependency": "Trigger 2 activation depends on forecasted red warning after Trigger 1 preparedness phase",
       "activation_type": "dual-trigger",
       "has_stop_mechanism": false,
-      "forecast_variable": "Inundation extent",
+      "forecast_variable": "River discharge",
       "threshold_operator": ">=",
       "threshold_value": 1.0,
-      "threshold_unit": "events",
+      "threshold_unit": "cusecs",
       "probability_value": NaN,
       "lead_time_value": 3.0,
       "timeframe_unit": "days",
       "normalized_source": "DNMG",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -3658,15 +4485,20 @@
       "condition_dependency": "Trigger 2 activation depends on forecasted red warning after Trigger 1 preparedness phase",
       "activation_type": "dual-trigger",
       "has_stop_mechanism": false,
-      "forecast_variable": "Red warning",
+      "forecast_variable": "River discharge",
       "threshold_operator": ">=",
-      "threshold_value": 2.0,
+      "threshold_value": 1.0,
       "threshold_unit": "days",
       "probability_value": NaN,
       "lead_time_value": 3.0,
       "timeframe_unit": "days",
       "normalized_source": "DNMG",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -3692,6 +4524,11 @@
       "timeframe_unit": "days",
       "normalized_source": "DNMG",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -3708,15 +4545,20 @@
       "condition_dependency": "Trigger 2 activation depends on forecasted red warning after Trigger 1 preparedness phase",
       "activation_type": "dual-trigger",
       "has_stop_mechanism": false,
-      "forecast_variable": "Inundation extent",
+      "forecast_variable": "River discharge",
       "threshold_operator": ">=",
       "threshold_value": 0.0,
-      "threshold_unit": "hours",
+      "threshold_unit": "cusecs",
       "probability_value": NaN,
       "lead_time_value": 1.0,
       "timeframe_unit": "days",
       "normalized_source": "DNMG",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -3742,6 +4584,11 @@
       "timeframe_unit": "days",
       "normalized_source": "BMKG",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -3767,6 +4614,11 @@
       "timeframe_unit": "days",
       "normalized_source": "BMKG",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -3792,6 +4644,11 @@
       "timeframe_unit": "days",
       "normalized_source": "BMKG",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -3817,6 +4674,11 @@
       "timeframe_unit": "days",
       "normalized_source": "BMKG",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -3833,15 +4695,20 @@
       "condition_dependency": null,
       "activation_type": "dual-trigger",
       "has_stop_mechanism": false,
-      "forecast_variable": "Tropical storm or hurricane occurrence",
-      "threshold_operator": ">",
-      "threshold_value": 60.0,
+      "forecast_variable": "Wind speed",
+      "threshold_operator": ">=",
+      "threshold_value": 1.0,
       "threshold_unit": "%",
       "probability_value": 60.0,
       "lead_time_value": 7.0,
       "timeframe_unit": "days",
       "normalized_source": "NHC",
       "llm_used": "azure_openai",
+      "original_variable": "Wind speed",
+      "canonical_variable": "Wind",
+      "subcategory": "Speed",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Single"
     },
     {
@@ -3867,6 +4734,11 @@
       "timeframe_unit": "days",
       "normalized_source": "DGOA",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -3892,6 +4764,11 @@
       "timeframe_unit": "days",
       "normalized_source": "DGOA",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -3917,6 +4794,11 @@
       "timeframe_unit": "days",
       "normalized_source": "CONAF",
       "llm_used": "azure_openai",
+      "original_variable": "Ignition probability",
+      "canonical_variable": "Fire Risk",
+      "subcategory": "Ignition probability",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -3942,6 +4824,11 @@
       "timeframe_unit": "days",
       "normalized_source": "CONAF",
       "llm_used": "azure_openai",
+      "original_variable": "Wind speed",
+      "canonical_variable": "Wind",
+      "subcategory": "Speed",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -3967,6 +4854,11 @@
       "timeframe_unit": "days",
       "normalized_source": "CONAF",
       "llm_used": "azure_openai",
+      "original_variable": "Relative humidity",
+      "canonical_variable": "Humidity",
+      "subcategory": "Relative humidity",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -3988,10 +4880,15 @@
       "threshold_value": 62.6,
       "threshold_unit": "°C",
       "probability_value": NaN,
-      "lead_time_value": 10.0,
+      "lead_time_value": 5.0,
       "timeframe_unit": "days",
       "normalized_source": "DMH",
       "llm_used": "azure_openai",
+      "original_variable": "Heat Index",
+      "canonical_variable": "Temperature",
+      "subcategory": "Heat index",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -4017,6 +4914,11 @@
       "timeframe_unit": "days",
       "normalized_source": "DMH",
       "llm_used": "azure_openai",
+      "original_variable": "Heat Index",
+      "canonical_variable": "Temperature",
+      "subcategory": "Heat index",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -4038,10 +4940,15 @@
       "threshold_value": 90.0,
       "threshold_unit": "percentile",
       "probability_value": NaN,
-      "lead_time_value": 10.0,
+      "lead_time_value": 5.0,
       "timeframe_unit": "days",
       "normalized_source": "DMH",
       "llm_used": "azure_openai",
+      "original_variable": "Heat Index",
+      "canonical_variable": "Temperature",
+      "subcategory": "Heat index",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -4063,10 +4970,15 @@
       "threshold_value": 5.0,
       "threshold_unit": "days",
       "probability_value": NaN,
-      "lead_time_value": 10.0,
+      "lead_time_value": 5.0,
       "timeframe_unit": "days",
       "normalized_source": "DMH",
       "llm_used": "azure_openai",
+      "original_variable": "Heatwave duration",
+      "canonical_variable": "Temperature",
+      "subcategory": "Heatwave",
+      "taxonomy_match_method": "llm_disambiguation",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -4092,6 +5004,11 @@
       "timeframe_unit": "days",
       "normalized_source": "ANAM",
       "llm_used": "azure_openai",
+      "original_variable": "Maximum temperature",
+      "canonical_variable": "Temperature",
+      "subcategory": "Max temperature",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4108,7 +5025,7 @@
       "condition_dependency": null,
       "activation_type": "single-trigger",
       "has_stop_mechanism": false,
-      "forecast_variable": "Duration",
+      "forecast_variable": "Seasonal precipitation",
       "threshold_operator": ">=",
       "threshold_value": 3.0,
       "threshold_unit": "days",
@@ -4117,6 +5034,11 @@
       "timeframe_unit": "days",
       "normalized_source": "ANAM",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4142,6 +5064,11 @@
       "timeframe_unit": "months",
       "normalized_source": "IDEAM",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4158,15 +5085,20 @@
       "condition_dependency": null,
       "activation_type": "single-trigger",
       "has_stop_mechanism": false,
-      "forecast_variable": "Standardized Precipitation Index",
+      "forecast_variable": "Seasonal precipitation",
       "threshold_operator": "<=",
       "threshold_value": -1.4,
-      "threshold_unit": "SPI",
+      "threshold_unit": "tercile",
       "probability_value": NaN,
       "lead_time_value": 3.0,
       "timeframe_unit": "months",
       "normalized_source": "IDEAM",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4183,7 +5115,7 @@
       "condition_dependency": null,
       "activation_type": "dual-trigger",
       "has_stop_mechanism": false,
-      "forecast_variable": "El Niño event",
+      "forecast_variable": "Seasonal precipitation",
       "threshold_operator": ">=",
       "threshold_value": 1.0,
       "threshold_unit": "event",
@@ -4192,6 +5124,11 @@
       "timeframe_unit": "months",
       "normalized_source": "DGOA",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4209,14 +5146,19 @@
       "activation_type": "dual-trigger",
       "has_stop_mechanism": false,
       "forecast_variable": "Seasonal precipitation",
-      "threshold_operator": "<=",
-      "threshold_value": 33.0,
+      "threshold_operator": "=",
+      "threshold_value": 60.0,
       "threshold_unit": "percentile",
       "probability_value": 60.0,
       "lead_time_value": 4.0,
       "timeframe_unit": "months",
       "normalized_source": "DGOA",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4242,6 +5184,11 @@
       "timeframe_unit": "months",
       "normalized_source": "DGOA",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4259,14 +5206,19 @@
       "activation_type": "dual-trigger",
       "has_stop_mechanism": false,
       "forecast_variable": "Seasonal precipitation",
-      "threshold_operator": "<=",
-      "threshold_value": 33.0,
+      "threshold_operator": "=",
+      "threshold_value": 0.0,
       "threshold_unit": "percentile",
       "probability_value": NaN,
       "lead_time_value": 4.0,
       "timeframe_unit": "months",
       "normalized_source": "DGOA",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4292,6 +5244,11 @@
       "timeframe_unit": "months",
       "normalized_source": "DGOA",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4317,6 +5274,11 @@
       "timeframe_unit": "months",
       "normalized_source": "DGOA",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4342,6 +5304,11 @@
       "timeframe_unit": "months",
       "normalized_source": "DGOA",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4358,7 +5325,7 @@
       "condition_dependency": null,
       "activation_type": "single-trigger",
       "has_stop_mechanism": false,
-      "forecast_variable": "Maximum temperature",
+      "forecast_variable": "Maximum day temperature",
       "threshold_operator": "<=",
       "threshold_value": 2.0,
       "threshold_unit": "°C",
@@ -4367,6 +5334,11 @@
       "timeframe_unit": "days",
       "normalized_source": "LMS",
       "llm_used": "azure_openai",
+      "original_variable": "Maximum day temperature",
+      "canonical_variable": "Temperature",
+      "subcategory": "Max daily temperature",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4383,15 +5355,20 @@
       "condition_dependency": null,
       "activation_type": "single-trigger",
       "has_stop_mechanism": false,
-      "forecast_variable": "Temperature anomaly",
+      "forecast_variable": "Seasonal precipitation",
       "threshold_operator": ">=",
-      "threshold_value": 2.0,
+      "threshold_value": 0.0,
       "threshold_unit": "days",
       "probability_value": NaN,
       "lead_time_value": 4.0,
       "timeframe_unit": "days",
       "normalized_source": "LMS",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4408,8 +5385,8 @@
       "condition_dependency": null,
       "activation_type": "single-trigger",
       "has_stop_mechanism": false,
-      "forecast_variable": "Lead time",
-      "threshold_operator": "<=",
+      "forecast_variable": "Seasonal precipitation",
+      "threshold_operator": ">=",
       "threshold_value": 4.0,
       "threshold_unit": "days",
       "probability_value": NaN,
@@ -4417,6 +5394,11 @@
       "timeframe_unit": "days",
       "normalized_source": "LMS",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4442,6 +5424,11 @@
       "timeframe_unit": "days",
       "normalized_source": "Netherlands",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Single"
     },
     {
@@ -4467,6 +5454,11 @@
       "timeframe_unit": "days",
       "normalized_source": "Netherlands",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4492,6 +5484,11 @@
       "timeframe_unit": "days",
       "normalized_source": "Netherlands",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4509,7 +5506,7 @@
       "activation_type": "multi-stage",
       "has_stop_mechanism": false,
       "forecast_variable": "Affected population",
-      "threshold_operator": ">=",
+      "threshold_operator": ">",
       "threshold_value": 90000.0,
       "threshold_unit": "people",
       "probability_value": 70.0,
@@ -4517,6 +5514,11 @@
       "timeframe_unit": "days",
       "normalized_source": "Netherlands",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4534,7 +5536,7 @@
       "activation_type": "multi-stage",
       "has_stop_mechanism": false,
       "forecast_variable": "Affected population",
-      "threshold_operator": ">=",
+      "threshold_operator": ">",
       "threshold_value": 50000.0,
       "threshold_unit": "people",
       "probability_value": 80.0,
@@ -4542,6 +5544,11 @@
       "timeframe_unit": "days",
       "normalized_source": "Netherlands",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4567,6 +5574,11 @@
       "timeframe_unit": "hours",
       "normalized_source": "PAGASA",
       "llm_used": "azure_openai",
+      "original_variable": "Wind speed",
+      "canonical_variable": "Wind",
+      "subcategory": "Speed",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4584,14 +5596,19 @@
       "activation_type": "multi-stage",
       "has_stop_mechanism": false,
       "forecast_variable": "Wind speed",
-      "threshold_operator": ">=",
+      "threshold_operator": "=",
       "threshold_value": 185.0,
       "threshold_unit": "km/h",
       "probability_value": NaN,
-      "lead_time_value": 3.0,
-      "timeframe_unit": "days",
+      "lead_time_value": 72.0,
+      "timeframe_unit": "hours",
       "normalized_source": "PAGASA",
       "llm_used": "azure_openai",
+      "original_variable": "Wind speed",
+      "canonical_variable": "Wind",
+      "subcategory": "Speed",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4613,10 +5630,15 @@
       "threshold_value": 118.0,
       "threshold_unit": "km/h",
       "probability_value": NaN,
-      "lead_time_value": 3.0,
-      "timeframe_unit": "days",
+      "lead_time_value": 72.0,
+      "timeframe_unit": "hours",
       "normalized_source": "PAGASA",
       "llm_used": "azure_openai",
+      "original_variable": "Wind speed",
+      "canonical_variable": "Wind",
+      "subcategory": "Speed",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4642,6 +5664,11 @@
       "timeframe_unit": "months",
       "normalized_source": "ANAM",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Single"
     },
     {
@@ -4667,6 +5694,11 @@
       "timeframe_unit": "days",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "Extreme Forecast Index",
+      "canonical_variable": "Other",
+      "subcategory": "Forecast extremity metric",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4685,13 +5717,18 @@
       "has_stop_mechanism": false,
       "forecast_variable": "Rainfall total",
       "threshold_operator": ">=",
-      "threshold_value": 1.0,
+      "threshold_value": 100.0,
       "threshold_unit": "mm",
       "probability_value": NaN,
       "lead_time_value": 7.0,
       "timeframe_unit": "days",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4717,6 +5754,11 @@
       "timeframe_unit": "months",
       "normalized_source": "ICPAC",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -4733,7 +5775,7 @@
       "condition_dependency": "Both conditions (SPI-12 < -1 and FEWSNET projection ≥ 0.7) must be met simultaneously in the same district to trigger anticipatory actions.",
       "activation_type": "dual-trigger",
       "has_stop_mechanism": true,
-      "forecast_variable": "Food insecurity index",
+      "forecast_variable": "Affected population",
       "threshold_operator": ">=",
       "threshold_value": 0.7,
       "threshold_unit": "index",
@@ -4742,6 +5784,11 @@
       "timeframe_unit": "months",
       "normalized_source": "ICPAC",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -4758,15 +5805,20 @@
       "condition_dependency": null,
       "activation_type": "single-trigger",
       "has_stop_mechanism": true,
-      "forecast_variable": "Cold wave occurrence",
+      "forecast_variable": "Cold wave intensity",
       "threshold_operator": ">=",
       "threshold_value": 1.0,
-      "threshold_unit": "events",
+      "threshold_unit": "event",
       "probability_value": NaN,
       "lead_time_value": 4.0,
       "timeframe_unit": "days",
       "normalized_source": "Kyrgyzhydromet",
       "llm_used": "azure_openai",
+      "original_variable": "Cold wave intensity",
+      "canonical_variable": "Temperature",
+      "subcategory": "Cold Wave",
+      "taxonomy_match_method": "llm_disambiguation",
+      "taxonomy_match_confidence": 0.95,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4792,6 +5844,11 @@
       "timeframe_unit": "days",
       "normalized_source": "Kyrgyzhydromet",
       "llm_used": "azure_openai",
+      "original_variable": "Cold wave occurrence",
+      "canonical_variable": "Temperature",
+      "subcategory": "Cold wave event",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4817,6 +5874,11 @@
       "timeframe_unit": "days",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -4842,6 +5904,11 @@
       "timeframe_unit": "days",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -4867,6 +5934,11 @@
       "timeframe_unit": "days",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -4892,6 +5964,11 @@
       "timeframe_unit": "days",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -4909,7 +5986,7 @@
       "activation_type": "dual-trigger",
       "has_stop_mechanism": false,
       "forecast_variable": "Rainfall total",
-      "threshold_operator": ">=",
+      "threshold_operator": ">",
       "threshold_value": 99.0,
       "threshold_unit": "percentile",
       "probability_value": 60.0,
@@ -4917,6 +5994,11 @@
       "timeframe_unit": "days",
       "normalized_source": "ICPAC",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4942,6 +6024,11 @@
       "timeframe_unit": "days",
       "normalized_source": "ICPAC",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4967,6 +6054,11 @@
       "timeframe_unit": "days",
       "normalized_source": "ICPAC",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -4990,8 +6082,13 @@
       "probability_value": 50.0,
       "lead_time_value": 5.0,
       "timeframe_unit": "days",
-      "normalized_source": "DHM",
+      "normalized_source": "GLOFAS",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -5008,15 +6105,20 @@
       "condition_dependency": "Activation trigger depends on confirmation of readiness trigger and manual monitoring by NRCS with DHM and Climate Centre support",
       "activation_type": "multi-stage",
       "has_stop_mechanism": true,
-      "forecast_variable": "River stage level",
-      "threshold_operator": "<",
-      "threshold_value": 2.0,
-      "threshold_unit": "m",
+      "forecast_variable": "Rainfall total",
+      "threshold_operator": ">=",
+      "threshold_value": 0.0,
+      "threshold_unit": "mm",
       "probability_value": NaN,
       "lead_time_value": 5.0,
       "timeframe_unit": "days",
       "normalized_source": "DHM",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -5042,6 +6144,11 @@
       "timeframe_unit": "days",
       "normalized_source": "DHM",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -5067,6 +6174,11 @@
       "timeframe_unit": "days",
       "normalized_source": "DHM",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -5092,31 +6204,11 @@
       "timeframe_unit": "days",
       "normalized_source": "DHM",
       "llm_used": "azure_openai",
-      "trigger_logic": "Conditional (Sequential / AND)"
-    },
-    {
-      "document_id": 16845,
-      "document_name": "Nepal - Floods EAP (MDRNP017)",
-      "hazard_type": "Flood",
-      "statement_key": "trigger_statement_2",
-      "threshold_index": 1,
-      "total_thresholds": 2,
-      "threshold_text": "Evacuation only implemented once rivers surpass danger level and show rising trend based on real-time DHM data",
-      "source_authority": "Department of Hydrology and Meteorology (DHM) Nepal, ICIMOD",
-      "lead_time": "48 hours",
-      "is_conditional": true,
-      "condition_dependency": "Evacuation actions conditional on river levels surpassing danger level and rising trend after activation trigger",
-      "activation_type": "multi-stage",
-      "has_stop_mechanism": true,
-      "forecast_variable": "River discharge",
-      "threshold_operator": ">",
-      "threshold_value": 0.0,
-      "threshold_unit": "cusecs",
-      "probability_value": NaN,
-      "lead_time_value": 48.0,
-      "timeframe_unit": "hours",
-      "normalized_source": "DHM",
-      "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -5142,31 +6234,11 @@
       "timeframe_unit": "days",
       "normalized_source": "INSIVUMEH",
       "llm_used": "azure_openai",
-      "trigger_logic": "Single"
-    },
-    {
-      "document_id": 16862,
-      "document_name": "Guatemala - Floods EAP (MDRGT024)",
-      "hazard_type": "Flood",
-      "statement_key": "trigger_statement_2",
-      "threshold_index": 0,
-      "total_thresholds": 1,
-      "threshold_text": "GLoFAS forecast exceeds 50% probability for a 3-year return period flood event in high flood risk areas",
-      "source_authority": "Global Flood Awareness System (GLoFAS)",
-      "lead_time": "3 days",
-      "is_conditional": false,
-      "condition_dependency": null,
-      "activation_type": "dual-trigger",
-      "has_stop_mechanism": false,
-      "forecast_variable": "River discharge",
-      "threshold_operator": ">=",
-      "threshold_value": 33.0,
-      "threshold_unit": "percentile",
-      "probability_value": 50.0,
-      "lead_time_value": 3.0,
-      "timeframe_unit": "days",
-      "normalized_source": "GLoFAS",
-      "llm_used": "azure_openai",
+      "original_variable": "Wind speed",
+      "canonical_variable": "Wind",
+      "subcategory": "Speed",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Single"
     },
     {
@@ -5185,13 +6257,18 @@
       "has_stop_mechanism": true,
       "forecast_variable": "Seasonal precipitation",
       "threshold_operator": ">=",
-      "threshold_value": 0.0,
+      "threshold_value": 33.0,
       "threshold_unit": "percentile",
       "probability_value": NaN,
       "lead_time_value": 3.0,
       "timeframe_unit": "months",
       "normalized_source": "INSIVUMEH",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -5209,14 +6286,19 @@
       "activation_type": "dual-trigger",
       "has_stop_mechanism": true,
       "forecast_variable": "Seasonal precipitation",
-      "threshold_operator": "=",
-      "threshold_value": 70.0,
+      "threshold_operator": "<=",
+      "threshold_value": 33.0,
       "threshold_unit": "percentile",
       "probability_value": 70.0,
       "lead_time_value": 3.0,
       "timeframe_unit": "months",
       "normalized_source": "INSIVUMEH",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -5242,6 +6324,11 @@
       "timeframe_unit": "months",
       "normalized_source": "INSIVUMEH",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -5267,6 +6354,11 @@
       "timeframe_unit": "months",
       "normalized_source": "INSIVUMEH",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -5292,6 +6384,11 @@
       "timeframe_unit": "months",
       "normalized_source": "INSIVUMEH",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -5317,6 +6414,11 @@
       "timeframe_unit": "months",
       "normalized_source": "INSIVUMEH",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -5342,6 +6444,11 @@
       "timeframe_unit": "months",
       "normalized_source": "INSIVUMEH",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -5358,15 +6465,20 @@
       "condition_dependency": "Orange alert activation depends on prior yellow alert; red alert follows orange alert",
       "activation_type": "multi-stage",
       "has_stop_mechanism": false,
-      "forecast_variable": "Alert level bulletin",
+      "forecast_variable": "Inundation extent",
       "threshold_operator": ">=",
       "threshold_value": 1.0,
-      "threshold_unit": "level",
+      "threshold_unit": "levels",
       "probability_value": NaN,
       "lead_time_value": 14.0,
       "timeframe_unit": "days",
       "normalized_source": "OVK",
       "llm_used": "azure_openai",
+      "original_variable": "Inundation extent",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "Flood extent",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -5386,12 +6498,17 @@
       "forecast_variable": "Volcanic activity indicators",
       "threshold_operator": ">=",
       "threshold_value": 2.0,
-      "threshold_unit": "alert level",
+      "threshold_unit": "level",
       "probability_value": NaN,
       "lead_time_value": 4.0,
       "timeframe_unit": "days",
       "normalized_source": "OVK",
       "llm_used": "azure_openai",
+      "original_variable": "Volcanic activity indicators",
+      "canonical_variable": "Volcanic Activity",
+      "subcategory": "Volcanic Ash",
+      "taxonomy_match_method": "llm_disambiguation",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -5408,7 +6525,7 @@
       "condition_dependency": "Orange alert activation depends on prior yellow alert; red alert follows orange alert",
       "activation_type": "multi-stage",
       "has_stop_mechanism": false,
-      "forecast_variable": "Alert level",
+      "forecast_variable": "Inundation extent",
       "threshold_operator": ">=",
       "threshold_value": 3.0,
       "threshold_unit": "level",
@@ -5417,6 +6534,11 @@
       "timeframe_unit": "days",
       "normalized_source": "OVK",
       "llm_used": "azure_openai",
+      "original_variable": "Inundation extent",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "Flood extent",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -5442,6 +6564,41 @@
       "timeframe_unit": "months",
       "normalized_source": "Eswatini",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
+      "trigger_logic": "Conditional (Sequential / AND)"
+    },
+    {
+      "document_id": 16988,
+      "document_name": "Eswatini - Drought EAP (MDRSZ005)",
+      "hazard_type": "Drought",
+      "statement_key": "trigger_statement_1",
+      "threshold_index": 1,
+      "total_thresholds": 2,
+      "threshold_text": "Low Composite Drought Index (CDI) average observed over the October-November-December (OND) season",
+      "source_authority": "Eswatini Meteorological Services",
+      "lead_time": "3 months (seasonal lead time)",
+      "is_conditional": true,
+      "condition_dependency": "The second trigger based on CDI monitoring in mid-January is conditional on the initial seasonal forecast trigger starting in September.",
+      "activation_type": "dual-trigger",
+      "has_stop_mechanism": true,
+      "forecast_variable": "Seasonal precipitation",
+      "threshold_operator": "<=",
+      "threshold_value": 33.0,
+      "threshold_unit": "percentile",
+      "probability_value": NaN,
+      "lead_time_value": 3.0,
+      "timeframe_unit": "months",
+      "normalized_source": "Eswatini",
+      "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -5467,6 +6624,11 @@
       "timeframe_unit": "hours",
       "normalized_source": "BMD",
       "llm_used": "azure_openai",
+      "original_variable": "Wind speed",
+      "canonical_variable": "Wind",
+      "subcategory": "Speed",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -5492,6 +6654,11 @@
       "timeframe_unit": "hours",
       "normalized_source": "BMD",
       "llm_used": "azure_openai",
+      "original_variable": "Wind speed",
+      "canonical_variable": "Wind",
+      "subcategory": "Speed",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -5517,6 +6684,11 @@
       "timeframe_unit": "hours",
       "normalized_source": "BMD",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -5542,6 +6714,11 @@
       "timeframe_unit": "hours",
       "normalized_source": "BMD",
       "llm_used": "azure_openai",
+      "original_variable": "Wind speed",
+      "canonical_variable": "Wind",
+      "subcategory": "Speed",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -5567,6 +6744,11 @@
       "timeframe_unit": "hours",
       "normalized_source": "BMD",
       "llm_used": "azure_openai",
+      "original_variable": "Wind speed",
+      "canonical_variable": "Wind",
+      "subcategory": "Speed",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -5592,6 +6774,11 @@
       "timeframe_unit": "hours",
       "normalized_source": "BMD",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -5617,6 +6804,11 @@
       "timeframe_unit": "hours",
       "normalized_source": "INAM",
       "llm_used": "azure_openai",
+      "original_variable": "Wind speed",
+      "canonical_variable": "Wind",
+      "subcategory": "Speed",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -5642,6 +6834,11 @@
       "timeframe_unit": "hours",
       "normalized_source": "INAM",
       "llm_used": "azure_openai",
+      "original_variable": "Wind speed",
+      "canonical_variable": "Wind",
+      "subcategory": "Speed",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -5667,6 +6864,11 @@
       "timeframe_unit": "hours",
       "normalized_source": "INAM",
       "llm_used": "azure_openai",
+      "original_variable": "Wind speed",
+      "canonical_variable": "Wind",
+      "subcategory": "Speed",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -5692,6 +6894,11 @@
       "timeframe_unit": "hours",
       "normalized_source": "INAM",
       "llm_used": "azure_openai",
+      "original_variable": "Wind speed",
+      "canonical_variable": "Wind",
+      "subcategory": "Speed",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -5710,63 +6917,18 @@
       "has_stop_mechanism": true,
       "forecast_variable": "River discharge",
       "threshold_operator": ">=",
-      "threshold_value": 5.0,
+      "threshold_value": 1.0,
       "threshold_unit": "years",
       "probability_value": NaN,
       "lead_time_value": 3.0,
       "timeframe_unit": "days",
       "normalized_source": "INAM",
       "llm_used": "azure_openai",
-      "trigger_logic": "Conditional (Either / OR)"
-    },
-    {
-      "document_id": 17044,
-      "document_name": "Mozambique - Floods EAP (MDRMZ022)",
-      "hazard_type": "Flood",
-      "statement_key": "trigger_statement_1",
-      "threshold_index": 1,
-      "total_thresholds": 2,
-      "threshold_text": "Trigger level reached within 72 hours (3 days)",
-      "source_authority": "National Institute of Meteorology (INAM), National Directorate of Water Resources Management (DNGRH), REPRESA project through GloFAS",
-      "lead_time": "3 days",
-      "is_conditional": false,
-      "condition_dependency": null,
-      "activation_type": "dual-trigger",
-      "has_stop_mechanism": true,
-      "forecast_variable": "River discharge",
-      "threshold_operator": ">=",
-      "threshold_value": 1.0,
-      "threshold_unit": "cusecs",
-      "probability_value": NaN,
-      "lead_time_value": 3.0,
-      "timeframe_unit": "days",
-      "normalized_source": "INAM",
-      "llm_used": "azure_openai",
-      "trigger_logic": "Conditional (Either / OR)"
-    },
-    {
-      "document_id": 17044,
-      "document_name": "Mozambique - Floods EAP (MDRMZ022)",
-      "hazard_type": "Flood",
-      "statement_key": "trigger_statement_2",
-      "threshold_index": 0,
-      "total_thresholds": 2,
-      "threshold_text": "GloFAS forecast indicating flood risk with approximately 7 days lead time for Buzi and Licungo rivers",
-      "source_authority": "REPRESA project through GloFAS",
-      "lead_time": "3 to 7 days",
-      "is_conditional": false,
-      "condition_dependency": null,
-      "activation_type": "dual-trigger",
-      "has_stop_mechanism": true,
-      "forecast_variable": "River discharge",
-      "threshold_operator": ">=",
-      "threshold_value": 1.0,
-      "threshold_unit": "cusecs",
-      "probability_value": NaN,
-      "lead_time_value": 7.0,
-      "timeframe_unit": "days",
-      "normalized_source": "GloFAS",
-      "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -5783,15 +6945,20 @@
       "condition_dependency": null,
       "activation_type": "single-trigger",
       "has_stop_mechanism": false,
-      "forecast_variable": "River discharge",
+      "forecast_variable": "Affected population",
       "threshold_operator": ">=",
-      "threshold_value": 1.0,
+      "threshold_value": 2.0,
       "threshold_unit": "months",
       "probability_value": NaN,
       "lead_time_value": 90.0,
       "timeframe_unit": "days",
       "normalized_source": "INM",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -5817,6 +6984,11 @@
       "timeframe_unit": "days",
       "normalized_source": "INM",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -5833,7 +7005,7 @@
       "condition_dependency": null,
       "activation_type": "single-trigger",
       "has_stop_mechanism": false,
-      "forecast_variable": "Response capacity",
+      "forecast_variable": "Affected population",
       "threshold_operator": "<=",
       "threshold_value": 60.0,
       "threshold_unit": "%",
@@ -5842,6 +7014,11 @@
       "timeframe_unit": "days",
       "normalized_source": "INM",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -5867,6 +7044,11 @@
       "timeframe_unit": "days",
       "normalized_source": "Steering",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -5884,14 +7066,19 @@
       "activation_type": "single-trigger",
       "has_stop_mechanism": false,
       "forecast_variable": "Affected population",
-      "threshold_operator": "between",
-      "threshold_value": 30.0,
-      "threshold_unit": "days",
+      "threshold_operator": ">=",
+      "threshold_value": 0.0,
+      "threshold_unit": "people",
       "probability_value": NaN,
       "lead_time_value": 90.0,
       "timeframe_unit": "days",
       "normalized_source": "Steering",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -5917,6 +7104,11 @@
       "timeframe_unit": "days",
       "normalized_source": "Steering",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -5942,6 +7134,11 @@
       "timeframe_unit": "days",
       "normalized_source": "CENAOS",
       "llm_used": "azure_openai",
+      "original_variable": "Wind speed",
+      "canonical_variable": "Wind",
+      "subcategory": "Speed",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Single"
     },
     {
@@ -5960,13 +7157,18 @@
       "has_stop_mechanism": true,
       "forecast_variable": "Wind speed",
       "threshold_operator": ">=",
-      "threshold_value": 3.0,
-      "threshold_unit": "zone",
+      "threshold_value": 1.0,
+      "threshold_unit": "category",
       "probability_value": NaN,
       "lead_time_value": 5.0,
       "timeframe_unit": "days",
       "normalized_source": "IMN",
       "llm_used": "azure_openai",
+      "original_variable": "Wind speed",
+      "canonical_variable": "Wind",
+      "subcategory": "Speed",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -5983,15 +7185,20 @@
       "condition_dependency": null,
       "activation_type": "dual-trigger",
       "has_stop_mechanism": true,
-      "forecast_variable": "Inundation extent",
+      "forecast_variable": "River discharge",
       "threshold_operator": ">=",
-      "threshold_value": 1.0,
-      "threshold_unit": "%",
+      "threshold_value": 0.0,
+      "threshold_unit": "cusecs",
       "probability_value": 60.0,
       "lead_time_value": 5.0,
       "timeframe_unit": "days",
       "normalized_source": "IMN",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -6008,15 +7215,20 @@
       "condition_dependency": null,
       "activation_type": "dual-trigger",
       "has_stop_mechanism": true,
-      "forecast_variable": "Lead time",
+      "forecast_variable": "Rainfall total",
       "threshold_operator": ">=",
-      "threshold_value": 5.0,
-      "threshold_unit": "days",
+      "threshold_value": 0.0,
+      "threshold_unit": "mm",
       "probability_value": NaN,
       "lead_time_value": 5.0,
       "timeframe_unit": "days",
       "normalized_source": "IMN",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -6042,6 +7254,11 @@
       "timeframe_unit": "days",
       "normalized_source": "IMN",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -6067,6 +7284,11 @@
       "timeframe_unit": "days",
       "normalized_source": "IMN",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -6092,6 +7314,11 @@
       "timeframe_unit": "days",
       "normalized_source": "IMN",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -6108,15 +7335,20 @@
       "condition_dependency": "Trigger 2 can activate independently of Trigger 1",
       "activation_type": "dual-trigger",
       "has_stop_mechanism": true,
-      "forecast_variable": "Tropical depression formation",
+      "forecast_variable": "Rainfall total",
       "threshold_operator": ">=",
       "threshold_value": 1.0,
-      "threshold_unit": "event",
+      "threshold_unit": "mm",
       "probability_value": NaN,
       "lead_time_value": 5.0,
       "timeframe_unit": "days",
       "normalized_source": "IMN",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -6136,12 +7368,17 @@
       "forecast_variable": "Volcanic activity parameters",
       "threshold_operator": ">=",
       "threshold_value": 1.0,
-      "threshold_unit": "unit",
+      "threshold_unit": "units",
       "probability_value": NaN,
       "lead_time_value": 0.0,
       "timeframe_unit": "hours",
       "normalized_source": "IGEPN",
       "llm_used": "azure_openai",
+      "original_variable": "Volcanic activity parameters",
+      "canonical_variable": "Volcanic Activity",
+      "subcategory": "Activity parameters",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Single"
     },
     {
@@ -6158,15 +7395,20 @@
       "condition_dependency": "Conditional on prior activation of Trigger 1 (Special Report A) indicating significant changes in volcanic activity",
       "activation_type": "dual-trigger",
       "has_stop_mechanism": true,
-      "forecast_variable": "Internal volcanic activity parameters",
+      "forecast_variable": "Inundation extent",
       "threshold_operator": ">=",
       "threshold_value": 1.0,
-      "threshold_unit": "units",
+      "threshold_unit": "%",
       "probability_value": NaN,
       "lead_time_value": 0.0,
       "timeframe_unit": "hours",
       "normalized_source": "IGEPN",
       "llm_used": "azure_openai",
+      "original_variable": "Inundation extent",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "Flood extent",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -6184,7 +7426,7 @@
       "activation_type": "dual-trigger",
       "has_stop_mechanism": true,
       "forecast_variable": "Ash fall",
-      "threshold_operator": ">",
+      "threshold_operator": ">=",
       "threshold_value": 2.0,
       "threshold_unit": "mm",
       "probability_value": NaN,
@@ -6192,6 +7434,11 @@
       "timeframe_unit": "hours",
       "normalized_source": "IGEPN",
       "llm_used": "azure_openai",
+      "original_variable": "Ash fall",
+      "canonical_variable": "Volcanic Activity",
+      "subcategory": "Ash deposition",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -6217,6 +7464,11 @@
       "timeframe_unit": "days",
       "normalized_source": "NOA",
       "llm_used": "azure_openai",
+      "original_variable": "Excess mortality",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Mortality excess",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -6242,6 +7494,11 @@
       "timeframe_unit": "days",
       "normalized_source": "NOA",
       "llm_used": "azure_openai",
+      "original_variable": "Excess mortality",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Mortality excess",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -6258,7 +7515,7 @@
       "condition_dependency": null,
       "activation_type": "single-trigger",
       "has_stop_mechanism": false,
-      "forecast_variable": "Excess mortality",
+      "forecast_variable": "Excess daily mortality",
       "threshold_operator": ">=",
       "threshold_value": 30.0,
       "threshold_unit": "%",
@@ -6267,6 +7524,11 @@
       "timeframe_unit": "days",
       "normalized_source": "NOA",
       "llm_used": "azure_openai",
+      "original_variable": "Excess daily mortality",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Mortality",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -6292,6 +7554,11 @@
       "timeframe_unit": "days",
       "normalized_source": "NOA",
       "llm_used": "azure_openai",
+      "original_variable": "Excess mortality",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Mortality excess",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -6317,6 +7584,11 @@
       "timeframe_unit": "months",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -6342,6 +7614,11 @@
       "timeframe_unit": "months",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -6367,6 +7644,11 @@
       "timeframe_unit": "months",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -6392,6 +7674,11 @@
       "timeframe_unit": "months",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "Crop yield reduction",
+      "canonical_variable": "Agricultural Impact",
+      "subcategory": "Crop yield",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -6417,6 +7704,11 @@
       "timeframe_unit": "days",
       "normalized_source": "BMD",
       "llm_used": "azure_openai",
+      "original_variable": "Temperature",
+      "canonical_variable": "Temperature",
+      "subcategory": "General temperature",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -6442,6 +7734,11 @@
       "timeframe_unit": "days",
       "normalized_source": "BMD",
       "llm_used": "azure_openai",
+      "original_variable": "Heat index",
+      "canonical_variable": "Temperature",
+      "subcategory": "Heat index",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -6467,6 +7764,11 @@
       "timeframe_unit": "days",
       "normalized_source": "Kyrgyzhydromet",
       "llm_used": "azure_openai",
+      "original_variable": "Temperature",
+      "canonical_variable": "Temperature",
+      "subcategory": "General temperature",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -6483,7 +7785,7 @@
       "condition_dependency": null,
       "activation_type": "single-trigger",
       "has_stop_mechanism": true,
-      "forecast_variable": "Lead time",
+      "forecast_variable": "Seasonal precipitation",
       "threshold_operator": ">=",
       "threshold_value": 4.0,
       "threshold_unit": "days",
@@ -6492,6 +7794,11 @@
       "timeframe_unit": "days",
       "normalized_source": "Kyrgyzhydromet",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -6517,6 +7824,11 @@
       "timeframe_unit": "days",
       "normalized_source": "Kyrgyzhydromet",
       "llm_used": "azure_openai",
+      "original_variable": "Temperature",
+      "canonical_variable": "Temperature",
+      "subcategory": "General temperature",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -6542,6 +7854,11 @@
       "timeframe_unit": "days",
       "normalized_source": "Kyrgyzhydromet",
       "llm_used": "azure_openai",
+      "original_variable": "Heatwave occurrence",
+      "canonical_variable": "Temperature",
+      "subcategory": "Heatwave occurrence",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -6567,6 +7884,11 @@
       "timeframe_unit": "days",
       "normalized_source": "Kyrgyzhydromet",
       "llm_used": "azure_openai",
+      "original_variable": "Heatwave occurrence probability",
+      "canonical_variable": "Temperature",
+      "subcategory": "Heatwave occurrence probability",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -6592,6 +7914,11 @@
       "timeframe_unit": "days",
       "normalized_source": "FFD",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -6617,6 +7944,11 @@
       "timeframe_unit": "days",
       "normalized_source": "FFD",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -6638,10 +7970,15 @@
       "threshold_value": 0.0,
       "threshold_unit": "cusecs",
       "probability_value": NaN,
-      "lead_time_value": 5.0,
+      "lead_time_value": 3.0,
       "timeframe_unit": "days",
       "normalized_source": "FFD",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -6667,6 +8004,11 @@
       "timeframe_unit": "days",
       "normalized_source": "FFD",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -6692,6 +8034,11 @@
       "timeframe_unit": "days",
       "normalized_source": "FFD",
       "llm_used": "azure_openai",
+      "original_variable": "River discharge",
+      "canonical_variable": "Hydrological Flow",
+      "subcategory": "River flow",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -6717,6 +8064,11 @@
       "timeframe_unit": "weeks",
       "normalized_source": "KMD",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -6742,6 +8094,11 @@
       "timeframe_unit": "weeks",
       "normalized_source": "KMD",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -6767,6 +8124,11 @@
       "timeframe_unit": "weeks",
       "normalized_source": "KMD",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -6792,6 +8154,11 @@
       "timeframe_unit": "months",
       "normalized_source": "IBF",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Single"
     },
     {
@@ -6813,10 +8180,15 @@
       "threshold_value": 4.0,
       "threshold_unit": "tercile",
       "probability_value": NaN,
-      "lead_time_value": 3.0,
+      "lead_time_value": 6.0,
       "timeframe_unit": "months",
       "normalized_source": "FEWSnet",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -6838,10 +8210,15 @@
       "threshold_value": 0.0,
       "threshold_unit": "percentile",
       "probability_value": NaN,
-      "lead_time_value": 6.0,
+      "lead_time_value": 3.0,
       "timeframe_unit": "months",
       "normalized_source": "FEWSnet",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -6860,13 +8237,18 @@
       "has_stop_mechanism": true,
       "forecast_variable": "Seasonal precipitation",
       "threshold_operator": ">=",
-      "threshold_value": 33.0,
+      "threshold_value": 1.0,
       "threshold_unit": "percentile",
       "probability_value": NaN,
       "lead_time_value": 3.0,
       "timeframe_unit": "months",
       "normalized_source": "COPECO",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -6892,31 +8274,11 @@
       "timeframe_unit": "months",
       "normalized_source": "COPECO",
       "llm_used": "azure_openai",
-      "trigger_logic": "Conditional (Sequential / AND)"
-    },
-    {
-      "document_id": 17595,
-      "document_name": "Honduras - Drought (MDRHN018)",
-      "hazard_type": "Drought",
-      "statement_key": "trigger_statement_1",
-      "threshold_index": 2,
-      "total_thresholds": 3,
-      "threshold_text": "Excluding AMJ and MJJ quarters due to predictability barrier",
-      "source_authority": "COPECO/CENAOS using IRI forecast",
-      "lead_time": "3 months",
-      "is_conditional": true,
-      "condition_dependency": "Trigger 1 must be met before Trigger 2 can activate the EAP",
-      "activation_type": "dual-trigger",
-      "has_stop_mechanism": true,
-      "forecast_variable": "Seasonal precipitation",
-      "threshold_operator": "=",
-      "threshold_value": 0.0,
-      "threshold_unit": "percentile",
-      "probability_value": NaN,
-      "lead_time_value": 3.0,
-      "timeframe_unit": "months",
-      "normalized_source": "COPECO",
-      "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -6942,6 +8304,11 @@
       "timeframe_unit": "months",
       "normalized_source": "COPECO",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -6967,6 +8334,11 @@
       "timeframe_unit": "months",
       "normalized_source": "COPECO",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -6992,6 +8364,11 @@
       "timeframe_unit": "months",
       "normalized_source": "COPECO",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -7009,14 +8386,19 @@
       "activation_type": "dual-trigger",
       "has_stop_mechanism": true,
       "forecast_variable": "Seasonal precipitation",
-      "threshold_operator": "=",
-      "threshold_value": 1.0,
-      "threshold_unit": "years",
+      "threshold_operator": ">=",
+      "threshold_value": 33.0,
+      "threshold_unit": "percentile",
       "probability_value": NaN,
       "lead_time_value": 3.0,
       "timeframe_unit": "months",
       "normalized_source": "COPECO",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -7042,6 +8424,11 @@
       "timeframe_unit": "months",
       "normalized_source": "LMS",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -7067,6 +8454,11 @@
       "timeframe_unit": "months",
       "normalized_source": "LMS",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -7092,6 +8484,11 @@
       "timeframe_unit": "months",
       "normalized_source": "LMS",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -7117,6 +8514,11 @@
       "timeframe_unit": "days",
       "normalized_source": "Hydromet",
       "llm_used": "azure_openai",
+      "original_variable": "Temperature",
+      "canonical_variable": "Temperature",
+      "subcategory": "General temperature",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -7142,6 +8544,11 @@
       "timeframe_unit": "days",
       "normalized_source": "Hydromet",
       "llm_used": "azure_openai",
+      "original_variable": "Temperature",
+      "canonical_variable": "Temperature",
+      "subcategory": "General temperature",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -7158,7 +8565,7 @@
       "condition_dependency": null,
       "activation_type": "single-trigger",
       "has_stop_mechanism": false,
-      "forecast_variable": "Temperature minimum",
+      "forecast_variable": "Minimum temperature",
       "threshold_operator": "<",
       "threshold_value": -40.0,
       "threshold_unit": "°C",
@@ -7167,6 +8574,11 @@
       "timeframe_unit": "days",
       "normalized_source": "Kazhydromet",
       "llm_used": "azure_openai",
+      "original_variable": "Minimum temperature",
+      "canonical_variable": "Temperature",
+      "subcategory": "Min temperature",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -7192,6 +8604,11 @@
       "timeframe_unit": "days",
       "normalized_source": "Kazhydromet",
       "llm_used": "azure_openai",
+      "original_variable": "Temperature",
+      "canonical_variable": "Temperature",
+      "subcategory": "General temperature",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -7217,6 +8634,11 @@
       "timeframe_unit": "days",
       "normalized_source": "Tajik",
       "llm_used": "azure_openai",
+      "original_variable": "Day temperature",
+      "canonical_variable": "Temperature",
+      "subcategory": "Daytime temperature",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -7242,6 +8664,11 @@
       "timeframe_unit": "days",
       "normalized_source": "Tajik",
       "llm_used": "azure_openai",
+      "original_variable": "Day temperature",
+      "canonical_variable": "Temperature",
+      "subcategory": "Daytime temperature",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -7267,6 +8694,11 @@
       "timeframe_unit": "days",
       "normalized_source": "DHM",
       "llm_used": "azure_openai",
+      "original_variable": "Daily maximum temperature",
+      "canonical_variable": "Temperature",
+      "subcategory": "Max daily temp",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -7292,6 +8724,11 @@
       "timeframe_unit": "days",
       "normalized_source": "DHM",
       "llm_used": "azure_openai",
+      "original_variable": "Relative humidity",
+      "canonical_variable": "Humidity",
+      "subcategory": "Relative humidity",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -7308,15 +8745,20 @@
       "condition_dependency": "Forecast criteria activation is conditional on observed conditions being met first (both Tmax and Rh thresholds)",
       "activation_type": "dual-trigger",
       "has_stop_mechanism": false,
-      "forecast_variable": "Heatwave alert",
+      "forecast_variable": "Heatwave intensity",
       "threshold_operator": ">=",
       "threshold_value": 1.0,
-      "threshold_unit": "alerts",
+      "threshold_unit": "event",
       "probability_value": NaN,
       "lead_time_value": 3.0,
       "timeframe_unit": "days",
       "normalized_source": "DHM",
       "llm_used": "azure_openai",
+      "original_variable": "Heatwave intensity",
+      "canonical_variable": "Temperature",
+      "subcategory": "Heatwave intensity",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -7342,6 +8784,11 @@
       "timeframe_unit": "days",
       "normalized_source": "DHM",
       "llm_used": "azure_openai",
+      "original_variable": "Daily maximum temperature",
+      "canonical_variable": "Temperature",
+      "subcategory": "Max daily temp",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -7367,6 +8814,11 @@
       "timeframe_unit": "months",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -7392,6 +8844,11 @@
       "timeframe_unit": "months",
       "normalized_source": "ECMWF",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -7417,6 +8874,11 @@
       "timeframe_unit": "months",
       "normalized_source": "Ministry",
       "llm_used": "azure_openai",
+      "original_variable": "Fodder deficit",
+      "canonical_variable": "Agricultural Impact",
+      "subcategory": "Fodder availability",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -7442,6 +8904,11 @@
       "timeframe_unit": "months",
       "normalized_source": "Ministry",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -7461,12 +8928,17 @@
       "forecast_variable": "Affected population",
       "threshold_operator": ">=",
       "threshold_value": 3.0,
-      "threshold_unit": "phase",
+      "threshold_unit": "IPC phase",
       "probability_value": NaN,
       "lead_time_value": 1.0,
       "timeframe_unit": "months",
       "normalized_source": "Cadre",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -7483,15 +8955,20 @@
       "condition_dependency": null,
       "activation_type": "multi-stage",
       "has_stop_mechanism": true,
-      "forecast_variable": "Affected population",
-      "threshold_operator": ">=",
-      "threshold_value": 1.0,
-      "threshold_unit": "people",
+      "forecast_variable": "Seasonal precipitation",
+      "threshold_operator": "=",
+      "threshold_value": 33.0,
+      "threshold_unit": "percentile",
       "probability_value": NaN,
       "lead_time_value": 1.0,
       "timeframe_unit": "months",
       "normalized_source": "Cadre",
       "llm_used": "azure_openai",
+      "original_variable": "Seasonal precipitation",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Seasonal total",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Either / OR)"
     },
     {
@@ -7517,6 +8994,11 @@
       "timeframe_unit": "hours",
       "normalized_source": "RSMC",
       "llm_used": "azure_openai",
+      "original_variable": "Wind speed",
+      "canonical_variable": "Wind",
+      "subcategory": "Speed",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -7542,6 +9024,11 @@
       "timeframe_unit": "days",
       "normalized_source": "RSMC",
       "llm_used": "azure_openai",
+      "original_variable": "Affected population",
+      "canonical_variable": "Population Impact",
+      "subcategory": "Affected count",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Conditional (Sequential / AND)"
     },
     {
@@ -7564,9 +9051,14 @@
       "threshold_unit": "mm",
       "probability_value": NaN,
       "lead_time_value": 0.0,
-      "timeframe_unit": "hours",
-      "normalized_source": "National",
+      "timeframe_unit": "days",
+      "normalized_source": "FMS",
       "llm_used": "azure_openai",
+      "original_variable": "Rainfall total",
+      "canonical_variable": "Precipitation",
+      "subcategory": "Total rainfall",
+      "taxonomy_match_method": "deterministic_alias",
+      "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Single"
     }
   ]
