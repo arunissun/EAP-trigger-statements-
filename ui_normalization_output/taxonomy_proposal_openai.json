@@ -1,0 +1,1467 @@
+{
+  "metadata": {
+    "generated_at_utc": "20260409T154839Z",
+    "llm": "openai",
+    "canonical_target": 10,
+    "approval_status": "pending_human_review",
+    "taxonomy_version_candidate": "candidate-20260409T154839Z",
+    "selected_attempt": 2,
+    "attempt_count": 2
+  },
+  "proposal": {
+    "proposed_canonical_variables": [
+      "Precipitation",
+      "Temperature",
+      "Wind",
+      "Hydrological Flow",
+      "Population Impact",
+      "Infectious Disease Incidence",
+      "Humidity",
+      "Fire Risk",
+      "Volcanic Activity",
+      "Agricultural Impact"
+    ],
+    "mappings": [
+      {
+        "forecast_variable": "Seasonal precipitation",
+        "canonical_variable": "Precipitation",
+        "subcategory_name": "Seasonal total",
+        "alias_list": [
+          "Seasonal precipitation"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Seasonal weather outlook indicating normal to above-normal rainfall"
+        ]
+      },
+      {
+        "forecast_variable": "River discharge",
+        "canonical_variable": "Hydrological Flow",
+        "subcategory_name": "River flow",
+        "alias_list": [
+          "River discharge"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "60 per cent or greater probability"
+        ]
+      },
+      {
+        "forecast_variable": "Rainfall total",
+        "canonical_variable": "Precipitation",
+        "subcategory_name": "Total rainfall",
+        "alias_list": [
+          "Rainfall total"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Anticipated rainfall totals exceeding the seasonal average of 800 mm to 1,200 mm across identified catchment areas"
+        ]
+      },
+      {
+        "forecast_variable": "Affected population",
+        "canonical_variable": "Population Impact",
+        "subcategory_name": "Affected count",
+        "alias_list": [
+          "Affected population"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Inundation modelling projects 30% or more of households affected in flood-risk zones"
+        ]
+      },
+      {
+        "forecast_variable": "Confirmed cholera cases",
+        "canonical_variable": "Infectious Disease Incidence",
+        "subcategory_name": "Cholera cases",
+        "alias_list": [
+          "Confirmed cholera cases"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Phase 1: A confirmed cholera case in any district of the country"
+        ]
+      },
+      {
+        "forecast_variable": "Wind speed",
+        "canonical_variable": "Wind",
+        "subcategory_name": "Speed",
+        "alias_list": [
+          "Wind speed"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Tropical storm with wind speed of 34 knots or stronger"
+        ]
+      },
+      {
+        "forecast_variable": "Temperature",
+        "canonical_variable": "Temperature",
+        "subcategory_name": "General temperature",
+        "alias_list": [
+          "Temperature"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Temperature of 38°C or more for two consecutive days"
+        ]
+      },
+      {
+        "forecast_variable": "Inundation extent",
+        "canonical_variable": "Hydrological Flow",
+        "subcategory_name": "Flood extent",
+        "alias_list": [
+          "Inundation extent"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Predicted increase in Sudd inundation extent over the next two months greater than 5% compared to seasonal minimum"
+        ]
+      },
+      {
+        "forecast_variable": "Daily maximum temperature",
+        "canonical_variable": "Temperature",
+        "subcategory_name": "Max daily temp",
+        "alias_list": [
+          "Daily maximum temperature"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Median ensemble member of ECMWF forecasts daily maximum temperature at Zahle below 2°C with a lead time of 7 days"
+        ]
+      },
+      {
+        "forecast_variable": "Heat Index",
+        "canonical_variable": "Temperature",
+        "subcategory_name": "Heat index",
+        "alias_list": [
+          "Heat Index"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Heat Index (HI) ≥ 62.6 for Yangon (Kaba Aye) for at least 3 consecutive days"
+        ]
+      },
+      {
+        "forecast_variable": "Excess mortality",
+        "canonical_variable": "Population Impact",
+        "subcategory_name": "Mortality excess",
+        "alias_list": [
+          "Excess mortality"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Category 1 – 1% to 12.49% excess mortality"
+        ]
+      },
+      {
+        "forecast_variable": "Maximum temperature",
+        "canonical_variable": "Temperature",
+        "subcategory_name": "Max temperature",
+        "alias_list": [
+          "Maximum temperature"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Maximum temperature less than or equal to 5th percentile (18-20°C)"
+        ]
+      },
+      {
+        "forecast_variable": "Minimum temperature",
+        "canonical_variable": "Temperature",
+        "subcategory_name": "Min temperature",
+        "alias_list": [
+          "Minimum temperature"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Minimum temperature less than or equal to 7°C"
+        ]
+      },
+      {
+        "forecast_variable": "Cold wave occurrence",
+        "canonical_variable": "Temperature",
+        "subcategory_name": "Cold wave event",
+        "alias_list": [
+          "Cold wave occurrence"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Forecast of cold wave with a lead time of 4 days"
+        ]
+      },
+      {
+        "forecast_variable": "Confirmed dengue cases",
+        "canonical_variable": "Infectious Disease Incidence",
+        "subcategory_name": "Dengue cases",
+        "alias_list": [
+          "Confirmed dengue cases"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Weekly dengue caseload exceeding 1,500 cases in May, June, July, December, and January"
+        ]
+      },
+      {
+        "forecast_variable": "Day temperature",
+        "canonical_variable": "Temperature",
+        "subcategory_name": "Daytime temperature",
+        "alias_list": [
+          "Day temperature"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Day temperature exceeding 39.5°C in the North for 4 consecutive days during July-August"
+        ]
+      },
+      {
+        "forecast_variable": "Relative humidity",
+        "canonical_variable": "Humidity",
+        "subcategory_name": "Relative humidity",
+        "alias_list": [
+          "Relative humidity"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Relative humidity less than 30% in the threatened territory"
+        ]
+      },
+      {
+        "forecast_variable": "Wind speed category",
+        "canonical_variable": "Wind",
+        "subcategory_name": "Speed category",
+        "alias_list": [
+          "Wind speed category"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Category 4 or 5 cyclone within 250 km of Fiji"
+        ]
+      },
+      {
+        "forecast_variable": "Ash fall",
+        "canonical_variable": "Volcanic Activity",
+        "subcategory_name": "Ash deposition",
+        "alias_list": [
+          "Ash fall"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Eruptive event with explosive index VEI 3 and ash fall exceeding 2 mm as per ASH3D model (Special Report C)"
+        ]
+      },
+      {
+        "forecast_variable": "Crop losses",
+        "canonical_variable": "Agricultural Impact",
+        "subcategory_name": "Crop damage",
+        "alias_list": [
+          "Crop losses"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Ministry of Agriculture Crop Forecast Survey Index (CFSI) projects 40% or greater crop losses"
+        ]
+      },
+      {
+        "forecast_variable": "Crop yield reduction",
+        "canonical_variable": "Agricultural Impact",
+        "subcategory_name": "Crop yield",
+        "alias_list": [
+          "Crop yield reduction"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Crop yield reduction predicted to be more than 50% based on LEAP index"
+        ]
+      },
+      {
+        "forecast_variable": "Excess daily mortality",
+        "canonical_variable": "Population Impact",
+        "subcategory_name": "Mortality",
+        "alias_list": [
+          "Excess daily mortality"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Category 3 – 30% or higher excess mortality (ranging upwards as high as 45% to 65% excess daily mortality)"
+        ]
+      },
+      {
+        "forecast_variable": "Extreme Forecast Index",
+        "canonical_variable": "Other",
+        "subcategory_name": "Forecast extremity metric",
+        "alias_list": [
+          "Extreme Forecast Index"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Weekly Extreme Forecast Index (EFI) from ECMWF model greater than 0.8"
+        ]
+      },
+      {
+        "forecast_variable": "Fodder deficit",
+        "canonical_variable": "Agricultural Impact",
+        "subcategory_name": "Fodder availability",
+        "alias_list": [
+          "Fodder deficit"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Fodder deficit of 40% or more"
+        ]
+      },
+      {
+        "forecast_variable": "Heat index",
+        "canonical_variable": "Temperature",
+        "subcategory_name": "Heat index",
+        "alias_list": [
+          "Heat index"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Heat index of 38 or more for two consecutive days"
+        ]
+      },
+      {
+        "forecast_variable": "Heatwave intensity",
+        "canonical_variable": "Temperature",
+        "subcategory_name": "Heatwave intensity",
+        "alias_list": [
+          "Heatwave intensity"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Forecast Criteria: DHM issues a red alert heatwave bulletin ('take action') for the next 3 days in the target city or its associated distric"
+        ]
+      },
+      {
+        "forecast_variable": "Heatwave occurrence",
+        "canonical_variable": "Temperature",
+        "subcategory_name": "Heatwave occurrence",
+        "alias_list": [
+          "Heatwave occurrence"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "72-hour forecast used to confirm heatwave occurrence"
+        ]
+      },
+      {
+        "forecast_variable": "Heatwave occurrence probability",
+        "canonical_variable": "Temperature",
+        "subcategory_name": "Heatwave occurrence probability",
+        "alias_list": [
+          "Heatwave occurrence probability"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Heatwave occurrence probability with 72-hour lead time less than 75% triggers stop mechanism"
+        ]
+      },
+      {
+        "forecast_variable": "Ignition probability",
+        "canonical_variable": "Fire Risk",
+        "subcategory_name": "Ignition probability",
+        "alias_list": [
+          "Ignition probability"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Ignition probability equal to or greater than 70%"
+        ]
+      },
+      {
+        "forecast_variable": "Internal volcanic activity parameters",
+        "canonical_variable": "Volcanic Activity",
+        "subcategory_name": "Internal parameters",
+        "alias_list": [
+          "Internal volcanic activity parameters"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Increase in parameters of internal volcanic activity (Special Report B)"
+        ]
+      },
+      {
+        "forecast_variable": "Maximum day temperature",
+        "canonical_variable": "Temperature",
+        "subcategory_name": "Max daily temperature",
+        "alias_list": [
+          "Maximum day temperature"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Maximum day temperature forecast of 2°C or less"
+        ]
+      },
+      {
+        "forecast_variable": "Nino3.4 index",
+        "canonical_variable": "Other",
+        "subcategory_name": "ENSO index",
+        "alias_list": [
+          "Nino3.4 index"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Nino3.4 index equal or greater than 0.5K in NDJ average forecast issued in July"
+        ]
+      },
+      {
+        "forecast_variable": "Volcanic activity anomaly",
+        "canonical_variable": "Volcanic Activity",
+        "subcategory_name": "Activity anomaly",
+        "alias_list": [
+          "Volcanic activity anomaly"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Level 2 (orange alert) bulletin received four days before impact, triggered by anomalies such as second-level seismic crisis, second-level m"
+        ]
+      },
+      {
+        "forecast_variable": "Volcanic activity parameters",
+        "canonical_variable": "Volcanic Activity",
+        "subcategory_name": "Activity parameters",
+        "alias_list": [
+          "Volcanic activity parameters"
+        ],
+        "confidence": 0.9,
+        "rationale": "Mapped via batch clustering.",
+        "examples": [
+          "Significant increase in internal volcanic activity parameters such as seismicity, gas emissions, deformation"
+        ]
+      }
+    ]
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "proposal": {
+        "proposed_canonical_variables": [
+          "Precipitation",
+          "River Discharge",
+          "Population Impact",
+          "Infectious Disease Cases",
+          "Wind Speed",
+          "Temperature",
+          "Flood Extent",
+          "Relative Humidity",
+          "Crop Production Impact",
+          "Volcanic Activity"
+        ],
+        "mappings": [
+          {
+            "forecast_variable": "Seasonal precipitation",
+            "canonical_variable": "Precipitation",
+            "subcategory_name": "Seasonal total",
+            "alias_list": [
+              "Seasonal precipitation"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Seasonal weather outlook indicating normal to above-normal rainfall"
+            ]
+          },
+          {
+            "forecast_variable": "River discharge",
+            "canonical_variable": "River Discharge",
+            "subcategory_name": "Flow volume",
+            "alias_list": [
+              "River discharge"
+            ],
+            "confidence": 0.95,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "60 per cent or greater probability"
+            ]
+          },
+          {
+            "forecast_variable": "Rainfall total",
+            "canonical_variable": "Precipitation",
+            "subcategory_name": "Total rainfall",
+            "alias_list": [
+              "Rainfall total"
+            ],
+            "confidence": 0.95,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Anticipated rainfall totals exceeding the seasonal average of 800 mm to 1,200 mm across identified catchment areas"
+            ]
+          },
+          {
+            "forecast_variable": "Affected population",
+            "canonical_variable": "Population Impact",
+            "subcategory_name": "Affected count",
+            "alias_list": [
+              "Affected population"
+            ],
+            "confidence": 0.95,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Inundation modelling projects 30% or more of households affected in flood-risk zones"
+            ]
+          },
+          {
+            "forecast_variable": "Confirmed cholera cases",
+            "canonical_variable": "Infectious Disease Cases",
+            "subcategory_name": "Cholera",
+            "alias_list": [
+              "Confirmed cholera cases"
+            ],
+            "confidence": 0.95,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Phase 1: A confirmed cholera case in any district of the country"
+            ]
+          },
+          {
+            "forecast_variable": "Wind speed",
+            "canonical_variable": "Wind Speed",
+            "subcategory_name": "Wind velocity",
+            "alias_list": [
+              "Wind speed"
+            ],
+            "confidence": 0.95,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Tropical storm with wind speed of 34 knots or stronger"
+            ]
+          },
+          {
+            "forecast_variable": "Temperature",
+            "canonical_variable": "Temperature",
+            "subcategory_name": "General temperature",
+            "alias_list": [
+              "Temperature"
+            ],
+            "confidence": 0.95,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Temperature of 38°C or more for two consecutive days"
+            ]
+          },
+          {
+            "forecast_variable": "Inundation extent",
+            "canonical_variable": "Flood Extent",
+            "subcategory_name": "Flooded area",
+            "alias_list": [
+              "Inundation extent"
+            ],
+            "confidence": 0.95,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Predicted increase in Sudd inundation extent over the next two months greater than 5% compared to seasonal minimum"
+            ]
+          },
+          {
+            "forecast_variable": "Daily maximum temperature",
+            "canonical_variable": "Temperature",
+            "subcategory_name": "Daily max",
+            "alias_list": [
+              "Daily maximum temperature"
+            ],
+            "confidence": 0.95,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Median ensemble member of ECMWF forecasts daily maximum temperature at Zahle below 2°C with a lead time of 7 days"
+            ]
+          },
+          {
+            "forecast_variable": "Heat Index",
+            "canonical_variable": "Temperature",
+            "subcategory_name": "Heat index",
+            "alias_list": [
+              "Heat Index"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Heat Index (HI) ≥ 62.6 for Yangon (Kaba Aye) for at least 3 consecutive days"
+            ]
+          },
+          {
+            "forecast_variable": "Excess mortality",
+            "canonical_variable": "Population Impact",
+            "subcategory_name": "Mortality increase",
+            "alias_list": [
+              "Excess mortality"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Category 1 – 1% to 12.49% excess mortality"
+            ]
+          },
+          {
+            "forecast_variable": "Maximum temperature",
+            "canonical_variable": "Temperature",
+            "subcategory_name": "Max temperature",
+            "alias_list": [
+              "Maximum temperature"
+            ],
+            "confidence": 0.95,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Maximum temperature less than or equal to 5th percentile (18-20°C)"
+            ]
+          },
+          {
+            "forecast_variable": "Minimum temperature",
+            "canonical_variable": "Temperature",
+            "subcategory_name": "Min temperature",
+            "alias_list": [
+              "Minimum temperature"
+            ],
+            "confidence": 0.95,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Minimum temperature less than or equal to 7°C"
+            ]
+          },
+          {
+            "forecast_variable": "Cold wave occurrence",
+            "canonical_variable": "Temperature",
+            "subcategory_name": "Cold wave event",
+            "alias_list": [
+              "Cold wave occurrence"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Forecast of cold wave with a lead time of 4 days"
+            ]
+          },
+          {
+            "forecast_variable": "Confirmed dengue cases",
+            "canonical_variable": "Infectious Disease Cases",
+            "subcategory_name": "Dengue",
+            "alias_list": [
+              "Confirmed dengue cases"
+            ],
+            "confidence": 0.95,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Weekly dengue caseload exceeding 1,500 cases in May, June, July, December, and January"
+            ]
+          },
+          {
+            "forecast_variable": "Day temperature",
+            "canonical_variable": "Temperature",
+            "subcategory_name": "Daytime temperature",
+            "alias_list": [
+              "Day temperature"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Day temperature exceeding 39.5°C in the North for 4 consecutive days during July-August"
+            ]
+          },
+          {
+            "forecast_variable": "Relative humidity",
+            "canonical_variable": "Relative Humidity",
+            "subcategory_name": "Humidity level",
+            "alias_list": [
+              "Relative humidity"
+            ],
+            "confidence": 0.95,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Relative humidity less than 30% in the threatened territory"
+            ]
+          },
+          {
+            "forecast_variable": "Wind speed category",
+            "canonical_variable": "Wind Speed",
+            "subcategory_name": "Speed category",
+            "alias_list": [
+              "Wind speed category"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Category 4 or 5 cyclone within 250 km of Fiji"
+            ]
+          },
+          {
+            "forecast_variable": "Ash fall",
+            "canonical_variable": "Volcanic Activity",
+            "subcategory_name": "Volcanic ash",
+            "alias_list": [
+              "Ash fall"
+            ],
+            "confidence": 0.95,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Eruptive event with explosive index VEI 3 and ash fall exceeding 2 mm as per ASH3D model (Special Report C)"
+            ]
+          },
+          {
+            "forecast_variable": "Crop losses",
+            "canonical_variable": "Crop Production Impact",
+            "subcategory_name": "Losses",
+            "alias_list": [
+              "Crop losses"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Ministry of Agriculture Crop Forecast Survey Index (CFSI) projects 40% or greater crop losses"
+            ]
+          },
+          {
+            "forecast_variable": "Crop yield reduction",
+            "canonical_variable": "Crop Production Impact",
+            "subcategory_name": "Crop yield reduction",
+            "alias_list": [
+              "Crop yield reduction"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Crop yield reduction predicted to be more than 50% based on LEAP index"
+            ]
+          },
+          {
+            "forecast_variable": "Excess daily mortality",
+            "canonical_variable": "Population Impact",
+            "subcategory_name": "Excess mortality",
+            "alias_list": [
+              "Excess daily mortality"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Category 3 – 30% or higher excess mortality (ranging upwards as high as 45% to 65% excess daily mortality)"
+            ]
+          },
+          {
+            "forecast_variable": "Extreme Forecast Index",
+            "canonical_variable": "Other",
+            "subcategory_name": "Extreme Forecast Index",
+            "alias_list": [
+              "Extreme Forecast Index"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Weekly Extreme Forecast Index (EFI) from ECMWF model greater than 0.8"
+            ]
+          },
+          {
+            "forecast_variable": "Fodder deficit",
+            "canonical_variable": "Crop Production Impact",
+            "subcategory_name": "Fodder deficit",
+            "alias_list": [
+              "Fodder deficit"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Fodder deficit of 40% or more"
+            ]
+          },
+          {
+            "forecast_variable": "Heat index",
+            "canonical_variable": "Temperature",
+            "subcategory_name": "Heat index",
+            "alias_list": [
+              "Heat index"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Heat index of 38 or more for two consecutive days"
+            ]
+          },
+          {
+            "forecast_variable": "Heatwave intensity",
+            "canonical_variable": "Temperature",
+            "subcategory_name": "Heatwave intensity",
+            "alias_list": [
+              "Heatwave intensity"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Forecast Criteria: DHM issues a red alert heatwave bulletin ('take action') for the next 3 days in the target city or its associated distric"
+            ]
+          },
+          {
+            "forecast_variable": "Heatwave occurrence",
+            "canonical_variable": "Temperature",
+            "subcategory_name": "Heatwave occurrence",
+            "alias_list": [
+              "Heatwave occurrence"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "72-hour forecast used to confirm heatwave occurrence"
+            ]
+          },
+          {
+            "forecast_variable": "Heatwave occurrence probability",
+            "canonical_variable": "Temperature",
+            "subcategory_name": "Heatwave occurrence probability",
+            "alias_list": [
+              "Heatwave occurrence probability"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Heatwave occurrence probability with 72-hour lead time less than 75% triggers stop mechanism"
+            ]
+          },
+          {
+            "forecast_variable": "Ignition probability",
+            "canonical_variable": "Other",
+            "subcategory_name": "Ignition probability",
+            "alias_list": [
+              "Ignition probability"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Ignition probability equal to or greater than 70%"
+            ]
+          },
+          {
+            "forecast_variable": "Internal volcanic activity parameters",
+            "canonical_variable": "Volcanic Activity",
+            "subcategory_name": "Internal volcanic parameters",
+            "alias_list": [
+              "Internal volcanic activity parameters"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Increase in parameters of internal volcanic activity (Special Report B)"
+            ]
+          },
+          {
+            "forecast_variable": "Maximum day temperature",
+            "canonical_variable": "Temperature",
+            "subcategory_name": "Maximum day temperature",
+            "alias_list": [
+              "Maximum day temperature"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Maximum day temperature forecast of 2°C or less"
+            ]
+          },
+          {
+            "forecast_variable": "Nino3.4 index",
+            "canonical_variable": "Other",
+            "subcategory_name": "Nino3.4 index",
+            "alias_list": [
+              "Nino3.4 index"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Nino3.4 index equal or greater than 0.5K in NDJ average forecast issued in July"
+            ]
+          },
+          {
+            "forecast_variable": "Volcanic activity anomaly",
+            "canonical_variable": "Volcanic Activity",
+            "subcategory_name": "Volcanic activity anomaly",
+            "alias_list": [
+              "Volcanic activity anomaly"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Level 2 (orange alert) bulletin received four days before impact, triggered by anomalies such as second-level seismic crisis, second-level m"
+            ]
+          },
+          {
+            "forecast_variable": "Volcanic activity parameters",
+            "canonical_variable": "Volcanic Activity",
+            "subcategory_name": "Volcanic activity parameters",
+            "alias_list": [
+              "Volcanic activity parameters"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Significant increase in internal volcanic activity parameters such as seismicity, gas emissions, deformation"
+            ]
+          }
+        ]
+      },
+      "quality": {
+        "overall_pass": false,
+        "checks": {
+          "canonical_count_ok": true,
+          "mapping_complete_ok": true,
+          "valid_target_ok": true,
+          "coverage_ok": true,
+          "semantic_distinctness_ok": true,
+          "alias_overlap_ok": true,
+          "min_support_ok": false
+        },
+        "failed_checks": [
+          "min_support_ok"
+        ],
+        "metrics": {
+          "coverage": 0.9882,
+          "coverage_target": 0.9,
+          "max_canonical_similarity": 0.25,
+          "max_alias_overlap": 0.0,
+          "max_alias_overlap_allowed": 0.5,
+          "min_support_records": 3,
+          "canonical_support": {
+            "Precipitation": 92,
+            "River Discharge": 44,
+            "Population Impact": 30,
+            "Infectious Disease Cases": 21,
+            "Wind Speed": 21,
+            "Temperature": 29,
+            "Flood Extent": 5,
+            "Relative Humidity": 2,
+            "Crop Production Impact": 3,
+            "Volcanic Activity": 4
+          },
+          "other_mapped_records": 3,
+          "total_records": 254
+        }
+      }
+    },
+    {
+      "attempt": 2,
+      "proposal": {
+        "proposed_canonical_variables": [
+          "Precipitation",
+          "Temperature",
+          "Wind",
+          "Hydrological Flow",
+          "Population Impact",
+          "Infectious Disease Incidence",
+          "Humidity",
+          "Fire Risk",
+          "Volcanic Activity",
+          "Agricultural Impact"
+        ],
+        "mappings": [
+          {
+            "forecast_variable": "Seasonal precipitation",
+            "canonical_variable": "Precipitation",
+            "subcategory_name": "Seasonal total",
+            "alias_list": [
+              "Seasonal precipitation"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Seasonal weather outlook indicating normal to above-normal rainfall"
+            ]
+          },
+          {
+            "forecast_variable": "River discharge",
+            "canonical_variable": "Hydrological Flow",
+            "subcategory_name": "River flow",
+            "alias_list": [
+              "River discharge"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "60 per cent or greater probability"
+            ]
+          },
+          {
+            "forecast_variable": "Rainfall total",
+            "canonical_variable": "Precipitation",
+            "subcategory_name": "Total rainfall",
+            "alias_list": [
+              "Rainfall total"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Anticipated rainfall totals exceeding the seasonal average of 800 mm to 1,200 mm across identified catchment areas"
+            ]
+          },
+          {
+            "forecast_variable": "Affected population",
+            "canonical_variable": "Population Impact",
+            "subcategory_name": "Affected count",
+            "alias_list": [
+              "Affected population"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Inundation modelling projects 30% or more of households affected in flood-risk zones"
+            ]
+          },
+          {
+            "forecast_variable": "Confirmed cholera cases",
+            "canonical_variable": "Infectious Disease Incidence",
+            "subcategory_name": "Cholera cases",
+            "alias_list": [
+              "Confirmed cholera cases"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Phase 1: A confirmed cholera case in any district of the country"
+            ]
+          },
+          {
+            "forecast_variable": "Wind speed",
+            "canonical_variable": "Wind",
+            "subcategory_name": "Speed",
+            "alias_list": [
+              "Wind speed"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Tropical storm with wind speed of 34 knots or stronger"
+            ]
+          },
+          {
+            "forecast_variable": "Temperature",
+            "canonical_variable": "Temperature",
+            "subcategory_name": "General temperature",
+            "alias_list": [
+              "Temperature"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Temperature of 38°C or more for two consecutive days"
+            ]
+          },
+          {
+            "forecast_variable": "Inundation extent",
+            "canonical_variable": "Hydrological Flow",
+            "subcategory_name": "Flood extent",
+            "alias_list": [
+              "Inundation extent"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Predicted increase in Sudd inundation extent over the next two months greater than 5% compared to seasonal minimum"
+            ]
+          },
+          {
+            "forecast_variable": "Daily maximum temperature",
+            "canonical_variable": "Temperature",
+            "subcategory_name": "Max daily temp",
+            "alias_list": [
+              "Daily maximum temperature"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Median ensemble member of ECMWF forecasts daily maximum temperature at Zahle below 2°C with a lead time of 7 days"
+            ]
+          },
+          {
+            "forecast_variable": "Heat Index",
+            "canonical_variable": "Temperature",
+            "subcategory_name": "Heat index",
+            "alias_list": [
+              "Heat Index"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Heat Index (HI) ≥ 62.6 for Yangon (Kaba Aye) for at least 3 consecutive days"
+            ]
+          },
+          {
+            "forecast_variable": "Excess mortality",
+            "canonical_variable": "Population Impact",
+            "subcategory_name": "Mortality excess",
+            "alias_list": [
+              "Excess mortality"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Category 1 – 1% to 12.49% excess mortality"
+            ]
+          },
+          {
+            "forecast_variable": "Maximum temperature",
+            "canonical_variable": "Temperature",
+            "subcategory_name": "Max temperature",
+            "alias_list": [
+              "Maximum temperature"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Maximum temperature less than or equal to 5th percentile (18-20°C)"
+            ]
+          },
+          {
+            "forecast_variable": "Minimum temperature",
+            "canonical_variable": "Temperature",
+            "subcategory_name": "Min temperature",
+            "alias_list": [
+              "Minimum temperature"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Minimum temperature less than or equal to 7°C"
+            ]
+          },
+          {
+            "forecast_variable": "Cold wave occurrence",
+            "canonical_variable": "Temperature",
+            "subcategory_name": "Cold wave event",
+            "alias_list": [
+              "Cold wave occurrence"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Forecast of cold wave with a lead time of 4 days"
+            ]
+          },
+          {
+            "forecast_variable": "Confirmed dengue cases",
+            "canonical_variable": "Infectious Disease Incidence",
+            "subcategory_name": "Dengue cases",
+            "alias_list": [
+              "Confirmed dengue cases"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Weekly dengue caseload exceeding 1,500 cases in May, June, July, December, and January"
+            ]
+          },
+          {
+            "forecast_variable": "Day temperature",
+            "canonical_variable": "Temperature",
+            "subcategory_name": "Daytime temperature",
+            "alias_list": [
+              "Day temperature"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Day temperature exceeding 39.5°C in the North for 4 consecutive days during July-August"
+            ]
+          },
+          {
+            "forecast_variable": "Relative humidity",
+            "canonical_variable": "Humidity",
+            "subcategory_name": "Relative humidity",
+            "alias_list": [
+              "Relative humidity"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Relative humidity less than 30% in the threatened territory"
+            ]
+          },
+          {
+            "forecast_variable": "Wind speed category",
+            "canonical_variable": "Wind",
+            "subcategory_name": "Speed category",
+            "alias_list": [
+              "Wind speed category"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Category 4 or 5 cyclone within 250 km of Fiji"
+            ]
+          },
+          {
+            "forecast_variable": "Ash fall",
+            "canonical_variable": "Volcanic Activity",
+            "subcategory_name": "Ash deposition",
+            "alias_list": [
+              "Ash fall"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Eruptive event with explosive index VEI 3 and ash fall exceeding 2 mm as per ASH3D model (Special Report C)"
+            ]
+          },
+          {
+            "forecast_variable": "Crop losses",
+            "canonical_variable": "Agricultural Impact",
+            "subcategory_name": "Crop damage",
+            "alias_list": [
+              "Crop losses"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Ministry of Agriculture Crop Forecast Survey Index (CFSI) projects 40% or greater crop losses"
+            ]
+          },
+          {
+            "forecast_variable": "Crop yield reduction",
+            "canonical_variable": "Agricultural Impact",
+            "subcategory_name": "Crop yield",
+            "alias_list": [
+              "Crop yield reduction"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Crop yield reduction predicted to be more than 50% based on LEAP index"
+            ]
+          },
+          {
+            "forecast_variable": "Excess daily mortality",
+            "canonical_variable": "Population Impact",
+            "subcategory_name": "Mortality",
+            "alias_list": [
+              "Excess daily mortality"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Category 3 – 30% or higher excess mortality (ranging upwards as high as 45% to 65% excess daily mortality)"
+            ]
+          },
+          {
+            "forecast_variable": "Extreme Forecast Index",
+            "canonical_variable": "Other",
+            "subcategory_name": "Forecast extremity metric",
+            "alias_list": [
+              "Extreme Forecast Index"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Weekly Extreme Forecast Index (EFI) from ECMWF model greater than 0.8"
+            ]
+          },
+          {
+            "forecast_variable": "Fodder deficit",
+            "canonical_variable": "Agricultural Impact",
+            "subcategory_name": "Fodder availability",
+            "alias_list": [
+              "Fodder deficit"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Fodder deficit of 40% or more"
+            ]
+          },
+          {
+            "forecast_variable": "Heat index",
+            "canonical_variable": "Temperature",
+            "subcategory_name": "Heat index",
+            "alias_list": [
+              "Heat index"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Heat index of 38 or more for two consecutive days"
+            ]
+          },
+          {
+            "forecast_variable": "Heatwave intensity",
+            "canonical_variable": "Temperature",
+            "subcategory_name": "Heatwave intensity",
+            "alias_list": [
+              "Heatwave intensity"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Forecast Criteria: DHM issues a red alert heatwave bulletin ('take action') for the next 3 days in the target city or its associated distric"
+            ]
+          },
+          {
+            "forecast_variable": "Heatwave occurrence",
+            "canonical_variable": "Temperature",
+            "subcategory_name": "Heatwave occurrence",
+            "alias_list": [
+              "Heatwave occurrence"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "72-hour forecast used to confirm heatwave occurrence"
+            ]
+          },
+          {
+            "forecast_variable": "Heatwave occurrence probability",
+            "canonical_variable": "Temperature",
+            "subcategory_name": "Heatwave occurrence probability",
+            "alias_list": [
+              "Heatwave occurrence probability"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Heatwave occurrence probability with 72-hour lead time less than 75% triggers stop mechanism"
+            ]
+          },
+          {
+            "forecast_variable": "Ignition probability",
+            "canonical_variable": "Fire Risk",
+            "subcategory_name": "Ignition probability",
+            "alias_list": [
+              "Ignition probability"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Ignition probability equal to or greater than 70%"
+            ]
+          },
+          {
+            "forecast_variable": "Internal volcanic activity parameters",
+            "canonical_variable": "Volcanic Activity",
+            "subcategory_name": "Internal parameters",
+            "alias_list": [
+              "Internal volcanic activity parameters"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Increase in parameters of internal volcanic activity (Special Report B)"
+            ]
+          },
+          {
+            "forecast_variable": "Maximum day temperature",
+            "canonical_variable": "Temperature",
+            "subcategory_name": "Max daily temperature",
+            "alias_list": [
+              "Maximum day temperature"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Maximum day temperature forecast of 2°C or less"
+            ]
+          },
+          {
+            "forecast_variable": "Nino3.4 index",
+            "canonical_variable": "Other",
+            "subcategory_name": "ENSO index",
+            "alias_list": [
+              "Nino3.4 index"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Nino3.4 index equal or greater than 0.5K in NDJ average forecast issued in July"
+            ]
+          },
+          {
+            "forecast_variable": "Volcanic activity anomaly",
+            "canonical_variable": "Volcanic Activity",
+            "subcategory_name": "Activity anomaly",
+            "alias_list": [
+              "Volcanic activity anomaly"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Level 2 (orange alert) bulletin received four days before impact, triggered by anomalies such as second-level seismic crisis, second-level m"
+            ]
+          },
+          {
+            "forecast_variable": "Volcanic activity parameters",
+            "canonical_variable": "Volcanic Activity",
+            "subcategory_name": "Activity parameters",
+            "alias_list": [
+              "Volcanic activity parameters"
+            ],
+            "confidence": 0.9,
+            "rationale": "Mapped via batch clustering.",
+            "examples": [
+              "Significant increase in internal volcanic activity parameters such as seismicity, gas emissions, deformation"
+            ]
+          }
+        ]
+      },
+      "quality": {
+        "overall_pass": false,
+        "checks": {
+          "canonical_count_ok": true,
+          "mapping_complete_ok": true,
+          "valid_target_ok": true,
+          "coverage_ok": true,
+          "semantic_distinctness_ok": true,
+          "alias_overlap_ok": true,
+          "min_support_ok": false
+        },
+        "failed_checks": [
+          "min_support_ok"
+        ],
+        "metrics": {
+          "coverage": 0.9921,
+          "coverage_target": 0.9,
+          "max_canonical_similarity": 0.3333,
+          "max_alias_overlap": 0.0,
+          "max_alias_overlap_allowed": 0.5,
+          "min_support_records": 3,
+          "canonical_support": {
+            "Precipitation": 92,
+            "Temperature": 29,
+            "Wind": 21,
+            "Hydrological Flow": 49,
+            "Population Impact": 30,
+            "Infectious Disease Incidence": 21,
+            "Humidity": 2,
+            "Fire Risk": 1,
+            "Volcanic Activity": 4,
+            "Agricultural Impact": 3
+          },
+          "other_mapped_records": 2,
+          "total_records": 254
+        }
+      }
+    }
+  ]
+}
