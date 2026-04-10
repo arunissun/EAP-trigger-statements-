@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "generated_at_utc": "20260409T154839Z",
+    "llm": "openai",
+    "approval_status": "pending_human_review"
+  },
+  "quality": {
+    "overall_pass": false,
+    "checks": {
+      "canonical_count_ok": true,
+      "mapping_complete_ok": true,
+      "valid_target_ok": true,
+      "coverage_ok": true,
+      "semantic_distinctness_ok": true,
+      "alias_overlap_ok": true,
+      "min_support_ok": false
+    },
+    "failed_checks": [
+      "min_support_ok"
+    ],
+    "metrics": {
+      "coverage": 0.9921,
+      "coverage_target": 0.9,
+      "max_canonical_similarity": 0.3333,
+      "max_alias_overlap": 0.0,
+      "max_alias_overlap_allowed": 0.5,
+      "min_support_records": 3,
+      "canonical_support": {
+        "Precipitation": 92,
+        "Temperature": 29,
+        "Wind": 21,
+        "Hydrological Flow": 49,
+        "Population Impact": 30,
+        "Infectious Disease Incidence": 21,
+        "Humidity": 2,
+        "Fire Risk": 1,
+        "Volcanic Activity": 4,
+        "Agricultural Impact": 3
+      },
+      "other_mapped_records": 2,
+      "total_records": 254
+    }
+  }
+}
