@@ -1,0 +1,255 @@
+document_id,hazard_type,trigger_statement,forecast_variable,unit,operator,source,lead_time_days,variable_resolution_note
+16389.0,Flood,60 per cent or greater probability,River discharge,cusecs,>=,CENAOS,5.0,as_extracted
+16389.0,Flood,Tropical storm with wind speed of 34 knots or stronger,Wind speed,knots,>=,CENAOS,5.0,as_extracted
+16389.0,Flood,Forecast lead time of 3 to 5 days,River discharge,cusecs,>=,CENAOS,5.0,as_extracted
+16389.0,Flood,Flood magnitude with a 10-year return period,River discharge,years,>=,GloFAS,3.0,as_extracted
+16389.0,Flood,Forecast lead time of 3 days,River discharge,cusecs,>=,GloFAS,60.0,as_extracted
+16393.0,Flood,Predicted increase in Sudd inundation extent over the next two months greater than 5% compared to seasonal minimum,Inundation extent,%,>,INFLOW,90.0,as_extracted
+16399.0,Flood,Seasonal weather outlook indicating normal to above-normal rainfall,Seasonal precipitation,percentile,>=,DCCMS,0.0,as_extracted
+16399.0,Flood,High probability of wetter-than-average conditions expected between November and March,Seasonal precipitation,percentile,>=,DCCMS,0.0,as_extracted
+16399.0,Flood,"Anticipated rainfall totals exceeding the seasonal average of 800 mm to 1,200 mm across identified catchment areas",Rainfall total,mm,>=,DCCMS,5.0,as_extracted
+16399.0,Flood,"Rainfall forecast of 100 to 150 mm or more within 72 hours in key basins (Shire, Linthipe, Lake Chilwa, etc.)",Rainfall total,mm,>=,DCCMS,5.0,as_extracted
+16399.0,Flood,Cyclone forecast predicting 100 mm or more rainfall within 24 hours in flood-prone districts,Rainfall total,mm,>=,DCCMS,5.0,as_extracted
+16399.0,Flood,Rainfall forecast combined with exposure analysis showing 30% or more of households at risk,Rainfall total,%,>=,DCCMS,5.0,as_extracted
+16399.0,Flood,Inundation modelling projects 30% or more of households affected in flood-risk zones,Affected population,%,>=,DCCMS,0.0,as_extracted
+16401.0,Cholera,Phase 1: A confirmed cholera case in any district of the country,Confirmed cholera cases,cases,>=,ZRCS,0.0,as_extracted
+16401.0,Cholera,Phase 2: A confirmed cholera case in Harare,Confirmed cholera cases,cases,>=,ZRCS,5.0,as_extracted
+16401.0,Cholera,Phase 3: Evidence of community transmission in Harare and spread to additional districts,Confirmed cholera cases,cases,>=,ZRCS,5.0,as_extracted
+16410.0,Flood,40% or greater probability that total seasonal precipitation will be above normal (upper tercile),Seasonal precipitation,percentile,>=,CEPMMT,5.0,as_extracted
+16410.0,Flood,ECMWF EFI > 0.8 forecast,River discharge,unitless,>,ECMWF,10.0,as_extracted
+16410.0,Flood,ONM forecast of precipitation exceeding 25 mm over the next 5 days,Rainfall total,mm,>=,ONM,10.0,as_extracted
+16416.0,Flood,Flood flows greater than 2-year return period to 5-year return period with a probability of more than 70% at respective upstream gauging stations,River discharge,years,>=,GLOFAS,0.25,as_extracted
+16416.0,Flood,Weekly weather outlooks from PMD for Kabul and Swat River sections,River discharge,cusecs,>=,PMD,2.0,as_extracted
+16416.0,Flood,"Observed flood flows in Kabul River at Nowshera station over 200,000 cusecs",River discharge,cusecs,>=,FFD,2.0,as_extracted
+16416.0,Flood,"Observed flood flows in Swat River at Munda Headworks over 150,000 cusecs",River discharge,cusecs,>,FFD,2.0,as_extracted
+16416.0,Flood,"Flood inflows in Indus at Tarbela of 400,000 cusecs or above in next 24 hours",River discharge,cusecs,>=,FFD,4.0,as_extracted
+16416.0,Flood,"High flood inflows in Indus at Kalabagh of 500,000 cusecs or above in next 24 hours",River discharge,cusecs,>=,FFD,4.0,as_extracted
+16416.0,Flood,"High flood inflows in Indus at Chashma of 550,000 cusecs or above in next 24 hours",River discharge,cusecs,>=,FFD,1.0,as_extracted
+16416.0,Flood,"Observed outflows in Tarbela above 400,000 cusecs or observed flood outflows of Indus at Kalabagh above 500,000 cusecs or at Chashma above 550,000 cusecs",River discharge,cusecs,>=,FFD,1.0,as_extracted
+16416.0,Flood,"Forecasted high flood inflows above 550,000 cusecs in Indus at Taunsa in next 24 hours",River discharge,cusecs,>,FFD,4.0,as_extracted
+16416.0,Flood,"Forecasted high flood inflows of Chenab River at Trimmu of 300,000 cusecs or above in next 24 hours",River discharge,cusecs,>=,FFD,4.0,as_extracted
+16416.0,Flood,"Observed flood outflows of Chenab River at Trimmu above 300,000 cusecs",River discharge,cusecs,>,FFD,4.0,as_extracted
+16416.0,Flood,"Forecasted high flood inflows above 550,000 cusecs in Indus at Taunsa in next 24 hours",River discharge,cusecs,>,FFD,4.0,as_extracted
+16416.0,Flood,"Forecasted high flood inflows above 300,000 cusecs in Chenab at Trimmu or Punjnad in next 24 hours",River discharge,cusecs,>,FFD,5.0,as_extracted
+16416.0,Flood,"Observed outflows of Indus River at Taunsa above 550,000 cusecs",River discharge,cusecs,>,FFD,5.0,as_extracted
+16416.0,Flood,"Observed outflows of Chenab River at Punjnad above 300,000 cusecs",River discharge,cusecs,>,FFD,5.0,as_extracted
+16416.0,Flood,"Observed outflows of Indus River at Taunsa above 550,000 cusecs and Chenab River at Panjnad above 300,000 cusecs",River discharge,cusecs,>=,FFD,7.0,as_extracted
+16416.0,Flood,"Forecasted very high flood inflows in Indus River at Guddu or Sukkur of 700,000 cusecs or above in next 24 hours",River discharge,cusecs,>=,FFD,90.0,as_extracted
+16416.0,Flood,"Observed high flood flows in Indus River at Kotri of 450,000 cusecs or above for 3 consecutive days or more",River discharge,cusecs,>=,FFD,90.0,as_extracted
+16440.0,Flood,"Cumulative precipitation greater than 150 mm in a week (category ""abundant"" according to DGM classification)",Rainfall total,mm,>,DGM,7.0,as_extracted
+16445.0,Drought,50% or greater probability that rainfall will remain in the lower tercile (below normal levels) for the December to February quarter,Seasonal precipitation,percentile,<=,DMH,7.0,as_extracted
+16446.0,Cholera,"Drought affecting 32,000 people in any of the 20 identified woredas as confirmed by monthly EDRMC disaster report",Affected population,people,>=,EDRMC,7.0,as_extracted
+16446.0,Cholera,One confirmed cholera case reported by EPHI in a neighboring woreda/district of the 20 identified woredas/districts within the same country or neighboring district of bordering country,Confirmed cholera cases,cases,>=,EPHI,7.0,as_extracted
+16446.0,Cholera,Five suspected cholera cases qualifying EPHI clinical case definition identified within a week in the 20 selected woredas/districts,Confirmed cholera cases,cases,>=,EPHI,4.0,as_extracted
+16446.0,Cholera,One confirmed cholera case reported by EPHI in a neighbouring woreda/district of the 20 identified woredas/districts within the same country or neighboring district of bordering country,Confirmed cholera cases,cases,>=,EPHI,4.0,as_extracted
+16446.0,Cholera,Five suspected cholera cases qualifying EPHI clinical case definition identified within a week in the 20 selected woredas/districts,Confirmed cholera cases,cases,>=,EPHI,4.0,as_extracted
+16458.0,Cold Wave,Minimum temperature less than or equal to 7°C,Minimum temperature,°C,<=,BMD,4.0,as_extracted
+16458.0,Cold Wave,Departure from normal temperature equal to or below the 2nd percentile (3 to 4°C),Seasonal precipitation,percentile,<=,BMD,4.0,as_extracted
+16458.0,Cold Wave,Maximum temperature less than or equal to 5th percentile (18-20°C),Maximum temperature,percentile,<=,BMD,4.0,as_extracted
+16458.0,Cold Wave,Wind speed exceeding 5th percentile (>5 km/hr),Wind speed,km/hr,>,BMD,90.0,as_extracted
+16458.0,Cold Wave,Conditions sustained for 3 consecutive days,Seasonal precipitation,days,>=,BMD,90.0,as_extracted
+16458.0,Cold Wave,Affecting three or more districts partially (at least 50% area of each district),Affected population,people,>=,BMD,90.0,as_extracted
+16467.0,Cholera,Confirmed cholera case or spikes in AWD cases in a neighboring location to selected PAMIs,Confirmed cholera cases,cases,>=,SRCS,90.0,as_extracted
+16467.0,Cholera,Activation of the SRCS drought EAP (MDRSO019),Confirmed cholera cases,cases,>=,SRCS,90.0,as_extracted
+16467.0,Cholera,Flooding and extensive rains in selected PAMI,Confirmed cholera cases,cases,>=,SRCS,90.0,as_extracted
+16467.0,Cholera,Drought followed by heavy rains in selected PAMI,Confirmed cholera cases,cases,>=,SRCS,10.0,as_extracted
+16467.0,Cholera,Drought EAP is activated,Confirmed cholera cases,cases,>=,SRCS,10.0,as_extracted
+16467.0,Cholera,"Increased malnutrition rates (GAM cases >10%) coinciding with heavy rains, flooding, or droughts",Confirmed cholera cases,%,>,SRCS,10.0,as_extracted
+16467.0,Cholera,Doubling of AWD/ADD CBS true signals from at least 5 to at least 10 signals within one week,Confirmed cholera cases,cases,>=,SRCS,5.0,as_extracted
+16467.0,Cholera,Confidential information from Ministry of Health indicating a rise in AWD/ADD cases,Confirmed cholera cases,cases,>=,SRCS,5.0,as_extracted
+16467.0,Cholera,Ministry of Health confirmation of AWD/Cholera cases,Confirmed cholera cases,cases,>=,SRCS,5.0,as_extracted
+16473.0,Heatwave,50% probability according to ECMWF,Seasonal precipitation,%,>=,ECMWF,5.0,as_extracted
+16473.0,Heatwave,At least 3 consecutive days in Tirana,Seasonal precipitation,days,>=,ECMWF,7.0,as_extracted
+16473.0,Heatwave,Expected maximum temperature higher than the 95th percentile of monthly historical maximum temperatures for June-September (2000-2024),Maximum temperature,percentile,>,ECMWF,7.0,as_extracted
+16473.0,Heatwave,Expected minimum temperature higher than the 95th percentile of monthly historical minimum temperatures for June-September (2000-2024),Minimum temperature,percentile,>,ECMWF,28.0,as_extracted
+16479.0,Cold Wave,Median ensemble member of ECMWF forecasts daily maximum temperature at Zahle below 2°C with a lead time of 7 days,Daily maximum temperature,°C,<,ECMWF,28.0,as_extracted
+16479.0,Cold Wave,Median ensemble member of ECMWF forecasts daily maximum temperature at Zahle below 2°C with a lead time of 5 days (stop mechanism),Daily maximum temperature,°C,<,ECMWF,28.0,as_extracted
+16482.0,Dengue,Meteorological Department forecasts average rainfall exceeding 100mm in the Western Province,Rainfall total,mm,>,NDCU,5.0,as_extracted
+16482.0,Dengue,"Weekly dengue caseload exceeding 1,500 cases in May, June, July, December, and January",Confirmed dengue cases,cases,>,NDCU,5.0,as_extracted
+16482.0,Dengue,Weekly dengue caseload in target districts exceeds 1.5 times their average caseload,Confirmed dengue cases,times average caseload,>,NDCU,5.0,as_extracted
+16486.0,Storm,Category 4 or 5 cyclone within 250 km of Fiji,Wind speed category,category,>=,FMS,5.0,as_extracted
+16486.0,Storm,"Category 3, 4, or 5 cyclone making landfall in Fiji",Wind speed category,category,>=,RSMC,5.0,as_extracted
+16494.0,Flood,"A severe rainfall warning (orange) or major warning (red) is issued in over 10 administrative regions across more than three river basins, lasting at least two consecutive days",Rainfall total,regions,>=,TMA,5.0,as_extracted
+16494.0,Flood,At least one advisory-level warning (yellow) is present on any of the remaining days within the five-day forecast,Rainfall total,days,>=,TMA,5.0,as_extracted
+16513.0,Flood,Cumulative monthly rainfall above the 1991-2020 reference average in the Agneby basin (Agboville),Rainfall total,mm,>,ECMWF,5.0,as_extracted
+16513.0,Flood,Fanfar forecast on orange alert,River discharge,cusecs,>=,ECMWF,5.0,as_extracted
+16513.0,Flood,Beacon water level in orange alert at 695 cm (significant threshold),River discharge,cm,>=,ECMWF,5.0,as_extracted
+16513.0,Flood,Beacon water level in orange alert at 665 cm (significant threshold),River discharge,cm,>=,ECMWF,5.0,as_extracted
+16513.0,Flood,ECMWF Extreme Forecast Index (EFI) greater than or equal to 0.8 forecasting rainfall ≥ 92 mm in next 5 days,Rainfall total,mm,>=,ECMWF,5.0,as_extracted
+16527.0,Population Movement,"Chocó: 1,290 displaced persons",Affected population,people,>=,TJC,5.0,as_extracted
+16527.0,Population Movement,"Cauca: 1,696 displaced persons",Affected population,people,>=,TJC,90.0,as_extracted
+16527.0,Population Movement,"Nariño: 3,040 displaced persons",Affected population,people,>=,TJC,90.0,as_extracted
+16527.0,Population Movement,"Valle del Cauca: 2,078 displaced persons",Affected population,people,>=,OCHA,90.0,as_extracted
+16531.0,Drought,Nino3.4 index equal or greater than 0.5K in NDJ average forecast issued in July,Nino3.4 index,K,>=,ECMWF,90.0,as_extracted
+16531.0,Drought,Below average precipitation forecast,Seasonal precipitation,percentile,<=,ECMWF,30.0,as_extracted
+16531.0,Drought,At least 45% probability of below average precipitation tercile,Seasonal precipitation,percentile,<=,ECMWF,30.0,as_extracted
+16531.0,Drought,Forecast issued in October,Seasonal precipitation,percentile,>=,ECMWF,8.0,as_extracted
+16531.0,Drought,Ministry of Agriculture Crop Forecast Survey Index (CFSI) projects 40% or greater crop losses,Crop losses,%,>=,CFSI,8.0,as_extracted
+16531.0,Drought,More than 21 consecutive days of no rain greater than 1mm during December to March (DJFM),Rainfall total,mm,<=,CFSI,8.0,as_extracted
+16542.0,Flood,Flood forecast corresponding to a 5-year return period,River discharge,years,>=,DNH,60.0,as_extracted
+16542.0,Flood,Water levels exceeding the 5-year return period threshold at key monitoring stations,River discharge,years,>=,DNH,60.0,as_extracted
+16542.0,Flood,Flood activation thresholds ranging from 370 cm in Bamako to 859 cm in Kayes,Inundation extent,cm,>=,DNH,5.0,as_extracted
+16562.0,Cholera,"Flooding affecting more than 2,000 people",Affected population,people,>,National,5.0,as_extracted
+16562.0,Cholera,Heavy rainfall of at least 50 mm per day for four consecutive days,Rainfall total,mm,>=,National,5.0,as_extracted
+16562.0,Cholera,At least five community alert cases of Acute Watery Diarrhea (AWD) within the same district in a single week,Confirmed cholera cases,cases,>=,Ministry,5.0,as_extracted
+16562.0,Cholera,"At least five suspected cholera cases in the same district in a single week, reported by the Ministry of Health",Confirmed cholera cases,cases,>=,Ministry,5.0,as_extracted
+16562.0,Cholera,"At least one confirmed cholera case in a neighboring district or cross-border area, validated by the Ministry of Health",Confirmed cholera cases,cases,>=,Ministry,5.0,as_extracted
+16566.0,Flood,Orange warning (special attention) indicating rainfall intensity of 10-20 mm/hr or 50-100 mm/day,Rainfall total,mm,>=,DNMG,5.0,as_extracted
+16566.0,Flood,Orange warning in more than three target municipalities,Inundation extent,people,>=,DNMG,3.0,as_extracted
+16566.0,Flood,Orange warning sustained for three consecutive days or more within a 5-day forecast period,River discharge,days,>=,DNMG,3.0,as_extracted
+16566.0,Flood,Expected cumulative rainfall total of 150 mm or more during the forecasted period,Rainfall total,mm,>=,DNMG,3.0,as_extracted
+16566.0,Flood,Red warning (alert) indicating rainfall intensity of more than 20 mm/hr or daily total of more than 100 mm,Rainfall total,mm,>=,DNMG,3.0,as_extracted
+16566.0,Flood,Red warning issued in any target municipality,River discharge,cusecs,>=,DNMG,3.0,as_extracted
+16566.0,Flood,Red warning sustained for two consecutive days within a 3-day forecast period,River discharge,days,>=,DNMG,3.0,as_extracted
+16566.0,Flood,Expected cumulative rainfall total of more than 200 mm in next 72 hours,Rainfall total,mm,>,DNMG,3.0,as_extracted
+16566.0,Flood,Evacuation early action triggered only at 24-hour lead time,River discharge,cusecs,>=,DNMG,3.0,as_extracted
+16567.0,Flood,Total daily rainfall exceeding 50 mm (initial threshold for flood risk),Rainfall total,mm,>,BMKG,6.0,as_extracted
+16567.0,Flood,Rainfall exceeding 100 mm in 24 hours with 80% probability (BMKG forecast),Rainfall total,mm,>,BMKG,7.0,as_extracted
+16567.0,Flood,Rainfall exceeding 80 mm/day (BNPB Prevention Dashboard),Rainfall total,mm/day,>,BMKG,3.0,as_extracted
+16567.0,Flood,Rainfall intensity exceeding 50 mm in 6 hours with over 60% probability during the 6 days prior to peak,Rainfall total,mm,>,BMKG,3.0,as_extracted
+16568.0,Extreme Rainfall,Greater than 60% chance of a tropical storm or hurricane entering the DGOA emergency stage watch area within the next 7 days,Wind speed,%,>=,NHC,8.0,as_extracted
+16568.0,Extreme Rainfall,Accumulated rainfall forecast exceeding 200 mm over a 3-day period,Rainfall total,mm,>,DGOA,8.0,as_extracted
+16568.0,Extreme Rainfall,Forecast period: May through November,Rainfall total,mm,>=,DGOA,5.0,as_extracted
+16569.0,Wildfire,Ignition probability equal to or greater than 70%,Ignition probability,%,>=,CONAF,5.0,as_extracted
+16569.0,Wildfire,Wind speed equal to or greater than 20 Km/h,Wind speed,km/h,>=,CONAF,5.0,as_extracted
+16569.0,Wildfire,Relative humidity less than 30% in the threatened territory,Relative humidity,%,<,CONAF,5.0,as_extracted
+16618.0,Heatwave,Heat Index (HI) ≥ 62.6 for Yangon (Kaba Aye) for at least 3 consecutive days,Heat Index,°C,>=,DMH,4.0,as_extracted
+16618.0,Heatwave,Heat Index (HI) ≥ 58.2 for Mandalay for at least 3 consecutive days,Heat Index,°C,>=,DMH,4.0,as_extracted
+16618.0,Heatwave,Heat Index corresponds to more than 90th percentile values for summer months (March-May),Heat Index,percentile,>,DMH,90.0,as_extracted
+16618.0,Heatwave,Forecast lead time maximum 5 days including 3 days heatwave duration,Heat Index,days,<=,DMH,90.0,reassigned_from_statement_context
+16633.0,Heatwave,Maximum temperature of 42.4°C or higher,Maximum temperature,°C,>=,ANAM,120.0,as_extracted
+16633.0,Heatwave,Duration of at least 3 consecutive days,Seasonal precipitation,days,>=,ANAM,120.0,as_extracted
+16646.0,Drought,50% probability that rainfall will be below normal for the next three months,Seasonal precipitation,percentile,<=,IDEAM,120.0,as_extracted
+16646.0,Drought,Standardized Precipitation Index (SPI) forecast indicates moderate drought with values equal or below -1.4 for the same three months,Seasonal precipitation,tercile,<=,IDEAM,90.0,as_extracted
+16651.0,Drought,El Niño event forecast in region 3.4,Seasonal precipitation,years,>=,DGOA,90.0,as_extracted
+16651.0,Drought,60% probability,Seasonal precipitation,percentile,<=,DGOA,90.0,as_extracted
+16651.0,Drought,Forecast horizon of 3 to 4 months,Seasonal precipitation,months,between,DGOA,4.0,as_extracted
+16651.0,Drought,Based on official IRI-CPC forecast until April of the current year or earlier in the previous year,Seasonal precipitation,percentile,=,DGOA,4.0,as_extracted
+16651.0,Drought,Quarterly precipitation forecast,Seasonal precipitation,mm,>=,DGOA,4.0,as_extracted
+16651.0,Drought,"Accumulated rainfall during May, June, and July below normal",Seasonal precipitation,percentile,<=,DGOA,3.0,as_extracted
+16651.0,Drought,Below 33rd percentile,Seasonal precipitation,percentile,<=,DGOA,3.0,as_extracted
+16682.0,Cold Wave,Maximum day temperature forecast of 2°C or less,Maximum day temperature,°C,<=,LMS,3.0,as_extracted
+16682.0,Cold Wave,For at least two consecutive days,Seasonal precipitation,days,>=,LMS,3.0,as_extracted
+16682.0,Cold Wave,Maximum lead time of four days before onset,Seasonal precipitation,days,>=,LMS,3.0,as_extracted
+16700.0,Storm,At least three municipalities in a province will have 10% of their houses damaged,Affected population,%,>=,Netherlands,3.0,as_extracted
+16700.0,Storm,"50% likelihood of complete damage to over 200,000 houses nationwide",Affected population,people,>=,Netherlands,3.0,as_extracted
+16700.0,Storm,"60% likelihood of complete damage to more than 160,000 houses",Affected population,people,>=,Netherlands,3.0,as_extracted
+16700.0,Storm,"70% likelihood of complete damage to more than 90,000 houses",Affected population,people,>=,Netherlands,60.0,as_extracted
+16700.0,Storm,"80% likelihood of complete damage to more than 50,000 houses",Affected population,people,>=,Netherlands,7.0,as_extracted
+16700.0,Storm,Predicted wind speed of 185 km/h in Central or Northern Luzon (Region 1),Wind speed,km/h,=,PAGASA,90.0,as_extracted
+16700.0,Storm,"Predicted wind speed of 185 km/h in Eastern Visayas, Bicol or Calabarzon (Region 2)",Wind speed,km/h,=,PAGASA,90.0,as_extracted
+16700.0,Storm,Predicted wind speed of 118 km/h in Caraga or Davao regions (Region 3),Wind speed,km/h,>=,PAGASA,4.0,as_extracted
+16754.0,Flood,Above-normal seasonal rainfall forecast,Seasonal precipitation,percentile,>,ANAM,4.0,as_extracted
+16754.0,Flood,Weekly Extreme Forecast Index (EFI) from ECMWF model greater than 0.8,Extreme Forecast Index,,>,ECMWF,7.0,as_extracted
+16764.0,Drought,SPI-12 forecast less than -1 for a district,Seasonal precipitation,tercile,<,ICPAC,7.0,as_extracted
+16764.0,Drought,FEWSNET food insecurity projection at least 0.7 in derived population-weighted index in the same district,Affected population,index,>=,ICPAC,7.0,as_extracted
+16767.0,Cold Wave,Forecast of cold wave with a lead time of 4 days,Cold wave occurrence,event,>=,Kyrgyzhydromet,7.0,as_extracted
+16767.0,Cold Wave,72-hour forecast confirmation with at least 75% probability of cold wave occurrence,Cold wave occurrence,%,>=,Kyrgyzhydromet,7.0,as_extracted
+16796.0,Flood,24-hour rainfall totals of 20mm or above forecasted 7 days ahead across western Yemen including Hajjah Governorate,Rainfall total,mm,>=,ECMWF,7.0,as_extracted
+16796.0,Flood,24-hour rainfall totals of 20mm or above forecasted within 3 days (72 hours) over northwestern Yemen including Hajjah Governorate,Rainfall total,mm,>=,ECMWF,5.0,as_extracted
+16797.0,Flood,24-hour rainfall totals of 20mm or above forecasted 7 days ahead across western Yemen including Hajjah Governorate,Rainfall total,mm,>=,ECMWF,5.0,as_extracted
+16797.0,Flood,24-hour rainfall totals of 20mm or above forecasted within 3 days (72 hours) over northwestern Yemen including Hajjah Governorate,Rainfall total,mm,>=,ECMWF,5.0,as_extracted
+16827.0,Flood,ICPAC forecasts indicate that the 99th percentile of daily precipitation totals will be exceeded with a probability of 60% or more seven days before impact,Rainfall total,percentile,>=,ICPAC,5.0,as_extracted
+16827.0,Flood,IGEBU forecasts indicate that the historical threshold of 25 mm in 24 hours will be exceeded,Rainfall total,mm,>=,ICPAC,5.0,as_extracted
+16827.0,Flood,ICPAC forecasts indicate that the 99th percentile of daily precipitation totals will be exceeded with a probability of 60% or more within the next three days,Rainfall total,percentile,>,ICPAC,5.0,as_extracted
+16845.0,Flood,"GLOFAS predicts more than 2-year return period flow in next 3 to 5 days with a probability of 50% or more at Chisapani, Chepang and Kusum stations",River discharge,years,>,GLOFAS,90.0,as_extracted
+16845.0,Flood,"Numerical weather prediction (NWP) or special weather advisories predict extreme and widespread rainfall for next three days across Babai and West Rapti basin areas and districts, provided rivers are flowing at stage level less than 2m below existing danger level",River discharge,m,<=,DHM,90.0,as_extracted
+16845.0,Flood,Activation trigger for Karnali: predicted water level at Chisapani station to rise 1 metre above existing danger level (10.8m) within next 48 hours,River discharge,metres,>=,DHM,90.0,as_extracted
+16845.0,Flood,Activation trigger for West Rapti: predicted water level at Kusum station to reach existing danger level (7.8m) within next 48 hours,River discharge,m,>=,DHM,90.0,as_extracted
+16845.0,Flood,Activation trigger for Babai: predicted water level at Chepang station to reach existing danger level (6.8m) within next 48 hours,River discharge,m,>=,DHM,90.0,as_extracted
+16862.0,Flood,60% probability that the path of a tropical storm (63 km/hr) or greater will enter the cyclone emergency zone of Guatemala,Wind speed,km/hr,>=,INSIVUMEH,14.0,as_extracted
+16877.0,Drought,El Niño warning issued by INSIVUMEH for area 3.4,Seasonal precipitation,percentile,>=,INSIVUMEH,2.0,as_extracted
+16877.0,Drought,70% probability,Seasonal precipitation,%,=,INSIVUMEH,90.0,as_extracted
+16877.0,Drought,Forecast period: next 3 months,Seasonal precipitation,percentile,>=,INSIVUMEH,90.0,as_extracted
+16877.0,Drought,Forecast issued as of June,Seasonal precipitation,percentile,>=,INSIVUMEH,3.0,as_extracted
+16877.0,Drought,Seasonal precipitation forecast issued by INSIVUMEH starting in June,Seasonal precipitation,percentile,>=,INSIVUMEH,3.0,as_extracted
+16877.0,Drought,50% probability of precipitation below the first tercile (33rd percentile),Seasonal precipitation,percentile,<=,INSIVUMEH,3.0,as_extracted
+16877.0,Drought,Forecast period: next 3 months,Seasonal precipitation,percentile,>=,INSIVUMEH,1.25,as_extracted
+16946.0,Volcanic Ash,Level 1 (yellow alert) bulletin received two weeks before impact,Inundation extent,levels,>=,OVK,1.25,as_extracted
+16946.0,Volcanic Ash,"Level 2 (orange alert) bulletin received four days before impact, triggered by anomalies such as second-level seismic crisis, second-level micro-deformation of the ground, and changes in gas composition (carbon dioxide accumulation) persisting for several hours a day",Volcanic activity anomaly,level,>=,OVK,1.25,as_extracted
+16946.0,Volcanic Ash,Level 3 (red alert) bulletin received two days before impact,Inundation extent,level,>=,OVK,3.0,as_extracted
+16988.0,Drought,Below to normal rainfall forecast issued by Eswatini Meteorological Services starting in September,Seasonal precipitation,percentile,<=,Eswatini Meteorological Services,3.0,as_extracted
+16988.0,Drought,Low Composite Drought Index (CDI) average observed over the October-November-December (OND) season,Seasonal precipitation,percentile,<=,Eswatini,3.0,as_extracted
+17037.0,Storm,BMD issues a Signal 4 or above warning with a lead time of 72 hours or more,Wind speed,Signal level,>=,BMD,3.0,as_extracted
+17037.0,Storm,"At least two models among BMD, IMD, ECMWF, GFS, JTWC forecast wind speeds of 125 km/h or greater in coastal districts of Bangladesh with a lead time of 72 hours or more",Wind speed,km/h,>=,BMD,3.0,as_extracted
+17037.0,Storm,Potential damage of 25% household assets in the respective Unions,Affected population,%,>=,BMD,90.0,as_extracted
+17037.0,Storm,BMD issues a Signal 7 or above warning with a lead time of 30 hours or more,Wind speed,Signal level,>=,BMD,90.0,as_extracted
+17037.0,Storm,BMD or IMD forecast wind speeds of 125 km/h or greater in coastal districts of Bangladesh with a lead time of 30 hours or more,Wind speed,km/h,>=,BMD,90.0,as_extracted
+17037.0,Storm,Potential damage of 25% household assets in the respective Unions,Affected population,%,>=,BMD,90.0,as_extracted
+17039.0,Storm,Category 3 cyclone with anticipated wind speed of 120 km/h or more at landfall,Wind speed,km/h,>=,INAM,90.0,as_extracted
+17039.0,Storm,Exceptional activation possible at 100 km/h wind speed based on expert consensus due to increased vulnerability or compounding risks,Wind speed,km/h,>=,INAM,90.0,as_extracted
+17042.0,Storm,Category 3 cyclone with anticipated wind speed of 120 km/h or more at landfall,Wind speed,km/h,>=,INAM,5.0,as_extracted
+17042.0,Storm,Exceptional activation possible at 100 km/h wind speed based on expert consensus due to increased vulnerability or compounding risks,Wind speed,km/h,>=,INAM,5.0,as_extracted
+17044.0,Flood,Water level corresponding to discharge of five-year return period at the river basin reference station,River discharge,years,>=,INAM,5.0,as_extracted
+17090.0,Population Movement,Two months of positive flow trend,Affected population,people,>=,INM,5.0,as_extracted
+17090.0,Population Movement,"Projection of more than 23,000 people (5% of the highest monthly flow) crossing the border for the following month",Affected population,people,>,INM,5.0,as_extracted
+17090.0,Population Movement,40% decrease of the response capacity,Affected population,%,<=,INM,0.0,as_extracted
+17090.0,Population Movement,High probability of flows of people in transit exceeding regular monthly thresholds,Affected population,people,>=,Steering,0.0,as_extracted
+17090.0,Population Movement,Initial execution time between 30 to 90 days,Affected population,people,>=,Steering,0.0,as_extracted
+17090.0,Population Movement,Insufficient operational and financial capacity to deal with the threat in coming weeks or months,Affected population,people,>=,Steering,5.0,as_extracted
+17092.0,Flood,60% probability of a tropical storm (34 knots) or greater reaching the warning area,Wind speed,knots,>=,CENAOS,5.0,as_extracted
+17174.0,Flood,Forecast of a tropical storm entering at least Zone 3 as per IMN Emergency Protocol,Wind speed,category,>=,IMN,5.0,as_extracted
+17174.0,Flood,60% probability of occurrence,River discharge,cusecs,>=,IMN,30.0,as_extracted
+17174.0,Flood,Lead time of 5 days,Rainfall total,mm,>=,IMN,30.0,as_extracted
+17174.0,Flood,Forecast of extreme rainfall with high probability of exceeding 400 mm accumulated precipitation over 5 days,Rainfall total,mm,>=,IMN,30.0,as_extracted
+17174.0,Flood,"If updated forecast on day 2 after activation indicates rainfall exceeding 300 mm over 3 days, early actions continue",Rainfall total,mm,>,IMN,30.0,as_extracted
+17174.0,Flood,Trigger 2 may be declared directly when cumulative rainfall between 300 and 400 mm is forecast,Rainfall total,mm,>=,IMN,7.0,as_extracted
+17174.0,Flood,Association with formation of tropical depression in danger zone 1 or 2,Rainfall total,mm,>=,IMN,7.0,as_extracted
+17240.0,Volcanic Ash,"Significant increase in internal volcanic activity parameters such as seismicity, gas emissions, deformation",Volcanic activity parameters,units,>=,IGEPN,4.0,as_extracted
+17240.0,Volcanic Ash,Increase in parameters of internal volcanic activity (Special Report B),Internal volcanic activity parameters,units,>=,IGEPN,4.0,as_extracted
+17240.0,Volcanic Ash,Eruptive event with explosive index VEI 3 and ash fall exceeding 2 mm as per ASH3D model (Special Report C),Ash fall,mm,>,IGEPN,4.0,as_extracted
+17253.0,Heatwave,Category 1 – 1% to 12.49% excess mortality,Excess mortality,%,between,NOA,4.0,as_extracted
+17253.0,Heatwave,Category 2 – 12.5% to 29.9% excess mortality,Excess mortality,%,between,NOA,4.0,as_extracted
+17253.0,Heatwave,Category 3 – 30% or higher excess mortality (ranging upwards as high as 45% to 65% excess daily mortality),Excess daily mortality,%,>=,NOA,5.0,as_extracted
+17253.0,Heatwave,Trigger threshold: Category 3 with predicted excess mortality of 45% or higher,Excess mortality,%,>=,NOA,5.0,as_extracted
+17272.0,Drought,More than 50% of the geographical area of a zone predicted to be drier than normal conditions (SPI < -1),Seasonal precipitation,%,>=,ECMWF,3.0,as_extracted
+17272.0,Drought,At least 40% probability of below normal rainfall for JJA season,Seasonal precipitation,percentile,<=,ECMWF,1.0,as_extracted
+17272.0,Drought,At least 45% probability of below normal rainfall for OND and MAM seasons,Seasonal precipitation,percentile,<=,ECMWF,5.0,as_extracted
+17272.0,Drought,Crop yield reduction predicted to be more than 50% based on LEAP index,Crop yield reduction,%,>,ECMWF,84.0,as_extracted
+17301.0,Heatwave,Temperature of 38°C or more for two consecutive days,Temperature,°C,>=,BMD,84.0,as_extracted
+17301.0,Heatwave,Heat index of 38 or more for two consecutive days,Heat index,°C,>=,BMD,84.0,as_extracted
+17333.0,Heatwave,Temperature exceeds the 85th percentile for three or more consecutive days during June to August,Temperature,percentile,>,Kyrgyzhydromet,210.0,as_extracted
+17333.0,Heatwave,Lead time of 4 days for selected local points,Seasonal precipitation,days,>=,Kyrgyzhydromet,90.0,as_extracted
+17333.0,Heatwave,Forecast monitored with ±2 degrees tolerance,Temperature,degrees,between,Kyrgyzhydromet,90.0,as_extracted
+17333.0,Heatwave,72-hour forecast used to confirm heatwave occurrence,Heatwave occurrence,event,>=,Kyrgyzhydromet,90.0,as_extracted
+17333.0,Heatwave,Heatwave occurrence probability with 72-hour lead time less than 75% triggers stop mechanism,Heatwave occurrence probability,%,<,Kyrgyzhydromet,90.0,as_extracted
+17366.0,Flood,"River flow above 150,000 cusecs at Nowshera station of Kabul River predicted by flood bulletin C and significant flood warnings/advisories with 3-5 days lead time",River discharge,cusecs,>,FFD,90.0,as_extracted
+17366.0,Flood,"Confirmation of very high-level flooding with flow above 150,000 cusecs at Nowshera station of Kabul River by flood bulletin A or B within next 48 hours",River discharge,cusecs,>,FFD,90.0,as_extracted
+17366.0,Flood,Bulletin A: qualitative forecast with up to 3 days lead time,River discharge,cusecs,>=,FFD,90.0,as_extracted
+17366.0,Flood,Bulletin B: quantitative forecast for next 24 hours,River discharge,cusecs,>=,FFD,90.0,as_extracted
+17366.0,Flood,Bulletin C: weekly qualitative river catchment forecast with up to 5 days lead time,River discharge,cusecs,>=,FFD,90.0,as_extracted
+17557.0,Drought,SPI value below -0.98,Seasonal precipitation,tercile,<=,KMD,90.0,as_extracted
+17557.0,Drought,At least 33% chance of occurrence,Seasonal precipitation,percentile,>=,KMD,90.0,as_extracted
+17557.0,Drought,Threshold exceeded in at least 3 of the 23 ASAL counties,Seasonal precipitation,counties,>=,KMD,90.0,as_extracted
+17563.0,Drought,Forecast of an El Nino event with an impact level corresponding to a once-in-six-year event,Seasonal precipitation,years,=,IBF,4.0,as_extracted
+17563.0,Drought,Forecast of IPC 4 conditions in FEWSnet Food Security Forecast Reports in March and June,Affected population,tercile,>=,FEWSnet,4.0,as_extracted
+17563.0,Drought,"If first trigger not activated, activation requires IBF model detection of drought by April and official drought declaration by Government of Zimbabwe",Seasonal precipitation,percentile,>=,FEWSnet,7.0,as_extracted
+17595.0,Drought,El Niño alert in area 3.4 for the next 3 months,Seasonal precipitation,percentile,>=,COPECO,7.0,as_extracted
+17595.0,Drought,60% probability based on IRI forecast from the OND quarter (year -1),Seasonal precipitation,percentile,<=,COPECO,5.0,as_extracted
+17595.0,Drought,Excluding AMJ and MJJ quarters due to predictability barrier,Seasonal precipitation,percentile,<=,COPECO,5.0,as_extracted
+17595.0,Drought,Accumulated rainfall for the next 3 months between the 10th and 20th percentile,Seasonal precipitation,percentile,between,COPECO,3.0,as_extracted
+17595.0,Drought,Forecasted serious precipitation deficiency,Seasonal precipitation,percentile,<=,COPECO,3.0,as_extracted
+17595.0,Drought,Probability greater than 60%,Seasonal precipitation,percentile,<=,COPECO,3.0,as_extracted
+17595.0,Drought,Starting in the March-May (MAM) quarter (year 1),Seasonal precipitation,tercile,=,COPECO,3.0,as_extracted
+17638.0,Drought,Seasonal outlook issued in September indicating below normal rainfall,Seasonal precipitation,percentile,<=,LMS,150.0,as_extracted
+17638.0,Drought,"October, November, December (OND) rainfall confirmed below normal",Seasonal precipitation,percentile,<=,LMS,150.0,as_extracted
+17638.0,Drought,Vulnerability Assessment Analysis report issued in January projects 20% of the population in drought-induced IPC Phase 3 and 4 in January,Affected population,%,>=,LMS,30.0,as_extracted
+17645.0,Cold Wave,Temperature in GBAO below -39.0°C (1st percentile) for 3 or more consecutive days,Temperature,°C,<=,Hydromet,30.0,as_extracted
+17645.0,Cold Wave,"Temperature in DRS, Sughd, and Khatlon below -21.1°C (2nd percentile) for 3 or more consecutive days",Temperature,°C,<=,Hydromet,30.0,as_extracted
+17691.0,Cold Wave,7-day temperature forecast minimum below -40°C (-35°C in Karaganda region) with precipitation and increased wind speed persisting for at least two days in any district,Minimum temperature,°C,<,Kazhydromet,30.0,as_extracted
+17691.0,Cold Wave,"Region-specific temperature thresholds for Orange level: Northern Kazakhstan -40°C, Akmola -40°C, Kostanay -40°C, Pavlodar -40°C, Eastern Kazakhstan (including Abay) -40°C, Karaganda -35°C",Temperature,°C,<=,Kazhydromet,5.0,as_extracted
+18031.0,Heatwave,Day temperature exceeding 39.5°C in the North for 4 consecutive days during July-August,Day temperature,°C,>,Tajik,0.0,as_extracted
+18031.0,Heatwave,Day temperature exceeding 43.5°C in the South for 4 consecutive days during July-August,Day temperature,°C,>,Tajik,,as_extracted
+25999.0,Heatwave,"Observed Conditions: Daily maximum temperature (Tmax) exceeding 41°C in Nepalgunj, 40.5°C in Dhangadi, 37.5°C in Biratnagar, 40.5°C in Siddharthanagar",Daily maximum temperature,°C,>=,DHM,,as_extracted
+25999.0,Heatwave,Observed Conditions: Relative humidity (Rh) of 45 percent or higher in the respective city where Tmax condition is met,Relative humidity,%,>=,DHM,,as_extracted
+25999.0,Heatwave,Forecast Criteria: DHM issues a red alert heatwave bulletin ('take action') for the next 3 days in the target city or its associated district,Heatwave intensity,event,>=,DHM,,as_extracted
+25999.0,Heatwave,Forecast Criteria: Numerical Weather Prediction (NWP) from DHM forecasts daily maximum temperature above the 99th percentile threshold in the target city/municipality for the next 3 consecutive days,Daily maximum temperature,percentile,>,DHM,,as_extracted
+26012.0,Drought,40% or more probability of below-normal rainfall totals over July to September,Seasonal precipitation,percentile,<=,ECMWF,,as_extracted
+26012.0,Drought,Forecast issued in April,Seasonal precipitation,percentile,>=,ECMWF,,as_extracted
+26012.0,Drought,Fodder deficit of 40% or more,Fodder deficit,%,>=,Ministry,,as_extracted
+26012.0,Drought,Assessment conducted in November,Seasonal precipitation,percentile,>=,Ministry,,as_extracted
+26012.0,Drought,Region in IPC Phase 3 or higher due to drought,Affected population,IPC phase,>=,Cadre,,as_extracted
+26012.0,Drought,Cadre Harmonisé results from November,Seasonal precipitation,percentile,>=,Cadre,,as_extracted
+26020.0,Storm,Tropical cyclone forecasted to cause winds of at least 64 knots (Category 3 on Australian scale),Wind speed,knots,>=,RSMC,,as_extracted
+26020.0,Storm,"Population in affected zone at least 5,000 people",Affected population,people,>=,RSMC,,as_extracted
+26020.0,Storm,Average rainfall over the whole country during two consecutive days reaches 190 mm,Rainfall total,mm,>=,FMS,,as_extracted
