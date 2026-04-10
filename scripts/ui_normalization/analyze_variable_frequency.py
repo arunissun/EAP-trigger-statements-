@@ -132,7 +132,7 @@ def _generate_recommendations(counts: pd.Series, total: int) -> dict[str, Any]:
     recommendations["common_variables"] = {
         "count": len(common_vars),
         "variables": list(common_vars.index),
-        "pct_of_total": round((common_vars.sum() / len(counts)) * 100, 2),
+        "pct_of_total": round((common_vars.sum() / len(df)) * 100, 2),
         "note": "These are good candidates for standard UI dropdown",
     }
 
