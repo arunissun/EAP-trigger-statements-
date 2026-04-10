@@ -11,10 +11,12 @@ Output: normalized_thresholds_openai.csv  or  normalized_thresholds_gemini.csv
 
 from __future__ import annotations
 
+from dataclasses import dataclass
 import json
 import logging
 import time
-from typing import Optional
+from pathlib import Path
+from typing import Any, Optional
 
 import pandas as pd
 from pydantic import BaseModel, Field, field_validator, ValidationError
@@ -30,10 +32,11 @@ try:
         LLM_TEMPERATURE, LLM_MAX_TOKENS,
         API_DELAY_SECONDS, MAX_RETRIES,
         EXPLODED_CSV, NORMALIZED_CSV_OPENAI, NORMALIZED_CSV_GEMINI,
+        TAXONOMY_PROPOSAL_JSON_OPENAI, TAXONOMY_PROPOSAL_JSON_GEMINI,
+        FORECAST_VARIABLES_REFERENCE_JSON, REQUIRE_APPROVED_TAXONOMY,
     )
 except ImportError:
     import sys
-    from pathlib import Path
     sys.path.insert(0, str(Path(__file__).parent))
     from config import (
         AZURE_OPENAI_ENDPOINT, AZURE_OPENAI_API_KEY,
@@ -42,6 +45,8 @@ except ImportError:
         LLM_TEMPERATURE, LLM_MAX_TOKENS,
         API_DELAY_SECONDS, MAX_RETRIES,
         EXPLODED_CSV, NORMALIZED_CSV_OPENAI, NORMALIZED_CSV_GEMINI,
+        TAXONOMY_PROPOSAL_JSON_OPENAI, TAXONOMY_PROPOSAL_JSON_GEMINI,
+        FORECAST_VARIABLES_REFERENCE_JSON, REQUIRE_APPROVED_TAXONOMY,
     )
 
 logger = logging.getLogger(__name__)
@@ -114,6 +119,32 @@ class NormalizedThreshold(BaseModel):
             raise ValueError(f"threshold_operator must be one of {allowed}, got '{v}'")
         return v
 
+    @field_validator("forecast_variable")
+    @classmethod
+    def validate_forecast_variable(cls, v: str) -> str:
+        value = str(v).strip()
+        if not value:
+            raise ValueError("forecast_variable cannot be empty")
+
+        value_norm = value.lower()
+        forbidden_terms = {
+            "lead time",
+            "forecast lead time",
+            "lead_time",
+            "lead-time",
+            "duration",
+            "conditions duration",
+            "forecast horizon",
+            "forecast period",
+            "timeframe",
+            "time window",
+        }
+        if value_norm in forbidden_terms:
+            raise ValueError(
+                "forecast_variable cannot be temporal metadata such as lead time/duration/timeframe"
+            )
+        return value
+
     @field_validator("timeframe_unit")
     @classmethod
     def validate_timeframe(cls, v: str) -> str:
@@ -154,6 +185,8 @@ EXTRACT AND NORMALIZE INTO THIS EXACT JSON SCHEMA (return ONLY valid JSON, no ma
 }
 
 HANDLING EDGE CASES:
+- Treat lead time, forecast horizon, duration, and timeframe as contextual metadata only. They must populate lead_time_value/timeframe_unit and must never be forecast_variable.
+- If a threshold sentence is mainly a lead-time/duration condition, infer forecast_variable from the hazard metric context in the same sentence (e.g., flood flow/rainfall/wind/cases), not from time words.
 - If dealing with human populations or cases (e.g., "32000 people", "one confirmed case"), map 'forecast_variable' to 'Affected population' or 'Confirmed cholera cases', and 'threshold_unit' to 'people' or 'cases'.
 - If dealing with abstract climate probabilities like "lower tercile", map 'threshold_unit' to 'percentile' and 'forecast_variable' to 'Seasonal precipitation'.
 - If no numeric lead time is present (e.g., "real-time"), set lead_time_value to 0 and timeframe_unit to 'hours'.
@@ -249,6 +282,256 @@ def _call_gemini(user_message: str) -> str:
         if raw.startswith("json"):
             raw = raw[4:]
     return raw.strip()
+
+
+def _call_openai_generic(system_prompt: str, user_message: str, max_tokens: int = 256) -> str:
+    """Call Azure OpenAI with a custom system prompt and JSON output."""
+    client = _get_openai_client()
+    response = client.chat.completions.create(
+        model=AZURE_OPENAI_DEPLOYMENT,
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_message},
+        ],
+        temperature=0.0,
+        max_tokens=max_tokens,
+        response_format={"type": "json_object"},
+    )
+    return response.choices[0].message.content.strip()
+
+
+def _call_gemini_generic(system_prompt: str, user_message: str) -> str:
+    """Call Gemini with a custom prompt and return raw text."""
+    client = _get_gemini_client()
+    full_prompt = f"{system_prompt}\n\n---\n\n{user_message}"
+    response = client.models.generate_content(
+        model=GEMINI_MODEL,
+        contents=full_prompt,
+    )
+    raw = response.text.strip()
+    if raw.startswith("```"):
+        raw = raw.split("```")[1]
+        if raw.startswith("json"):
+            raw = raw[4:]
+    return raw.strip()
+
+
+@dataclass
+class TaxonomyContext:
+    lookup: dict[str, dict[str, Any]]
+    canonical_options: list[str]
+    approved: bool
+    source_path: Path | None
+    source_type: str
+
+
+def _extract_from_proposal(payload: dict[str, Any], source_path: Path) -> TaxonomyContext:
+    metadata = payload.get("metadata", {})
+    proposal = payload.get("proposal", {})
+    mappings = proposal.get("mappings", [])
+    canonical_raw = proposal.get("proposed_canonical_variables", [])
+
+    canonical_options: list[str] = []
+    for item in canonical_raw:
+        name = str(item).strip()
+        if name and name.lower() != "other" and name not in canonical_options:
+            canonical_options.append(name)
+
+    lookup: dict[str, dict[str, Any]] = {}
+    for m in mappings:
+        fv = str(m.get("forecast_variable", "")).strip()
+        if fv:
+            lookup[fv.lower()] = m
+
+        for alias in m.get("alias_list", []):
+            alias_name = str(alias).strip().lower()
+            if alias_name:
+                lookup[alias_name] = m
+
+    approved = str(metadata.get("approval_status", "")).strip().lower() == "approved"
+    return TaxonomyContext(
+        lookup=lookup,
+        canonical_options=canonical_options,
+        approved=approved,
+        source_path=source_path,
+        source_type="proposal",
+    )
+
+
+def _extract_from_reference(payload: dict[str, Any], source_path: Path) -> TaxonomyContext | None:
+    """Parse approved reference taxonomy if it uses canonical_variables schema."""
+    canonical_block = payload.get("canonical_variables")
+    if not isinstance(canonical_block, list):
+        return None
+
+    lookup: dict[str, dict[str, Any]] = {}
+    canonical_options: list[str] = []
+
+    for item in canonical_block:
+        if not isinstance(item, dict):
+            continue
+        canonical_name = str(item.get("name", "")).strip()
+        if not canonical_name:
+            continue
+
+        if canonical_name.lower() != "other" and canonical_name not in canonical_options:
+            canonical_options.append(canonical_name)
+
+        base_mapping = {
+            "canonical_variable": canonical_name,
+            "subcategory_name": canonical_name,
+        }
+        lookup[canonical_name.lower()] = base_mapping
+
+        for alias in item.get("aliases", []):
+            alias_name = str(alias).strip().lower()
+            if alias_name:
+                lookup[alias_name] = base_mapping
+
+        for sub in item.get("subcategories", []):
+            if isinstance(sub, dict):
+                sub_name = str(sub.get("name", "")).strip()
+                sub_aliases = sub.get("aliases", [])
+            else:
+                sub_name = str(sub).strip()
+                sub_aliases = []
+
+            if not sub_name:
+                continue
+            sub_mapping = {
+                "canonical_variable": canonical_name,
+                "subcategory_name": sub_name,
+            }
+            lookup[sub_name.lower()] = sub_mapping
+
+            for alias in sub_aliases:
+                alias_name = str(alias).strip().lower()
+                if alias_name:
+                    lookup[alias_name] = sub_mapping
+
+    if not canonical_options:
+        return None
+
+    metadata = payload.get("metadata", {})
+    approved_flag = str(metadata.get("approval_status", "approved")).strip().lower()
+    approved = approved_flag in {"approved", "locked", "locked_approved"}
+    return TaxonomyContext(
+        lookup=lookup,
+        canonical_options=canonical_options,
+        approved=approved,
+        source_path=source_path,
+        source_type="reference",
+    )
+
+
+def _load_taxonomy_context(llm_choice: str, allow_unapproved_taxonomy: bool = False) -> TaxonomyContext:
+    """Load taxonomy context with governance-aware approval checks."""
+    proposal_path = TAXONOMY_PROPOSAL_JSON_OPENAI
+    if llm_choice == "gemini":
+        proposal_path = TAXONOMY_PROPOSAL_JSON_GEMINI
+
+    candidates = [FORECAST_VARIABLES_REFERENCE_JSON, proposal_path]
+    context: TaxonomyContext | None = None
+
+    for path in candidates:
+        if not path.exists():
+            continue
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except Exception as exc:
+            logger.warning("Could not parse taxonomy JSON at %s: %s", path, exc)
+            continue
+
+        parsed = _extract_from_reference(payload, path)
+        if parsed is None and "proposal" in payload:
+            parsed = _extract_from_proposal(payload, path)
+
+        if parsed is not None:
+            context = parsed
+            break
+
+    if context is None:
+        logger.warning("No taxonomy mapping found. All unmatched variables will route to Other.")
+        return TaxonomyContext(lookup={}, canonical_options=[], approved=False, source_path=None, source_type="none")
+
+    if REQUIRE_APPROVED_TAXONOMY and not allow_unapproved_taxonomy and not context.approved:
+        raise RuntimeError(
+            f"Taxonomy at {context.source_path} is not approved. "
+            "Approve/lock taxonomy first or rerun with allow_unapproved_taxonomy=True for development."
+        )
+
+    logger.info(
+        "Loaded taxonomy (%s) from %s with %d canonical options and %d alias entries.",
+        context.source_type,
+        context.source_path,
+        len(context.canonical_options),
+        len(context.lookup),
+    )
+    return context
+
+
+def _build_disambiguation_prompt(row: dict, forecast_variable: str, canonical_options: list[str]) -> str:
+    payload = {
+        "task": "Map normalized variable to canonical taxonomy.",
+        "rules": [
+            "Pick exactly one canonical option or Other.",
+            "Use hazard and threshold semantics, not lead time semantics.",
+            "Return JSON only."
+        ],
+        "canonical_options": canonical_options + ["Other"],
+        "input": {
+            "forecast_variable": forecast_variable,
+            "hazard_type": row.get("hazard_type"),
+            "threshold_text": row.get("threshold_text"),
+            "threshold_unit": row.get("threshold_unit"),
+        },
+        "required_output_schema": {
+            "canonical_variable": "string",
+            "subcategory": "string",
+            "confidence": 0.0,
+        },
+    }
+    return json.dumps(payload, ensure_ascii=True)
+
+
+def _disambiguate_mapping_with_llm(
+    row: dict,
+    forecast_variable: str,
+    canonical_options: list[str],
+    llm_choice: str,
+) -> tuple[str, str, float]:
+    if not canonical_options or not forecast_variable:
+        return "Other", "Other", 0.0
+
+    system_prompt = (
+        "You are a taxonomy disambiguation assistant for EAP forecast variables. "
+        "Return only compact JSON with canonical_variable, subcategory, confidence."
+    )
+    user_prompt = _build_disambiguation_prompt(row=row, forecast_variable=forecast_variable, canonical_options=canonical_options)
+
+    try:
+        if llm_choice == "gemini":
+            raw = _call_gemini_generic(system_prompt, user_prompt)
+        elif llm_choice == "openai":
+            raw = _call_openai_generic(system_prompt, user_prompt, max_tokens=220)
+        else:
+            try:
+                raw = _call_openai_generic(system_prompt, user_prompt, max_tokens=220)
+            except Exception:
+                raw = _call_gemini_generic(system_prompt, user_prompt)
+
+        parsed = json.loads(raw)
+        canonical = str(parsed.get("canonical_variable", "Other")).strip()
+        subcategory = str(parsed.get("subcategory", forecast_variable)).strip() or forecast_variable
+        confidence = float(parsed.get("confidence", 0.0))
+    except Exception as exc:
+        logger.warning("LLM disambiguation failed for '%s': %s", forecast_variable, exc)
+        return "Other", "Other", 0.0
+
+    if canonical not in canonical_options and canonical != "Other":
+        canonical = "Other"
+    confidence = max(0.0, min(1.0, confidence))
+    return canonical, subcategory, confidence
 
 
 # ---------------------------------------------------------------------------
@@ -389,6 +672,7 @@ def normalize_dataframe(
     output_path: Path | None = None,
     llm_choice: str = "auto",
     checkpoint_every: int = 10,
+    allow_unapproved_taxonomy: bool = False,
 ) -> pd.DataFrame:
     """
     Normalize every row in the exploded DataFrame.
@@ -410,12 +694,17 @@ def normalize_dataframe(
         else:
             output_path = NORMALIZED_CSV_OPENAI  # default
 
+    taxonomy_context = _load_taxonomy_context(
+        llm_choice=llm_choice,
+        allow_unapproved_taxonomy=allow_unapproved_taxonomy,
+    )
+
     results = []
     total   = len(df)
 
     for i, (_, row) in enumerate(df.iterrows(), start=1):
         logger.info("Normalizing record %d / %d …", i, total)
-        
+
         # Call LLM based on choice
         if llm_choice == "openai":
             result = normalize_record_openai(row.to_dict())
@@ -423,7 +712,29 @@ def normalize_dataframe(
             result = normalize_record_gemini(row.to_dict())
         else:  # auto mode
             result = normalize_record(row.to_dict())
+
+        # deterministic taxonomy lookup
+        fv = str(result.get("forecast_variable") or "").strip()
+        result["original_variable"] = fv
         
+        mapping = taxonomy_context.lookup.get(fv.lower())
+        if mapping:
+            result["canonical_variable"] = mapping.get("canonical_variable")
+            result["subcategory"] = mapping.get("subcategory_name")
+            result["taxonomy_match_method"] = "deterministic_alias"
+            result["taxonomy_match_confidence"] = 1.0
+        else:
+            canonical, subcategory, confidence = _disambiguate_mapping_with_llm(
+                row=result,
+                forecast_variable=fv,
+                canonical_options=taxonomy_context.canonical_options,
+                llm_choice=llm_choice,
+            )
+            result["canonical_variable"] = canonical
+            result["subcategory"] = subcategory
+            result["taxonomy_match_method"] = "llm_disambiguation" if canonical != "Other" else "other_fallback"
+            result["taxonomy_match_confidence"] = confidence
+
         results.append(result)
 
         # Polite rate-limiting
@@ -460,6 +771,11 @@ if __name__ == "__main__":
         default="auto",
         help="Which LLM to use: 'openai' (Azure OpenAI only), 'gemini' (Gemini only), or 'auto' (OpenAI with Gemini fallback)"
     )
+    parser.add_argument(
+        "--allow-unapproved-taxonomy",
+        action="store_true",
+        help="Allow Phase 2 mapping with non-approved taxonomy artifacts (development mode).",
+    )
     args = parser.parse_args()
 
     if not EXPLODED_CSV.exists():
@@ -471,7 +787,11 @@ if __name__ == "__main__":
     print(f"📥  Loaded {len(df_exploded)} exploded records.")
     print(f"🤖  Using LLM: {args.llm.upper()}")
 
-    df_normalized = normalize_dataframe(df_exploded, llm_choice=args.llm)
+    df_normalized = normalize_dataframe(
+        df_exploded,
+        llm_choice=args.llm,
+        allow_unapproved_taxonomy=args.allow_unapproved_taxonomy,
+    )
     errors = df_normalized["llm_error"].notna().sum()
     print(f"\n✅  Step 2 complete.  {len(df_normalized)} records normalized.")
     if errors:
