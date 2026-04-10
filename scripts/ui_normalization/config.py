@@ -36,6 +36,20 @@ NORMALIZED_CSV_GEMINI = OUTPUT_DIR / "normalized_thresholds_gemini.csv"
 UI_SCHEMA_JSON_OPENAI = OUTPUT_DIR / "ui_schema_openai.json"
 UI_SCHEMA_JSON_GEMINI = OUTPUT_DIR / "ui_schema_gemini.json"
 
+# Canonical taxonomy reference (approved lock target)
+FORECAST_VARIABLES_REFERENCE_JSON = PROJECT_ROOT / "FORECAST_VARIABLES_REFERENCE.json"
+
+# Phase 0 / 1 artifacts
+PHASE0_FLATTENED_CSV_OPENAI = OUTPUT_DIR / "phase0_flattened_candidates_openai.csv"
+PHASE0_FLATTENED_CSV_GEMINI = OUTPUT_DIR / "phase0_flattened_candidates_gemini.csv"
+
+TAXONOMY_PROPOSAL_JSON_OPENAI = OUTPUT_DIR / "taxonomy_proposal_openai.json"
+TAXONOMY_PROPOSAL_JSON_GEMINI = OUTPUT_DIR / "taxonomy_proposal_gemini.json"
+TAXONOMY_QUALITY_JSON_OPENAI = OUTPUT_DIR / "taxonomy_quality_openai.json"
+TAXONOMY_QUALITY_JSON_GEMINI = OUTPUT_DIR / "taxonomy_quality_gemini.json"
+TAXONOMY_REVIEW_MD_OPENAI = OUTPUT_DIR / "taxonomy_review_openai.md"
+TAXONOMY_REVIEW_MD_GEMINI = OUTPUT_DIR / "taxonomy_review_gemini.md"
+
 # ---------------------------------------------------------------------------
 # Azure OpenAI (primary LLM)
 # ---------------------------------------------------------------------------
@@ -57,6 +71,17 @@ LLM_TEMPERATURE  = 0.0      # deterministic extraction
 LLM_MAX_TOKENS   = 512      # schema output is small
 API_DELAY_SECONDS = 1.5     # polite rate-limiting between calls
 MAX_RETRIES       = 3       # per-record retry attempts
+
+# Phase 1 taxonomy governance defaults
+PHASE1_CANONICAL_TARGET = 10
+PHASE1_COVERAGE_TARGET = 0.90
+PHASE1_MIN_SUPPORT_RECORDS = 3
+PHASE1_MAX_ALIAS_OVERLAP = 0.50
+PHASE1_MAX_ITERATIONS = 2
+
+# Phase 2/3 governance behavior
+REQUIRE_APPROVED_TAXONOMY = True
+MAX_PRIMARY_CANONICALS = 13
 
 # ---------------------------------------------------------------------------
 # Hazard type inference keywords (matched against document_name)
