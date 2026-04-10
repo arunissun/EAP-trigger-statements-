@@ -1,4 +1,4 @@
-# Forecast Variable Frequency Analysis - OPENAI
+# Forecast Variable Frequency Analysis - using OPenAI (Chatgpt 3.5 turbo)
 
 - Total threshold records: **258**
 - Unique forecast variables: **51**
