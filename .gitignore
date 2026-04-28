@@ -24,4 +24,8 @@ scripts/test_pymupdf.py
 # No pdfs
 *.pdf
 
+# Designer and planning notes
+for_designer/*.md
+plan-*.md
+
 
