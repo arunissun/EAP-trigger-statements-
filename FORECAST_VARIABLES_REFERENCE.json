@@ -1,357 +1,1611 @@
 {
-  "metadata": {
-    "description": "Forecast Variables Reference for EAP Trigger UI - Organized by frequency and use case",
-    "generated_date": "2026-03-17",
-    "source": "Analysis of 255 normalized trigger threshold records",
-    "total_unique_variables": 53,
-    "recommendation": "Use Tier 1 as main dropdown, Tier 2 for advanced/optional, Tier 3 for freetext custom entry"
-  },
-  "tier_1_common": {
-    "description": "Most common variables - covers ~80% of all triggers. Recommended for main UI dropdown.",
-    "count": 14,
-    "coverage_percent": 80.8,
-    "variables": [
-      {
-        "rank": 1,
-        "name": "Seasonal precipitation",
-        "frequency": 46,
-        "percent_of_total": 18.0,
-        "cumulative_percent": 18.0,
-        "use_cases": ["Flood forecasting", "Climate-based early action", "Seasonal planning"],
-        "recommended_for_ui": true
-      },
-      {
-        "rank": 2,
-        "name": "Rainfall total",
-        "frequency": 36,
-        "percent_of_total": 14.1,
-        "cumulative_percent": 32.2,
-        "use_cases": ["Flood triggers", "Water-related hazards"],
-        "recommended_for_ui": true
-      },
-      {
-        "rank": 3,
-        "name": "River discharge",
-        "frequency": 34,
-        "percent_of_total": 13.3,
-        "cumulative_percent": 45.5,
-        "use_cases": ["Flood early action", "Hydrological forecasts"],
-        "recommended_for_ui": true
-      },
-      {
-        "rank": 4,
-        "name": "Affected population",
-        "frequency": 25,
-        "percent_of_total": 9.8,
-        "cumulative_percent": 55.3,
-        "use_cases": ["Impact-based triggers", "Vulnerability assessment"],
-        "recommended_for_ui": true
-      },
-      {
-        "rank": 5,
-        "name": "Wind speed",
-        "frequency": 19,
-        "percent_of_total": 7.5,
-        "cumulative_percent": 62.8,
-        "use_cases": ["Storm/cyclone triggers"],
-        "recommended_for_ui": true
-      },
-      {
-        "rank": 6,
-        "name": "Confirmed cholera cases",
-        "frequency": 18,
-        "percent_of_total": 7.1,
-        "cumulative_percent": 69.8,
-        "use_cases": ["Disease outbreak triggers", "Health emergency response"],
-        "recommended_for_ui": true
-      },
-      {
-        "rank": 7,
-        "name": "Inundation extent",
-        "frequency": 7,
-        "percent_of_total": 2.7,
-        "cumulative_percent": 72.5,
-        "use_cases": ["Flood impact assessment"],
-        "recommended_for_ui": true
-      },
-      {
-        "rank": 8,
-        "name": "Temperature",
-        "frequency": 6,
-        "percent_of_total": 2.4,
-        "cumulative_percent": 74.9,
-        "use_cases": ["Heat wave triggers", "Temperature-based early action"],
-        "recommended_for_ui": true,
-        "note": "See also: Maximum temperature, Daily maximum temperature"
-      },
-      {
-        "rank": 9,
-        "name": "Maximum temperature",
-        "frequency": 4,
-        "percent_of_total": 1.6,
-        "cumulative_percent": 76.5,
-        "use_cases": ["Heat wave triggers"],
-        "recommended_for_ui": true,
-        "consolidation_note": "Consider merging with 'Temperature' for cleaner UX"
-      },
-      {
-        "rank": 10,
-        "name": "Daily maximum temperature",
-        "frequency": 4,
-        "percent_of_total": 1.6,
-        "cumulative_percent": 78.0,
-        "use_cases": ["Daily heat monitoring"],
-        "recommended_for_ui": true,
-        "consolidation_note": "Consider merging with 'Temperature' for cleaner UX"
-      },
-      {
-        "rank": 11,
-        "name": "Lead time",
-        "frequency": 4,
-        "percent_of_total": 1.6,
-        "cumulative_percent": 79.6,
-        "use_cases": ["Forecast lead time specification"],
-        "recommended_for_ui": true,
-        "data_quality_note": "Consider if this should be metadata rather than a forecast variable"
-      },
-      {
-        "rank": 12,
-        "name": "Heat Index",
-        "frequency": 3,
-        "percent_of_total": 1.2,
-        "cumulative_percent": 80.8,
-        "use_cases": ["Heat-humidity combined index for health impacts"],
-        "recommended_for_ui": true
-      },
-      {
-        "rank": 13,
-        "name": "Excess mortality",
-        "frequency": 3,
-        "percent_of_total": 1.2,
-        "cumulative_percent": 82.0,
-        "use_cases": ["Health emergency indicators"],
-        "recommended_for_ui": true
-      },
-      {
-        "rank": 14,
-        "name": "Relative humidity",
-        "frequency": 2,
-        "percent_of_total": 0.8,
-        "cumulative_percent": 82.8,
-        "use_cases": ["Drought/moisture monitoring"],
-        "recommended_for_ui": true
-      }
-    ]
-  },
-  "tier_2_special": {
-    "description": "Specialized/region-specific variables appearing in 2-3 documents. Show on demand via 'Advanced' or 'Other' button.",
-    "count": 17,
-    "coverage_percent": 14.0,
-    "variables": [
-      {
-        "rank": 15,
-        "name": "Cold wave occurrence",
-        "frequency": 2,
-        "percent_of_total": 0.8,
-        "use_cases": ["Cold weather early action"],
-        "recommended_for_ui": false,
-        "tier": "optional"
-      },
-      {
-        "rank": 16,
-        "name": "Malaria incidence",
-        "frequency": 2,
-        "percent_of_total": 0.8,
-        "use_cases": ["Disease outbreak response"],
-        "recommended_for_ui": false,
-        "tier": "optional"
-      },
-      {
-        "rank": 17,
-        "name": "Suspected cholera cases",
-        "frequency": 2,
-        "percent_of_total": 0.8,
-        "use_cases": ["Early disease detection"],
-        "recommended_for_ui": false,
-        "tier": "optional"
-      },
-      {
-        "rank": 18,
-        "name": "Lake level",
-        "frequency": 2,
-        "percent_of_total": 0.8,
-        "use_cases": ["Water body monitoring"],
-        "recommended_for_ui": false,
-        "tier": "optional"
-      },
-      {
-        "rank": 19,
-        "name": "Waterbody elevation",
-        "frequency": 2,
-        "percent_of_total": 0.8,
-        "use_cases": ["Water level monitoring"],
-        "recommended_for_ui": false,
-        "tier": "optional",
-        "consolidation_note": "Consider merging with 'Lake level' or 'River discharge'"
-      },
-      {
-        "rank": 20,
-        "name": "Cumulative rainfall",
-        "frequency": 2,
-        "percent_of_total": 0.8,
-        "use_cases": ["Long-term rainfall monitoring"],
-        "recommended_for_ui": false,
-        "tier": "optional"
-      },
-      {
-        "rank": 21,
-        "name": "Altitude/Elevation",
-        "frequency": 2,
-        "percent_of_total": 0.8,
-        "use_cases": ["Geographic/climatic differentiation"],
-        "recommended_for_ui": false,
-        "tier": "optional"
-      },
-      {
-        "rank": 22,
-        "name": "Mortality rate",
-        "frequency": 2,
-        "percent_of_total": 0.8,
-        "use_cases": ["Health outcome monitoring"],
-        "recommended_for_ui": false,
-        "tier": "optional"
-      },
-      {
-        "rank": 23,
-        "name": "Outbreak severity index",
-        "frequency": 2,
-        "percent_of_total": 0.8,
-        "use_cases": ["Disease severity assessment"],
-        "recommended_for_ui": false,
-        "tier": "optional"
-      },
-      {
-        "rank": 24,
-        "name": "Rainfall anomaly",
-        "frequency": 2,
-        "percent_of_total": 0.8,
-        "use_cases": ["Drought/excess rainfall detection"],
-        "recommended_for_ui": false,
-        "tier": "optional"
-      },
-      {
-        "rank": 25,
-        "name": "River level",
-        "frequency": 2,
-        "percent_of_total": 0.8,
-        "use_cases": ["Hydrological monitoring"],
-        "recommended_for_ui": false,
-        "tier": "optional",
-        "consolidation_note": "Consider merging with 'River discharge' or 'Lake level'"
-      },
-      {
-        "rank": 26,
-        "name": "Temperature anomaly",
-        "frequency": 2,
-        "percent_of_total": 0.8,
-        "use_cases": ["Deviation-based heat/cold triggers"],
-        "recommended_for_ui": false,
-        "tier": "optional"
-      },
-      {
-        "rank": 27,
-        "name": "Vegetation health",
-        "frequency": 2,
-        "percent_of_total": 0.8,
-        "use_cases": ["Drought monitoring, food security"],
-        "recommended_for_ui": false,
-        "tier": "optional"
-      },
-      {
-        "rank": 28,
-        "name": "Water availability",
-        "frequency": 2,
-        "percent_of_total": 0.8,
-        "use_cases": ["Water security monitoring"],
-        "recommended_for_ui": false,
-        "tier": "optional"
-      },
-      {
-        "rank": 29,
-        "name": "Weekly cholera incidence",
-        "frequency": 2,
-        "percent_of_total": 0.8,
-        "use_cases": ["Disease trend monitoring"],
-        "recommended_for_ui": false,
-        "tier": "optional"
-      },
-      {
-        "rank": 30,
-        "name": "Yellow fever cases",
-        "frequency": 2,
-        "percent_of_total": 0.8,
-        "use_cases": ["Disease outbreak response"],
-        "recommended_for_ui": false,
-        "tier": "optional"
-      }
-    ]
-  },
-  "tier_3_rare": {
-    "description": "Rare variables appearing only once. Recommend offering as freetext 'Other/Specify' field instead of dropdown option.",
-    "count": 22,
-    "coverage_percent": 6.0,
-    "variables": [
-      "Abdominal distension",
-      "Blood pressure",
-      "Cholera Rapid Diagnostic Test (RDT) positive rate",
-      "Consultation per population at risk",
-      "COVID-19 active cases",
-      "Dengue fever incidence",
-      "Fever with arthralgia-joint pain",
-      "Flood affected areas",
-      "Food security indicators",
-      "Health facility functionality",
-      "Health sector capacity",
-      "Meningitis cases",
-      "Nutrition indicators",
-      "Operational effectiveness",
-      "Plague cases",
-      "Pregnancy complications",
-      "Seasonal forecasts",
-      "Water quality indicators",
-      "Waterborne disease rate",
-      "Weather conditions"
-    ],
-    "recommendation": "Use freetext field with option to save for future dropdown inclusion"
-  },
-  "implementation_recommendations": {
-    "quick_start": {
-      "option_1": "14-item dropdown (Tier 1 only) - Covers 80% of triggers, minimal UI clutter",
-      "option_2": "14 + 16-item tiered - Main dropdown + 'Show more' expands to Tier 2",
-      "option_3": "14 + 16 + freetext - Full tiered with custom entry for emerging variables"
+  "taxonomy_version": "2026-04-v2",
+  "generated_date": "2026-04-22",
+  "description": "Canonical variable taxonomy for EAP Trigger UI. Generated from approved combination matrix (Phase 0.1c). Includes geographic scope types (Phase 0.3) and connector vocabulary (Phase 0.4).",
+  "source_matrix": "combination_matrix_enriched.csv",
+  "canonicals": [
+    {
+      "name": "Agricultural Impact",
+      "subcategories": [
+        {
+          "name": "Crop damage",
+          "aliases": [],
+          "primary_units": [
+            "%"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": false
+          },
+          "lead_time": {
+            "applicable": true,
+            "units": [
+              "months"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "drought"
+          ],
+          "example_statement": "Ministry of Agriculture Crop Forecast Survey Index (CFSI) projects 40% or greater crop losses",
+          "notes": "accumulation_window_units and persistence_units set to 'n/a' per domain rules"
+        },
+        {
+          "name": "Crop yield",
+          "aliases": [],
+          "primary_units": [
+            "%"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": false
+          },
+          "lead_time": {
+            "applicable": true,
+            "units": [
+              "months"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "drought"
+          ],
+          "example_statement": "Crop yield reduction predicted to be more than 50% based on LEAP index",
+          "notes": "accumulation_window_units and persistence_units set to 'n/a' per domain rules"
+        },
+        {
+          "name": "Fodder availability",
+          "aliases": [],
+          "primary_units": [
+            "%"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": false
+          },
+          "lead_time": {
+            "applicable": true,
+            "units": [
+              "months"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "drought"
+          ],
+          "example_statement": "Fodder deficit of 40% or more",
+          "notes": "accumulation_window_units and persistence_units set to 'n/a' per domain rules"
+        },
+        {
+          "name": "Pasture / fodder condition score",
+          "aliases": [],
+          "primary_units": [
+            "index",
+            "score"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": "optional"
+          },
+          "lead_time": {
+            "applicable": "optional",
+            "units": [
+              "days",
+              "weeks"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "drought",
+            "other"
+          ],
+          "example_statement": "Trigger if pasture condition score falls below 40 indicating poor fodder availability.",
+          "notes": "Condition score is an index from field or remote sensing data, no accumulation window applies."
+        },
+        {
+          "name": "Drought severity",
+          "aliases": [],
+          "primary_units": [
+            "%",
+            "counties",
+            "districts",
+            "index"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": "optional"
+          },
+          "lead_time": {
+            "applicable": "optional",
+            "units": [
+              "months",
+              "weeks"
+            ]
+          },
+          "geographic_scope": "always",
+          "hazard_types": [
+            "drought"
+          ],
+          "example_statement": "Threshold exceeded in at least 3 of the 23 ASAL counties based on drought monitoring indicators.",
+          "notes": "Drought severity expressed as geographic coverage — number of admin units meeting drought threshold. Count_threshold geographic scope type applies."
+        },
+        {
+          "name": "Food insecurity projection",
+          "aliases": [],
+          "primary_units": [
+            "IPC phase",
+            "index",
+            "score"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": false
+          },
+          "lead_time": {
+            "applicable": "optional",
+            "units": [
+              "months",
+              "weeks"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "drought"
+          ],
+          "example_statement": "FEWSNET food insecurity projection at least 0.7 in derived population-weighted index in the same district.",
+          "notes": "Food insecurity composite index from FEWSNET IPC analysis. Index value is the threshold; no forecast probability — model output only."
+        }
+      ]
     },
-    "ui_pattern": {
-      "main_dropdown": "Tier 1 variables (14 items)",
-      "advanced_section": "Tier 2 variables (16 items) - Show only on click or if user has used before",
-      "custom_entry": "Freetext for Tier 3 - Log for future analysis"
+    {
+      "name": "Alert/Warning Status",
+      "subcategories": [
+        {
+          "name": "Advisory bulletin issuance",
+          "aliases": [],
+          "primary_units": [
+            "bulletin",
+            "report"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": false
+          },
+          "lead_time": {
+            "applicable": false
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "cyclone",
+            "flood",
+            "heatwave",
+            "other"
+          ],
+          "example_statement": "Trigger upon issuance of advisory bulletin for potential flood risk.",
+          "notes": "Advisory bulletins are discrete events, no forecast probability or lead time applies."
+        },
+        {
+          "name": "Crisis alert category",
+          "aliases": [],
+          "primary_units": [
+            "category",
+            "level"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": false
+          },
+          "lead_time": {
+            "applicable": false
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "cyclone",
+            "flood",
+            "heatwave",
+            "other"
+          ],
+          "example_statement": "Trigger if crisis alert category is raised to orange or red for the affected area (e.g. PAGASA orange warning level).",
+          "notes": "Crisis alert category captures colour-coded alert systems (red/orange/yellow/green). The colour is the value; the subcategory is the category concept. No forecast probability or lead time applies — alert issuance is a discrete event."
+        },
+        {
+          "name": "Storm signal level",
+          "aliases": [],
+          "primary_units": [
+            "category",
+            "level"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": false
+          },
+          "lead_time": {
+            "applicable": false
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "cyclone"
+          ],
+          "example_statement": "Trigger if storm signal level 3 is issued for the coastal area.",
+          "notes": "Storm signal levels are categorical warnings without forecast probability or lead time."
+        },
+        {
+          "name": "Cold Wave Condition Persistence",
+          "aliases": [],
+          "primary_units": [
+            "days",
+            "hours"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": true,
+            "units": [
+              "days"
+            ]
+          },
+          "probability": {
+            "applicable": false
+          },
+          "lead_time": {
+            "applicable": false
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "cold_wave"
+          ],
+          "example_statement": "Cold wave conditions sustained for 3 consecutive days trigger activation.",
+          "notes": "Duration-based trigger: persistence of cold wave conditions as number of consecutive days. Distinct from temperature value threshold."
+        }
+      ]
     },
-    "quality_improvements": [
-      "Consider consolidating Temperature variants (Temperature, Maximum temperature, Daily maximum temperature)",
-      "Review 'Lead time' - appears to be metadata rather than a forecast variable",
-      "Group similar disease-related variables (e.g., all cholera variants into 'Cholera indicators')",
-      "Group water-related variables (Lake level, Waterbody elevation, River level, River discharge)"
-    ],
-    "data_collection": {
-      "freetext_logging": "Log all freetext 'Other' entries to identify emerging variables",
-      "usage_analytics": "Track which variables partners select most frequently",
-      "feedback_loop": "Quarterly review: If Tier 3 variable used 5+ times, promote to Tier 2"
+    {
+      "name": "Fire Risk",
+      "subcategories": [
+        {
+          "name": "Ignition probability",
+          "aliases": [],
+          "primary_units": [
+            "%"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": true
+          },
+          "lead_time": {
+            "applicable": true,
+            "units": [
+              "days"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "wildfire"
+          ],
+          "example_statement": "Ignition probability equal to or greater than 70%",
+          "notes": "Fire Risk canonical variable not in scope; retained as is with domain rules applied where possible"
+        }
+      ]
+    },
+    {
+      "name": "Humidity",
+      "subcategories": [
+        {
+          "name": "Relative humidity",
+          "aliases": [],
+          "primary_units": [
+            "%"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": false
+          },
+          "lead_time": {
+            "applicable": true,
+            "units": [
+              "days"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "heatwave",
+            "wildfire"
+          ],
+          "example_statement": "Observed Conditions: Relative humidity (Rh) of 45 percent or higher in the respective city where Tmax condition is met",
+          "notes": "Humidity canonical variable not in scope; retained as is with domain rules applied where possible"
+        }
+      ]
+    },
+    {
+      "name": "Hydrological Flow",
+      "subcategories": [
+        {
+          "name": "Flood extent",
+          "aliases": [],
+          "primary_units": [
+            "%",
+            "cm",
+            "level",
+            "levels",
+            "people"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": "optional"
+          },
+          "lead_time": {
+            "applicable": true,
+            "units": [
+              "days",
+              "hours",
+              "months"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "flood",
+            "volcanic ash"
+          ],
+          "example_statement": "Predicted increase in Sudd inundation extent over the next two months greater than 5% compared to seasonal minimum",
+          "notes": "persistence_applicable set to 'conditional' as per original; accumulation_window_units and persistence_units set to 'n/a' per domain rules"
+        },
+        {
+          "name": "Return period exceedance",
+          "aliases": [],
+          "primary_units": [
+            "years"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": "optional"
+          },
+          "lead_time": {
+            "applicable": "optional",
+            "units": [
+              "days",
+              "hours",
+              "weeks"
+            ]
+          },
+          "geographic_scope": "always",
+          "hazard_types": [
+            "flood"
+          ],
+          "example_statement": "Trigger if river flow exceeds the 100-year return period level at station X.",
+          "notes": "Return period exceedance is a threshold exceedance at a station or basin, geographic scope mandatory."
+        },
+        {
+          "name": "River flow",
+          "aliases": [],
+          "primary_units": [
+            "cm",
+            "cusecs",
+            "days",
+            "m",
+            "metres",
+            "unitless",
+            "years"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": true,
+            "units": [
+              "days"
+            ]
+          },
+          "probability": {
+            "applicable": true
+          },
+          "lead_time": {
+            "applicable": true,
+            "units": [
+              "days",
+              "hours"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "flood"
+          ],
+          "example_statement": "River flow above 150,000 cusecs at Nowshera station of Kabul River predicted by flood bulletin C and significant flood warnings/advisories with 3-5 days lead time",
+          "notes": "accumulation_window_units set to 'n/a' per domain rules"
+        },
+        {
+          "name": "Water level",
+          "aliases": [],
+          "primary_units": [
+            "cm",
+            "ft",
+            "m"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": true,
+            "units": [
+              "days",
+              "hours"
+            ]
+          },
+          "probability": {
+            "applicable": "optional"
+          },
+          "lead_time": {
+            "applicable": "optional",
+            "units": [
+              "days",
+              "hours",
+              "weeks"
+            ]
+          },
+          "geographic_scope": "always",
+          "hazard_types": [
+            "flood"
+          ],
+          "example_statement": "Trigger if water level remains above 5 m for 12 consecutive hours at gauge Y.",
+          "notes": "Water level persistence applies for flood duration assessment, geographic scope mandatory."
+        }
+      ]
+    },
+    {
+      "name": "Infectious Disease",
+      "subcategories": [
+        {
+          "name": "AWD / Acute Watery Diarrhoea cases",
+          "aliases": [],
+          "primary_units": [
+            "cases",
+            "count"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": false
+          },
+          "lead_time": {
+            "applicable": false
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "cholera",
+            "other"
+          ],
+          "example_statement": "Trigger if AWD cases exceed 50 in the district within 24 hours.",
+          "notes": "AWD cases are real-time counts, no forecast probability or lead time applies."
+        },
+        {
+          "name": "Cholera cases",
+          "aliases": [],
+          "primary_units": [
+            "%",
+            "cases"
+          ],
+          "accumulation_window": {
+            "applicable": true,
+            "units": [
+              "weeks"
+            ]
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": false
+          },
+          "lead_time": {
+            "applicable": false
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "cholera"
+          ],
+          "example_statement": "One confirmed cholera case reported by EPHI in a neighbouring woreda/district of the 20 identified woredas/districts within the same country or neighboring district of bordering country",
+          "notes": "canonical_variable changed from 'Infectious Disease Incidence' to 'Infectious Disease' per domain canonical variables; lead_time_applicable set to 'no' for observational subcategory; persistence_units and accumulation_window_units set per domain rules"
+        },
+        {
+          "name": "Dengue cases",
+          "aliases": [],
+          "primary_units": [
+            "cases",
+            "times average caseload"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": false
+          },
+          "lead_time": {
+            "applicable": true,
+            "units": [
+              "weeks"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "dengue"
+          ],
+          "example_statement": "Weekly dengue caseload exceeding 1,500 cases in May, June, July, December, and January"
+        },
+        {
+          "name": "Malnutrition rate (GAM)",
+          "aliases": [],
+          "primary_units": [
+            "%",
+            "percent"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": false
+          },
+          "lead_time": {
+            "applicable": false
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "other"
+          ],
+          "example_statement": "Trigger if GAM rate exceeds 15% in the region.",
+          "notes": "Malnutrition rate is a measured prevalence, no forecast probability or lead time applies."
+        }
+      ]
+    },
+    {
+      "name": "Other",
+      "subcategories": [
+        {
+          "name": "ENSO index",
+          "aliases": [],
+          "primary_units": [
+            "K"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": false
+          },
+          "lead_time": {
+            "applicable": true,
+            "units": [
+              "months"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "drought"
+          ],
+          "example_statement": "Nino3.4 index equal or greater than 0.5K in NDJ average forecast issued in July"
+        },
+        {
+          "name": "Forecast extremity metric",
+          "aliases": [],
+          "primary_units": [],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": false
+          },
+          "lead_time": {
+            "applicable": true,
+            "units": [
+              "days"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "flood"
+          ],
+          "example_statement": "Weekly Extreme Forecast Index (EFI) from ECMWF model greater than 0.8"
+        },
+        {
+          "name": "Other",
+          "aliases": [],
+          "primary_units": [],
+          "accumulation_window": {
+            "applicable": true,
+            "units": [
+              "hours"
+            ]
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": false
+          },
+          "lead_time": {
+            "applicable": false
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "cold wave",
+            "drought",
+            "flood",
+            "heatwave",
+            "storm"
+          ],
+          "example_statement": "Predicted water levels of Babai and West Rapti rivers to rise to their existing danger levels at Chepang and Kusum stations respectively within next 48 hours"
+        }
+      ]
+    },
+    {
+      "name": "Population Impact",
+      "subcategories": [
+        {
+          "name": "Affected count",
+          "aliases": [],
+          "primary_units": [
+            "%",
+            "IPC phase",
+            "index",
+            "months",
+            "people",
+            "tercile"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": true
+          },
+          "lead_time": {
+            "applicable": true,
+            "units": [
+              "days",
+              "hours",
+              "months"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "cholera",
+            "cold wave",
+            "drought",
+            "flood",
+            "population movement",
+            "storm"
+          ],
+          "example_statement": "Vulnerability Assessment Analysis report issued in January projects 20% of the population in drought-induced IPC Phase 3 and 4 in January"
+        },
+        {
+          "name": "Mortality",
+          "aliases": [],
+          "primary_units": [
+            "%"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": false
+          },
+          "lead_time": {
+            "applicable": true,
+            "units": [
+              "days"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "heatwave"
+          ],
+          "example_statement": "Category 3 – 30% or higher excess mortality (ranging upwards as high as 45% to 65% excess daily mortality)"
+        },
+        {
+          "name": "Mortality excess",
+          "aliases": [],
+          "primary_units": [
+            "%"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": false
+          },
+          "lead_time": {
+            "applicable": true,
+            "units": [
+              "days"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "heatwave"
+          ],
+          "example_statement": "Trigger threshold: Category 3 with predicted excess mortality of 45% or higher"
+        },
+        {
+          "name": "Damage likelihood",
+          "aliases": [],
+          "primary_units": [
+            "%",
+            "percent"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": true
+          },
+          "lead_time": {
+            "applicable": "optional",
+            "units": [
+              "days"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "cyclone",
+            "storm"
+          ],
+          "example_statement": "80% likelihood of complete damage to more than 50,000 houses.",
+          "notes": "Probability-of-damage threshold expressed as percentage likelihood; house count is in threshold_value field."
+        },
+        {
+          "name": "Damage to houses",
+          "aliases": [],
+          "primary_units": [
+            "%",
+            "count",
+            "houses"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": true
+          },
+          "lead_time": {
+            "applicable": "optional",
+            "units": [
+              "days"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "cyclone",
+            "storm"
+          ],
+          "example_statement": "60% likelihood of complete damage to more than 160,000 houses based on typhoon wind model.",
+          "notes": "Physical structure damage threshold expressed as probability of exceedance; house count is in threshold_value field."
+        }
+      ]
+    },
+    {
+      "name": "Precipitation",
+      "subcategories": [
+        {
+          "name": "Extreme precipitation index (EFI)",
+          "aliases": [],
+          "primary_units": [
+            "index"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": "optional"
+          },
+          "lead_time": {
+            "applicable": "optional",
+            "units": [
+              "days",
+              "hours",
+              "weeks"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "flood",
+            "other"
+          ],
+          "example_statement": "Trigger if EFI exceeds 1.5 for the 7-day period forecast.",
+          "notes": "EFI is a standardized index with fixed climatological period, no accumulation window applies."
+        },
+        {
+          "name": "Rainfall anomaly / departure from normal",
+          "aliases": [],
+          "primary_units": [
+            "cm",
+            "inches",
+            "mm",
+            "percent"
+          ],
+          "accumulation_window": {
+            "applicable": true,
+            "units": [
+              "days",
+              "months",
+              "weeks"
+            ]
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": "optional"
+          },
+          "lead_time": {
+            "applicable": "optional",
+            "units": [
+              "days",
+              "hours",
+              "months",
+              "weeks"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "drought",
+            "flood",
+            "other"
+          ],
+          "example_statement": "Trigger if rainfall anomaly exceeds +30% over the past 30 days.",
+          "notes": "Anomaly can be expressed as absolute or percent departure from normal rainfall."
+        },
+        {
+          "name": "Seasonal total",
+          "aliases": [],
+          "primary_units": [
+            "%",
+            "counties",
+            "days",
+            "event",
+            "mm",
+            "months",
+            "percentile",
+            "tercile",
+            "years"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": true,
+            "units": [
+              "days"
+            ]
+          },
+          "probability": {
+            "applicable": true
+          },
+          "lead_time": {
+            "applicable": true,
+            "units": [
+              "days",
+              "months",
+              "weeks"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "cold wave",
+            "drought",
+            "flood",
+            "heatwave"
+          ],
+          "example_statement": "If first trigger not activated, activation requires IBF model detection of drought by April and official drought declaration by Government of Zimbabwe",
+          "notes": "Seasonal total is a fixed climatological period, so accumulation_window_applicable set to no"
+        },
+        {
+          "name": "Standardised Precipitation Index (SPI)",
+          "aliases": [],
+          "primary_units": [
+            "index"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": "optional"
+          },
+          "lead_time": {
+            "applicable": "optional",
+            "units": [
+              "months",
+              "weeks"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "drought",
+            "other"
+          ],
+          "example_statement": "Trigger if SPI for 3 months is below -1.5 indicating drought conditions.",
+          "notes": "SPI uses fixed climatological periods, accumulation window does not apply."
+        },
+        {
+          "name": "Total rainfall",
+          "aliases": [],
+          "primary_units": [
+            "%",
+            "days",
+            "mm",
+            "mm/day",
+            "percentile",
+            "regions"
+          ],
+          "accumulation_window": {
+            "applicable": true,
+            "units": [
+              "days",
+              "hours",
+              "weeks"
+            ]
+          },
+          "persistence": {
+            "applicable": true,
+            "units": [
+              "days"
+            ]
+          },
+          "probability": {
+            "applicable": "optional"
+          },
+          "lead_time": {
+            "applicable": "optional",
+            "units": [
+              "days",
+              "months",
+              "weeks"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "cholera",
+            "dengue",
+            "drought",
+            "extreme rainfall",
+            "flood",
+            "storm"
+          ],
+          "example_statement": "Numerical weather prediction (NWP) or special weather advisories predict extreme and widespread rainfall for next three days across Babai and West Rapti basin areas and districts, provided rivers are flowing at stage level less than 2m below existing danger level"
+        },
+        {
+          "name": "Rainfall intensity",
+          "aliases": [],
+          "primary_units": [
+            "mm",
+            "mm/day",
+            "mm/hr"
+          ],
+          "accumulation_window": {
+            "applicable": true,
+            "units": [
+              "days",
+              "hours"
+            ]
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": "optional"
+          },
+          "lead_time": {
+            "applicable": "optional",
+            "units": [
+              "days",
+              "hours"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "extreme rainfall",
+            "flood"
+          ],
+          "example_statement": "Red warning (alert) issued when rainfall intensity exceeds 20 mm/hr or daily total exceeds 100 mm.",
+          "notes": "Rainfall intensity measures rate (mm/hr) distinct from total accumulation. Accumulation window captures the measurement period."
+        }
+      ]
+    },
+    {
+      "name": "Temperature",
+      "subcategories": [
+        {
+          "name": "Cold wave event",
+          "aliases": [],
+          "primary_units": [
+            "%",
+            "event"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": true,
+            "units": [
+              "days"
+            ]
+          },
+          "probability": {
+            "applicable": "optional"
+          },
+          "lead_time": {
+            "applicable": "optional",
+            "units": [
+              "days"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "cold_wave"
+          ],
+          "example_statement": "Cold wave forecast with a lead time of 4 days (event); or 72-hour confirmation with at least 75% probability of cold wave occurrence (%).",
+          "notes": "Merged: Cold Wave + Cold wave event. Unit 'event' = binary cold wave occurrence; '%' = probability threshold."
+        },
+        {
+          "name": "Heat index",
+          "aliases": [],
+          "primary_units": [
+            "percentile",
+            "°C"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": true,
+            "units": [
+              "days"
+            ]
+          },
+          "probability": {
+            "applicable": "optional"
+          },
+          "lead_time": {
+            "applicable": "optional",
+            "units": [
+              "days"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "heatwave"
+          ],
+          "example_statement": "Heat Index corresponds to more than 90th percentile values for summer months (March-May)"
+        },
+        {
+          "name": "Heatwave",
+          "aliases": [],
+          "primary_units": [
+            "days"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": true,
+            "units": [
+              "days"
+            ]
+          },
+          "probability": {
+            "applicable": "optional"
+          },
+          "lead_time": {
+            "applicable": "optional",
+            "units": [
+              "days"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "heatwave"
+          ],
+          "example_statement": "Forecast lead time maximum 5 days including 3 days heatwave duration"
+        },
+        {
+          "name": "Heatwave intensity",
+          "aliases": [],
+          "primary_units": [
+            "event"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": true,
+            "units": [
+              "days"
+            ]
+          },
+          "probability": {
+            "applicable": "optional"
+          },
+          "lead_time": {
+            "applicable": "optional",
+            "units": [
+              "days"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "heatwave"
+          ],
+          "example_statement": "Forecast Criteria: DHM issues a red alert heatwave bulletin ('take action') for the next 3 days in the target city or its associated district"
+        },
+        {
+          "name": "Heatwave occurrence",
+          "aliases": [],
+          "primary_units": [
+            "%",
+            "event"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": true,
+            "units": [
+              "days"
+            ]
+          },
+          "probability": {
+            "applicable": "optional"
+          },
+          "lead_time": {
+            "applicable": true,
+            "units": [
+              "days"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "heatwave"
+          ],
+          "example_statement": "72-hour forecast of heatwave occurrence (event); or probability of heatwave occurrence exceeds threshold (%).",
+          "notes": "Merged: Heatwave occurrence (event) + Heatwave occurrence probability (%). Unit 'event' = binary confirmation; '%' = probability threshold."
+        },
+        {
+          "name": "Max daily temperature",
+          "aliases": [],
+          "primary_units": [
+            "percentile",
+            "°C"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": true,
+            "units": [
+              "days"
+            ]
+          },
+          "probability": {
+            "applicable": "optional"
+          },
+          "lead_time": {
+            "applicable": true,
+            "units": [
+              "days"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "cold_wave",
+            "heatwave"
+          ],
+          "example_statement": "Daily maximum temperature above the 99th percentile threshold; or max day temperature 2°C or less for cold wave; or above 95th percentile of monthly historical maximum temperature.",
+          "notes": "Merged: Max daily temp + Max daily temperature + Max temperature + Daytime temperature. All refer to daily maximum temperature as the trigger variable."
+        },
+        {
+          "name": "Min temperature",
+          "aliases": [],
+          "primary_units": [
+            "percentile",
+            "°C"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": true,
+            "units": [
+              "days"
+            ]
+          },
+          "probability": {
+            "applicable": "optional"
+          },
+          "lead_time": {
+            "applicable": true,
+            "units": [
+              "days"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "cold_wave",
+            "heatwave"
+          ],
+          "example_statement": "7-day temperature forecast minimum below -40°C (-35°C in Karaganda region) with precipitation and increased wind speed persisting for at least two days in any district",
+          "notes": "Merged: Min temperature + General temperature. Regional min temp thresholds (General temperature) are a subtype of Min temperature."
+        },
+        {
+          "name": "Temperature anomaly / departure from normal",
+          "aliases": [],
+          "primary_units": [
+            "C",
+            "F",
+            "percent"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": "optional"
+          },
+          "lead_time": {
+            "applicable": "optional",
+            "units": [
+              "days",
+              "hours",
+              "months",
+              "weeks"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "cold_wave",
+            "heatwave",
+            "other"
+          ],
+          "example_statement": "Trigger if temperature anomaly exceeds +2°C for the month.",
+          "notes": "Anomaly is departure from climatological normal, no accumulation window applies."
+        },
+        {
+          "name": "Wind chill index",
+          "aliases": [],
+          "primary_units": [
+            "C",
+            "F"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": true,
+            "units": [
+              "days",
+              "hours"
+            ]
+          },
+          "probability": {
+            "applicable": "optional"
+          },
+          "lead_time": {
+            "applicable": "optional",
+            "units": [
+              "days",
+              "hours"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "cold_wave",
+            "other"
+          ],
+          "example_statement": "Trigger if wind chill index remains below -10°C for 6 consecutive hours.",
+          "notes": "Wind chill index requires persistence to define cold wave conditions."
+        }
+      ]
+    },
+    {
+      "name": "Volcanic Activity",
+      "subcategories": [
+        {
+          "name": "Seismic / monitoring parameters",
+          "aliases": [],
+          "primary_units": [
+            "count",
+            "index",
+            "level",
+            "ppm"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": false
+          },
+          "lead_time": {
+            "applicable": false
+          },
+          "geographic_scope": "always",
+          "hazard_types": [
+            "volcanic ash"
+          ],
+          "example_statement": "Significant increase in internal volcanic activity parameters such as seismicity, gas emissions, ground deformation — trigger when monitoring authority declares significant anomaly.",
+          "notes": "Observational subcategory: real-time monitoring data (seismicity counts, CO2/SO2 ppm, ground deformation). No forecast probability or lead time — geographic scope always required (named volcano/station)."
+        },
+        {
+          "name": "Ash deposition",
+          "aliases": [],
+          "primary_units": [
+            "mm"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": false
+          },
+          "lead_time": {
+            "applicable": false
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "volcanic ash"
+          ],
+          "example_statement": "Eruptive event with explosive index VEI 3 and ash fall exceeding 2 mm as per ASH3D model (Special Report C)"
+        },
+        {
+          "name": "Volcanic alert level",
+          "aliases": [],
+          "primary_units": [
+            "level"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": false
+          },
+          "probability": {
+            "applicable": false
+          },
+          "lead_time": {
+            "applicable": true,
+            "units": [
+              "days"
+            ]
+          },
+          "geographic_scope": "always",
+          "hazard_types": [
+            "volcanic ash"
+          ],
+          "example_statement": "Level 2 (orange alert) bulletin received four days before impact, triggered by anomalies such as second-level seismic crisis, second-level micro-deformation of the ground, and changes in gas composition (carbon dioxide accumulation) persisting for several hours a day.",
+          "notes": "Alert level issued by the national volcanic monitoring authority (e.g. Level 1/2/3 or green/orange/red). Lead time applies — bulletin is issued days before expected impact. Geographic scope always required (named volcano). This subcategory tracks the official alert code, not ash deposition volume."
+        }
+      ]
+    },
+    {
+      "name": "Wind",
+      "subcategories": [
+        {
+          "name": "Speed",
+          "aliases": [],
+          "primary_units": [
+            "%",
+            "Signal level",
+            "category",
+            "km/h",
+            "km/hr",
+            "knots",
+            "signal level"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": true,
+            "units": [
+              "days",
+              "hours"
+            ]
+          },
+          "probability": {
+            "applicable": "optional"
+          },
+          "lead_time": {
+            "applicable": "optional",
+            "units": [
+              "days",
+              "hours"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "cold wave",
+            "extreme rainfall",
+            "flood",
+            "storm",
+            "wildfire"
+          ],
+          "example_statement": "At least two models among BMD, IMD, ECMWF, GFS, JTWC forecast wind speeds of 125 km/h or greater in coastal districts of Bangladesh with a lead time of 72 hours or more",
+          "notes": "persistence_applicable set to yes due to sustained winds rule; probability and lead_time set to optional for forecast-based subcategory"
+        },
+        {
+          "name": "Speed category",
+          "aliases": [],
+          "primary_units": [
+            "category"
+          ],
+          "accumulation_window": {
+            "applicable": false
+          },
+          "persistence": {
+            "applicable": true,
+            "units": [
+              "days",
+              "hours"
+            ]
+          },
+          "probability": {
+            "applicable": "optional"
+          },
+          "lead_time": {
+            "applicable": true,
+            "units": [
+              "days"
+            ]
+          },
+          "geographic_scope": "optional",
+          "hazard_types": [
+            "storm"
+          ],
+          "example_statement": "Category 4 or 5 cyclone within 250 km of Fiji",
+          "notes": "persistence_applicable set to yes due to sustained winds rule; probability and lead_time set to optional/yes for forecast-based subcategory"
+        }
+      ]
     }
-  },
-  "field_mapping_for_developers": {
-    "csv_column": "forecast_variable",
-    "json_schema_location": "dropdown_masters.forecast_variables",
-    "ui_component_type": "dropdown / select",
-    "validation": "Must be one of the predefined list OR freetext if 'Other' selected",
-    "database_storage": "Store both selected value AND any freetext 'Other' entry for analysis"
+  ],
+  "geographic_scope_types": [
+    "national",
+    "regional",
+    "watershed_basin",
+    "station_gauge",
+    "administrative_unit",
+    "count_threshold"
+  ],
+  "geographic_scope_label_required_for": [
+    "station_gauge",
+    "watershed_basin",
+    "administrative_unit",
+    "count_threshold",
+    "regional"
+  ],
+  "connectors": {
+    "within_statement": [
+      "AND",
+      "OR"
+    ],
+    "cross_statement": [
+      "OR",
+      "AND",
+      "THEN",
+      "IF_THEN",
+      "INDEPENDENT",
+      "MIN_N_OF_M"
+    ],
+    "inter_phase": [
+      "PRECEDES",
+      "ENABLES",
+      "OPTIONAL_PRECURSOR",
+      "CANCELS",
+      "SUSPENDS"
+    ]
   }
 }
