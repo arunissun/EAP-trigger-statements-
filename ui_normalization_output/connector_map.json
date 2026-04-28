@@ -1,0 +1,1139 @@
+[
+  {
+    "document_id": "16389",
+    "document_name": "Honduras - Floods EAP (MDRHN027)",
+    "hazard_type": "Flood",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "pre_activation",
+      "trigger_statement_2": "activation"
+    },
+    "connector_map": {
+      "T1→T2": "AND"
+    },
+    "inter_phase_connector": "ENABLES",
+    "stop_mechanism_present": true,
+    "stop_connector": "CANCELS",
+    "classification_method": "llm",
+    "classification_confidence": 0.95,
+    "notes": "The EAP uses a dual-trigger system where a pre-activation phase enables a conditional activation phase, both with stop mechanisms that cancel active actions."
+  },
+  {
+    "document_id": "16393",
+    "document_name": "South Sudan - Floods sEAP (MDRSS017)",
+    "hazard_type": "Flood",
+    "activation_type": "single-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "16399",
+    "document_name": "Malawi - Pluvial Floods sEAP (MDRMW023)",
+    "hazard_type": "Flood",
+    "activation_type": "multi-stage",
+    "phase_map": {
+      "trigger_statement_1": "pre_activation",
+      "trigger_statement_2": "activation"
+    },
+    "connector_map": {
+      "T1→T2": "THEN"
+    },
+    "inter_phase_connector": "ENABLES",
+    "stop_mechanism_present": true,
+    "stop_connector": "CANCELS",
+    "classification_method": "llm",
+    "classification_confidence": 0.9,
+    "notes": "The EAP uses a multi-stage trigger logic where a pre-activation phase based on seasonal forecasts enables a conditional activation phase based on observational data, with explicit stop mechanisms that cancel active actions."
+  },
+  {
+    "document_id": "16401",
+    "document_name": "Zimbabwe - Cholera sEAP (MDRZW026)",
+    "hazard_type": "Cholera",
+    "activation_type": "multi-stage",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "16410",
+    "document_name": "Mauritania - Flood sEAP (MDRMR020)",
+    "hazard_type": "Flood",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "16416",
+    "document_name": "Pakistan - Riverine Floods EAP (MDRPK029)",
+    "hazard_type": "Flood",
+    "activation_type": "multi-stage",
+    "phase_map": {
+      "trigger_statement_1": "pre_activation",
+      "trigger_statement_2": "pre_activation",
+      "trigger_statement_3": "pre_activation",
+      "trigger_statement_4": "activation",
+      "trigger_statement_5": "activation",
+      "trigger_statement_6": "activation",
+      "trigger_statement_7": "activation"
+    },
+    "connector_map": {
+      "T1→T2": "THEN",
+      "T2→T3": "THEN",
+      "T3→T4": "THEN",
+      "T4→T5": "THEN",
+      "T5→T6": "THEN",
+      "T6→T7": "THEN"
+    },
+    "inter_phase_connector": "PRECEDES",
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "llm",
+    "classification_confidence": 0.9,
+    "notes": "The EAP uses multiple pre-activation multi-stage triggers based on hydrological forecasts and observations that precede a sequential multi-stage activation phase without an explicit stop mechanism."
+  },
+  {
+    "document_id": "16440",
+    "document_name": "Madagascar - Floods sEAP (MDRMG024)",
+    "hazard_type": "Flood",
+    "activation_type": "single-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "16445",
+    "document_name": "Paraguay - Drought sEAP (MDRPY024)",
+    "hazard_type": "Drought",
+    "activation_type": "single-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "16446",
+    "document_name": "Ethiopia - Cholera sEAP (MDRET038)",
+    "hazard_type": "Cholera",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation",
+      "trigger_statement_2": "activation"
+    },
+    "connector_map": {
+      "T1→T2": "AND"
+    },
+    "inter_phase_connector": null,
+    "stop_mechanism_present": true,
+    "stop_connector": "CANCELS",
+    "classification_method": "llm",
+    "classification_confidence": 0.9,
+    "notes": "Two dual-trigger activation statements with trigger_statement_2 conditionally dependent on trigger_statement_1, connected by IF_THEN, both include stop mechanisms that cancel activation."
+  },
+  {
+    "document_id": "16458",
+    "document_name": "Bangladesh - Cold Wave EAP (MDRBD038)",
+    "hazard_type": "Cold Wave",
+    "activation_type": "multi-stage",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": true,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "16467",
+    "document_name": "Somalia - Cholera sEAP (MDRSO023)",
+    "hazard_type": "Cholera",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation",
+      "trigger_statement_2": "activation"
+    },
+    "connector_map": {
+      "T1→T2": "AND"
+    },
+    "inter_phase_connector": null,
+    "stop_mechanism_present": true,
+    "stop_connector": "CANCELS",
+    "classification_method": "llm",
+    "classification_confidence": 0.9,
+    "notes": "The EAP has two dual-trigger activation statements connected by OR, both with stop mechanisms that cancel activation."
+  },
+  {
+    "document_id": "16473",
+    "document_name": "Albania - Heatwave sEAP (MDRAL009)",
+    "hazard_type": "Heatwave",
+    "activation_type": "single-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "16479",
+    "document_name": "Lebanon - Cold Wave sEAP (MDRLB019)",
+    "hazard_type": "Cold Wave",
+    "activation_type": "single-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": true,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "16482",
+    "document_name": "Sri Lanka - Dengue sEAP (MDRLK022)",
+    "hazard_type": "Dengue",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "16486",
+    "document_name": "Fiji - Tropical Cyclone  sEAP (MDRFJ008)",
+    "hazard_type": "Storm",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "16494",
+    "document_name": "Tanzania - Flood EAP (MDRTZ041)",
+    "hazard_type": "Flood",
+    "activation_type": "single-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": true,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "16513",
+    "document_name": "Côte d'Ivore - Floods sEAP (MDRCI017)",
+    "hazard_type": "Flood",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": true,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "16527",
+    "document_name": "Colombia - Forced Displacement sEAP (MDRCO031)",
+    "hazard_type": "Population Movement",
+    "activation_type": "single-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "16531",
+    "document_name": "Zambia - Drought EAP2024ZM02 (MDRZM025)",
+    "hazard_type": "Drought",
+    "activation_type": "multi-stage",
+    "phase_map": {
+      "trigger_statement_1": "pre_activation",
+      "trigger_statement_2": "pre_activation",
+      "trigger_statement_3": "activation"
+    },
+    "connector_map": {
+      "T1→T2": "THEN",
+      "T2→T3": "THEN"
+    },
+    "inter_phase_connector": "OPTIONAL_PRECURSOR",
+    "stop_mechanism_present": true,
+    "stop_connector": null,
+    "classification_method": "llm",
+    "classification_confidence": 0.9,
+    "notes": "The EAP uses multiple independent multi-stage pre-activation triggers with an optional precursor relationship to the activation phase, each including stop mechanisms."
+  },
+  {
+    "document_id": "16542",
+    "document_name": "Mali - Flood EAP (MDRML021)",
+    "hazard_type": "Flood",
+    "activation_type": "single-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": true,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "16562",
+    "document_name": "Cameroon - Cholera EAP (MDRCM040)",
+    "hazard_type": "Cholera",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "pre_activation",
+      "trigger_statement_2": "activation"
+    },
+    "connector_map": {
+      "T1→T2": "AND"
+    },
+    "inter_phase_connector": "ENABLES",
+    "stop_mechanism_present": true,
+    "stop_connector": "CANCELS",
+    "classification_method": "llm",
+    "classification_confidence": 0.95,
+    "notes": "The EAP uses a dual-trigger structure where a pre-activation phase based on environmental conditions enables a conditional activation phase based on disease case thresholds, with explicit stop mechanisms cancelling actions."
+  },
+  {
+    "document_id": "16566",
+    "document_name": "Timor Leste - Flood sEAP (MDRTL001)",
+    "hazard_type": "Flood",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "pre_activation",
+      "trigger_statement_2": "activation"
+    },
+    "connector_map": {
+      "T1→T2": "AND"
+    },
+    "inter_phase_connector": "ENABLES",
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "llm",
+    "classification_confidence": 0.9,
+    "notes": "The EAP uses a dual-trigger system where a pre-activation phase with multiple AND-connected thresholds enables a conditional activation phase triggered by a forecasted red warning."
+  },
+  {
+    "document_id": "16567",
+    "document_name": "Indonesia - Flood EAP (MDRID027)",
+    "hazard_type": "Flood",
+    "activation_type": "multi-stage",
+    "phase_map": {
+      "trigger_statement_1": "pre_activation",
+      "trigger_statement_2": "activation"
+    },
+    "connector_map": {
+      "T1→T2": "THEN"
+    },
+    "inter_phase_connector": "PRECEDES",
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "llm",
+    "classification_confidence": 0.9,
+    "notes": "The EAP uses a multi-stage trigger with a pre-activation rainfall threshold phase preceding the main activation based on higher rainfall and river level alerts, connected sequentially by THEN."
+  },
+  {
+    "document_id": "16568",
+    "document_name": "El Salvador -Extreme Rainfall sEAP (MDRSV018)",
+    "hazard_type": "Extreme Rainfall",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "pre_activation",
+      "trigger_statement_2": "activation"
+    },
+    "connector_map": {
+      "T1→T2": "AND"
+    },
+    "inter_phase_connector": "ENABLES",
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "llm",
+    "classification_confidence": 0.9,
+    "notes": "The EAP uses a dual-trigger structure where a pre-activation alert enables a conditional activation based on rainfall forecasts, with no stop mechanism included."
+  },
+  {
+    "document_id": "16569",
+    "document_name": "Chile - Wildfire sEAP (MDRCL018)",
+    "hazard_type": "Wildfire",
+    "activation_type": "single-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": true,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "16618",
+    "document_name": "Myanmar - Heatwave sEAP (MDRMM022)",
+    "hazard_type": "Heatwave",
+    "activation_type": "multi-stage",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": true,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "16633",
+    "document_name": "Burkina Faso - Heatwave sEAP (MDRBF020)",
+    "hazard_type": "Heatwave",
+    "activation_type": "single-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "16646",
+    "document_name": "Colombia - Drought sEAP (MDRCO027)",
+    "hazard_type": "Drought",
+    "activation_type": "single-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "16651",
+    "document_name": "El Salvador - Drought EAP (MDRSV017)",
+    "hazard_type": "Drought",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "pre_activation",
+      "trigger_statement_2": "activation"
+    },
+    "connector_map": {
+      "T1→T2": "AND"
+    },
+    "inter_phase_connector": "PRECEDES",
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "llm",
+    "classification_confidence": 0.9,
+    "notes": "The EAP uses a dual-trigger structure where an early El Niño forecast precedes and informs the main precipitation-based activation trigger without an explicit stop mechanism."
+  },
+  {
+    "document_id": "16682",
+    "document_name": "Lesotho - Cold Wave EAP (MDRLS010)",
+    "hazard_type": "Cold Wave",
+    "activation_type": "single-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "16700",
+    "document_name": "Philippines - Typhoon EAP (MDRPH055)",
+    "hazard_type": "Storm",
+    "activation_type": "multi-stage",
+    "phase_map": {
+      "trigger_statement_1": "pre_activation",
+      "trigger_statement_2": "activation",
+      "trigger_statement_3": "pre_activation"
+    },
+    "connector_map": {
+      "T1→T2": "THEN",
+      "T2→T3": "THEN"
+    },
+    "inter_phase_connector": "OPTIONAL_PRECURSOR",
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "llm",
+    "classification_confidence": 0.85,
+    "notes": "The EAP uses multi-stage pre-activation wind and damage impact thresholds as optional precursors to a multi-stage activation phase based on population impact likelihoods, with no explicit stop mechanism."
+  },
+  {
+    "document_id": "16754",
+    "document_name": "Chad - Floods EAP (MDRTD023)",
+    "hazard_type": "Flood",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "pre_activation",
+      "trigger_statement_2": "activation"
+    },
+    "connector_map": {
+      "T1→T2": "AND"
+    },
+    "inter_phase_connector": "PRECEDES",
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "llm",
+    "classification_confidence": 0.9,
+    "notes": "The EAP uses a dual-trigger structure with a pre-activation phase followed by activation, connected sequentially without a stop mechanism."
+  },
+  {
+    "document_id": "16764",
+    "document_name": "Somalia - Drought EAP (MDRSO019)",
+    "hazard_type": "Drought",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": true,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "16767",
+    "document_name": "Kyrgyzstan - Cold Wave EAP (MDRKG020)",
+    "hazard_type": "Cold Wave",
+    "activation_type": "single-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": true,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "16796",
+    "document_name": "Yemen - Floods EAP (MDRYE015)",
+    "hazard_type": "Flood",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "16797",
+    "document_name": "Yemen - Floods EAP (MDRYE015)",
+    "hazard_type": "Flood",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "16827",
+    "document_name": "Burundi - Floods -sEAP (MDRBI021)",
+    "hazard_type": "Flood",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "16845",
+    "document_name": "Nepal - Floods EAP (MDRNP017)",
+    "hazard_type": "Flood",
+    "activation_type": "multi-stage",
+    "phase_map": {
+      "trigger_statement_1": "pre_activation",
+      "trigger_statement_2": "activation"
+    },
+    "connector_map": {
+      "T1→T2": "THEN"
+    },
+    "inter_phase_connector": "ENABLES",
+    "stop_mechanism_present": true,
+    "stop_connector": "CANCELS",
+    "classification_method": "llm",
+    "classification_confidence": 0.9,
+    "notes": "The EAP uses a multi-stage pre-activation trigger that enables the activation phase, with conditional dependencies and explicit stop mechanisms that cancel active actions."
+  },
+  {
+    "document_id": "16862",
+    "document_name": "Guatemala - Floods EAP (MDRGT024)",
+    "hazard_type": "Flood",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "pre_activation",
+      "trigger_statement_2": "activation"
+    },
+    "connector_map": {
+      "T1→T2": "AND"
+    },
+    "inter_phase_connector": "ENABLES",
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "llm",
+    "classification_confidence": 0.9,
+    "notes": "The EAP uses a dual-trigger logic where a pre-activation wind probability AND an activation hydrological forecast must both be met to activate the plan, with no stop mechanism included."
+  },
+  {
+    "document_id": "16877",
+    "document_name": "Guatemala - Drought EAP (MDRGT023)",
+    "hazard_type": "Drought",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "pre_activation",
+      "trigger_statement_2": "activation"
+    },
+    "connector_map": {
+      "T1→T2": "AND"
+    },
+    "inter_phase_connector": "PRECEDES",
+    "stop_mechanism_present": true,
+    "stop_connector": "CANCELS",
+    "classification_method": "llm",
+    "classification_confidence": 0.9,
+    "notes": "The EAP uses a dual-trigger structure where a pre-activation drought forecast precedes and informs the main activation trigger, with explicit stop mechanisms that cancel active actions."
+  },
+  {
+    "document_id": "16946",
+    "document_name": "Comoros - Volcanic Ash (EAP) (MDRKM012)",
+    "hazard_type": "Volcanic Ash",
+    "activation_type": "multi-stage",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "16988",
+    "document_name": "Eswatini - Drought EAP (MDRSZ005)",
+    "hazard_type": "Drought",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": true,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "17037",
+    "document_name": "Bangladesh - Cyclone EAP (MDRBD033)",
+    "hazard_type": "Storm",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "pre_activation",
+      "trigger_statement_2": "activation"
+    },
+    "connector_map": {
+      "T1→T2": "AND"
+    },
+    "inter_phase_connector": "ENABLES",
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "llm",
+    "classification_confidence": 0.95,
+    "notes": "The EAP uses a dual-trigger structure where a pre-activation phase enables a conditional activation phase, linked by an IF_THEN connector without an explicit stop mechanism."
+  },
+  {
+    "document_id": "17039",
+    "document_name": "Mozambique - Cyclone EAP (MDRMZ021)",
+    "hazard_type": "Storm",
+    "activation_type": "single-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": true,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "17042",
+    "document_name": "Mozambique - Cyclone EAP (MDRMZ021)",
+    "hazard_type": "Storm",
+    "activation_type": "single-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": true,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "17044",
+    "document_name": "Mozambique - Floods EAP (MDRMZ022)",
+    "hazard_type": "Flood",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation",
+      "trigger_statement_2": "pre_activation"
+    },
+    "connector_map": {
+      "T1→T2": "AND"
+    },
+    "inter_phase_connector": "PRECEDES",
+    "stop_mechanism_present": true,
+    "stop_connector": "CANCELS",
+    "classification_method": "llm",
+    "classification_confidence": 0.9,
+    "notes": "The EAP uses a pre-activation forecast trigger that precedes and then leads to a dual-trigger activation phase with explicit stop mechanisms that cancel active actions."
+  },
+  {
+    "document_id": "17090",
+    "document_name": "Honduras - Population Movement EAP (MDRHN021)",
+    "hazard_type": "Population Movement",
+    "activation_type": "single-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation",
+      "trigger_statement_2": "pre_activation"
+    },
+    "connector_map": {
+      "T1→T2": "THEN"
+    },
+    "inter_phase_connector": "PRECEDES",
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "llm",
+    "classification_confidence": 0.85,
+    "notes": "The EAP has a pre-activation phase monitoring early warning conditions that precedes but does not enable the main activation trigger, with independent simultaneous monitoring of both."
+  },
+  {
+    "document_id": "17092",
+    "document_name": "Honduras - Floods EAP (MDRHN020)",
+    "hazard_type": "Flood",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "pre_activation",
+      "trigger_statement_2": "activation"
+    },
+    "connector_map": {
+      "T1→T2": "AND"
+    },
+    "inter_phase_connector": "ENABLES",
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "llm",
+    "classification_confidence": 0.9,
+    "notes": "The EAP uses a dual-trigger structure where a pre-activation tropical storm probability enables activation upon a flood probability threshold, connected by an AND logic without a stop mechanism."
+  },
+  {
+    "document_id": "17174",
+    "document_name": "Costa Rica - Floods EAP (MDRCR024)",
+    "hazard_type": "Flood",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation",
+      "trigger_statement_2": "activation"
+    },
+    "connector_map": {
+      "T1→T2": "AND"
+    },
+    "inter_phase_connector": null,
+    "stop_mechanism_present": true,
+    "stop_connector": "CANCELS",
+    "classification_method": "llm",
+    "classification_confidence": 0.9,
+    "notes": "The EAP has two independent dual-trigger activation statements with explicit stop mechanisms that cancel active actions."
+  },
+  {
+    "document_id": "17240",
+    "document_name": "Ecuador - Volcanic Ash (MDREC024)",
+    "hazard_type": "Volcanic Ash",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "pre_activation",
+      "trigger_statement_2": "activation"
+    },
+    "connector_map": {
+      "T1→T2": "THEN"
+    },
+    "inter_phase_connector": "ENABLES",
+    "stop_mechanism_present": true,
+    "stop_connector": "CANCELS",
+    "classification_method": "llm",
+    "classification_confidence": 0.9,
+    "notes": "The EAP uses a dual-trigger structure where a pre-activation phase enables the main activation, with conditional sequential logic and explicit stop mechanisms that cancel active actions."
+  },
+  {
+    "document_id": "17253",
+    "document_name": "Greece - Extreme Heat sEAP (MDRGR005)",
+    "hazard_type": "Heatwave",
+    "activation_type": "single-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "17272",
+    "document_name": "Ethiopia - Drought EAP (MDRET033)",
+    "hazard_type": "Drought",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": true,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "17301",
+    "document_name": "Bangladesh - Heatwave EAP (MDRBD032)",
+    "hazard_type": "Heatwave",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": true,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "17333",
+    "document_name": "Kyrgyzstan - Heatwave (MDRKG016)",
+    "hazard_type": "Heatwave",
+    "activation_type": "single-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": true,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "17366",
+    "document_name": "Pakistan - Riverine Flood (MDRPK024)",
+    "hazard_type": "Flood",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation",
+      "trigger_statement_2": "pre_activation"
+    },
+    "connector_map": {
+      "T1→T2": "AND"
+    },
+    "inter_phase_connector": "ENABLES",
+    "stop_mechanism_present": true,
+    "stop_connector": "CANCELS",
+    "classification_method": "llm",
+    "classification_confidence": 0.9,
+    "notes": "The EAP uses a pre-activation phase based on bulletins that enables the main dual-trigger activation, with explicit stop mechanisms that cancel actions."
+  },
+  {
+    "document_id": "17557",
+    "document_name": "Kenya - Drought (MDRKE055)",
+    "hazard_type": "Drought",
+    "activation_type": "single-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "17563",
+    "document_name": "Zimbabwe - Drought Protocol (MDRZW020)",
+    "hazard_type": "Drought",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "pre_activation",
+      "trigger_statement_2": "activation"
+    },
+    "connector_map": {
+      "T1→T2": "AND"
+    },
+    "inter_phase_connector": "ENABLES",
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "llm",
+    "classification_confidence": 0.9,
+    "notes": "The EAP uses a dual-trigger system where a pre-activation forecast enables the main activation trigger, which is conditional on the first or alternative drought detection criteria."
+  },
+  {
+    "document_id": "17595",
+    "document_name": "Honduras - Drought (MDRHN018)",
+    "hazard_type": "Drought",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "pre_activation",
+      "trigger_statement_2": "activation"
+    },
+    "connector_map": {
+      "T1→T2": "AND"
+    },
+    "inter_phase_connector": "ENABLES",
+    "stop_mechanism_present": true,
+    "stop_connector": "CANCELS",
+    "classification_method": "llm",
+    "classification_confidence": 0.9,
+    "notes": "The EAP uses a dual-trigger system where a pre-activation drought forecast enables a conditional activation based on rainfall thresholds, with explicit stop mechanisms cancelling actions."
+  },
+  {
+    "document_id": "17638",
+    "document_name": "Lesotho - Drought (EAP2022LS01) (MDRLS006)",
+    "hazard_type": "Drought",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": true,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "17645",
+    "document_name": "Tajikistan - Cold Wave (EAP2022TJ02) (MDRTJ033)",
+    "hazard_type": "Cold Wave",
+    "activation_type": "single-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": true,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "17691",
+    "document_name": "Kazakhstan - EAP2022KZ01 - Cold Wave (MDRKZ012)",
+    "hazard_type": "Cold Wave",
+    "activation_type": "single-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "18031",
+    "document_name": "Tajikistan - Heat Wave (EAP2021TJ01) (MDRTJ034)",
+    "hazard_type": "Heatwave",
+    "activation_type": "single-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": true,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "25999",
+    "document_name": "Nepal - Heatwave sEAP (MDRNP020)",
+    "hazard_type": "Heatwave",
+    "activation_type": "dual-trigger",
+    "phase_map": {
+      "trigger_statement_1": "activation"
+    },
+    "connector_map": {},
+    "inter_phase_connector": null,
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "deterministic",
+    "classification_confidence": 1.0,
+    "notes": "Single-statement document; no connector classification needed."
+  },
+  {
+    "document_id": "26012",
+    "document_name": "Niger - Drought EAP (MDRNE031)",
+    "hazard_type": "Drought",
+    "activation_type": "multi-stage",
+    "phase_map": {
+      "trigger_statement_1": "pre_activation",
+      "trigger_statement_2": "activation",
+      "trigger_statement_3": "activation"
+    },
+    "connector_map": {
+      "T1→T2": "THEN",
+      "T2→T3": "THEN"
+    },
+    "inter_phase_connector": "PRECEDES",
+    "stop_mechanism_present": true,
+    "stop_connector": "CANCELS",
+    "classification_method": "llm",
+    "classification_confidence": 0.85,
+    "notes": "The EAP uses a multi-stage trigger structure where an early warning pre-activation phase precedes activation phases linked sequentially and alternatively, with explicit stop mechanisms that cancel active actions."
+  },
+  {
+    "document_id": "26020",
+    "document_name": "Fiji - Tropical Cyclone  sEAP (MDRFJ008)",
+    "hazard_type": "Storm",
+    "activation_type": "multi-stage",
+    "phase_map": {
+      "trigger_statement_1": "activation",
+      "trigger_statement_2": "pre_activation"
+    },
+    "connector_map": {
+      "T1→T2": "THEN"
+    },
+    "inter_phase_connector": "OPTIONAL_PRECURSOR",
+    "stop_mechanism_present": false,
+    "stop_connector": null,
+    "classification_method": "llm",
+    "classification_confidence": 0.9,
+    "notes": "The EAP includes a multi-stage activation trigger conditional on readiness, with an independent pre-activation rainfall trigger acting as an optional precursor."
+  }
+]

@@ -1,0 +1,2 @@
+document_id,document_name,statement_key,threshold_index,threshold_text,canonical_variable,subcategory,threshold_unit,matched_canonical,matched_subcategory,match_method,match_confidence,geographic_scope_type,geographic_scope_label
+17090,Honduras - Population Movement EAP (MDRHN021),trigger_statement_1,2,40% decrease of the response capacity,Population Impact,Response capacity,percent,Population Impact,Response capacity,out_of_matrix,0.0,national,
