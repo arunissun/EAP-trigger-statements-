@@ -9061,5 +9061,455 @@
       "taxonomy_match_confidence": 1.0,
       "trigger_logic": "Single"
     }
-  ]
+  ],
+  "accumulation_window_rules": {
+    "Agricultural Impact": {
+      "Crop damage": {
+        "applicable": false
+      },
+      "Crop yield": {
+        "applicable": false
+      },
+      "Fodder availability": {
+        "applicable": false
+      },
+      "Pasture / fodder condition score": {
+        "applicable": false
+      },
+      "Drought severity": {
+        "applicable": false
+      },
+      "Food insecurity projection": {
+        "applicable": false
+      }
+    },
+    "Alert/Warning Status": {
+      "Advisory bulletin issuance": {
+        "applicable": false
+      },
+      "Crisis alert category": {
+        "applicable": false
+      },
+      "Storm signal level": {
+        "applicable": false
+      },
+      "Cold Wave Condition Persistence": {
+        "applicable": false
+      }
+    },
+    "Fire Risk": {
+      "Ignition probability": {
+        "applicable": false
+      }
+    },
+    "Humidity": {
+      "Relative humidity": {
+        "applicable": false
+      }
+    },
+    "Hydrological Flow": {
+      "Flood extent": {
+        "applicable": false
+      },
+      "Return period exceedance": {
+        "applicable": false
+      },
+      "River flow": {
+        "applicable": false
+      },
+      "Water level": {
+        "applicable": false
+      }
+    },
+    "Infectious Disease": {
+      "AWD / Acute Watery Diarrhoea cases": {
+        "applicable": false
+      },
+      "Cholera cases": {
+        "applicable": true,
+        "units": [
+          "weeks"
+        ]
+      },
+      "Dengue cases": {
+        "applicable": false
+      },
+      "Malnutrition rate (GAM)": {
+        "applicable": false
+      }
+    },
+    "Other": {
+      "ENSO index": {
+        "applicable": false
+      },
+      "Forecast extremity metric": {
+        "applicable": false
+      },
+      "Other": {
+        "applicable": true,
+        "units": [
+          "hours"
+        ]
+      }
+    },
+    "Population Impact": {
+      "Affected count": {
+        "applicable": false
+      },
+      "Mortality": {
+        "applicable": false
+      },
+      "Mortality excess": {
+        "applicable": false
+      },
+      "Damage likelihood": {
+        "applicable": false
+      },
+      "Damage to houses": {
+        "applicable": false
+      }
+    },
+    "Precipitation": {
+      "Extreme precipitation index (EFI)": {
+        "applicable": false
+      },
+      "Rainfall anomaly / departure from normal": {
+        "applicable": true,
+        "units": [
+          "days",
+          "months",
+          "weeks"
+        ]
+      },
+      "Seasonal total": {
+        "applicable": false
+      },
+      "Standardised Precipitation Index (SPI)": {
+        "applicable": false
+      },
+      "Total rainfall": {
+        "applicable": true,
+        "units": [
+          "days",
+          "hours",
+          "weeks"
+        ]
+      },
+      "Rainfall intensity": {
+        "applicable": true,
+        "units": [
+          "days",
+          "hours"
+        ]
+      }
+    },
+    "Temperature": {
+      "Cold wave event": {
+        "applicable": false
+      },
+      "Heat index": {
+        "applicable": false
+      },
+      "Heatwave": {
+        "applicable": false
+      },
+      "Heatwave intensity": {
+        "applicable": false
+      },
+      "Heatwave occurrence": {
+        "applicable": false
+      },
+      "Max daily temperature": {
+        "applicable": false
+      },
+      "Min temperature": {
+        "applicable": false
+      },
+      "Temperature anomaly / departure from normal": {
+        "applicable": false
+      },
+      "Wind chill index": {
+        "applicable": false
+      }
+    },
+    "Volcanic Activity": {
+      "Seismic / monitoring parameters": {
+        "applicable": false
+      },
+      "Ash deposition": {
+        "applicable": false
+      },
+      "Volcanic alert level": {
+        "applicable": false
+      }
+    },
+    "Wind": {
+      "Speed": {
+        "applicable": false
+      },
+      "Speed category": {
+        "applicable": false
+      }
+    }
+  },
+  "persistence_rules": {
+    "Agricultural Impact": {
+      "Crop damage": {
+        "applicable": false
+      },
+      "Crop yield": {
+        "applicable": false
+      },
+      "Fodder availability": {
+        "applicable": false
+      },
+      "Pasture / fodder condition score": {
+        "applicable": false
+      },
+      "Drought severity": {
+        "applicable": false
+      },
+      "Food insecurity projection": {
+        "applicable": false
+      }
+    },
+    "Alert/Warning Status": {
+      "Advisory bulletin issuance": {
+        "applicable": false
+      },
+      "Crisis alert category": {
+        "applicable": false
+      },
+      "Storm signal level": {
+        "applicable": false
+      },
+      "Cold Wave Condition Persistence": {
+        "applicable": true,
+        "units": [
+          "days"
+        ]
+      }
+    },
+    "Fire Risk": {
+      "Ignition probability": {
+        "applicable": false
+      }
+    },
+    "Humidity": {
+      "Relative humidity": {
+        "applicable": false
+      }
+    },
+    "Hydrological Flow": {
+      "Flood extent": {
+        "applicable": false
+      },
+      "Return period exceedance": {
+        "applicable": false
+      },
+      "River flow": {
+        "applicable": true,
+        "units": [
+          "days"
+        ]
+      },
+      "Water level": {
+        "applicable": true,
+        "units": [
+          "days",
+          "hours"
+        ]
+      }
+    },
+    "Infectious Disease": {
+      "AWD / Acute Watery Diarrhoea cases": {
+        "applicable": false
+      },
+      "Cholera cases": {
+        "applicable": false
+      },
+      "Dengue cases": {
+        "applicable": false
+      },
+      "Malnutrition rate (GAM)": {
+        "applicable": false
+      }
+    },
+    "Other": {
+      "ENSO index": {
+        "applicable": false
+      },
+      "Forecast extremity metric": {
+        "applicable": false
+      },
+      "Other": {
+        "applicable": false
+      }
+    },
+    "Population Impact": {
+      "Affected count": {
+        "applicable": false
+      },
+      "Mortality": {
+        "applicable": false
+      },
+      "Mortality excess": {
+        "applicable": false
+      },
+      "Damage likelihood": {
+        "applicable": false
+      },
+      "Damage to houses": {
+        "applicable": false
+      }
+    },
+    "Precipitation": {
+      "Extreme precipitation index (EFI)": {
+        "applicable": false
+      },
+      "Rainfall anomaly / departure from normal": {
+        "applicable": false
+      },
+      "Seasonal total": {
+        "applicable": true,
+        "units": [
+          "days"
+        ]
+      },
+      "Standardised Precipitation Index (SPI)": {
+        "applicable": false
+      },
+      "Total rainfall": {
+        "applicable": true,
+        "units": [
+          "days"
+        ]
+      },
+      "Rainfall intensity": {
+        "applicable": false
+      }
+    },
+    "Temperature": {
+      "Cold wave event": {
+        "applicable": true,
+        "units": [
+          "days"
+        ]
+      },
+      "Heat index": {
+        "applicable": true,
+        "units": [
+          "days"
+        ]
+      },
+      "Heatwave": {
+        "applicable": true,
+        "units": [
+          "days"
+        ]
+      },
+      "Heatwave intensity": {
+        "applicable": true,
+        "units": [
+          "days"
+        ]
+      },
+      "Heatwave occurrence": {
+        "applicable": true,
+        "units": [
+          "days"
+        ]
+      },
+      "Max daily temperature": {
+        "applicable": true,
+        "units": [
+          "days"
+        ]
+      },
+      "Min temperature": {
+        "applicable": true,
+        "units": [
+          "days"
+        ]
+      },
+      "Temperature anomaly / departure from normal": {
+        "applicable": false
+      },
+      "Wind chill index": {
+        "applicable": true,
+        "units": [
+          "days",
+          "hours"
+        ]
+      }
+    },
+    "Volcanic Activity": {
+      "Seismic / monitoring parameters": {
+        "applicable": false
+      },
+      "Ash deposition": {
+        "applicable": false
+      },
+      "Volcanic alert level": {
+        "applicable": false
+      }
+    },
+    "Wind": {
+      "Speed": {
+        "applicable": true,
+        "units": [
+          "days",
+          "hours"
+        ]
+      },
+      "Speed category": {
+        "applicable": true,
+        "units": [
+          "days",
+          "hours"
+        ]
+      }
+    }
+  },
+  "geographic_scope_contract": {
+    "enum_values": [
+      "national",
+      "regional",
+      "watershed_basin",
+      "station_gauge",
+      "administrative_unit",
+      "count_threshold"
+    ],
+    "label_required_for": [
+      "station_gauge",
+      "watershed_basin",
+      "administrative_unit",
+      "count_threshold",
+      "regional"
+    ],
+    "default": "national",
+    "ui_note": "Always show a geographic scope selector; default = 'national'. When a value in 'label_required_for' is selected, render a free-text label field for the specific name (station name, basin name, district, etc.)."
+  },
+  "connector_vocabulary": {
+    "within_statement": [
+      "AND",
+      "OR"
+    ],
+    "cross_statement": [
+      "OR",
+      "AND",
+      "THEN",
+      "IF_THEN",
+      "INDEPENDENT",
+      "MIN_N_OF_M"
+    ],
+    "inter_phase": [
+      "PRECEDES",
+      "ENABLES",
+      "OPTIONAL_PRECURSOR",
+      "CANCELS",
+      "SUSPENDS"
+    ]
+  },
+  "combination_matrix_version": "2026-04-v2"
 }
